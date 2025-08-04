@@ -21,7 +21,7 @@ class GetStartedView extends StatelessWidget {
           children: [
             Text(
               S.of(context).appBarTitle,
-              style: AppStyles.styleBold30,
+              style: AppStyles.styleBold30(context),
             ),
             SvgPicture.asset(
               Assets.imagesDetectiveSearchIcon,
