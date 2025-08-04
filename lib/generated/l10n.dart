@@ -63,6 +63,11 @@ class S {
   String get start {
     return Intl.message('بدا', name: 'start', desc: '', args: []);
   }
+
+  /// `فكرة اللعبة`
+  String get gameIdea {
+    return Intl.message('فكرة اللعبة', name: 'gameIdea', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

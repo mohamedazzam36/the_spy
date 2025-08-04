@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 
 abstract class AppStyles {
-  static TextStyle styleMedium30(BuildContext context) {
+  static TextStyle styleSemiBold35(BuildContext context) {
     return GoogleFonts.changa(
-      fontSize: getResponsiveText(context, fontSize: 30),
+      fontSize: getResponsiveText(context, fontSize: 35),
       color: Colors.white,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
     );
   }
 
