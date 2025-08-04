@@ -54,9 +54,9 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `appBar`
-  String get title {
-    return Intl.message('appBar', name: 'title', desc: '', args: []);
+  /// `The Spy`
+  String get appBarTitle {
+    return Intl.message('The Spy', name: 'appBarTitle', desc: '', args: []);
   }
 }
 
