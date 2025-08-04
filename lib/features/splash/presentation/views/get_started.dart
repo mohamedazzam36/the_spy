@@ -13,7 +13,6 @@ class GetStartedView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: kPrimaryColor,
         centerTitle: true,
         title: Row(
@@ -21,12 +20,12 @@ class GetStartedView extends StatelessWidget {
           children: [
             Text(
               S.of(context).appBarTitle,
-              style: AppStyles.styleBold30(context),
+              style: AppStyles.styleMedium30(context),
             ),
             SvgPicture.asset(
+              height: 60,
+              width: 60,
               Assets.imagesDetectiveSearchIcon,
-              height: 50,
-              width: 50,
             ),
           ],
         ),

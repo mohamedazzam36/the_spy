@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-class SplashDecoratedContainer extends StatelessWidget {
-  const SplashDecoratedContainer({super.key});
+class GetStartedDecoratedContainer extends StatelessWidget {
+  const GetStartedDecoratedContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 200,
-      decoration: BoxDecoration(color: Colors.white.withAlpha(50)),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Colors.white.withAlpha(100), Colors.white.withAlpha(50)],
+        ),
+      ),
     );
   }
 }
