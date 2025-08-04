@@ -3,7 +3,17 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/generated/l10n.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  WidgetsBinding.instance.deferFirstFrame();
+
+  await Future.delayed(
+    const Duration(milliseconds: 350),
+  );
+
+  WidgetsBinding.instance.allowFirstFrame();
+
   runApp(const TheSpy());
 }
 

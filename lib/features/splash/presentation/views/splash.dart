@@ -55,7 +55,7 @@ class _SplashViewState extends State<SplashView>
       const Duration(milliseconds: 2000),
       () async {
         await animationController.reverse();
-        context.push(AppRouter.kGetStartedView);
+        context.pushReplacement(AppRouter.kAdaptiveLayoutView);
       },
     );
   }
