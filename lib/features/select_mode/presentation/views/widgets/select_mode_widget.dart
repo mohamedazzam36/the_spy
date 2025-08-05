@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:the_spy/core/utils/app_colors.dart';
-import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/select_mode/data/models/select_mode_model.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_decorated_container.dart';
-import 'package:the_spy/features/splash/presentation/views/widgets/get_started_decorated_container.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class SelectModeWidget extends StatelessWidget {
   const SelectModeWidget({super.key, required this.selectModeModel});
@@ -32,6 +27,7 @@ class SelectModeWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 50),
         child: Center(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(

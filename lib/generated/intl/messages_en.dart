@@ -32,7 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "gameIdea": MessageLookupByLibrary.simpleMessage("فكرة اللعبة"),
     "normalModeDescription": MessageLookupByLibrary.simpleMessage(
-      "اللي بيظهر للمستخبي هو ( انت المستخبي ) . يعني بيكون عارف انه هو المستخبي وبيحاول يندمج",
+      "اللي بيظهر للمستخبي هو \n( انت المستخبي )\n  يعني بيكون عارف انه هو المستخبي وبيحاول يندمج",
     ),
     "normalModeTitle": MessageLookupByLibrary.simpleMessage("العادي"),
     "start": MessageLookupByLibrary.simpleMessage("بدا"),

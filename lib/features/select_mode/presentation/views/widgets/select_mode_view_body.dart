@@ -21,20 +21,19 @@ class SelectModeViewBody extends StatelessWidget {
       ),
     ];
 
-    return CustomScrollView(
-      physics: const ClampingScrollPhysics(),
-      slivers: [
-        SliverFillRemaining(
-          hasScrollBody: true,
-          child: PageView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 2,
-            itemBuilder: (context, index) {
-              return SelectModeWidget(selectModeModel: modes[index]);
-            },
-          ),
-        ),
-      ],
+    return PageView.builder(
+      scrollDirection: Axis.horizontal,
+      itemCount: 2,
+      itemBuilder: (context, index) {
+        return CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: SelectModeWidget(selectModeModel: modes[index]),
+            ),
+          ],
+        );
+      },
     );
   }
 }
