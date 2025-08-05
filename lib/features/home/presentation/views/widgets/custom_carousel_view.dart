@@ -17,23 +17,25 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
   @override
   void initState() {
     super.initState();
-    getCategoriesInfo();
   }
 
   @override
   Widget build(BuildContext context) {
+    getCategoriesInfo();
     return SizedBox(
-      height: 500,
+      height: 600,
       child: CarouselView.weighted(
+        padding: const EdgeInsets.all(0),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
         itemSnapping: true,
         scrollDirection: Axis.vertical,
-        flexWeights: const [
-          1,
-        ],
-        children: const [
-          // CarouselViewItem(categoryItemModel: ,),
-        ],
+        flexWeights: const [1],
+        children: categoriesList.map(
+          (e) {
+            print('ddddddd');
+            return CarouselViewItem(categoryItemModel: e);
+          },
+        ).toList(),
       ),
     );
   }
@@ -44,6 +46,66 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
         titleName: S.of(context).animals,
         image: Assets.imagesAnimals,
         namesList: S.of(context).animalsList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).cities,
+        image: Assets.imagesCities,
+        namesList: S.of(context).citiesList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).cloths,
+        image: Assets.imagesCloths,
+        namesList: S.of(context).clothsList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).colors,
+        image: Assets.imagesColors,
+        namesList: S.of(context).colorsList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).countries,
+        image: Assets.imagesCountries,
+        namesList: S.of(context).countriesList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).devices,
+        image: Assets.imagesDevices,
+        namesList: S.of(context).devicesList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).everything,
+        image: Assets.imagesEverything,
+        namesList: S.of(context).everythingList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).food,
+        image: Assets.imagesFood,
+        namesList: S.of(context).foodList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).footballPlayers,
+        image: Assets.imagesFootballPlayers,
+        namesList: S.of(context).footballPlayersList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).movies,
+        image: Assets.imagesMovies,
+        namesList: S.of(context).moviesList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).sports,
+        image: Assets.imagesSports,
+        namesList: S.of(context).sportsList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).tools,
+        image: Assets.imagesTools,
+        namesList: S.of(context).toolsList.split(', '),
+      ),
+      CategoryItemModel(
+        titleName: S.of(context).videoGames,
+        image: Assets.imagesVideoGames,
+        namesList: S.of(context).videoGamesList.split(', '),
       ),
     ];
   }

@@ -17,10 +17,14 @@ class CarouselViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      fit: StackFit.expand,
       children: [
-        SvgPicture.asset(
-          categoryItemModel.image,
+        FittedBox(
           fit: BoxFit.fill,
+          child: Image.asset(
+            categoryItemModel.image,
+            fit: BoxFit.cover,
+          ),
         ),
         BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
