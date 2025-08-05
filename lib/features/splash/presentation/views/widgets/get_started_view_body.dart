@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
+import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/splash/presentation/views/widgets/get_started_decorated_container.dart';
 import 'package:the_spy/generated/l10n.dart';
@@ -43,6 +45,9 @@ class GetStartedViewBody extends StatelessWidget {
                       ),
                     ),
                     CustomTextButton(
+                      onPressed: () {
+                        context.pushReplacement(AppRouter.kSelectModeView);
+                      },
                       text: S.of(context).start,
                     ),
                     const SizedBox(
