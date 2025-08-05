@@ -25,14 +25,7 @@ class SelectModeViewBody extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemCount: 2,
       itemBuilder: (context, index) {
-        return CustomScrollView(
-          slivers: [
-            SliverFillRemaining(
-              hasScrollBody: false,
-              child: SelectModeWidget(selectModeModel: modes[index]),
-            ),
-          ],
-        );
+        return SelectModeWidget(selectModeModel: modes[index]);
       },
     );
   }

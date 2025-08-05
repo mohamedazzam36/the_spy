@@ -24,17 +24,19 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appBarTitle": MessageLookupByLibrary.simpleMessage("المستخبي"),
     "blindModeDescription": MessageLookupByLibrary.simpleMessage(
-      "فالمود دا اللي بيظهر للمستخبي هي كلمه مختلفه عن الباقي. يعني محدش بيكون عارف ان هو المستخبي ولا لا",
+      "فالمود ده اللي بيظهر للمستخبي هي كلمة مختلفة عن الباقي. يعني محدش بيكون عارف إنه هو المستخبي ولا لأ",
     ),
     "blindModeTitle": MessageLookupByLibrary.simpleMessage("العمياني"),
     "gameDescription": MessageLookupByLibrary.simpleMessage(
-      "فكرة اللعبة باختصار ان لما الجيم يبدا الموبايل بيمر علي كل لاعب وكل اللاعبين بيطلعلهم كلمه واحده عدا لاعب واحد بيطلعله حاجه مختلفه وكل اللاعبين بيحاولوا بيطلعوا مين المستخبي دا وهو بيحاول يندمج معاهم ويخلي محدش يشك فيه",
+      "فكرة اللعبة باختصار أن لما الجيم يبدأ الموبايل بيمر على كل لاعب وكل اللاعبين بيطلعلهم كلمة واحدة عدا لاعب واحد بيطلعله حاجة مختلفة وكل اللاعبين بيحاولوا يطلعوا مين المستخبي ده وهو بيحاول يندمج معاهم ويخلي محدش يشك فيه",
     ),
     "gameIdea": MessageLookupByLibrary.simpleMessage("فكرة اللعبة"),
     "normalModeDescription": MessageLookupByLibrary.simpleMessage(
-      "اللي بيظهر للمستخبي هو \n( انت المستخبي )\n  يعني بيكون عارف انه هو المستخبي وبيحاول يندمج",
+      "اللي بيظهر للمستخبي هو \n( أنت المستخبي )\n  يعني بيكون عارف إنه هو المستخبي وبيحاول يندمج",
     ),
     "normalModeTitle": MessageLookupByLibrary.simpleMessage("العادي"),
-    "start": MessageLookupByLibrary.simpleMessage("بدا"),
+    "select": MessageLookupByLibrary.simpleMessage("اختار"),
+    "selectMode": MessageLookupByLibrary.simpleMessage("اختار المود"),
+    "start": MessageLookupByLibrary.simpleMessage("بدأ"),
   };
 }

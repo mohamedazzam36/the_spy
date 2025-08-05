@@ -54,55 +54,75 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `المستخبي`
+  /// `The Spy`
   String get appBarTitle {
-    return Intl.message('المستخبي', name: 'appBarTitle', desc: '', args: []);
+    return Intl.message('The Spy', name: 'appBarTitle', desc: '', args: []);
   }
 
-  /// `بدا`
+  /// `Start`
   String get start {
-    return Intl.message('بدا', name: 'start', desc: '', args: []);
+    return Intl.message('Start', name: 'start', desc: '', args: []);
   }
 
-  /// `فكرة اللعبة`
+  /// `Game Idea`
   String get gameIdea {
-    return Intl.message('فكرة اللعبة', name: 'gameIdea', desc: '', args: []);
+    return Intl.message('Game Idea', name: 'gameIdea', desc: '', args: []);
   }
 
-  /// `فكرة اللعبة باختصار ان لما الجيم يبدا الموبايل بيمر علي كل لاعب وكل اللاعبين بيطلعلهم كلمه واحده عدا لاعب واحد بيطلعله حاجه مختلفه وكل اللاعبين بيحاولوا بيطلعوا مين المستخبي دا وهو بيحاول يندمج معاهم ويخلي محدش يشك فيه`
+  /// `The idea is simple: when the game starts, the phone is passed to each player. All players see the same word—except one, who sees something different. The goal is for the odd one out to blend in without getting caught, while the others try to figure out who the spy is.`
   String get gameDescription {
     return Intl.message(
-      'فكرة اللعبة باختصار ان لما الجيم يبدا الموبايل بيمر علي كل لاعب وكل اللاعبين بيطلعلهم كلمه واحده عدا لاعب واحد بيطلعله حاجه مختلفه وكل اللاعبين بيحاولوا بيطلعوا مين المستخبي دا وهو بيحاول يندمج معاهم ويخلي محدش يشك فيه',
+      'The idea is simple: when the game starts, the phone is passed to each player. All players see the same word—except one, who sees something different. The goal is for the odd one out to blend in without getting caught, while the others try to figure out who the spy is.',
       name: 'gameDescription',
       desc: '',
       args: [],
     );
   }
 
-  /// `العادي`
-  String get normalModeTitle {
-    return Intl.message('العادي', name: 'normalModeTitle', desc: '', args: []);
+  /// `Select mode`
+  String get selectMode {
+    return Intl.message('Select mode', name: 'selectMode', desc: '', args: []);
   }
 
-  /// `اللي بيظهر للمستخبي هو \n( انت المستخبي )\n  يعني بيكون عارف انه هو المستخبي وبيحاول يندمج`
+  /// `Select`
+  String get select {
+    return Intl.message('Select', name: 'select', desc: '', args: []);
+  }
+
+  /// `Normal Mode`
+  String get normalModeTitle {
+    return Intl.message(
+      'Normal Mode',
+      name: 'normalModeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The spy sees this message:\n(You are the spy)\nIn this mode, the spy knows their identity and tries to blend in with the others.`
   String get normalModeDescription {
     return Intl.message(
-      'اللي بيظهر للمستخبي هو \n( انت المستخبي )\n  يعني بيكون عارف انه هو المستخبي وبيحاول يندمج',
+      'The spy sees this message:\n(You are the spy)\nIn this mode, the spy knows their identity and tries to blend in with the others.',
       name: 'normalModeDescription',
       desc: '',
       args: [],
     );
   }
 
-  /// `العمياني`
+  /// `Blind Mode`
   String get blindModeTitle {
-    return Intl.message('العمياني', name: 'blindModeTitle', desc: '', args: []);
+    return Intl.message(
+      'Blind Mode',
+      name: 'blindModeTitle',
+      desc: '',
+      args: [],
+    );
   }
 
-  /// `فالمود دا اللي بيظهر للمستخبي هي كلمه مختلفه عن الباقي. يعني محدش بيكون عارف ان هو المستخبي ولا لا`
+  /// `In this mode, the spy sees a completely different word—but doesn’t know they’re the spy. No one knows who the spy is—not even the spy themselves.`
   String get blindModeDescription {
     return Intl.message(
-      'فالمود دا اللي بيظهر للمستخبي هي كلمه مختلفه عن الباقي. يعني محدش بيكون عارف ان هو المستخبي ولا لا',
+      'In this mode, the spy sees a completely different word—but doesn’t know they’re the spy. No one knows who the spy is—not even the spy themselves.',
       name: 'blindModeDescription',
       desc: '',
       args: [],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_view_body.dart';
+import 'package:the_spy/generated/l10n.dart';
 
 class SelectMode extends StatelessWidget {
   const SelectMode({super.key});
@@ -13,7 +14,7 @@ class SelectMode extends StatelessWidget {
         backgroundColor: kPrimaryColor,
         centerTitle: true,
         title: Text(
-          'اختار المود',
+          S.of(context).selectMode,
           style: Styles.styleSemiBold35(context),
         ),
       ),

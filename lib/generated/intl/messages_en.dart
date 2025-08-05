@@ -22,19 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "appBarTitle": MessageLookupByLibrary.simpleMessage("المستخبي"),
+    "appBarTitle": MessageLookupByLibrary.simpleMessage("The Spy"),
     "blindModeDescription": MessageLookupByLibrary.simpleMessage(
-      "فالمود دا اللي بيظهر للمستخبي هي كلمه مختلفه عن الباقي. يعني محدش بيكون عارف ان هو المستخبي ولا لا",
+      "In this mode, the spy sees a completely different word—but doesn’t know they’re the spy. No one knows who the spy is—not even the spy themselves.",
     ),
-    "blindModeTitle": MessageLookupByLibrary.simpleMessage("العمياني"),
+    "blindModeTitle": MessageLookupByLibrary.simpleMessage("Blind Mode"),
     "gameDescription": MessageLookupByLibrary.simpleMessage(
-      "فكرة اللعبة باختصار ان لما الجيم يبدا الموبايل بيمر علي كل لاعب وكل اللاعبين بيطلعلهم كلمه واحده عدا لاعب واحد بيطلعله حاجه مختلفه وكل اللاعبين بيحاولوا بيطلعوا مين المستخبي دا وهو بيحاول يندمج معاهم ويخلي محدش يشك فيه",
+      "The idea is simple: when the game starts, the phone is passed to each player. All players see the same word—except one, who sees something different. The goal is for the odd one out to blend in without getting caught, while the others try to figure out who the spy is.",
     ),
-    "gameIdea": MessageLookupByLibrary.simpleMessage("فكرة اللعبة"),
+    "gameIdea": MessageLookupByLibrary.simpleMessage("Game Idea"),
     "normalModeDescription": MessageLookupByLibrary.simpleMessage(
-      "اللي بيظهر للمستخبي هو \n( انت المستخبي )\n  يعني بيكون عارف انه هو المستخبي وبيحاول يندمج",
+      "The spy sees this message:\n(You are the spy)\nIn this mode, the spy knows their identity and tries to blend in with the others.",
     ),
-    "normalModeTitle": MessageLookupByLibrary.simpleMessage("العادي"),
-    "start": MessageLookupByLibrary.simpleMessage("بدا"),
+    "normalModeTitle": MessageLookupByLibrary.simpleMessage("Normal Mode"),
+    "select": MessageLookupByLibrary.simpleMessage("Select"),
+    "selectMode": MessageLookupByLibrary.simpleMessage("Select mode"),
+    "start": MessageLookupByLibrary.simpleMessage("Start"),
   };
 }
