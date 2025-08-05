@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 
-abstract class AppStyles {
+abstract class Styles {
   static TextStyle styleSemiBold35(BuildContext context) {
-    return GoogleFonts.changa(
+    return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 35),
       color: Colors.white,
       fontWeight: FontWeight.w600,
@@ -12,8 +11,16 @@ abstract class AppStyles {
   }
 
   static TextStyle styleBold50(BuildContext context) {
-    return GoogleFonts.changa(
+    return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 50),
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
+    );
+  }
+
+  static TextStyle styleBold25(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 25),
       color: Colors.white,
       fontWeight: FontWeight.bold,
     );

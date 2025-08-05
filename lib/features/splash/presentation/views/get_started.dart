@@ -15,7 +15,7 @@ class GetStartedView extends StatelessWidget {
         centerTitle: true,
         title: Text(
           S.of(context).gameIdea,
-          style: AppStyles.styleSemiBold35(context),
+          style: Styles.styleSemiBold35(context),
         ),
       ),
       body: const GetStartedViewBody(),

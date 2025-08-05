@@ -20,11 +20,14 @@ class CustomTextButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
         ),
         minimumSize: Size(
-          MediaQuery.sizeOf(context).width * .8,
+          double.infinity,
           MediaQuery.sizeOf(context).height * .1,
         ),
       ),
-      child: Text(text, style: AppStyles.styleBold50(context)),
+      child: Text(
+        text,
+        style: Styles.styleBold50(context),
+      ),
     );
   }
 }

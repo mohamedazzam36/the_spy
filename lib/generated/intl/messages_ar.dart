@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appBarTitle": MessageLookupByLibrary.simpleMessage("المستخبي"),
+    "gameDescription": MessageLookupByLibrary.simpleMessage(
+      "فكرة اللعبة باختصار ان لما الجيم يبدا الموبايل بيمر علي كل لاعب وكل اللاعبين بيطلعلهم كلمه واحده عدا لاعب واحد بيطلعله حاجه مختلفه وكل اللاعبين بيحاولوا بيطلعوا مين المستخبي دا وهو بيحاول يندمج معاهم ويخلي محدش يشك فيه",
+    ),
     "gameIdea": MessageLookupByLibrary.simpleMessage("فكرة اللعبة"),
     "start": MessageLookupByLibrary.simpleMessage("بدا"),
   };
