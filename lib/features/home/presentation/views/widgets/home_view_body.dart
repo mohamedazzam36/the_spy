@@ -7,7 +7,6 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(S.of(context).devicesList.split(', ')[2]);
     return const CustomCarouselView();
   }
 }
