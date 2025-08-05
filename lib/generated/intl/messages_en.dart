@@ -23,10 +23,18 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appBarTitle": MessageLookupByLibrary.simpleMessage("المستخبي"),
+    "blindModeDescription": MessageLookupByLibrary.simpleMessage(
+      "فالمود دا اللي بيظهر للمستخبي هي كلمه مختلفه عن الباقي. يعني محدش بيكون عارف ان هو المستخبي ولا لا",
+    ),
+    "blindModeTitle": MessageLookupByLibrary.simpleMessage("العمياني"),
     "gameDescription": MessageLookupByLibrary.simpleMessage(
       "فكرة اللعبة باختصار ان لما الجيم يبدا الموبايل بيمر علي كل لاعب وكل اللاعبين بيطلعلهم كلمه واحده عدا لاعب واحد بيطلعله حاجه مختلفه وكل اللاعبين بيحاولوا بيطلعوا مين المستخبي دا وهو بيحاول يندمج معاهم ويخلي محدش يشك فيه",
     ),
     "gameIdea": MessageLookupByLibrary.simpleMessage("فكرة اللعبة"),
+    "normalModeDescription": MessageLookupByLibrary.simpleMessage(
+      "اللي بيظهر للمستخبي هو ( انت المستخبي ) . يعني بيكون عارف انه هو المستخبي وبيحاول يندمج",
+    ),
+    "normalModeTitle": MessageLookupByLibrary.simpleMessage("العادي"),
     "start": MessageLookupByLibrary.simpleMessage("بدا"),
   };
 }

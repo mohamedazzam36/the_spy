@@ -78,6 +78,36 @@ class S {
       args: [],
     );
   }
+
+  /// `العادي`
+  String get normalModeTitle {
+    return Intl.message('العادي', name: 'normalModeTitle', desc: '', args: []);
+  }
+
+  /// `اللي بيظهر للمستخبي هو ( انت المستخبي ) . يعني بيكون عارف انه هو المستخبي وبيحاول يندمج`
+  String get normalModeDescription {
+    return Intl.message(
+      'اللي بيظهر للمستخبي هو ( انت المستخبي ) . يعني بيكون عارف انه هو المستخبي وبيحاول يندمج',
+      name: 'normalModeDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `العمياني`
+  String get blindModeTitle {
+    return Intl.message('العمياني', name: 'blindModeTitle', desc: '', args: []);
+  }
+
+  /// `فالمود دا اللي بيظهر للمستخبي هي كلمه مختلفه عن الباقي. يعني محدش بيكون عارف ان هو المستخبي ولا لا`
+  String get blindModeDescription {
+    return Intl.message(
+      'فالمود دا اللي بيظهر للمستخبي هي كلمه مختلفه عن الباقي. يعني محدش بيكون عارف ان هو المستخبي ولا لا',
+      name: 'blindModeDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

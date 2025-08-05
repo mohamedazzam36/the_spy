@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class GetStartedDecoratedContainer extends StatelessWidget {
-  const GetStartedDecoratedContainer({super.key});
+  const GetStartedDecoratedContainer({super.key, required this.text});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class GetStartedDecoratedContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: Text(
-        S.of(context).gameDescription,
+        text,
         style: Styles.styleBold25(context),
         textAlign: TextAlign.center,
       ),

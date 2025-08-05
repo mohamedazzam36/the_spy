@@ -38,7 +38,9 @@ class GetStartedViewBody extends StatelessWidget {
                     const SizedBox(
                       height: 100,
                     ),
-                    const GetStartedDecoratedContainer(),
+                    GetStartedDecoratedContainer(
+                      text: S.of(context).gameDescription,
+                    ),
                     const Expanded(
                       child: SizedBox(
                         height: 50,
