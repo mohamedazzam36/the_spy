@@ -4,8 +4,8 @@ import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_view_body.dart';
 import 'package:the_spy/generated/l10n.dart';
 
-class SelectMode extends StatelessWidget {
-  const SelectMode({super.key});
+class SelectModeView extends StatelessWidget {
+  const SelectModeView({super.key});
 
   @override
   Widget build(BuildContext context) {

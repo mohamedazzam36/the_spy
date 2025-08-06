@@ -35,7 +35,7 @@ class TheSpy extends StatelessWidget {
     return MaterialApp.router(
       theme: ThemeData(textTheme: GoogleFonts.changaTextTheme()),
       debugShowCheckedModeBanner: false,
-      routerConfig: AppRouter.router,
+      routerConfig: AppRouter.router(),
       locale: const Locale('ar'),
       localizationsDelegates: const [
         S.delegate,
