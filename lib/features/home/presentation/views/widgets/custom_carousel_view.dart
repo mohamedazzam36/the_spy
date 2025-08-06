@@ -5,7 +5,6 @@ import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/assets.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 import 'package:the_spy/features/home/data/models/category_item_model.dart';
-import 'package:the_spy/features/home/data/models/home_to_players_model.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/carousel_view_item.dart';
 import 'package:the_spy/generated/l10n.dart';
 
@@ -32,14 +31,7 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
     double width = MediaQuery.sizeOf(context).width;
     return CarouselView.weighted(
       onTap: (value) {
-        context.push(
-          AppRouter.kPlayersView,
-
-          extra: HomeToPlayersModel(
-            mode: widget.mode,
-            categoryNames: categoriesList[value].namesList,
-          ),
-        );
+        context.push(AppRouter.kPlayersView, extra: widget.mode);
       },
       controller: controller,
       padding: const EdgeInsets.all(12),

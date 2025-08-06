@@ -12,12 +12,10 @@ class SelectModeViewBody extends StatelessWidget {
     List<SelectModeModel> modes = [
       SelectModeModel(
         mode: Mode.normal,
-        modeTitle: S.of(context).normalModeTitle,
         modeDescription: S.of(context).normalModeDescription,
         backGroundColor: Colors.black12,
       ),
       SelectModeModel(
-        modeTitle: S.of(context).blindModeTitle,
         modeDescription: S.of(context).blindModeDescription,
         backGroundColor: Colors.red,
         mode: Mode.blind,

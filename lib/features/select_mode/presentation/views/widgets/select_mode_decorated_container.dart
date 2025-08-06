@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/features/select_mode/data/models/select_mode_model.dart';
 
 class SelectModeDecoratedContainer extends StatelessWidget {
@@ -22,7 +23,7 @@ class SelectModeDecoratedContainer extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            selectModeModel.modeTitle,
+            selectModeModel.mode.getModeName(context),
             style: Styles.styleBold50(context),
             textAlign: TextAlign.center,
           ),

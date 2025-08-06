@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/constants.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/utils/extentions.dart';
 
 class PlayersView extends StatelessWidget {
-  const PlayersView({super.key, required this.appBarTitle});
+  const PlayersView({super.key, required this.mode});
 
-  final String appBarTitle;
+  final Mode mode;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class PlayersView extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          appBarTitle,
+          mode.getModeName(context),
           style: Styles.styleSemiBold35(context),
         ),
       ),
