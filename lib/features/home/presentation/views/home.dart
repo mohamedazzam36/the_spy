@@ -14,6 +14,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('home build');
     return Scaffold(
       backgroundColor: kPrimaryColor,
       bottomNavigationBar: const CustomCurvedNavigationBar(),

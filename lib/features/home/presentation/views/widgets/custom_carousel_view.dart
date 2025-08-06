@@ -31,7 +31,10 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
     double width = MediaQuery.sizeOf(context).width;
     return CarouselView.weighted(
       onTap: (value) {
-        context.push(AppRouter.kPlayersView, extra: widget.mode);
+        context.push(
+          AppRouter.kPlayersView,
+          extra: widget.mode,
+        );
       },
       controller: controller,
       padding: const EdgeInsets.all(12),

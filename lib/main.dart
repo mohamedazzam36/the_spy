@@ -7,7 +7,6 @@ import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/players/data/repos/players_repo.dart';
-import 'package:the_spy/features/players/data/repos/players_repo_impl.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 import 'package:the_spy/generated/l10n.dart';
 
@@ -39,7 +38,12 @@ class TheSpy extends StatelessWidget {
     return BlocProvider(
       create: (context) => PlayersCubit(playersRepo: getIt.get<PlayersRepo>()),
       child: MaterialApp.router(
-        theme: ThemeData(textTheme: GoogleFonts.changaTextTheme()),
+        theme: ThemeData(
+          textTheme: GoogleFonts.changaTextTheme(),
+          appBarTheme: const AppBarTheme(
+            iconTheme: IconThemeData(color: Colors.white),
+          ),
+        ),
         debugShowCheckedModeBanner: false,
         routerConfig: AppRouter.router(),
         locale: const Locale('ar'),

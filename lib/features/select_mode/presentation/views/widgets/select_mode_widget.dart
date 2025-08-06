@@ -17,6 +17,7 @@ class SelectModeWidget extends StatelessWidget {
       physics: const ClampingScrollPhysics(),
       slivers: [
         SliverFillRemaining(
+          hasScrollBody: false,
           child: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(

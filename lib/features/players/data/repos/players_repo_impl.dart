@@ -9,4 +9,10 @@ class PlayersRepoImpl implements PlayersRepo {
     final Box<PlayerModel> playersList = getIt.get<Box<PlayerModel>>();
     return playersList.values.toList();
   }
+
+  @override
+  void addPlayer(PlayerModel player) {
+    final Box<PlayerModel> playersList = getIt.get<Box<PlayerModel>>();
+    playersList.add(player);
+  }
 }

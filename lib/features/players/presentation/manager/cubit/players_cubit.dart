@@ -8,9 +8,15 @@ part 'players_state.dart';
 class PlayersCubit extends Cubit<PlayersState> {
   PlayersCubit({required this.playersRepo}) : super(PlayersInitial());
   final PlayersRepo playersRepo;
+  List<PlayerModel> playersList = [];
 
-  List<PlayerModel> fetchPlayersData() {
+  fetchPlayersData() {
+    playersList = playersRepo.fetchPlayersData();
     emit(PlayersSuccess());
-    return playersRepo.fetchPlayersData();
+  }
+
+  void addPlayer(PlayerModel player) {
+    playersRepo.addPlayer(player);
+    emit(PlayersSuccess());
   }
 }

@@ -58,13 +58,11 @@ class _SplashViewState extends State<SplashView>
       begin: 0,
       end: 1,
     ).animate(animationController);
-    animationController.forward();
-    await Future.delayed(
-      const Duration(milliseconds: 2000),
-      () async {
-        await animationController.reverse();
-        context.pushReplacement(AppRouter.kAdaptiveLayoutView);
-      },
-    );
+    await animationController.forward();
+    await Future.delayed(const Duration(milliseconds: 500));
+    if (mounted) {
+      await animationController.reverse();
+      context.pushReplacement(AppRouter.kAdaptiveLayoutView);
+    }
   }
 }
