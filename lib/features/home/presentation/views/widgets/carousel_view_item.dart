@@ -27,7 +27,7 @@ class CarouselViewItem extends StatelessWidget {
             categoryItemModel.image,
             cacheWidth: width <= SizeConfig.mobileWidth
                 ? (0.5 * width).toInt()
-                : (0.167 * width).toInt(),
+                : (0.333 * width).toInt(),
             cacheHeight: width <= SizeConfig.mobileWidth
                 ? (width / 1.5).toInt()
                 : (width / 2.5).toInt(),

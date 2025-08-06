@@ -4,6 +4,7 @@ import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/desk
 import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/mobile_layout.dart';
 import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/tablet_layout.dart';
 import 'package:the_spy/features/home/presentation/views/home.dart';
+import 'package:the_spy/features/players/presentation/views/players.dart';
 import 'package:the_spy/features/select_mode/presentation/views/select_mode.dart';
 import 'package:the_spy/features/splash/presentation/views/get_started.dart';
 import 'package:the_spy/features/splash/presentation/views/splash.dart';
@@ -13,7 +14,8 @@ abstract class AppRouter {
   static const String kAdaptiveLayoutView = '/AdaptiveLayoutView';
   static const String kGetStartedView = '/GetStartedView';
   static const String kSelectModeView = '/SelectModeView';
-  static const String kHomeView = '/';
+  static const String kHomeView = '/HomeView';
+  static const String kPlayersView = '/';
   static GoRouter router = GoRouter(
     routes: [
       // GoRoute(
@@ -23,6 +25,10 @@ abstract class AppRouter {
       GoRoute(
         path: kHomeView,
         builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path: kPlayersView,
+        builder: (context, state) => const PlayersView(),
       ),
       GoRoute(
         path: kSelectModeView,
