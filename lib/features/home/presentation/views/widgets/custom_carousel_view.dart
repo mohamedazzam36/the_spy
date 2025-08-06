@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/assets.dart';
+import 'package:the_spy/core/utils/size_config.dart';
 import 'package:the_spy/features/home/data/models/category_item_model.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/carousel_view_item.dart';
 import 'package:the_spy/generated/l10n.dart';
@@ -13,6 +14,7 @@ class CustomCarouselView extends StatefulWidget {
 
 class _CustomCarouselViewState extends State<CustomCarouselView> {
   late List<CategoryItemModel> categoriesList;
+  CarouselController controller = CarouselController(initialItem: 4);
 
   @override
   void initState() {
@@ -22,21 +24,22 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
   @override
   Widget build(BuildContext context) {
     getCategoriesInfo();
-    return SizedBox(
-      height: 600,
-      child: CarouselView.weighted(
-        padding: const EdgeInsets.all(0),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
-        itemSnapping: true,
-        scrollDirection: Axis.horizontal,
-        flexWeights: const [1],
-        children: categoriesList.map(
-          (e) {
-            print('ddddddd');
-            return CarouselViewItem(categoryItemModel: e);
-          },
-        ).toList(),
-      ),
+    double width = MediaQuery.sizeOf(context).width;
+    return CarouselView.weighted(
+      controller: controller,
+      padding: const EdgeInsets.all(12),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      elevation: 4,
+      itemSnapping: true,
+      scrollDirection: Axis.horizontal,
+      flexWeights: width <= SizeConfig.mobileWidth
+          ? [1, 2, 1]
+          : [1, 1, 2, 1, 1],
+      children: categoriesList.map(
+        (e) {
+          return CarouselViewItem(categoryItemModel: e);
+        },
+      ).toList(),
     );
   }
 
