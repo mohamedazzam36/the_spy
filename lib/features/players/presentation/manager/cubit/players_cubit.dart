@@ -6,7 +6,7 @@ import 'package:the_spy/features/players/data/repos/players_repo.dart';
 part 'players_state.dart';
 
 class PlayersCubit extends Cubit<PlayersState> {
-  PlayersCubit(this.playersRepo) : super(PlayersInitial());
+  PlayersCubit({required this.playersRepo}) : super(PlayersInitial());
   final PlayersRepo playersRepo;
 
   List<PlayerModel> fetchPlayersData() {

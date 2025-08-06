@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_spy/constants.dart';
+import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/custom_carousel_view.dart';
 

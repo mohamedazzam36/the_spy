@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:the_spy/constants.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/assets.dart';
+import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/core/widgets/custom_curved_navigation_bar.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/home_view_body.dart';

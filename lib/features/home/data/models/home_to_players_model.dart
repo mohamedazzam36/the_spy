@@ -1,4 +1,4 @@
-import 'package:the_spy/constants.dart';
+import 'package:the_spy/core/utils/enums.dart';
 
 class HomeToPlayersModel {
   final Mode mode;

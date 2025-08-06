@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:the_spy/constants.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/assets.dart';
+import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 import 'package:the_spy/features/home/data/models/category_item_model.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/carousel_view_item.dart';

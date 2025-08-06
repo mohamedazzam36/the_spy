@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:the_spy/constants.dart';
+import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/adaptive_layout/presentation/views/adaptive_layout.dart';
 import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/desktop_layout.dart';
@@ -18,7 +19,7 @@ abstract class AppRouter {
   static const String kGetStartedView = '/GetStartedView';
   static const String kSelectModeView = '/SelectModeView';
   static const String kHomeView = '/HomeView';
-  static const String kPlayersView = '/PlayersView';
+  static const String kPlayersView = '/p';
 
   static GoRouter router() {
     final bool isFirstStart = getIt.get<Box<dynamic>>().get(
@@ -39,8 +40,9 @@ abstract class AppRouter {
         ),
         GoRoute(
           path: kPlayersView,
-          builder: (context, state) => PlayersView(
-            mode: state.extra as Mode,
+          builder: (context, state) => const PlayersView(
+            mode: Mode.blind,
+            // state.extra as Mode,
           ),
         ),
         GoRoute(

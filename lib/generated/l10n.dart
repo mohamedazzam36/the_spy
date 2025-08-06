@@ -119,6 +119,16 @@ class S {
     );
   }
 
+  /// `اضافة لاعب جديد`
+  String get addPlayer {
+    return Intl.message(
+      'اضافة لاعب جديد',
+      name: 'addPlayer',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `اكلات`
   String get food {
     return Intl.message('اكلات', name: 'food', desc: '', args: []);

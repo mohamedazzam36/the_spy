@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_spy/constants.dart';
+import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/features/select_mode/data/models/select_mode_model.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_widget.dart';
 import 'package:the_spy/generated/l10n.dart';
