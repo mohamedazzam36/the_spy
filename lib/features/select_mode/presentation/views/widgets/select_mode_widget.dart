@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/select_mode/data/models/select_mode_model.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_decorated_container.dart';
@@ -48,7 +50,10 @@ class SelectModeWidget extends StatelessWidget {
                     ),
                     CustomTextButton(
                       onPressed: () {
-                        // context.pushReplacement(AppRouter.kSelectModeView);
+                        context.push(
+                          AppRouter.kHomeView,
+                          extra: selectModeModel.mode,
+                        );
                       },
                       text: S.of(context).select,
                     ),

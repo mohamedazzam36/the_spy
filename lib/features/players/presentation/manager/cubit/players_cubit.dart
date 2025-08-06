@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/players/data/repos/players_repo.dart';
-import 'package:the_spy/features/players/data/repos/players_repo_impl.dart';
 
 part 'players_state.dart';
 

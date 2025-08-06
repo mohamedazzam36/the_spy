@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/constants.dart';
 import 'package:the_spy/features/select_mode/data/models/select_mode_model.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_widget.dart';
 import 'package:the_spy/generated/l10n.dart';
@@ -10,6 +11,7 @@ class SelectModeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     List<SelectModeModel> modes = [
       SelectModeModel(
+        mode: Mode.normal,
         modeTitle: S.of(context).normalModeTitle,
         modeDescription: S.of(context).normalModeDescription,
         backGroundColor: Colors.black12,
@@ -18,6 +20,7 @@ class SelectModeViewBody extends StatelessWidget {
         modeTitle: S.of(context).blindModeTitle,
         modeDescription: S.of(context).blindModeDescription,
         backGroundColor: Colors.red,
+        mode: Mode.blind,
       ),
     ];
 

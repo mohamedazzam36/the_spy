@@ -13,12 +13,12 @@ import 'package:the_spy/features/splash/presentation/views/get_started.dart';
 import 'package:the_spy/features/splash/presentation/views/splash.dart';
 
 abstract class AppRouter {
-  static const String kSplashView = '/';
+  // static const String kSplashView = '/';
   static const String kAdaptiveLayoutView = '/AdaptiveLayoutView';
   static const String kGetStartedView = '/GetStartedView';
   static const String kSelectModeView = '/SelectModeView';
   static const String kHomeView = '/HomeView';
-  // static const String kPlayersView = '/';
+  static const String kPlayersView = '/';
 
   static GoRouter router() {
     final bool isFirstStart = getIt.get<Box<dynamic>>().get(
@@ -27,18 +27,20 @@ abstract class AppRouter {
     );
     return GoRouter(
       routes: [
-        GoRoute(
-          path: kSplashView,
-          builder: (context, state) => const SplashView(),
-        ),
+        //   GoRoute(
+        //     path: kSplashView,
+        //     builder: (context, state) => const SplashView(),
+        //   ),
         GoRoute(
           path: kHomeView,
-          builder: (context, state) => const HomeView(),
+          builder: (context, state) => HomeView(
+            mode: state.extra as Mode,
+          ),
         ),
-        // GoRoute(
-        //   path: kPlayersView,
-        //   builder: (context, state) => const PlayersView(),
-        // ),
+        GoRoute(
+          path: kPlayersView,
+          builder: (context, state) => const PlayersView(),
+        ),
         GoRoute(
           path: kSelectModeView,
           builder: (context, state) => const SelectModeView(),

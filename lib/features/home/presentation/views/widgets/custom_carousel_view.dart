@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:the_spy/constants.dart';
+import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/assets.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 import 'package:the_spy/features/home/data/models/category_item_model.dart';
+import 'package:the_spy/features/home/data/models/home_to_players_model.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/carousel_view_item.dart';
 import 'package:the_spy/generated/l10n.dart';
 
 class CustomCarouselView extends StatefulWidget {
-  const CustomCarouselView({super.key});
+  const CustomCarouselView({super.key, required this.mode});
+  final Mode mode;
 
   @override
   State<CustomCarouselView> createState() => _CustomCarouselViewState();
@@ -26,6 +31,16 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
     getCategoriesInfo();
     double width = MediaQuery.sizeOf(context).width;
     return CarouselView.weighted(
+      onTap: (value) {
+        context.push(
+          AppRouter.kPlayersView,
+
+          extra: HomeToPlayersModel(
+            mode: widget.mode,
+            categoryNames: categoriesList[value].namesList,
+          ),
+        );
+      },
       controller: controller,
       padding: const EdgeInsets.all(12),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
