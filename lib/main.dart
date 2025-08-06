@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:the_spy/core/utils/app_router.dart';
+import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   WidgetsBinding.instance.deferFirstFrame();
+
+  await Hive.initFlutter();
+
+  Hive.registerAdapter(PlayerModelAdapter());
+
+  await setupLocator();
 
   await Future.delayed(
     const Duration(milliseconds: 350),
