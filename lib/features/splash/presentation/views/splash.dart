@@ -62,7 +62,7 @@ class _SplashViewState extends State<SplashView>
     await Future.delayed(const Duration(milliseconds: 500));
     if (mounted) {
       await animationController.reverse();
-      context.pushReplacement(AppRouter.kAdaptiveLayoutView);
+      context.go(AppRouter.kAdaptiveLayoutView);
     }
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/functions/access_player_cubit.dart';
+import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/generated/l10n.dart';
 

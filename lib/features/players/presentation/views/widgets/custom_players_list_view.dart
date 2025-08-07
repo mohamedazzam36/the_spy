@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:the_spy/core/utils/functions/access_player_cubit.dart';
+import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/custom_players_list_view_item.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/extentions.dart';
-import 'package:the_spy/core/utils/functions/access_player_cubit.dart';
+import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/players_view_body.dart';
 
 class PlayersView extends StatelessWidget {
@@ -16,7 +16,7 @@ class PlayersView extends StatelessWidget {
         backgroundColor: kPrimaryColor,
         centerTitle: true,
         title: Text(
-          accessPlayerCubit(context).currentMode!.getModeName(context),
+          accessAppCubit(context).currentMode!.getModeName(context),
           style: Styles.styleSemiBold35(context),
         ),
       ),

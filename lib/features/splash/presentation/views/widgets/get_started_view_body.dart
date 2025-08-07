@@ -53,7 +53,7 @@ class GetStartedViewBody extends StatelessWidget {
                       onPressed: () async {
                         final appBox = getIt.get<Box<dynamic>>();
                         await appBox.put(kIsFirstStart, false);
-                        context.pushReplacement(AppRouter.kSelectModeView);
+                        context.go(AppRouter.kSelectModeView);
                       },
                       text: S.of(context).start,
                     ),

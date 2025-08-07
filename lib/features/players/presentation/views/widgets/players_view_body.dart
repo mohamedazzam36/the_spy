@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
+import 'package:the_spy/core/utils/functions/showDialogAlert.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/custom_players_list_view.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/custom_text_form_field.dart';
@@ -33,7 +37,15 @@ class PlayersViewBody extends StatelessWidget {
               ),
               CustomTextButton(
                 text: S.of(context).start,
-                onPressed: () {},
+                onPressed: () {
+                  bool canNavigate =
+                      accessPlayerCubit(context).playersList.length > 2;
+                  if (canNavigate) {
+                    context.go(AppRouter.kWordRevealview);
+                  } else {
+                    showDialogAlert(context);
+                  }
+                },
                 color: Colors.white,
                 textStyle: Styles.styleBold50(
                   context,
