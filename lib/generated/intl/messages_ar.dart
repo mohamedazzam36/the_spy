@@ -23,6 +23,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "addPlayer": MessageLookupByLibrary.simpleMessage("اضافة لاعب جديد"),
+    "alertAction": MessageLookupByLibrary.simpleMessage("رجوع"),
+    "alertContent": MessageLookupByLibrary.simpleMessage(
+      "مينفعش اقل من تلت لاعبين !",
+    ),
+    "alertTitle": MessageLookupByLibrary.simpleMessage("حدث خطا!"),
     "animals": MessageLookupByLibrary.simpleMessage("حيوانات"),
     "animalsList": MessageLookupByLibrary.simpleMessage(
       "أسد, نمر, فهد, ذئب, كلب, قط, دب, ثعلب, زرافة, فيل, غزال, ظبي, تمساح, سلحفاة, أرنب, قرد, دلفين, حوت, قرش, بطريق, نسر, صقر, بومة, غراب, عصفور, كناري, ببغاء, هدهد, نملة, نحلة, ذبابة, بعوضة, جمل, حصان, حمار, بقرة, ماعز, خروف, ديك, دجاجة, بط, وزة, سمكة, نجم البحر, قنديل البحر, حصان البحر, عقرب, حية, ضفدع, ورل",

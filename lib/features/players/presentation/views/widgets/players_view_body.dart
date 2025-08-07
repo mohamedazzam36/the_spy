@@ -41,9 +41,14 @@ class PlayersViewBody extends StatelessWidget {
                   bool canNavigate =
                       accessPlayerCubit(context).playersList.length > 2;
                   if (canNavigate) {
-                    context.go(AppRouter.kWordRevealview);
+                    context.push(AppRouter.kWordRevealview);
                   } else {
-                    showDialogAlert(context);
+                    showDialogAlert(
+                      context,
+                      title: S.of(context).alertTitle,
+                      actionText: S.of(context).alertAction,
+                      content: S.of(context).alertContent,
+                    );
                   }
                 },
                 color: Colors.white,

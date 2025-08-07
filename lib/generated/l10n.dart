@@ -149,6 +149,26 @@ class S {
     );
   }
 
+  /// `حدث خطا!`
+  String get alertTitle {
+    return Intl.message('حدث خطا!', name: 'alertTitle', desc: '', args: []);
+  }
+
+  /// `مينفعش اقل من تلت لاعبين !`
+  String get alertContent {
+    return Intl.message(
+      'مينفعش اقل من تلت لاعبين !',
+      name: 'alertContent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رجوع`
+  String get alertAction {
+    return Intl.message('رجوع', name: 'alertAction', desc: '', args: []);
+  }
+
   /// `اكلات`
   String get food {
     return Intl.message('اكلات', name: 'food', desc: '', args: []);
