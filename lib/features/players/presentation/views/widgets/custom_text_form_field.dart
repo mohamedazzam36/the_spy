@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/utils/functions/access_player_cubit.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
-import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 import 'package:the_spy/generated/l10n.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -33,9 +32,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       child: TextFormField(
         controller: controller,
         onFieldSubmitted: (value) => validatePlayer(context),
-        validator: (value) => BlocProvider.of<PlayersCubit>(
-          context,
-        ).validatePlayer(context, name: value),
+        validator: (value) =>
+            accessPlayerCubit(context).validatePlayer(context, name: value),
         style: Styles.styleSemiBold24(context),
         cursorColor: Colors.white,
         decoration: InputDecoration(
@@ -68,10 +66,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   void validatePlayer(BuildContext context) {
     if (formKey.currentState!.validate()) {
       setState(() {
-        BlocProvider.of<PlayersCubit>(
+        accessPlayerCubit(
           context,
         ).addPlayer(PlayerModel(name: controller.text));
-        BlocProvider.of<PlayersCubit>(context).fetchPlayersData();
+        accessPlayerCubit(context).fetchPlayersData();
         autovalidateMode = AutovalidateMode.disabled;
         controller.clear();
       });

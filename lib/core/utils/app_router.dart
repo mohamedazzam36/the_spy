@@ -1,7 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:the_spy/constants.dart';
-import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/adaptive_layout/presentation/views/adaptive_layout.dart';
 import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/desktop_layout.dart';
@@ -9,6 +8,7 @@ import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/mobi
 import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/tablet_layout.dart';
 import 'package:the_spy/features/home/presentation/views/home.dart';
 import 'package:the_spy/features/players/presentation/views/players.dart';
+import 'package:the_spy/features/questions_and_word_reveal/presentation/views/word_reveal.dart';
 import 'package:the_spy/features/select_mode/presentation/views/select_mode.dart';
 import 'package:the_spy/features/splash/presentation/views/get_started.dart';
 import 'package:the_spy/features/splash/presentation/views/splash.dart';
@@ -19,7 +19,8 @@ abstract class AppRouter {
   static const String kGetStartedView = '/GetStartedView';
   static const String kSelectModeView = '/SelectModeView';
   static const String kHomeView = '/HomeView';
-  static const String kPlayersView = '/p';
+  static const String kPlayersView = '/PlayersView';
+  static const String kWordRevealview = '/WordRevealview';
 
   static GoRouter router() {
     final bool isFirstStart = getIt.get<Box<dynamic>>().get(
@@ -34,16 +35,15 @@ abstract class AppRouter {
         ),
         GoRoute(
           path: kHomeView,
-          builder: (context, state) => HomeView(
-            mode: state.extra as Mode,
-          ),
+          builder: (context, state) => const HomeView(),
+        ),
+        GoRoute(
+          path: kWordRevealview,
+          builder: (context, state) => const WordRevealview(),
         ),
         GoRoute(
           path: kPlayersView,
-          builder: (context, state) => const PlayersView(
-            mode: Mode.blind,
-            // state.extra as Mode,
-          ),
+          builder: (context, state) => const PlayersView(),
         ),
         GoRoute(
           path: kSelectModeView,

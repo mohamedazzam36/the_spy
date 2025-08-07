@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/assets.dart';
-import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 import 'package:the_spy/features/home/data/models/category_item_model.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/carousel_view_item.dart';
 import 'package:the_spy/generated/l10n.dart';
 
 class CustomCarouselView extends StatefulWidget {
-  const CustomCarouselView({super.key, required this.mode});
-  final Mode mode;
+  const CustomCarouselView({super.key});
 
   @override
   State<CustomCarouselView> createState() => _CustomCarouselViewState();
@@ -21,8 +19,9 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
   CarouselController controller = CarouselController(initialItem: 4);
 
   @override
-  void initState() {
-    super.initState();
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -33,7 +32,7 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
       onTap: (value) {
         context.push(
           AppRouter.kPlayersView,
-          extra: widget.mode,
+          extra: categoriesList[value],
         );
       },
       controller: controller,

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/utils/functions/access_player_cubit.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
-import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 
 class CustomPlayerListViewItem extends StatelessWidget {
   const CustomPlayerListViewItem({
@@ -32,7 +31,7 @@ class CustomPlayerListViewItem extends StatelessWidget {
             IconButton(
               onPressed: () async {
                 await player.delete();
-                BlocProvider.of<PlayersCubit>(context).fetchPlayersData();
+                accessPlayerCubit(context).fetchPlayersData();
               },
               icon: const Icon(
                 Icons.delete,
