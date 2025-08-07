@@ -20,13 +20,15 @@ class CustomPlayerListViewItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Row(
           children: [
-            Text(
-              player.name,
-              style: Styles.styleSemiBold24(
-                context,
-              ).copyWith(color: Colors.black),
+            Expanded(
+              child: Text(
+                player.name,
+                style: Styles.styleSemiBold24(
+                  context,
+                ).copyWith(color: Colors.black),
+              ),
             ),
-            const Spacer(),
+
             IconButton(
               onPressed: () async {
                 await player.delete();

@@ -10,6 +10,13 @@ abstract class Styles {
     );
   }
 
+  static TextStyle extraLight16(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 16),
+      fontWeight: FontWeight.w200,
+    );
+  }
+
   static TextStyle styleSemiBold60(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 60),
