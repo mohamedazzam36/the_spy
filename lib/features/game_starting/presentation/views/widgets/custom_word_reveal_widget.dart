@@ -3,8 +3,8 @@ import 'package:the_spy/core/widgets/custom_small_text_button.dart';
 import 'package:the_spy/features/game_starting/presentation/views/widgets/custom_word_reveal_card.dart';
 import 'package:the_spy/generated/l10n.dart';
 
-class CustomwordRevealWidget extends StatelessWidget {
-  const CustomwordRevealWidget.CustomWordRevealWidget({
+class CustomWordRevealWidget extends StatelessWidget {
+  const CustomWordRevealWidget({
     super.key,
     required this.wordName,
   });

@@ -39,7 +39,7 @@ abstract class AppRouter {
         ),
         GoRoute(
           path: kWordRevealview,
-          builder: (context, state) => const WordRevealview(),
+          builder: (context, state) => const GameStartingview(),
         ),
         GoRoute(
           path: kPlayersView,
