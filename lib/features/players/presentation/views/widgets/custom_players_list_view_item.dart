@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
@@ -13,6 +14,7 @@ class CustomPlayerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: kWhiteColor,
       margin: const EdgeInsets.all(0),
       elevation: 10,
       child: Padding(
@@ -24,7 +26,7 @@ class CustomPlayerListViewItem extends StatelessWidget {
                 player.name,
                 style: Styles.styleSemiBold24(
                   context,
-                ).copyWith(color: Colors.black),
+                ).copyWith(color: kBlackColor),
               ),
             ),
 

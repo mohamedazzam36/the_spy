@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 
 abstract class Styles {
   static TextStyle styleSemiBold35(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 35),
-      color: Colors.white,
+      color: kWhiteColor,
       fontWeight: FontWeight.w600,
     );
   }
@@ -20,7 +21,7 @@ abstract class Styles {
   static TextStyle styleSemiBold60(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 60),
-      color: Colors.white,
+      color: kWhiteColor,
       fontWeight: FontWeight.w600,
     );
   }
@@ -28,7 +29,7 @@ abstract class Styles {
   static TextStyle styleSemiBold24(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 24),
-      color: Colors.white,
+      color: kWhiteColor,
       fontWeight: FontWeight.w600,
     );
   }
@@ -36,7 +37,7 @@ abstract class Styles {
   static TextStyle styleBold50(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 50),
-      color: Colors.white,
+      color: kWhiteColor,
       fontWeight: FontWeight.bold,
     );
   }
@@ -44,7 +45,7 @@ abstract class Styles {
   static TextStyle styleBold25(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 25),
-      color: Colors.white,
+      color: kWhiteColor,
       fontWeight: FontWeight.bold,
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 
 void showDialogAlert(
@@ -25,7 +26,7 @@ void showDialogAlert(
           TextButton(
             child: Text(
               actionText,
-              style: Styles.extraLight16(context).copyWith(color: Colors.black),
+              style: Styles.extraLight16(context).copyWith(color: kBlackColor),
             ),
             onPressed: () {
               context.pop();

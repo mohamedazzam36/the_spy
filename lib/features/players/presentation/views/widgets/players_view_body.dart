@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
@@ -51,10 +52,10 @@ class PlayersViewBody extends StatelessWidget {
                     );
                   }
                 },
-                color: Colors.white,
+                color: kWhiteColor,
                 textStyle: Styles.styleBold50(
                   context,
-                ).copyWith(color: Colors.black),
+                ).copyWith(color: kBlackColor),
               ),
             ],
           ),

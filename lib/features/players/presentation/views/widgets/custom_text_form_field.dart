@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
@@ -35,7 +36,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         validator: (value) =>
             accessPlayerCubit(context).validatePlayer(context, name: value),
         style: Styles.styleSemiBold24(context),
-        cursorColor: Colors.white,
+        cursorColor: kWhiteColor,
         decoration: InputDecoration(
           errorStyle: Styles.extraLight16(context),
           suffixIcon: IconButton(
@@ -43,13 +44,13 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             icon: const Icon(
               size: 36,
               Icons.add_box_rounded,
-              color: Colors.white,
+              color: kWhiteColor,
             ),
           ),
           hintText: S.of(context).addPlayer,
           hintStyle: Styles.styleSemiBold24(
             context,
-          ).copyWith(color: Colors.white.withAlpha(150)),
+          ).copyWith(color: kWhiteColor.withAlpha(150)),
           contentPadding: const EdgeInsets.symmetric(
             horizontal: 24,
             vertical: 16,
@@ -93,7 +94,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: const BorderSide(
-        color: Colors.white,
+        color: kWhiteColor,
       ),
     );
   }
