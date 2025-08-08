@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/enums.dart';
+import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 import 'package:the_spy/generated/l10n.dart';
 
 extension ModesName on Mode {
@@ -10,5 +11,13 @@ extension ModesName on Mode {
       case Mode.blind:
         return S.of(context).blindModeTitle;
     }
+  }
+}
+
+extension PlayersStateX on PlayersState {
+  bool gameStartingStates() {
+    return this is PlayerReveal ||
+        this is WordReveal ||
+        this is PlayersFinished;
   }
 }

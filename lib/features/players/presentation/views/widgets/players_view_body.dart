@@ -56,8 +56,6 @@ class PlayersViewBody extends StatelessWidget {
   void nagvigateToGameStarting(BuildContext context) {
     bool canNavigate = accessPlayerCubit(context).playersList.length > 2;
     if (canNavigate) {
-      accessPlayerCubit(context).getPlayersRandomList(context);
-      accessPlayerCubit(context).getSpyName(context);
       context.push(AppRouter.kWordRevealview);
     } else {
       showDialogAlert(

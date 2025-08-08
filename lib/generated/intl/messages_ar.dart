@@ -74,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "gameIdea": MessageLookupByLibrary.simpleMessage("فكرة اللعبة"),
     "giveMobileTo": MessageLookupByLibrary.simpleMessage("ادي الموبايل ل"),
+    "hide": MessageLookupByLibrary.simpleMessage("استخبى!"),
     "movies": MessageLookupByLibrary.simpleMessage("مسلسلات"),
     "moviesList": MessageLookupByLibrary.simpleMessage(
       "تيتانيك, أفاتار, بداية, بين النجوم, العراب, المصارع, فارس الظلام, الجوكر, خيال رخيص, نادي القتال, فورست جامب, الماتريكس, الخلاص من شاوشانك, المنتقمون, الرجل الحديدي, الرجل العنكبوت, النمر الأسود, دكتور سترينج, ملكة الثلج, حكاية لعبة, فوق, كوكو, موانا, سيارات, العثور على نيمو, الملك الأسد, علاء الدين, الجميلة والوحش, الخارقون, شريك, مدغشقر, زوتوبيا, راتاتوي, من الداخل للخارج, صداع الكحول, السعي للسعادة, ديدبول, لوغان, جون ويك, قراصنة الكاريبي, العائد, لا لا لاند, المفكرة, الشفق, ألعاب الجوع, مختلفة, الآن تراني, العظمة, تينيت",

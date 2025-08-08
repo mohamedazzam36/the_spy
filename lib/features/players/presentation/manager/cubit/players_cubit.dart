@@ -1,8 +1,7 @@
-import 'dart:math';
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
+import 'package:the_spy/core/game_logic_service/game_logic_service.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/players/data/repos/players_repo.dart';
 
@@ -15,6 +14,7 @@ class PlayersCubit extends Cubit<PlayersState> {
   List<PlayerModel> playersList = [];
   List<PlayerModel> playersRandomList = [];
   PlayerModel? theSpy;
+  int currentPlayerIndex = 0;
 
   fetchPlayersData() {
     playersList = playersRepo.fetchPlayersData();
@@ -34,16 +34,24 @@ class PlayersCubit extends Cubit<PlayersState> {
     emit(PlayersSuccess());
   }
 
-  void showWordToPlayer() {}
+  void switchBetweenPlayersAndWord() {
+    if (currentPlayerIndex < playersRandomList.length - 1) {
+      PlayerModel currentPlayer = playersRandomList[currentPlayerIndex];
 
-  void getSpyName(BuildContext context) {
-    List<PlayerModel> twicedRandomList = playersRandomList..shuffle();
-    theSpy = twicedRandomList[Random().nextInt(playersRandomList.length)];
-    emit(PlayerReveal());
+      if (state is PlayerReveal) {
+        emit(WordReveal(isSpy: currentPlayer.name == theSpy!.name));
+      } else {
+        emit(PlayerReveal(player: playersRandomList[++currentPlayerIndex]));
+      }
+    } else {
+      emit(PlayersFinished());
+    }
   }
 
-  void getPlayersRandomList(BuildContext context) {
-    List<PlayerModel> randomTempList = playersList..shuffle();
-    playersRandomList = randomTempList..shuffle();
+  void startGame() {
+    currentPlayerIndex = 0;
+    playersRandomList = GameLogicService.getPlayersRandomList(playersList);
+    theSpy = GameLogicService.pickSpy(playersRandomList);
+    emit(PlayerReveal(player: playersRandomList[currentPlayerIndex]));
   }
 }
