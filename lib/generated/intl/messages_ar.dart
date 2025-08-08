@@ -73,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "فكرة اللعبة باختصار أن لما الجيم يبدأ الموبايل بيمر على كل لاعب وكل اللاعبين بيطلعلهم كلمة واحدة عدا لاعب واحد بيطلعله حاجة مختلفة وكل اللاعبين بيحاولوا يطلعوا مين المستخبي ده وهو بيحاول يندمج معاهم ويخلي محدش يشك فيه",
     ),
     "gameIdea": MessageLookupByLibrary.simpleMessage("فكرة اللعبة"),
+    "giveMobileTo": MessageLookupByLibrary.simpleMessage("ادي الموبايل ل"),
     "movies": MessageLookupByLibrary.simpleMessage("مسلسلات"),
     "moviesList": MessageLookupByLibrary.simpleMessage(
       "تيتانيك, أفاتار, بداية, بين النجوم, العراب, المصارع, فارس الظلام, الجوكر, خيال رخيص, نادي القتال, فورست جامب, الماتريكس, الخلاص من شاوشانك, المنتقمون, الرجل الحديدي, الرجل العنكبوت, النمر الأسود, دكتور سترينج, ملكة الثلج, حكاية لعبة, فوق, كوكو, موانا, سيارات, العثور على نيمو, الملك الأسد, علاء الدين, الجميلة والوحش, الخارقون, شريك, مدغشقر, زوتوبيا, راتاتوي, من الداخل للخارج, صداع الكحول, السعي للسعادة, ديدبول, لوغان, جون ويك, قراصنة الكاريبي, العائد, لا لا لاند, المفكرة, الشفق, ألعاب الجوع, مختلفة, الآن تراني, العظمة, تينيت",
@@ -80,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "nameRegisteredValidate": MessageLookupByLibrary.simpleMessage(
       "اللاعب موجود بالفعل!",
     ),
+    "next": MessageLookupByLibrary.simpleMessage("التالي"),
     "noNameValidate": MessageLookupByLibrary.simpleMessage(
       "مينفعش تضيف لاعب فاضي (:",
     ),
@@ -89,6 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "normalModeTitle": MessageLookupByLibrary.simpleMessage("العادي"),
     "select": MessageLookupByLibrary.simpleMessage("اختار"),
     "selectMode": MessageLookupByLibrary.simpleMessage("اختار المود"),
+    "show": MessageLookupByLibrary.simpleMessage("عرض"),
     "sports": MessageLookupByLibrary.simpleMessage("رياضات"),
     "sportsList": MessageLookupByLibrary.simpleMessage(
       "كرة القدم, كرة السلة, كرة الطائرة, كرة اليد, السباحة, التنس, كرة الطاولة, الكاراتيه, الجودو, المصارعة, الملاكمة, رفع الأثقال, ألعاب القوى, الجمباز, الهوكي, الرغبي, البيسبول, الكريكت, الاسكواش, البولينج, ركوب الخيل, ركوب الدراجات, القفز بالمظلات, التزحلق على الجليد, الغوص, التجديف, التزحلق على الماء, الباركور, الكونغ فو, التايكوندو, ركوب الأمواج, السباق, الفورمولا واحد, الرماية, الشطرنج, الدراجات الجبلية, اليوغا, الجمباز الإيقاعي, الزومبا, بيلاتس, الرماية بالقوس, السنوكر, الكيك بوكسنج, الهوكي الجليدي, السباحة التوقيعية, البولو, التنس الأرضي, المشي الرياضي, الركض, الرماية بالبندقية",
@@ -101,6 +104,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "videoGames": MessageLookupByLibrary.simpleMessage("العاب"),
     "videoGamesList": MessageLookupByLibrary.simpleMessage(
       "ببجي, فورتنايت, كول أوف ديوتي, فيفا, إي فوتبول, جي تي أي, ريد ديد, مايندكرافت, ذا ويتشر, ذا ليجند أوف زيلدا, أنشارتد, لاست أوف أس, جاد أوف وار, هورايزون زيرو دون, سبيس فيرس, باتل فيلد, أسسنز كريد, فار كراي, ووتش دوجز, سايبر بانك, ديابلو, هالو, سوبر ماريو, سونيك, بوكيمون, دونكي كونغ, تكن, ستريت فايتر, مورتال كومبات, كينغدوم هارتس, فاينل فانتسي, تومب رايدر, هاري بوتر, ستارفيلد, سبايدرمان, باتمان, جوست أوف تسوشيما, نينجا غايدن, ريزدنت إيفل, سايلنت هيل, ديمونز سولز, دارك سولز, بلادبورن, إلدن رينج, دووم, ولفنشتاين, كراش بانديكوت, سبيس إنجنيرز, ستاردو فالي, جينشين إمباكت, ليج أوف ليجيندز, أوفرواتش, فالورانت, فورتزا هورايزون",
+    ),
+    "wordRevealText": MessageLookupByLibrary.simpleMessage(
+      "اضغط عرض عشان تشوف الكلمه ومتخليش حد يشوفها",
     ),
   };
 }

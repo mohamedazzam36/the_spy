@@ -11,6 +11,7 @@ class PlayersCubit extends Cubit<PlayersState> {
 
   final PlayersRepo playersRepo;
   List<PlayerModel> playersList = [];
+  PlayerModel? theSpy;
 
   fetchPlayersData() {
     playersList = playersRepo.fetchPlayersData();
@@ -29,4 +30,8 @@ class PlayersCubit extends Cubit<PlayersState> {
     playersRepo.addPlayer(player);
     emit(PlayersSuccess());
   }
+
+  void showWordToPlayer() {}
+
+  void getRandomPlayersList() {}
 }

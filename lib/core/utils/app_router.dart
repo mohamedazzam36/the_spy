@@ -8,7 +8,7 @@ import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/mobi
 import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/tablet_layout.dart';
 import 'package:the_spy/features/home/presentation/views/home.dart';
 import 'package:the_spy/features/players/presentation/views/players.dart';
-import 'package:the_spy/features/questions_and_word_reveal/presentation/views/word_reveal.dart';
+import 'package:the_spy/features/game_starting/presentation/views/game_starting.dart';
 import 'package:the_spy/features/select_mode/presentation/views/select_mode.dart';
 import 'package:the_spy/features/splash/presentation/views/get_started.dart';
 import 'package:the_spy/features/splash/presentation/views/splash.dart';

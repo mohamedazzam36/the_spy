@@ -54,315 +54,355 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `المستخبي`
+  /// `The Hidden One`
   String get appBarTitle {
-    return Intl.message('المستخبي', name: 'appBarTitle', desc: '', args: []);
+    return Intl.message(
+      'The Hidden One',
+      name: 'appBarTitle',
+      desc: '',
+      args: [],
+    );
   }
 
-  /// `بدأ`
+  /// `Start`
   String get start {
-    return Intl.message('بدأ', name: 'start', desc: '', args: []);
+    return Intl.message('Start', name: 'start', desc: '', args: []);
   }
 
-  /// `فكرة اللعبة`
+  /// `Game Idea`
   String get gameIdea {
-    return Intl.message('فكرة اللعبة', name: 'gameIdea', desc: '', args: []);
+    return Intl.message('Game Idea', name: 'gameIdea', desc: '', args: []);
   }
 
-  /// `فكرة اللعبة باختصار أن لما الجيم يبدأ الموبايل بيمر على كل لاعب وكل اللاعبين بيطلعلهم كلمة واحدة عدا لاعب واحد بيطلعله حاجة مختلفة وكل اللاعبين بيحاولوا يطلعوا مين المستخبي ده وهو بيحاول يندمج معاهم ويخلي محدش يشك فيه`
+  /// `The game idea in short is that when the game starts, the phone is passed to each player, and all players get one word except for one player who gets something different. All players try to figure out who the hidden one is, while the hidden one tries to blend in so no one suspects them.`
   String get gameDescription {
     return Intl.message(
-      'فكرة اللعبة باختصار أن لما الجيم يبدأ الموبايل بيمر على كل لاعب وكل اللاعبين بيطلعلهم كلمة واحدة عدا لاعب واحد بيطلعله حاجة مختلفة وكل اللاعبين بيحاولوا يطلعوا مين المستخبي ده وهو بيحاول يندمج معاهم ويخلي محدش يشك فيه',
+      'The game idea in short is that when the game starts, the phone is passed to each player, and all players get one word except for one player who gets something different. All players try to figure out who the hidden one is, while the hidden one tries to blend in so no one suspects them.',
       name: 'gameDescription',
       desc: '',
       args: [],
     );
   }
 
-  /// `اختار المود`
+  /// `Select Mode`
   String get selectMode {
-    return Intl.message('اختار المود', name: 'selectMode', desc: '', args: []);
+    return Intl.message('Select Mode', name: 'selectMode', desc: '', args: []);
   }
 
-  /// `اختار`
+  /// `Select`
   String get select {
-    return Intl.message('اختار', name: 'select', desc: '', args: []);
+    return Intl.message('Select', name: 'select', desc: '', args: []);
   }
 
-  /// `العادي`
+  /// `Normal`
   String get normalModeTitle {
-    return Intl.message('العادي', name: 'normalModeTitle', desc: '', args: []);
+    return Intl.message('Normal', name: 'normalModeTitle', desc: '', args: []);
   }
 
-  /// `اللي بيظهر للمستخبي هو \n( أنت المستخبي )\n  يعني بيكون عارف إنه هو المستخبي وبيحاول يندمج`
+  /// `What appears to the hidden one is \n( You are the hidden one )\n which means they know they're the hidden one and try to blend in.`
   String get normalModeDescription {
     return Intl.message(
-      'اللي بيظهر للمستخبي هو \n( أنت المستخبي )\n  يعني بيكون عارف إنه هو المستخبي وبيحاول يندمج',
+      'What appears to the hidden one is \n( You are the hidden one )\n which means they know they\'re the hidden one and try to blend in.',
       name: 'normalModeDescription',
       desc: '',
       args: [],
     );
   }
 
-  /// `العمياني`
+  /// `Blind`
   String get blindModeTitle {
-    return Intl.message('العمياني', name: 'blindModeTitle', desc: '', args: []);
+    return Intl.message('Blind', name: 'blindModeTitle', desc: '', args: []);
   }
 
-  /// `فالمود ده اللي بيظهر للمستخبي هي كلمة مختلفة عن الباقي. يعني محدش بيكون عارف إنه هو المستخبي ولا لأ`
+  /// `In this mode, what appears to the hidden one is a different word from the rest. This means no one knows if they're the hidden one or not.`
   String get blindModeDescription {
     return Intl.message(
-      'فالمود ده اللي بيظهر للمستخبي هي كلمة مختلفة عن الباقي. يعني محدش بيكون عارف إنه هو المستخبي ولا لأ',
+      'In this mode, what appears to the hidden one is a different word from the rest. This means no one knows if they\'re the hidden one or not.',
       name: 'blindModeDescription',
       desc: '',
       args: [],
     );
   }
 
-  /// `اضافة لاعب جديد`
+  /// `Add a new player`
   String get addPlayer {
     return Intl.message(
-      'اضافة لاعب جديد',
+      'Add a new player',
       name: 'addPlayer',
       desc: '',
       args: [],
     );
   }
 
-  /// `مينفعش تضيف لاعب فاضي (:`
+  /// `You can't add an empty player name (:`
   String get noNameValidate {
     return Intl.message(
-      'مينفعش تضيف لاعب فاضي (:',
+      'You can\'t add an empty player name (:',
       name: 'noNameValidate',
       desc: '',
       args: [],
     );
   }
 
-  /// `اللاعب موجود بالفعل!`
+  /// `The player already exists!`
   String get nameRegisteredValidate {
     return Intl.message(
-      'اللاعب موجود بالفعل!',
+      'The player already exists!',
       name: 'nameRegisteredValidate',
       desc: '',
       args: [],
     );
   }
 
-  /// `حدث خطا!`
+  /// `An error occurred!`
   String get alertTitle {
-    return Intl.message('حدث خطا!', name: 'alertTitle', desc: '', args: []);
+    return Intl.message(
+      'An error occurred!',
+      name: 'alertTitle',
+      desc: '',
+      args: [],
+    );
   }
 
-  /// `مينفعش اقل من تلت لاعبين !`
+  /// `You can't have less than three players!`
   String get alertContent {
     return Intl.message(
-      'مينفعش اقل من تلت لاعبين !',
+      'You can\'t have less than three players!',
       name: 'alertContent',
       desc: '',
       args: [],
     );
   }
 
-  /// `رجوع`
+  /// `Back`
   String get alertAction {
-    return Intl.message('رجوع', name: 'alertAction', desc: '', args: []);
+    return Intl.message('Back', name: 'alertAction', desc: '', args: []);
   }
 
-  /// `اكلات`
+  /// `Give the phone to`
+  String get giveMobileTo {
+    return Intl.message(
+      'Give the phone to',
+      name: 'giveMobileTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tap 'Show' to see the word and don't let anyone else see it`
+  String get wordRevealText {
+    return Intl.message(
+      'Tap \'Show\' to see the word and don\'t let anyone else see it',
+      name: 'wordRevealText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Show`
+  String get show {
+    return Intl.message('Show', name: 'show', desc: '', args: []);
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message('Next', name: 'next', desc: '', args: []);
+  }
+
+  /// `Foods`
   String get food {
-    return Intl.message('اكلات', name: 'food', desc: '', args: []);
+    return Intl.message('Foods', name: 'food', desc: '', args: []);
   }
 
-  /// `كشري, محشي, ملوخية, شاورما, بيتزا, برجر, فول, طعمية, كبسة, مقلوبة, مشاوي, كباب, كفتة, سمك, جمبري, سوشي, شوربة عدس, فطير مشلتت, عيش باللحم, بطاطس محمرة, فراخ مشوية, بانيه, مكرونة بشاميل, صينية بطاطس, رز معمر, عكاوي, بامية, مسقعة, بيض, جبنة, عصير مانجو, عصير فراولة, لبن رايب, مهلبية, أرز باللبن, كنافة, قطايف, جلاش, بلح الشام, بسبوسة, تشيز كيك, دونات, كيك, تورتة, كريم كراميل, كرواسون, باتيه, سمبوسك, سبرنج رول`
+  /// `Koshari, Mahshi, Molokhia, Shawarma, Pizza, Burger, Foul, Ta'ameya, Kabsa, Maqluba, Mixed Grills, Kebab, Kofta, Fish, Shrimp, Sushi, Lentil Soup, Feteer Meshaltet, Aish bel Lahm, French Fries, Grilled Chicken, Pane, Macaroni Béchamel, Potato Tray, Rice with Milk, Akawi, Bamia, Moussaka, Eggs, Cheese, Mango Juice, Strawberry Juice, Laban Rayeb, Mahalabia, Rice Pudding, Kunafa, Qatayef, Baklava, Balah El Sham, Basbousa, Cheesecake, Donuts, Cake, Torte, Crème Caramel, Croissant, Paté, Sambousek, Spring Roll`
   String get foodList {
     return Intl.message(
-      'كشري, محشي, ملوخية, شاورما, بيتزا, برجر, فول, طعمية, كبسة, مقلوبة, مشاوي, كباب, كفتة, سمك, جمبري, سوشي, شوربة عدس, فطير مشلتت, عيش باللحم, بطاطس محمرة, فراخ مشوية, بانيه, مكرونة بشاميل, صينية بطاطس, رز معمر, عكاوي, بامية, مسقعة, بيض, جبنة, عصير مانجو, عصير فراولة, لبن رايب, مهلبية, أرز باللبن, كنافة, قطايف, جلاش, بلح الشام, بسبوسة, تشيز كيك, دونات, كيك, تورتة, كريم كراميل, كرواسون, باتيه, سمبوسك, سبرنج رول',
+      'Koshari, Mahshi, Molokhia, Shawarma, Pizza, Burger, Foul, Ta\'ameya, Kabsa, Maqluba, Mixed Grills, Kebab, Kofta, Fish, Shrimp, Sushi, Lentil Soup, Feteer Meshaltet, Aish bel Lahm, French Fries, Grilled Chicken, Pane, Macaroni Béchamel, Potato Tray, Rice with Milk, Akawi, Bamia, Moussaka, Eggs, Cheese, Mango Juice, Strawberry Juice, Laban Rayeb, Mahalabia, Rice Pudding, Kunafa, Qatayef, Baklava, Balah El Sham, Basbousa, Cheesecake, Donuts, Cake, Torte, Crème Caramel, Croissant, Paté, Sambousek, Spring Roll',
       name: 'foodList',
       desc: '',
       args: [],
     );
   }
 
-  /// `ملابس`
+  /// `Clothes`
   String get cloths {
-    return Intl.message('ملابس', name: 'cloths', desc: '', args: []);
+    return Intl.message('Clothes', name: 'cloths', desc: '', args: []);
   }
 
-  /// `قميص, بنطلون, تيشيرت, جاكيت, بلوفر, شورت, بدلة, فستان, تنورة, عباية, كوفية, طاقية, شراب, حزام, حذاء, شبشب, سروال, بيجامة, قميص نوم, نقاب, طرحة, بدي, جاكت جينز, هودي, بالطو, قميص رسمي, تي شيرت بولو, بنطلون جينز, بنطلون قماش, تي شيرت سبورت, شوز جلد, كعب عالي, سنيكرز, بوت, فروه, بدلة رسمية, تيشيرت بكم, تيشيرت نص كم, جاكت جلد, تريننج, تيشيرت مطبوع, تيشيرت, جاكت شتوي, كاب, جوانتي, روب حمام, سروال داخلي`
+  /// `Shirt, Pants, T-shirt, Jacket, Sweater, Shorts, Suit, Dress, Skirt, Abaya, Kufiya, Beanie, Socks, Belt, Shoes, Slippers, Trousers, Pajamas, Nightgown, Niqab, Hijab, Bodysuit, Denim Jacket, Hoodie, Coat, Formal Shirt, Polo Shirt, Jeans, Cloth Pants, Sport T-shirt, Leather Shoes, High Heels, Sneakers, Boots, Fur Coat, Formal Suit, Long-sleeved T-shirt, Short-sleeved T-shirt, Leather Jacket, Tracksuit, Printed T-shirt, T-shirt, Winter Jacket, Cap, Gloves, Bathrobe, Underwear`
   String get clothsList {
     return Intl.message(
-      'قميص, بنطلون, تيشيرت, جاكيت, بلوفر, شورت, بدلة, فستان, تنورة, عباية, كوفية, طاقية, شراب, حزام, حذاء, شبشب, سروال, بيجامة, قميص نوم, نقاب, طرحة, بدي, جاكت جينز, هودي, بالطو, قميص رسمي, تي شيرت بولو, بنطلون جينز, بنطلون قماش, تي شيرت سبورت, شوز جلد, كعب عالي, سنيكرز, بوت, فروه, بدلة رسمية, تيشيرت بكم, تيشيرت نص كم, جاكت جلد, تريننج, تيشيرت مطبوع, تيشيرت, جاكت شتوي, كاب, جوانتي, روب حمام, سروال داخلي',
+      'Shirt, Pants, T-shirt, Jacket, Sweater, Shorts, Suit, Dress, Skirt, Abaya, Kufiya, Beanie, Socks, Belt, Shoes, Slippers, Trousers, Pajamas, Nightgown, Niqab, Hijab, Bodysuit, Denim Jacket, Hoodie, Coat, Formal Shirt, Polo Shirt, Jeans, Cloth Pants, Sport T-shirt, Leather Shoes, High Heels, Sneakers, Boots, Fur Coat, Formal Suit, Long-sleeved T-shirt, Short-sleeved T-shirt, Leather Jacket, Tracksuit, Printed T-shirt, T-shirt, Winter Jacket, Cap, Gloves, Bathrobe, Underwear',
       name: 'clothsList',
       desc: '',
       args: [],
     );
   }
 
-  /// `حيوانات`
+  /// `Animals`
   String get animals {
-    return Intl.message('حيوانات', name: 'animals', desc: '', args: []);
+    return Intl.message('Animals', name: 'animals', desc: '', args: []);
   }
 
-  /// `أسد, نمر, فهد, ذئب, كلب, قط, دب, ثعلب, زرافة, فيل, غزال, ظبي, تمساح, سلحفاة, أرنب, قرد, دلفين, حوت, قرش, بطريق, نسر, صقر, بومة, غراب, عصفور, كناري, ببغاء, هدهد, نملة, نحلة, ذبابة, بعوضة, جمل, حصان, حمار, بقرة, ماعز, خروف, ديك, دجاجة, بط, وزة, سمكة, نجم البحر, قنديل البحر, حصان البحر, عقرب, حية, ضفدع, ورل`
+  /// `Lion, Tiger, Leopard, Wolf, Dog, Cat, Bear, Fox, Giraffe, Elephant, Gazelle, Antelope, Crocodile, Turtle, Rabbit, Monkey, Dolphin, Whale, Shark, Penguin, Eagle, Falcon, Owl, Raven, Sparrow, Canary, Parrot, Hoopoe, Ant, Bee, Fly, Mosquito, Camel, Horse, Donkey, Cow, Goat, Sheep, Rooster, Chicken, Duck, Goose, Fish, Starfish, Jellyfish, Seahorse, Scorpion, Snake, Frog, Monitor Lizard`
   String get animalsList {
     return Intl.message(
-      'أسد, نمر, فهد, ذئب, كلب, قط, دب, ثعلب, زرافة, فيل, غزال, ظبي, تمساح, سلحفاة, أرنب, قرد, دلفين, حوت, قرش, بطريق, نسر, صقر, بومة, غراب, عصفور, كناري, ببغاء, هدهد, نملة, نحلة, ذبابة, بعوضة, جمل, حصان, حمار, بقرة, ماعز, خروف, ديك, دجاجة, بط, وزة, سمكة, نجم البحر, قنديل البحر, حصان البحر, عقرب, حية, ضفدع, ورل',
+      'Lion, Tiger, Leopard, Wolf, Dog, Cat, Bear, Fox, Giraffe, Elephant, Gazelle, Antelope, Crocodile, Turtle, Rabbit, Monkey, Dolphin, Whale, Shark, Penguin, Eagle, Falcon, Owl, Raven, Sparrow, Canary, Parrot, Hoopoe, Ant, Bee, Fly, Mosquito, Camel, Horse, Donkey, Cow, Goat, Sheep, Rooster, Chicken, Duck, Goose, Fish, Starfish, Jellyfish, Seahorse, Scorpion, Snake, Frog, Monitor Lizard',
       name: 'animalsList',
       desc: '',
       args: [],
     );
   }
 
-  /// `بلدان`
+  /// `Countries`
   String get countries {
-    return Intl.message('بلدان', name: 'countries', desc: '', args: []);
+    return Intl.message('Countries', name: 'countries', desc: '', args: []);
   }
 
-  /// `مصر, السعودية, الإمارات, الكويت, قطر, الأردن, سوريا, لبنان, فلسطين, العراق, ليبيا, تونس, الجزائر, المغرب, اليمن, البحرين, عمان, السودان, تركيا, إيران, الهند, باكستان, الصين, اليابان, كوريا, فرنسا, ألمانيا, إيطاليا, إسبانيا, البرتغال, هولندا, بلجيكا, السويد, النرويج, فنلندا, سويسرا, أمريكا, كندا, المكسيك, البرازيل, الأرجنتين, أستراليا, نيوزيلندا, جنوب أفريقيا, نيجيريا, كينيا, أوغندا, ماليزيا, إندونيسيا, تايلاند`
+  /// `Egypt, Saudi Arabia, UAE, Kuwait, Qatar, Jordan, Syria, Lebanon, Palestine, Iraq, Libya, Tunisia, Algeria, Morocco, Yemen, Bahrain, Oman, Sudan, Turkey, Iran, India, Pakistan, China, Japan, Korea, France, Germany, Italy, Spain, Portugal, Netherlands, Belgium, Sweden, Norway, Finland, Switzerland, USA, Canada, Mexico, Brazil, Argentina, Australia, New Zealand, South Africa, Nigeria, Kenya, Uganda, Malaysia, Indonesia, Thailand`
   String get countriesList {
     return Intl.message(
-      'مصر, السعودية, الإمارات, الكويت, قطر, الأردن, سوريا, لبنان, فلسطين, العراق, ليبيا, تونس, الجزائر, المغرب, اليمن, البحرين, عمان, السودان, تركيا, إيران, الهند, باكستان, الصين, اليابان, كوريا, فرنسا, ألمانيا, إيطاليا, إسبانيا, البرتغال, هولندا, بلجيكا, السويد, النرويج, فنلندا, سويسرا, أمريكا, كندا, المكسيك, البرازيل, الأرجنتين, أستراليا, نيوزيلندا, جنوب أفريقيا, نيجيريا, كينيا, أوغندا, ماليزيا, إندونيسيا, تايلاند',
+      'Egypt, Saudi Arabia, UAE, Kuwait, Qatar, Jordan, Syria, Lebanon, Palestine, Iraq, Libya, Tunisia, Algeria, Morocco, Yemen, Bahrain, Oman, Sudan, Turkey, Iran, India, Pakistan, China, Japan, Korea, France, Germany, Italy, Spain, Portugal, Netherlands, Belgium, Sweden, Norway, Finland, Switzerland, USA, Canada, Mexico, Brazil, Argentina, Australia, New Zealand, South Africa, Nigeria, Kenya, Uganda, Malaysia, Indonesia, Thailand',
       name: 'countriesList',
       desc: '',
       args: [],
     );
   }
 
-  /// `الوان`
+  /// `Colors`
   String get colors {
-    return Intl.message('الوان', name: 'colors', desc: '', args: []);
+    return Intl.message('Colors', name: 'colors', desc: '', args: []);
   }
 
-  /// `أحمر, أزرق, أخضر, أصفر, برتقالي, بنفسجي, وردي, أسود, أبيض, رمادي, بني, سماوي, كحلي, زيتي, تركواز, موف, أوف وايت, بيج, فضي, ذهبي, ليموني, فوشيا, نحاسي, رصاصي, كريمي, عنابي, نبيتي, مشمشي, خردلي, تيفاني, زيتي غامق, أخضر فستقي, أزرق ملكي, بنفسجي فاتح, أزرق سماوي, أصفر ليموني, رمادي غامق, رمادي فاتح, بيج رملي, عسلي, موكا, برونزي, ورد بلدي, بنفسج غامق, كشمير, أخضر زيتي, مشمع, أوف وايت مائل للرمادي, رمادي مائل للأزرق, رمادي مائل للأخضر`
+  /// `Red, Blue, Green, Yellow, Orange, Purple, Pink, Black, White, Grey, Brown, Cyan, Navy, Olive Green, Turquoise, Mauve, Off-white, Beige, Silver, Gold, Lemon, Fuchsia, Copper, Lead, Cream, Maroon, Burgundy, Apricot, Mustard, Tiffany, Dark Olive, Pistachio Green, Royal Blue, Light Purple, Sky Blue, Lemon Yellow, Dark Grey, Light Grey, Sandy Beige, Honey, Mocha, Bronze, Tea Rose, Dark Violet, Cashmere, Olive Green, Waxy, Off-white with grey tinge, Grey with blue tinge, Grey with green tinge`
   String get colorsList {
     return Intl.message(
-      'أحمر, أزرق, أخضر, أصفر, برتقالي, بنفسجي, وردي, أسود, أبيض, رمادي, بني, سماوي, كحلي, زيتي, تركواز, موف, أوف وايت, بيج, فضي, ذهبي, ليموني, فوشيا, نحاسي, رصاصي, كريمي, عنابي, نبيتي, مشمشي, خردلي, تيفاني, زيتي غامق, أخضر فستقي, أزرق ملكي, بنفسجي فاتح, أزرق سماوي, أصفر ليموني, رمادي غامق, رمادي فاتح, بيج رملي, عسلي, موكا, برونزي, ورد بلدي, بنفسج غامق, كشمير, أخضر زيتي, مشمع, أوف وايت مائل للرمادي, رمادي مائل للأزرق, رمادي مائل للأخضر',
+      'Red, Blue, Green, Yellow, Orange, Purple, Pink, Black, White, Grey, Brown, Cyan, Navy, Olive Green, Turquoise, Mauve, Off-white, Beige, Silver, Gold, Lemon, Fuchsia, Copper, Lead, Cream, Maroon, Burgundy, Apricot, Mustard, Tiffany, Dark Olive, Pistachio Green, Royal Blue, Light Purple, Sky Blue, Lemon Yellow, Dark Grey, Light Grey, Sandy Beige, Honey, Mocha, Bronze, Tea Rose, Dark Violet, Cashmere, Olive Green, Waxy, Off-white with grey tinge, Grey with blue tinge, Grey with green tinge',
       name: 'colorsList',
       desc: '',
       args: [],
     );
   }
 
-  /// `مسلسلات`
+  /// `Movies`
   String get movies {
-    return Intl.message('مسلسلات', name: 'movies', desc: '', args: []);
+    return Intl.message('Movies', name: 'movies', desc: '', args: []);
   }
 
-  /// `تيتانيك, أفاتار, بداية, بين النجوم, العراب, المصارع, فارس الظلام, الجوكر, خيال رخيص, نادي القتال, فورست جامب, الماتريكس, الخلاص من شاوشانك, المنتقمون, الرجل الحديدي, الرجل العنكبوت, النمر الأسود, دكتور سترينج, ملكة الثلج, حكاية لعبة, فوق, كوكو, موانا, سيارات, العثور على نيمو, الملك الأسد, علاء الدين, الجميلة والوحش, الخارقون, شريك, مدغشقر, زوتوبيا, راتاتوي, من الداخل للخارج, صداع الكحول, السعي للسعادة, ديدبول, لوغان, جون ويك, قراصنة الكاريبي, العائد, لا لا لاند, المفكرة, الشفق, ألعاب الجوع, مختلفة, الآن تراني, العظمة, تينيت`
+  /// `Titanic, Avatar, Inception, Interstellar, The Godfather, Gladiator, The Dark Knight, Joker, Pulp Fiction, Fight Club, Forrest Gump, The Matrix, The Shawshank Redemption, The Avengers, Iron Man, Spider-Man, Black Panther, Doctor Strange, Frozen, Toy Story, Up, Coco, Moana, Cars, Finding Nemo, The Lion King, Aladdin, Beauty and the Beast, The Incredibles, Shrek, Madagascar, Zootopia, Ratatouille, Inside Out, The Hangover, The Pursuit of Happyness, Deadpool, Logan, John Wick, Pirates of the Caribbean, The Revenant, La La Land, The Notebook, Twilight, The Hunger Games, Divergent, Now You See Me, The Prestige, Tenet`
   String get moviesList {
     return Intl.message(
-      'تيتانيك, أفاتار, بداية, بين النجوم, العراب, المصارع, فارس الظلام, الجوكر, خيال رخيص, نادي القتال, فورست جامب, الماتريكس, الخلاص من شاوشانك, المنتقمون, الرجل الحديدي, الرجل العنكبوت, النمر الأسود, دكتور سترينج, ملكة الثلج, حكاية لعبة, فوق, كوكو, موانا, سيارات, العثور على نيمو, الملك الأسد, علاء الدين, الجميلة والوحش, الخارقون, شريك, مدغشقر, زوتوبيا, راتاتوي, من الداخل للخارج, صداع الكحول, السعي للسعادة, ديدبول, لوغان, جون ويك, قراصنة الكاريبي, العائد, لا لا لاند, المفكرة, الشفق, ألعاب الجوع, مختلفة, الآن تراني, العظمة, تينيت',
+      'Titanic, Avatar, Inception, Interstellar, The Godfather, Gladiator, The Dark Knight, Joker, Pulp Fiction, Fight Club, Forrest Gump, The Matrix, The Shawshank Redemption, The Avengers, Iron Man, Spider-Man, Black Panther, Doctor Strange, Frozen, Toy Story, Up, Coco, Moana, Cars, Finding Nemo, The Lion King, Aladdin, Beauty and the Beast, The Incredibles, Shrek, Madagascar, Zootopia, Ratatouille, Inside Out, The Hangover, The Pursuit of Happyness, Deadpool, Logan, John Wick, Pirates of the Caribbean, The Revenant, La La Land, The Notebook, Twilight, The Hunger Games, Divergent, Now You See Me, The Prestige, Tenet',
       name: 'moviesList',
       desc: '',
       args: [],
     );
   }
 
-  /// `رياضات`
+  /// `Sports`
   String get sports {
-    return Intl.message('رياضات', name: 'sports', desc: '', args: []);
+    return Intl.message('Sports', name: 'sports', desc: '', args: []);
   }
 
-  /// `كرة القدم, كرة السلة, كرة الطائرة, كرة اليد, السباحة, التنس, كرة الطاولة, الكاراتيه, الجودو, المصارعة, الملاكمة, رفع الأثقال, ألعاب القوى, الجمباز, الهوكي, الرغبي, البيسبول, الكريكت, الاسكواش, البولينج, ركوب الخيل, ركوب الدراجات, القفز بالمظلات, التزحلق على الجليد, الغوص, التجديف, التزحلق على الماء, الباركور, الكونغ فو, التايكوندو, ركوب الأمواج, السباق, الفورمولا واحد, الرماية, الشطرنج, الدراجات الجبلية, اليوغا, الجمباز الإيقاعي, الزومبا, بيلاتس, الرماية بالقوس, السنوكر, الكيك بوكسنج, الهوكي الجليدي, السباحة التوقيعية, البولو, التنس الأرضي, المشي الرياضي, الركض, الرماية بالبندقية`
+  /// `Football, Basketball, Volleyball, Handball, Swimming, Tennis, Table Tennis, Karate, Judo, Wrestling, Boxing, Weightlifting, Athletics, Gymnastics, Hockey, Rugby, Baseball, Cricket, Squash, Bowling, Horse Riding, Cycling, Skydiving, Ice Skating, Diving, Rowing, Water Skiing, Parkour, Kung Fu, Taekwondo, Surfing, Racing, Formula One, Archery, Chess, Mountain Biking, Yoga, Rhythmic Gymnastics, Zumba, Pilates, Archery, Snooker, Kickboxing, Ice Hockey, Synchronized Swimming, Polo, Clay Court Tennis, Power Walking, Jogging, Rifle Shooting`
   String get sportsList {
     return Intl.message(
-      'كرة القدم, كرة السلة, كرة الطائرة, كرة اليد, السباحة, التنس, كرة الطاولة, الكاراتيه, الجودو, المصارعة, الملاكمة, رفع الأثقال, ألعاب القوى, الجمباز, الهوكي, الرغبي, البيسبول, الكريكت, الاسكواش, البولينج, ركوب الخيل, ركوب الدراجات, القفز بالمظلات, التزحلق على الجليد, الغوص, التجديف, التزحلق على الماء, الباركور, الكونغ فو, التايكوندو, ركوب الأمواج, السباق, الفورمولا واحد, الرماية, الشطرنج, الدراجات الجبلية, اليوغا, الجمباز الإيقاعي, الزومبا, بيلاتس, الرماية بالقوس, السنوكر, الكيك بوكسنج, الهوكي الجليدي, السباحة التوقيعية, البولو, التنس الأرضي, المشي الرياضي, الركض, الرماية بالبندقية',
+      'Football, Basketball, Volleyball, Handball, Swimming, Tennis, Table Tennis, Karate, Judo, Wrestling, Boxing, Weightlifting, Athletics, Gymnastics, Hockey, Rugby, Baseball, Cricket, Squash, Bowling, Horse Riding, Cycling, Skydiving, Ice Skating, Diving, Rowing, Water Skiing, Parkour, Kung Fu, Taekwondo, Surfing, Racing, Formula One, Archery, Chess, Mountain Biking, Yoga, Rhythmic Gymnastics, Zumba, Pilates, Archery, Snooker, Kickboxing, Ice Hockey, Synchronized Swimming, Polo, Clay Court Tennis, Power Walking, Jogging, Rifle Shooting',
       name: 'sportsList',
       desc: '',
       args: [],
     );
   }
 
-  /// `لاعبين كره`
+  /// `Football players`
   String get footballPlayers {
     return Intl.message(
-      'لاعبين كره',
+      'Football players',
       name: 'footballPlayers',
       desc: '',
       args: [],
     );
   }
 
-  /// `ميسي, رونالدو, نيمار, محمد صلاح, هازارد, لوكا مودريتش, كريم بنزيما, كيفين دي بروين, روبرت ليفاندوفسكي, إيرلينغ هالاند, كيليان مبابي, أنطوان غريزمان, لويس سواريز, أنخيل دي ماريا, فرينكي دي يونغ, جورجينيو, كايل ووكر, تياجو سيلفا, فينيسيوس جونيور, أشرف حكيمي, رياض محرز, إيدرسون, أليسون بيكر, تير شتيغن, دوناروما, سيرجيو راموس, جيرارد بيكيه, رافاييل فاران, خوسيه خيمينيز, ماركينيوس, بوكايو ساكا, جود بيلينغهام, كاسيميرو, برونو فيرنانديز, سانشو, سون هيونغ مين, أوباميانغ, لاكازيت, إيكاردي, باولو ديبالا, جريليش, كانتي, ديكلان رايس, رامي بن سبعيني, سفيان أمرابط, زياش, يوسف النصيري, سيرجيو بوسكيتس, إنييستا, تشافي`
+  /// `Messi, Ronaldo, Neymar, Mohamed Salah, Hazard, Luka Modrić, Karim Benzema, Kevin De Bruyne, Robert Lewandowski, Erling Haaland, Kylian Mbappé, Antoine Griezmann, Luis Suárez, Ángel Di María, Frenkie de Jong, Jorginho, Kyle Walker, Thiago Silva, Vinícius Júnior, Achraf Hakimi, Riyad Mahrez, Ederson, Alisson Becker, Ter Stegen, Donnarumma, Sergio Ramos, Gerard Piqué, Raphaël Varane, José Giménez, Marquinhos, Bukayo Saka, Jude Bellingham, Casemiro, Bruno Fernandes, Sancho, Son Heung-min, Aubameyang, Lacazette, Icardi, Paulo Dybala, Grealish, Kanté, Declan Rice, Ramy Bensebaini, Sofyan Amrabat, Ziyech, Youssef En-Nesyri, Sergio Busquets, Iniesta, Xavi`
   String get footballPlayersList {
     return Intl.message(
-      'ميسي, رونالدو, نيمار, محمد صلاح, هازارد, لوكا مودريتش, كريم بنزيما, كيفين دي بروين, روبرت ليفاندوفسكي, إيرلينغ هالاند, كيليان مبابي, أنطوان غريزمان, لويس سواريز, أنخيل دي ماريا, فرينكي دي يونغ, جورجينيو, كايل ووكر, تياجو سيلفا, فينيسيوس جونيور, أشرف حكيمي, رياض محرز, إيدرسون, أليسون بيكر, تير شتيغن, دوناروما, سيرجيو راموس, جيرارد بيكيه, رافاييل فاران, خوسيه خيمينيز, ماركينيوس, بوكايو ساكا, جود بيلينغهام, كاسيميرو, برونو فيرنانديز, سانشو, سون هيونغ مين, أوباميانغ, لاكازيت, إيكاردي, باولو ديبالا, جريليش, كانتي, ديكلان رايس, رامي بن سبعيني, سفيان أمرابط, زياش, يوسف النصيري, سيرجيو بوسكيتس, إنييستا, تشافي',
+      'Messi, Ronaldo, Neymar, Mohamed Salah, Hazard, Luka Modrić, Karim Benzema, Kevin De Bruyne, Robert Lewandowski, Erling Haaland, Kylian Mbappé, Antoine Griezmann, Luis Suárez, Ángel Di María, Frenkie de Jong, Jorginho, Kyle Walker, Thiago Silva, Vinícius Júnior, Achraf Hakimi, Riyad Mahrez, Ederson, Alisson Becker, Ter Stegen, Donnarumma, Sergio Ramos, Gerard Piqué, Raphaël Varane, José Giménez, Marquinhos, Bukayo Saka, Jude Bellingham, Casemiro, Bruno Fernandes, Sancho, Son Heung-min, Aubameyang, Lacazette, Icardi, Paulo Dybala, Grealish, Kanté, Declan Rice, Ramy Bensebaini, Sofyan Amrabat, Ziyech, Youssef En-Nesyri, Sergio Busquets, Iniesta, Xavi',
       name: 'footballPlayersList',
       desc: '',
       args: [],
     );
   }
 
-  /// `مدن`
+  /// `Cities`
   String get cities {
-    return Intl.message('مدن', name: 'cities', desc: '', args: []);
+    return Intl.message('Cities', name: 'cities', desc: '', args: []);
   }
 
-  /// `القاهرة, الرياض, دبي, الدوحة, بيروت, عمان, دمشق, بغداد, الخرطوم, الجزائر, تونس, طرابلس, الرباط, جدة, الإسكندرية, طنطا, المنصورة, أسيوط, أسوان, الأقصر, مرسى مطروح, العين السخنة, شرم الشيخ, الغردقة, الدمام, الخبر, المدينة المنورة, مكة, المدينة, أبها, جيزان, نيوم, حائل, بريدة, مسقط, المنامة, صلالة, كوالالمبور, بانكوك, سنغافورة, نيويورك, واشنطن, لندن, باريس, برلين, أمستردام, روما, ميلان, مدريد`
+  /// `Cairo, Riyadh, Dubai, Doha, Beirut, Amman, Damascus, Baghdad, Khartoum, Algiers, Tunis, Tripoli, Rabat, Jeddah, Alexandria, Tanta, Mansoura, Assiut, Aswan, Luxor, Marsa Matrouh, Ain Sokhna, Sharm El Sheikh, Hurghada, Dammam, Khobar, Medina, Mecca, Madinah, Abha, Jizan, Neom, Ha'il, Buraidah, Muscat, Manama, Salalah, Kuala Lumpur, Bangkok, Singapore, New York, Washington, London, Paris, Berlin, Amsterdam, Rome, Milan, Madrid`
   String get citiesList {
     return Intl.message(
-      'القاهرة, الرياض, دبي, الدوحة, بيروت, عمان, دمشق, بغداد, الخرطوم, الجزائر, تونس, طرابلس, الرباط, جدة, الإسكندرية, طنطا, المنصورة, أسيوط, أسوان, الأقصر, مرسى مطروح, العين السخنة, شرم الشيخ, الغردقة, الدمام, الخبر, المدينة المنورة, مكة, المدينة, أبها, جيزان, نيوم, حائل, بريدة, مسقط, المنامة, صلالة, كوالالمبور, بانكوك, سنغافورة, نيويورك, واشنطن, لندن, باريس, برلين, أمستردام, روما, ميلان, مدريد',
+      'Cairo, Riyadh, Dubai, Doha, Beirut, Amman, Damascus, Baghdad, Khartoum, Algiers, Tunis, Tripoli, Rabat, Jeddah, Alexandria, Tanta, Mansoura, Assiut, Aswan, Luxor, Marsa Matrouh, Ain Sokhna, Sharm El Sheikh, Hurghada, Dammam, Khobar, Medina, Mecca, Madinah, Abha, Jizan, Neom, Ha\'il, Buraidah, Muscat, Manama, Salalah, Kuala Lumpur, Bangkok, Singapore, New York, Washington, London, Paris, Berlin, Amsterdam, Rome, Milan, Madrid',
       name: 'citiesList',
       desc: '',
       args: [],
     );
   }
 
-  /// `اجهزه`
+  /// `Devices`
   String get devices {
-    return Intl.message('اجهزه', name: 'devices', desc: '', args: []);
+    return Intl.message('Devices', name: 'devices', desc: '', args: []);
   }
 
-  /// `موبايل, لابتوب, كمبيوتر, تابلت, تلفزيون, ساعة ذكية, ماوس, كيبورد, طابعة, سماعة, راوتر, كاميرا, بروجكتور, جهاز ألعاب, بلايستيشن, اكس بوكس, نظام صوت, سخان كهربائي, مروحة, مكيف, ثلاجة, غسالة, ميكروويف, خلاط, عصارة, محضر طعام, مكنسة كهربائية, فرن كهربائي, غلاية, دفاية, مسجل, جهاز دي في دي, ريسيفر, جهاز انذار, موبايل جيمينج, لابتوب جيمينج, قرص صلب, ذاكرة فلاش, مودم, لوحة أم, كارت شاشة, معالج, باور سبلاي, جهاز كشف المعادن, جهاز بصمة, جهاز عرض, جهاز تتبع, ساعة رياضية, سماعة رأس, جهاز تحليل السكر`
+  /// `Mobile, Laptop, Computer, Tablet, Television, Smartwatch, Mouse, Keyboard, Printer, Headphones, Router, Camera, Projector, Gaming Console, PlayStation, Xbox, Sound System, Electric Heater, Fan, Air Conditioner, Refrigerator, Washing Machine, Microwave, Blender, Juicer, Food Processor, Vacuum Cleaner, Electric Oven, Kettle, Heater, Tape Recorder, DVD Player, Receiver, Alarm System, Gaming Mobile, Gaming Laptop, Hard Drive, Flash Drive, Modem, Motherboard, Graphics Card, Processor, Power Supply, Metal Detector, Fingerprint Scanner, Display Device, Tracking Device, Sports Watch, Headset, Blood Sugar Monitor`
   String get devicesList {
     return Intl.message(
-      'موبايل, لابتوب, كمبيوتر, تابلت, تلفزيون, ساعة ذكية, ماوس, كيبورد, طابعة, سماعة, راوتر, كاميرا, بروجكتور, جهاز ألعاب, بلايستيشن, اكس بوكس, نظام صوت, سخان كهربائي, مروحة, مكيف, ثلاجة, غسالة, ميكروويف, خلاط, عصارة, محضر طعام, مكنسة كهربائية, فرن كهربائي, غلاية, دفاية, مسجل, جهاز دي في دي, ريسيفر, جهاز انذار, موبايل جيمينج, لابتوب جيمينج, قرص صلب, ذاكرة فلاش, مودم, لوحة أم, كارت شاشة, معالج, باور سبلاي, جهاز كشف المعادن, جهاز بصمة, جهاز عرض, جهاز تتبع, ساعة رياضية, سماعة رأس, جهاز تحليل السكر',
+      'Mobile, Laptop, Computer, Tablet, Television, Smartwatch, Mouse, Keyboard, Printer, Headphones, Router, Camera, Projector, Gaming Console, PlayStation, Xbox, Sound System, Electric Heater, Fan, Air Conditioner, Refrigerator, Washing Machine, Microwave, Blender, Juicer, Food Processor, Vacuum Cleaner, Electric Oven, Kettle, Heater, Tape Recorder, DVD Player, Receiver, Alarm System, Gaming Mobile, Gaming Laptop, Hard Drive, Flash Drive, Modem, Motherboard, Graphics Card, Processor, Power Supply, Metal Detector, Fingerprint Scanner, Display Device, Tracking Device, Sports Watch, Headset, Blood Sugar Monitor',
       name: 'devicesList',
       desc: '',
       args: [],
     );
   }
 
-  /// `ادوات`
+  /// `Tools`
   String get tools {
-    return Intl.message('ادوات', name: 'tools', desc: '', args: []);
+    return Intl.message('Tools', name: 'tools', desc: '', args: []);
   }
 
-  /// `مفتاح ربط, مفك, شاكوش, كماشة, منشار, زرادية, متر, شنيور, دريل, صاروخ, بنسة, مفتاح بلدي, مفتاح فرنساوي, مفتاح ألن, مفتاح عجل, مفتاح مواسير, مقص, قطر, قلم رصاص, قلم فلوماستر, مسطرة, مثلث, فرجار, ميزان مياه, ميزان حرارة, ميزان, فأس, إزميل, سكينة, سكين, ساطور, مقشطة, مقص صاج, مسدس شمع, مسدس سيليكون, مسدس رش, مسدس هواء, كاوية لحام, مكواه, مكواه لحام, مكواة, كريك, مجرفة, مسطرين, فرشة, بكرة, شريط لحام, شريط كهرباء, شريط قياس, مسامير, صواميل, براغي, شفرة, شفرة حلاقة, شفرة منشار, مفتاح صواميل`
+  /// `Wrench, Screwdriver, Hammer, Pliers, Saw, Pincers, Tape Measure, Drill, Drill, Angle Grinder, Pincers, Open-end Wrench, Adjustable Wrench, Allen Key, Lug Wrench, Pipe Wrench, Scissors, Cutter, Pencil, Marker, Ruler, Triangle, Compass, Spirit Level, Thermometer, Scale, Axe, Chisel, Knife, Blade, Cleaver, Scraper, Shears, Glue Gun, Silicone Gun, Spray Gun, Air Gun, Soldering Iron, Iron, Soldering Iron, Iron, Trowel, Shovel, Plaster Trowel, Brush, Roller, Electrical Tape, Electrical Tape, Measuring Tape, Nails, Nuts, Screws, Blade, Razor Blade, Saw Blade, Nut Wrench`
   String get toolsList {
     return Intl.message(
-      'مفتاح ربط, مفك, شاكوش, كماشة, منشار, زرادية, متر, شنيور, دريل, صاروخ, بنسة, مفتاح بلدي, مفتاح فرنساوي, مفتاح ألن, مفتاح عجل, مفتاح مواسير, مقص, قطر, قلم رصاص, قلم فلوماستر, مسطرة, مثلث, فرجار, ميزان مياه, ميزان حرارة, ميزان, فأس, إزميل, سكينة, سكين, ساطور, مقشطة, مقص صاج, مسدس شمع, مسدس سيليكون, مسدس رش, مسدس هواء, كاوية لحام, مكواه, مكواه لحام, مكواة, كريك, مجرفة, مسطرين, فرشة, بكرة, شريط لحام, شريط كهرباء, شريط قياس, مسامير, صواميل, براغي, شفرة, شفرة حلاقة, شفرة منشار, مفتاح صواميل',
+      'Wrench, Screwdriver, Hammer, Pliers, Saw, Pincers, Tape Measure, Drill, Drill, Angle Grinder, Pincers, Open-end Wrench, Adjustable Wrench, Allen Key, Lug Wrench, Pipe Wrench, Scissors, Cutter, Pencil, Marker, Ruler, Triangle, Compass, Spirit Level, Thermometer, Scale, Axe, Chisel, Knife, Blade, Cleaver, Scraper, Shears, Glue Gun, Silicone Gun, Spray Gun, Air Gun, Soldering Iron, Iron, Soldering Iron, Iron, Trowel, Shovel, Plaster Trowel, Brush, Roller, Electrical Tape, Electrical Tape, Measuring Tape, Nails, Nuts, Screws, Blade, Razor Blade, Saw Blade, Nut Wrench',
       name: 'toolsList',
       desc: '',
       args: [],
     );
   }
 
-  /// `العاب`
+  /// `Video Games`
   String get videoGames {
-    return Intl.message('العاب', name: 'videoGames', desc: '', args: []);
+    return Intl.message('Video Games', name: 'videoGames', desc: '', args: []);
   }
 
-  /// `ببجي, فورتنايت, كول أوف ديوتي, فيفا, إي فوتبول, جي تي أي, ريد ديد, مايندكرافت, ذا ويتشر, ذا ليجند أوف زيلدا, أنشارتد, لاست أوف أس, جاد أوف وار, هورايزون زيرو دون, سبيس فيرس, باتل فيلد, أسسنز كريد, فار كراي, ووتش دوجز, سايبر بانك, ديابلو, هالو, سوبر ماريو, سونيك, بوكيمون, دونكي كونغ, تكن, ستريت فايتر, مورتال كومبات, كينغدوم هارتس, فاينل فانتسي, تومب رايدر, هاري بوتر, ستارفيلد, سبايدرمان, باتمان, جوست أوف تسوشيما, نينجا غايدن, ريزدنت إيفل, سايلنت هيل, ديمونز سولز, دارك سولز, بلادبورن, إلدن رينج, دووم, ولفنشتاين, كراش بانديكوت, سبيس إنجنيرز, ستاردو فالي, جينشين إمباكت, ليج أوف ليجيندز, أوفرواتش, فالورانت, فورتزا هورايزون`
+  /// `PUBG, Fortnite, Call of Duty, FIFA, eFootball, GTA, Red Dead, Minecraft, The Witcher, The Legend of Zelda, Uncharted, The Last of Us, God of War, Horizon Zero Dawn, Space Engineers, Battlefield, Assassin's Creed, Far Cry, Watch Dogs, Cyberpunk, Diablo, Halo, Super Mario, Sonic, Pokémon, Donkey Kong, Tekken, Street Fighter, Mortal Kombat, Kingdom Hearts, Final Fantasy, Tomb Raider, Harry Potter, Starfield, Spider-Man, Batman, Ghost of Tsushima, Ninja Gaiden, Resident Evil, Silent Hill, Demon's Souls, Dark Souls, Bloodborne, Elden Ring, Doom, Wolfenstein, Crash Bandicoot, Space Engineers, Stardew Valley, Genshin Impact, League of Legends, Overwatch, Valorant, Forza Horizon`
   String get videoGamesList {
     return Intl.message(
-      'ببجي, فورتنايت, كول أوف ديوتي, فيفا, إي فوتبول, جي تي أي, ريد ديد, مايندكرافت, ذا ويتشر, ذا ليجند أوف زيلدا, أنشارتد, لاست أوف أس, جاد أوف وار, هورايزون زيرو دون, سبيس فيرس, باتل فيلد, أسسنز كريد, فار كراي, ووتش دوجز, سايبر بانك, ديابلو, هالو, سوبر ماريو, سونيك, بوكيمون, دونكي كونغ, تكن, ستريت فايتر, مورتال كومبات, كينغدوم هارتس, فاينل فانتسي, تومب رايدر, هاري بوتر, ستارفيلد, سبايدرمان, باتمان, جوست أوف تسوشيما, نينجا غايدن, ريزدنت إيفل, سايلنت هيل, ديمونز سولز, دارك سولز, بلادبورن, إلدن رينج, دووم, ولفنشتاين, كراش بانديكوت, سبيس إنجنيرز, ستاردو فالي, جينشين إمباكت, ليج أوف ليجيندز, أوفرواتش, فالورانت, فورتزا هورايزون',
+      'PUBG, Fortnite, Call of Duty, FIFA, eFootball, GTA, Red Dead, Minecraft, The Witcher, The Legend of Zelda, Uncharted, The Last of Us, God of War, Horizon Zero Dawn, Space Engineers, Battlefield, Assassin\'s Creed, Far Cry, Watch Dogs, Cyberpunk, Diablo, Halo, Super Mario, Sonic, Pokémon, Donkey Kong, Tekken, Street Fighter, Mortal Kombat, Kingdom Hearts, Final Fantasy, Tomb Raider, Harry Potter, Starfield, Spider-Man, Batman, Ghost of Tsushima, Ninja Gaiden, Resident Evil, Silent Hill, Demon\'s Souls, Dark Souls, Bloodborne, Elden Ring, Doom, Wolfenstein, Crash Bandicoot, Space Engineers, Stardew Valley, Genshin Impact, League of Legends, Overwatch, Valorant, Forza Horizon',
       name: 'videoGamesList',
       desc: '',
       args: [],
     );
   }
 
-  /// `كله`
+  /// `Everything`
   String get everything {
-    return Intl.message('كله', name: 'everything', desc: '', args: []);
+    return Intl.message('Everything', name: 'everything', desc: '', args: []);
   }
 
-  /// `موبايل, لابتوب, كشري, محشي, ملوخية, قميص, بنطلون, تيشيرت, أسد, نمر, فهد, مصر, السعودية, الإمارات, أحمر, أزرق, أخضر, تيتانيك, أفاتار, بداية, كرة القدم, كرة السلة, كرة الطائرة, مفتاح ربط, مفك, شاكوش, ببجي, فورتنايت, كول أوف ديوتي, شاورما, بيتزا, برجر, جاكيت, بلوفر, شورت, ذئب, كلب, قط, الكويت, قطر, الأردن, أصفر, برتقالي, بنفسجي, العراب, المصارع, فارس الظلام, السباحة, التنس, كرة الطاولة, كماشة, منشار, زرادية, فيفا, إي فوتبول, جي تي أي, فول, طعمية, كبسة, بدلة, فستان, تنورة, دب, ثعلب, زرافة, سوريا, لبنان, فلسطين, وردي, أسود, أبيض, الخلاص من شاوشانك, المنتقمون, الرجل الحديدي, الكاراتيه, الجودو, المصارعة, متر, شنيور, دريل, ريد ديد, مايندكرافت, ذا ويتشر, مقلوبة, مشاوي, كباب, عباية, كوفية, طاقية, فيل, غزال, ظبي, العراق, ليبيا, تونس, رمادي, بني, سماوي, ملكة الثلج, حكاية لعبة, فوق, الملاكمة, رفع الأثقال, ألعاب القوى, بنسة, مفتاح بلدي, مفتاح فرنساوي, ذا ليجند أوف زيلدا, أنشارتد, سمك, جمبري, سوشي, شراب, حزام, حذاء, تمساح, سلحفاة, أرنب, الجزائر, المغرب, اليمن, كحلي, زيتي, تركواز, السعي للسعادة, ديدبول, لوغان, الجمباز, الهوكي, الرغبي, لاست أوف أس, جاد أوف وار, شوربة عدس, فطير مشلتت, عيش باللحم, شبشب, سروال, بيجامة, قرد, دلفين, حوت, البحرين, عمان, السودان, موف, أوف وايت, بيج, قراصنة الكاريبي, العائد, لا لا لاند, البيسبول, الكريكت, الاسكواش, هورايزون زيرو دون, سبيس فيرس, بطاطس محمرة, فراخ مشوية, بانيه, قميص نوم, نقاب, طرحة, قرش, بطريق, نسر, تركيا, إيران, الهند, فضي, ذهبي, ليموني, المفكرة, الشفق, ألعاب الجوع, البولينج, ركوب الخيل, ركوب الدراجات, باتل فيلد, أسسنز كريد, فار كراي, مكرونة بشاميل, صينية بطاطس, رز معمر, بدي, جاكت جينز, هودي, صقر, بومة, غراب, باكستان, الصين, اليابان, فوشيا, نحاسي, رصاصي, القفز بالمظلات, التزحلق على الجليد, الغوص, ووتش دوجز, سايبر بانك, ديابلو, عكاوي, بامية, مسقعة, بالطو, قميص رسمي, تي شيرت بولو, عصفور, كناري, ببغاء, كوريا, فرنسا, ألمانيا, كريمي, عنابي, نبيتي, التجديف, التزحلق على الماء, الباركور, ماء, هواء, نار, تراب, شمس, قمر, سماء, نجم, مطر, ثلج, سحاب, ريح, برق, رعد, موج, رمل, جبل, بحر, نهر, شجرة, زهرة, ورق, قلم, كتاب, مكتب, كرسي, طاولة, باب, شباك, حائط, أرض, سقف, لمبة, تليفون, راديو, ساعة, مرآة, كوب, طبق, ملعقة, شوكة, سكين, سلة, صندوق, مفتاح, قفل, حبل, خيط, إبرة, مقص, زر, إطار, صورة, لوحة, زجاج, بلاستيك, حديد, خشب, حجر, معدن`
+  /// `Mobile, Laptop, Koshari, Mahshi, Molokhia, Shirt, Pants, T-shirt, Lion, Tiger, Leopard, Egypt, Saudi Arabia, UAE, Red, Blue, Green, Titanic, Avatar, Inception, Football, Basketball, Volleyball, Wrench, Screwdriver, Hammer, PUBG, Fortnite, Call of Duty, Shawarma, Pizza, Burger, Jacket, Sweater, Shorts, Wolf, Dog, Cat, Kuwait, Qatar, Jordan, Yellow, Orange, Purple, The Godfather, Gladiator, The Dark Knight, Swimming, Tennis, Table Tennis, Pliers, Saw, Pincers, FIFA, eFootball, GTA, Foul, Ta'ameya, Kabsa, Suit, Dress, Skirt, Bear, Fox, Giraffe, Syria, Lebanon, Palestine, Pink, Black, White, The Shawshank Redemption, The Avengers, Iron Man, Karate, Judo, Wrestling, Tape Measure, Drill, Drill, Red Dead, Minecraft, The Witcher, Maqluba, Mixed Grills, Kebab, Abaya, Kufiya, Beanie, Elephant, Gazelle, Antelope, Iraq, Libya, Tunisia, Grey, Brown, Cyan, Frozen, Toy Story, Up, Boxing, Weightlifting, Athletics, Pincers, Open-end Wrench, Adjustable Wrench, The Legend of Zelda, Uncharted, Fish, Shrimp, Sushi, Socks, Belt, Shoes, Crocodile, Turtle, Rabbit, Algeria, Morocco, Yemen, Navy, Olive Green, Turquoise, The Pursuit of Happyness, Deadpool, Logan, Gymnastics, Hockey, Rugby, The Last of Us, God of War, Lentil Soup, Feteer Meshaltet, Aish bel Lahm, Slippers, Trousers, Pajamas, Monkey, Dolphin, Whale, Bahrain, Oman, Sudan, Mauve, Off-white, Beige, Pirates of the Caribbean, The Revenant, La La Land, Baseball, Cricket, Squash, Horizon Zero Dawn, Space Engineers, French Fries, Grilled Chicken, Pane, Nightgown, Niqab, Hijab, Shark, Penguin, Eagle, Turkey, Iran, India, Silver, Gold, Lemon, The Notebook, Twilight, The Hunger Games, Bowling, Horse Riding, Cycling, Battlefield, Assassin's Creed, Far Cry, Macaroni Béchamel, Potato Tray, Rice with Milk, Bodysuit, Denim Jacket, Hoodie, Falcon, Owl, Raven, Pakistan, China, Japan, Fuchsia, Copper, Lead, Skydiving, Ice Skating, Diving, Watch Dogs, Cyberpunk, Diablo, Akawi, Bamia, Moussaka, Coat, Formal Shirt, Polo Shirt, Sparrow, Canary, Parrot, Korea, France, Germany, Cream, Maroon, Burgundy, Rowing, Water Skiing, Parkour, Water, Air, Fire, Earth, Sun, Moon, Sky, Star, Rain, Snow, Cloud, Wind, Lightning, Thunder, Wave, Sand, Mountain, Sea, River, Tree, Flower, Paper, Pen, Book, Desk, Chair, Table, Door, Window, Wall, Floor, Ceiling, Lamp, Telephone, Radio, Clock, Mirror, Cup, Plate, Spoon, Fork, Knife, Basket, Box, Key, Lock, Rope, Thread, Needle, Scissors, Button, Frame, Picture, Painting, Glass, Plastic, Iron, Wood, Stone, Metal`
   String get everythingList {
     return Intl.message(
-      'موبايل, لابتوب, كشري, محشي, ملوخية, قميص, بنطلون, تيشيرت, أسد, نمر, فهد, مصر, السعودية, الإمارات, أحمر, أزرق, أخضر, تيتانيك, أفاتار, بداية, كرة القدم, كرة السلة, كرة الطائرة, مفتاح ربط, مفك, شاكوش, ببجي, فورتنايت, كول أوف ديوتي, شاورما, بيتزا, برجر, جاكيت, بلوفر, شورت, ذئب, كلب, قط, الكويت, قطر, الأردن, أصفر, برتقالي, بنفسجي, العراب, المصارع, فارس الظلام, السباحة, التنس, كرة الطاولة, كماشة, منشار, زرادية, فيفا, إي فوتبول, جي تي أي, فول, طعمية, كبسة, بدلة, فستان, تنورة, دب, ثعلب, زرافة, سوريا, لبنان, فلسطين, وردي, أسود, أبيض, الخلاص من شاوشانك, المنتقمون, الرجل الحديدي, الكاراتيه, الجودو, المصارعة, متر, شنيور, دريل, ريد ديد, مايندكرافت, ذا ويتشر, مقلوبة, مشاوي, كباب, عباية, كوفية, طاقية, فيل, غزال, ظبي, العراق, ليبيا, تونس, رمادي, بني, سماوي, ملكة الثلج, حكاية لعبة, فوق, الملاكمة, رفع الأثقال, ألعاب القوى, بنسة, مفتاح بلدي, مفتاح فرنساوي, ذا ليجند أوف زيلدا, أنشارتد, سمك, جمبري, سوشي, شراب, حزام, حذاء, تمساح, سلحفاة, أرنب, الجزائر, المغرب, اليمن, كحلي, زيتي, تركواز, السعي للسعادة, ديدبول, لوغان, الجمباز, الهوكي, الرغبي, لاست أوف أس, جاد أوف وار, شوربة عدس, فطير مشلتت, عيش باللحم, شبشب, سروال, بيجامة, قرد, دلفين, حوت, البحرين, عمان, السودان, موف, أوف وايت, بيج, قراصنة الكاريبي, العائد, لا لا لاند, البيسبول, الكريكت, الاسكواش, هورايزون زيرو دون, سبيس فيرس, بطاطس محمرة, فراخ مشوية, بانيه, قميص نوم, نقاب, طرحة, قرش, بطريق, نسر, تركيا, إيران, الهند, فضي, ذهبي, ليموني, المفكرة, الشفق, ألعاب الجوع, البولينج, ركوب الخيل, ركوب الدراجات, باتل فيلد, أسسنز كريد, فار كراي, مكرونة بشاميل, صينية بطاطس, رز معمر, بدي, جاكت جينز, هودي, صقر, بومة, غراب, باكستان, الصين, اليابان, فوشيا, نحاسي, رصاصي, القفز بالمظلات, التزحلق على الجليد, الغوص, ووتش دوجز, سايبر بانك, ديابلو, عكاوي, بامية, مسقعة, بالطو, قميص رسمي, تي شيرت بولو, عصفور, كناري, ببغاء, كوريا, فرنسا, ألمانيا, كريمي, عنابي, نبيتي, التجديف, التزحلق على الماء, الباركور, ماء, هواء, نار, تراب, شمس, قمر, سماء, نجم, مطر, ثلج, سحاب, ريح, برق, رعد, موج, رمل, جبل, بحر, نهر, شجرة, زهرة, ورق, قلم, كتاب, مكتب, كرسي, طاولة, باب, شباك, حائط, أرض, سقف, لمبة, تليفون, راديو, ساعة, مرآة, كوب, طبق, ملعقة, شوكة, سكين, سلة, صندوق, مفتاح, قفل, حبل, خيط, إبرة, مقص, زر, إطار, صورة, لوحة, زجاج, بلاستيك, حديد, خشب, حجر, معدن',
+      'Mobile, Laptop, Koshari, Mahshi, Molokhia, Shirt, Pants, T-shirt, Lion, Tiger, Leopard, Egypt, Saudi Arabia, UAE, Red, Blue, Green, Titanic, Avatar, Inception, Football, Basketball, Volleyball, Wrench, Screwdriver, Hammer, PUBG, Fortnite, Call of Duty, Shawarma, Pizza, Burger, Jacket, Sweater, Shorts, Wolf, Dog, Cat, Kuwait, Qatar, Jordan, Yellow, Orange, Purple, The Godfather, Gladiator, The Dark Knight, Swimming, Tennis, Table Tennis, Pliers, Saw, Pincers, FIFA, eFootball, GTA, Foul, Ta\'ameya, Kabsa, Suit, Dress, Skirt, Bear, Fox, Giraffe, Syria, Lebanon, Palestine, Pink, Black, White, The Shawshank Redemption, The Avengers, Iron Man, Karate, Judo, Wrestling, Tape Measure, Drill, Drill, Red Dead, Minecraft, The Witcher, Maqluba, Mixed Grills, Kebab, Abaya, Kufiya, Beanie, Elephant, Gazelle, Antelope, Iraq, Libya, Tunisia, Grey, Brown, Cyan, Frozen, Toy Story, Up, Boxing, Weightlifting, Athletics, Pincers, Open-end Wrench, Adjustable Wrench, The Legend of Zelda, Uncharted, Fish, Shrimp, Sushi, Socks, Belt, Shoes, Crocodile, Turtle, Rabbit, Algeria, Morocco, Yemen, Navy, Olive Green, Turquoise, The Pursuit of Happyness, Deadpool, Logan, Gymnastics, Hockey, Rugby, The Last of Us, God of War, Lentil Soup, Feteer Meshaltet, Aish bel Lahm, Slippers, Trousers, Pajamas, Monkey, Dolphin, Whale, Bahrain, Oman, Sudan, Mauve, Off-white, Beige, Pirates of the Caribbean, The Revenant, La La Land, Baseball, Cricket, Squash, Horizon Zero Dawn, Space Engineers, French Fries, Grilled Chicken, Pane, Nightgown, Niqab, Hijab, Shark, Penguin, Eagle, Turkey, Iran, India, Silver, Gold, Lemon, The Notebook, Twilight, The Hunger Games, Bowling, Horse Riding, Cycling, Battlefield, Assassin\'s Creed, Far Cry, Macaroni Béchamel, Potato Tray, Rice with Milk, Bodysuit, Denim Jacket, Hoodie, Falcon, Owl, Raven, Pakistan, China, Japan, Fuchsia, Copper, Lead, Skydiving, Ice Skating, Diving, Watch Dogs, Cyberpunk, Diablo, Akawi, Bamia, Moussaka, Coat, Formal Shirt, Polo Shirt, Sparrow, Canary, Parrot, Korea, France, Germany, Cream, Maroon, Burgundy, Rowing, Water Skiing, Parkour, Water, Air, Fire, Earth, Sun, Moon, Sky, Star, Rain, Snow, Cloud, Wind, Lightning, Thunder, Wave, Sand, Mountain, Sea, River, Tree, Flower, Paper, Pen, Book, Desk, Chair, Table, Door, Window, Wall, Floor, Ceiling, Lamp, Telephone, Radio, Clock, Mirror, Cup, Plate, Spoon, Fork, Knife, Basket, Box, Key, Lock, Rope, Thread, Needle, Scissors, Button, Frame, Picture, Painting, Glass, Plastic, Iron, Wood, Stone, Metal',
       name: 'everythingList',
       desc: '',
       args: [],

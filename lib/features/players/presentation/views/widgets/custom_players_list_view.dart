@@ -22,6 +22,7 @@ class _CustomPlayersListViewState extends State<CustomPlayersListView> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<PlayersCubit, PlayersState>(
+      buildWhen: (previous, current) => current is PlayersSuccess,
       builder: (context, state) {
         List<PlayerModel> playersList = accessPlayerCubit(context).playersList;
         return ListView.builder(

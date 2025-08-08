@@ -49,10 +49,13 @@ class CarouselViewItem extends StatelessWidget {
           child: const SizedBox(),
         ),
         Center(
-          child: FittedBox(
-            child: Text(
-              categoryItemModel.titleName,
-              style: Styles.styleSemiBold60(context),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: FittedBox(
+              child: Text(
+                categoryItemModel.titleName,
+                style: Styles.styleSemiBold60(context),
+              ),
             ),
           ),
         ),
