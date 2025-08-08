@@ -7,12 +7,14 @@ import 'package:the_spy/generated/l10n.dart';
 class CustomPlayerRevealWidget extends StatelessWidget {
   const CustomPlayerRevealWidget({
     super.key,
-    required this.randomPlayersList,
+    required this.playersRandomList,
     required this.playerIndex,
+    this.onPressed,
   });
 
-  final List<PlayerModel> randomPlayersList;
+  final List<PlayerModel> playersRandomList;
   final int playerIndex;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +35,13 @@ class CustomPlayerRevealWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CustomPlayerRevealcard(
-                    playerName: randomPlayersList[playerIndex].name,
+                    playerName: playersRandomList[playerIndex].name,
                   ),
                   const SizedBox(
                     height: 50,
                   ),
                   CustomSmallTextButton(
-                    onPressed: () {},
+                    onPressed: onPressed,
                     text: S.of(context).show,
                   ),
                 ],

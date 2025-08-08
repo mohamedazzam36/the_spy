@@ -7,9 +7,11 @@ class CustomWordRevealWidget extends StatelessWidget {
   const CustomWordRevealWidget({
     super.key,
     required this.wordName,
+    this.onPressed,
   });
 
   final String wordName;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class CustomWordRevealWidget extends StatelessWidget {
                     height: 50,
                   ),
                   CustomSmallTextButton(
-                    onPressed: () {},
+                    onPressed: onPressed,
                     text: S.of(context).next,
                   ),
                 ],

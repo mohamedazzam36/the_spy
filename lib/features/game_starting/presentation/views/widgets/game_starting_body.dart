@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/game_logic_service/game_logic_service.dart';
+import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
+import 'package:the_spy/features/game_starting/presentation/views/widgets/custom_player_reveal_widget.dart';
 import 'package:the_spy/features/game_starting/presentation/views/widgets/custom_word_reveal_widget.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
@@ -25,17 +27,28 @@ class _GameStartingBodyState extends State<GameStartingBody> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<PlayersCubit, PlayersState>(
+      buildWhen: (previous, current) =>
+          current is PlayerReveal || current is WordReveal,
       builder: (context, state) {
-        return CustomWordRevealWidget(
-          wordName: wordName!,
-        );
+        if (state is PlayerReveal) {
+          return CustomPlayerRevealWidget(
+            playersRandomList: playersRandomList,
+            playerIndex: playerIndex,
+            onPressed: () {
+              playerIndex++;
+            },
+          );
+        } else if (state is WordReveal) {
+          return CustomWordRevealWidget(wordName: wordName!);
+        } else {
+          return const CircularProgressIndicator();
+        }
       },
     );
   }
 
   void initGameStarting() {
-    playersRandomList = GameLogicService.getPlayersRandomList(context);
+    playersRandomList = accessPlayerCubit(context).playersRandomList;
     wordName = GameLogicService.getRandomCategoryWord(context);
-    GameLogicService.getSpyName(context, playersRandomList: playersRandomList);
   }
 }

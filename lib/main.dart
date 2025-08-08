@@ -7,6 +7,7 @@ import 'package:the_spy/core/cubits/app_cubit/app_cubit.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/utils/simple_bloc_observer.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/players/data/repos/players_repo.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
@@ -18,6 +19,8 @@ void main() async {
   WidgetsBinding.instance.deferFirstFrame();
 
   await Hive.initFlutter();
+
+  Bloc.observer = SimpleBlocObserver();
 
   Hive.registerAdapter(PlayerModelAdapter());
 

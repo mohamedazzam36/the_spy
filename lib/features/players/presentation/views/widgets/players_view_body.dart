@@ -39,18 +39,7 @@ class PlayersViewBody extends StatelessWidget {
               CustomTextButton(
                 text: S.of(context).start,
                 onPressed: () {
-                  bool canNavigate =
-                      accessPlayerCubit(context).playersList.length > 2;
-                  if (canNavigate) {
-                    context.push(AppRouter.kWordRevealview);
-                  } else {
-                    showDialogAlert(
-                      context,
-                      title: S.of(context).alertTitle,
-                      actionText: S.of(context).alertAction,
-                      content: S.of(context).alertContent,
-                    );
-                  }
+                  nagvigateToGameStarting(context);
                 },
                 color: kWhiteColor,
                 textStyle: Styles.styleBold50(
@@ -62,5 +51,21 @@ class PlayersViewBody extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  void nagvigateToGameStarting(BuildContext context) {
+    bool canNavigate = accessPlayerCubit(context).playersList.length > 2;
+    if (canNavigate) {
+      accessPlayerCubit(context).getPlayersRandomList(context);
+      accessPlayerCubit(context).getSpyName(context);
+      context.push(AppRouter.kWordRevealview);
+    } else {
+      showDialogAlert(
+        context,
+        title: S.of(context).alertTitle,
+        actionText: S.of(context).alertAction,
+        content: S.of(context).alertContent,
+      );
+    }
   }
 }

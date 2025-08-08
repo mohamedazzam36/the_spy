@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
@@ -11,6 +13,7 @@ class PlayersCubit extends Cubit<PlayersState> {
 
   final PlayersRepo playersRepo;
   List<PlayerModel> playersList = [];
+  List<PlayerModel> playersRandomList = [];
   PlayerModel? theSpy;
 
   fetchPlayersData() {
@@ -33,5 +36,14 @@ class PlayersCubit extends Cubit<PlayersState> {
 
   void showWordToPlayer() {}
 
-  void getRandomPlayersList() {}
+  void getSpyName(BuildContext context) {
+    List<PlayerModel> twicedRandomList = playersRandomList..shuffle();
+    theSpy = twicedRandomList[Random().nextInt(playersRandomList.length)];
+    emit(PlayerReveal());
+  }
+
+  void getPlayersRandomList(BuildContext context) {
+    List<PlayerModel> randomTempList = playersList..shuffle();
+    playersRandomList = randomTempList..shuffle();
+  }
 }
