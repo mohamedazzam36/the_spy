@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
@@ -8,7 +9,6 @@ import 'package:the_spy/core/utils/functions/showDialogAlert.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/custom_players_list_view.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/custom_text_form_field.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class PlayersViewBody extends StatelessWidget {
   const PlayersViewBody({super.key});
@@ -37,7 +37,7 @@ class PlayersViewBody extends StatelessWidget {
                 height: 8,
               ),
               CustomTextButton(
-                text: S.of(context).start,
+                text: 'start'.tr(),
                 onPressed: () {
                   nagvigateToGameStarting(context);
                 },
@@ -60,9 +60,9 @@ class PlayersViewBody extends StatelessWidget {
     } else {
       showDialogAlert(
         context,
-        title: S.of(context).alertTitle,
-        actionText: S.of(context).alertAction,
-        content: S.of(context).alertContent,
+        title: 'alertTitle'.tr(),
+        actionText: 'alertAction'.tr(),
+        content: 'alertContent'.tr(),
       );
     }
   }

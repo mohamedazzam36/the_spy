@@ -1,10 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/functions/game_fuctions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/enums.dart';
-import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 extension ModesInfo on GameModesEnum {
   ({Color backGroundColor, String image, String modeDescription, int numOfSpys, String title})
@@ -12,17 +11,17 @@ extension ModesInfo on GameModesEnum {
     switch (this) {
       case GameModesEnum.classic:
         return (
-          title: S.of(context).classicModeTitle,
+          title: 'classicModeTitle'.tr(),
           numOfSpys: 1,
-          modeDescription: S.of(context).classicModeDescription,
+          modeDescription: 'classicModeDescription'.tr(),
           image: 'image',
           backGroundColor: kBlackColor,
         );
       case GameModesEnum.blind:
         return (
-          title: S.of(context).blindModeTitle,
+          title: 'blindModeTitle'.tr(),
           numOfSpys: 1,
-          modeDescription: S.of(context).blindModeDescription,
+          modeDescription: 'blindModeDescription'.tr(),
           image: 'image',
           backGroundColor: kWhiteColor,
         );
@@ -61,24 +60,6 @@ extension ModesInfo on GameModesEnum {
         return Blind().setupGame(context);
       case GameModesEnum.specialPlayers:
         return SpeacialPlayers().setupGame(context);
-      case GameModesEnum.classicDouble:
-        // TODO: Handle this case.
-        throw UnimplementedError();
-      case GameModesEnum.blindDouble:
-        // TODO: Handle this case.
-        throw UnimplementedError();
-    }
-  }
-
-  String spysShowedWord(BuildContext context) {
-    switch (this) {
-      case GameModesEnum.classic:
-        accessPlayerCubit(context).gameModeModel.spysShowedWord = S.of(context).hide;
-        return S.of(context).hide;
-      case GameModesEnum.blind:
-        return accessPlayerCubit(context).gameModeModel.spysShowedWord;
-      case GameModesEnum.specialPlayers:
-        return accessPlayerCubit(context).gameModeModel.spysShowedWord;
       case GameModesEnum.classicDouble:
         // TODO: Handle this case.
         throw UnimplementedError();

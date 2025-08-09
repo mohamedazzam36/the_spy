@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/utils/app_router.dart';
@@ -6,7 +7,6 @@ import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 import 'package:the_spy/features/home/data/models/category_item_model.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/carousel_view_item.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class CustomCarouselView extends StatefulWidget {
   const CustomCarouselView({super.key});
@@ -31,8 +31,7 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
     double width = MediaQuery.sizeOf(context).width;
     return CarouselView.weighted(
       onTap: (value) {
-        accessAppCubit(context).currentCategoryNames =
-            categoriesList[value].namesList;
+        accessAppCubit(context).currentCategoryNames = categoriesList[value].namesList;
         context.push(
           AppRouter.kPlayersView,
         );
@@ -43,9 +42,7 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
       elevation: 4,
       itemSnapping: true,
       scrollDirection: Axis.horizontal,
-      flexWeights: width <= SizeConfig.mobileWidth
-          ? [1, 2, 1]
-          : [1, 1, 2, 1, 1],
+      flexWeights: width <= SizeConfig.mobileWidth ? [1, 2, 1] : [1, 1, 2, 1, 1],
       children: categoriesList.map(
         (e) {
           return CarouselViewItem(categoryItemModel: e);
@@ -57,69 +54,69 @@ class _CustomCarouselViewState extends State<CustomCarouselView> {
   void getCategoriesInfo() {
     categoriesList = [
       CategoryItemModel(
-        titleName: S.of(context).animals,
+        titleName: 'animals'.tr(),
         image: Assets.imagesAnimals,
-        namesList: S.of(context).animalsList.split(', '),
+        namesList: 'animalsList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).food,
+        titleName: 'food'.tr(),
         image: Assets.imagesFood,
-        namesList: S.of(context).foodList.split(', '),
+        namesList: 'foodList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).devices,
+        titleName: 'devices'.tr(),
         image: Assets.imagesDevices,
-        namesList: S.of(context).devicesList.split(', '),
+        namesList: 'devicesList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).cloths,
+        titleName: 'cloths'.tr(),
         image: Assets.imagesCloths,
-        namesList: S.of(context).clothsList.split(', '),
+        namesList: 'clothsList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).videoGames,
+        titleName: 'videoGames'.tr(),
         image: Assets.imagesVideoGames,
-        namesList: S.of(context).videoGamesList.split(', '),
+        namesList: 'videoGamesList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).tools,
+        titleName: 'tools'.tr(),
         image: Assets.imagesTools,
-        namesList: S.of(context).toolsList.split(', '),
+        namesList: 'toolsList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).cities,
+        titleName: 'cities'.tr(),
         image: Assets.imagesCities,
-        namesList: S.of(context).citiesList.split(', '),
+        namesList: 'citiesList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).countries,
+        titleName: 'countries'.tr(),
         image: Assets.imagesCountries,
-        namesList: S.of(context).countriesList.split(', '),
+        namesList: 'countriesList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).movies,
+        titleName: 'movies'.tr(),
         image: Assets.imagesMovies,
-        namesList: S.of(context).moviesList.split(', '),
+        namesList: 'moviesList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).colors,
+        titleName: 'colors'.tr(),
         image: Assets.imagesColors,
-        namesList: S.of(context).colorsList.split(', '),
+        namesList: 'colorsList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).sports,
+        titleName: 'sports'.tr(),
         image: Assets.imagesSports,
-        namesList: S.of(context).sportsList.split(', '),
+        namesList: 'sportsList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).footballPlayers,
+        titleName: 'footballPlayers'.tr(),
         image: Assets.imagesFootballPlayers,
-        namesList: S.of(context).footballPlayersList.split(', '),
+        namesList: 'footballPlayersList'.tr().split(', '),
       ),
       CategoryItemModel(
-        titleName: S.of(context).everything,
+        titleName: 'everything'.tr(),
         image: Assets.imagesEverything,
-        namesList: S.of(context).everythingList.split(', '),
+        namesList: 'everythingList'.tr().split(', '),
       ),
     ];
   }

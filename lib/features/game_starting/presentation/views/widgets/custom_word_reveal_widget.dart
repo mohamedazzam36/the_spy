@@ -1,7 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/widgets/custom_small_text_button.dart';
 import 'package:the_spy/features/game_starting/presentation/views/widgets/custom_word_reveal_card.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class CustomWordRevealWidget extends StatelessWidget {
   const CustomWordRevealWidget({
@@ -37,7 +37,7 @@ class CustomWordRevealWidget extends StatelessWidget {
                   ),
                   CustomSmallTextButton(
                     onPressed: onPressed,
-                    text: S.of(context).next,
+                    text: 'next'.tr(),
                   ),
                 ],
               ),

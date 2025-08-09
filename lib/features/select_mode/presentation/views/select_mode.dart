@@ -1,8 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_view_body.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class SelectModeView extends StatelessWidget {
   const SelectModeView({super.key});
@@ -14,7 +14,7 @@ class SelectModeView extends StatelessWidget {
         backgroundColor: kPrimaryColor,
         centerTitle: true,
         title: Text(
-          S.of(context).selectMode,
+          'selectMode'.tr(),
           style: Styles.styleSemiBold35(context),
         ),
       ),

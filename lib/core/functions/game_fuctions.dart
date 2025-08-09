@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/widgets.dart';
 import 'package:the_spy/core/game_logic_service/game_logic_service.dart';
 import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
@@ -93,7 +94,7 @@ class Classic extends GameModeFuctions {
 
   @override
   setSpysShowedWord(BuildContext context) {
-    // Was setted
+    accessPlayerCubit(context).gameModeModel.spysShowedWord = 'hide'.tr();
   }
 
   @override

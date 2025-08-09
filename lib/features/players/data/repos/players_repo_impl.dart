@@ -1,9 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/players/data/repos/players_repo.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class PlayersRepoImpl implements PlayersRepo {
   @override
@@ -25,13 +25,13 @@ class PlayersRepoImpl implements PlayersRepo {
     required List<PlayerModel> playersList,
   }) {
     if (name == null || name.isEmpty) {
-      return S.of(context).noNameValidate;
+      return 'noNameValidate'.tr();
     } else if (playersList.any(
       (player) {
         return name == player.name;
       },
     )) {
-      return S.of(context).nameRegisteredValidate;
+      return 'nameRegisteredValidate'.tr();
     }
     return null;
   }

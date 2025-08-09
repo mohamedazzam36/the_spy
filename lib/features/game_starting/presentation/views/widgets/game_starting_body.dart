@@ -40,7 +40,7 @@ class _GameStartingBodyState extends State<GameStartingBody> {
         } else if (state is WordReveal) {
           return CustomWordRevealWidget(
             wordName: state.isSpy
-                ? mode.spysShowedWord(context)
+                ? accessPlayerCubit(context).gameModeModel.spysShowedWord
                 : accessPlayerCubit(context).gameModeModel.playersShowedWord,
             onPressed: () => accessPlayerCubit(context).switchBetweenPlayersAndWord(),
           );

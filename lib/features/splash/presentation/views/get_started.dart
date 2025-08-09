@@ -1,8 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/features/splash/presentation/views/widgets/get_started_view_body.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class GetStartedView extends StatelessWidget {
   const GetStartedView({super.key});
@@ -14,7 +14,7 @@ class GetStartedView extends StatelessWidget {
         backgroundColor: kPrimaryColor,
         centerTitle: true,
         title: Text(
-          S.of(context).gameIdea,
+          'gameIdea'.tr(),
           style: Styles.styleSemiBold35(context),
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -7,7 +8,6 @@ import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/splash/presentation/views/widgets/get_started_decorated_container.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class GetStartedViewBody extends StatelessWidget {
   const GetStartedViewBody({super.key});
@@ -42,7 +42,7 @@ class GetStartedViewBody extends StatelessWidget {
                       height: 100,
                     ),
                     GetStartedDecoratedContainer(
-                      text: S.of(context).gameDescription,
+                      text: 'gameDescription'.tr(),
                     ),
                     const Expanded(
                       child: SizedBox(
@@ -55,7 +55,7 @@ class GetStartedViewBody extends StatelessWidget {
                         await appBox.put(kIsFirstStart, false);
                         context.go(AppRouter.kSelectModeView);
                       },
-                      text: S.of(context).start,
+                      text: 'start'.tr(),
                     ),
                     const SizedBox(
                       height: 48,

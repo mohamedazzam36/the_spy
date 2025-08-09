@@ -1,8 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/widgets/custom_small_text_button.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/game_starting/presentation/views/widgets/custom_player_reveal_card.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class CustomPlayerRevealWidget extends StatelessWidget {
   const CustomPlayerRevealWidget({
@@ -40,7 +40,7 @@ class CustomPlayerRevealWidget extends StatelessWidget {
                   ),
                   CustomSmallTextButton(
                     onPressed: onPressed,
-                    text: S.of(context).show,
+                    text: 'show'.tr(),
                   ),
                 ],
               ),

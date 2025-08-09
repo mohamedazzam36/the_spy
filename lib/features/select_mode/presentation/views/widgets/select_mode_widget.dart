@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/models/game_mode_model.dart';
@@ -6,7 +7,6 @@ import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_decorated_container.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class SelectModeWidget extends StatelessWidget {
   const SelectModeWidget({super.key, required this.gameModeModel});
@@ -61,7 +61,7 @@ class SelectModeWidget extends StatelessWidget {
                           AppRouter.kHomeView,
                         );
                       },
-                      text: S.of(context).select,
+                      text: 'select'.tr(),
                     ),
                     const SizedBox(
                       height: 48,

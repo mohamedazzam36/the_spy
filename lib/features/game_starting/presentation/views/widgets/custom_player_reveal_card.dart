@@ -1,7 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class CustomPlayerRevealcard extends StatelessWidget {
   const CustomPlayerRevealcard({
@@ -35,13 +35,13 @@ class CustomPlayerRevealcard extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            CustomWordRevealText(playerName: S.of(context).giveMobileTo),
+            CustomWordRevealText(playerName: 'giveMobileTo'.tr()),
             CustomWordRevealText(playerName: playerName),
             const SizedBox(
               height: 32,
             ),
             Text(
-              S.of(context).wordRevealText,
+              'wordRevealText'.tr(),
               style: Styles.styleSemiBold24(
                 context,
               ).copyWith(color: kBlackColor),

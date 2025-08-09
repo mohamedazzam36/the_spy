@@ -1,9 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
-import 'package:the_spy/generated/l10n.dart';
 
 class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField({
@@ -33,8 +33,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       child: TextFormField(
         controller: controller,
         onFieldSubmitted: (value) => validatePlayer(context),
-        validator: (value) =>
-            accessPlayerCubit(context).validatePlayer(context, name: value),
+        validator: (value) => accessPlayerCubit(context).validatePlayer(context, name: value),
         style: Styles.styleSemiBold24(context),
         cursorColor: kWhiteColor,
         decoration: InputDecoration(
@@ -47,7 +46,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
               color: kWhiteColor,
             ),
           ),
-          hintText: S.of(context).addPlayer,
+          hintText: 'addPlayer'.tr(),
           hintStyle: Styles.styleSemiBold24(
             context,
           ).copyWith(color: kWhiteColor.withAlpha(150)),
