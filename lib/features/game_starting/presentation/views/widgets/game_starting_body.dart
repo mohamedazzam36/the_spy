@@ -7,7 +7,6 @@ import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/features/game_starting/presentation/views/widgets/custom_player_reveal_widget.dart';
 import 'package:the_spy/features/game_starting/presentation/views/widgets/custom_word_reveal_widget.dart';
-import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 
 class GameStartingBody extends StatefulWidget {
@@ -19,13 +18,12 @@ class GameStartingBody extends StatefulWidget {
 
 class _GameStartingBodyState extends State<GameStartingBody> {
   String? showedWord;
-  GameModesEnum? mode;
-  List<PlayerModel> playersList = [];
+  late GameModesEnum mode;
 
   @override
   void initState() {
     initGameStarting();
-    log(accessPlayerCubit(context).theSpy!.name);
+    log(accessPlayerCubit(context).gameModeModel.spysList[0].name);
     super.initState();
   }
 
@@ -41,7 +39,9 @@ class _GameStartingBodyState extends State<GameStartingBody> {
           );
         } else if (state is WordReveal) {
           return CustomWordRevealWidget(
-            wordName: state.isSpy ? mode!.getSpyWord(context, playersList) : showedWord!,
+            wordName: state.isSpy
+                ? mode.spysShowedWord(context)
+                : accessPlayerCubit(context).gameModeModel.playersShowedWord,
             onPressed: () => accessPlayerCubit(context).switchBetweenPlayersAndWord(),
           );
         } else {
@@ -52,9 +52,8 @@ class _GameStartingBodyState extends State<GameStartingBody> {
   }
 
   void initGameStarting() {
-    mode = accessAppCubit(context).gameModeModel!.gameModesEnum;
     accessPlayerCubit(context).startGame();
-    playersList = accessPlayerCubit(context).playersList;
-    showedWord = mode!.getShowedWord(context, playersList);
+    mode = accessPlayerCubit(context).gameModeModel.currentMode;
+    mode.setGameStarting(context);
   }
 }

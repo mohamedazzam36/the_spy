@@ -54,7 +54,7 @@ class PlayersViewBody extends StatelessWidget {
   }
 
   void nagvigateToGameStarting(BuildContext context) {
-    bool canNavigate = accessPlayerCubit(context).playersList.length > 2;
+    bool canNavigate = accessPlayerCubit(context).gameModeModel.playersList.length > 2;
     if (canNavigate) {
       context.push(AppRouter.kWordRevealview);
     } else {

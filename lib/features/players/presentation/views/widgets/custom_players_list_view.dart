@@ -24,7 +24,7 @@ class _CustomPlayersListViewState extends State<CustomPlayersListView> {
     return BlocBuilder<PlayersCubit, PlayersState>(
       buildWhen: (previous, current) => current is PlayersSuccess,
       builder: (context, state) {
-        List<PlayerModel> playersList = accessPlayerCubit(context).playersList;
+        List<PlayerModel> playersList = accessPlayerCubit(context).gameModeModel.playersList;
         return ListView.builder(
           itemCount: playersList.length,
           itemBuilder: (context, index) {

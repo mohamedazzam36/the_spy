@@ -24,7 +24,7 @@ class SelectModeWidget extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  gameModeModel.gameModesEnum.getModeInfo(context).backGroundColor,
+                  gameModeModel.currentMode.getModeInfo(context).backGroundColor,
                   Colors.deepPurple,
                   Colors.deepPurple[300]!,
                   const Color.fromARGB(255, 243, 205, 225),
@@ -53,7 +53,10 @@ class SelectModeWidget extends StatelessWidget {
                     ),
                     CustomTextButton(
                       onPressed: () {
-                        accessAppCubit(context).gameModeModel = gameModeModel;
+                        accessAppCubit(context).currentMode = gameModeModel.currentMode;
+                        accessPlayerCubit(context).gameModeModel = GameModeModel(
+                          currentMode: gameModeModel.currentMode,
+                        );
                         context.push(
                           AppRouter.kHomeView,
                         );
