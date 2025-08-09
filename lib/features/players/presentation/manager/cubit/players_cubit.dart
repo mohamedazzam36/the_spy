@@ -14,6 +14,7 @@ class PlayersCubit extends Cubit<PlayersState> {
   List<PlayerModel> playersList = [];
   List<PlayerModel> playersRandomList = [];
   PlayerModel? theSpy;
+  String? showedWord;
   int currentPlayerIndex = 0;
 
   fetchPlayersData() {
@@ -51,7 +52,7 @@ class PlayersCubit extends Cubit<PlayersState> {
   void startGame() {
     currentPlayerIndex = 0;
     playersRandomList = GameLogicService.getPlayersRandomList(playersList);
-    theSpy = GameLogicService.pickSpy(playersRandomList);
+    theSpy = GameLogicService.getRandomPlayer(playersRandomList);
     emit(PlayerReveal(player: playersRandomList[currentPlayerIndex]));
   }
 }

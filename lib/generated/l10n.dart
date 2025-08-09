@@ -89,16 +89,21 @@ class S {
     return Intl.message('اختار', name: 'select', desc: '', args: []);
   }
 
-  /// `العادي`
-  String get normalModeTitle {
-    return Intl.message('العادي', name: 'normalModeTitle', desc: '', args: []);
+  /// `الكلاسيك`
+  String get classicModeTitle {
+    return Intl.message(
+      'الكلاسيك',
+      name: 'classicModeTitle',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `اللي بيظهر للمستخبي هو \n( أنت المستخبي )\n  يعني بيكون عارف إنه هو المستخبي وبيحاول يندمج`
-  String get normalModeDescription {
+  String get classicModeDescription {
     return Intl.message(
       'اللي بيظهر للمستخبي هو \n( أنت المستخبي )\n  يعني بيكون عارف إنه هو المستخبي وبيحاول يندمج',
-      name: 'normalModeDescription',
+      name: 'classicModeDescription',
       desc: '',
       args: [],
     );

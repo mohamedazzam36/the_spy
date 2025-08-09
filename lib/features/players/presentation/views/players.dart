@@ -16,7 +16,9 @@ class PlayersView extends StatelessWidget {
         backgroundColor: kPrimaryColor,
         centerTitle: true,
         title: Text(
-          accessAppCubit(context).currentMode!.getModeName(context),
+          accessAppCubit(
+            context,
+          ).gameModeModel!.gameModesEnum.getModeInfo(context).title,
           style: Styles.styleSemiBold35(context),
         ),
       ),

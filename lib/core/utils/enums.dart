@@ -1,1 +1,7 @@
-enum Mode { normal, blind }
+enum GameModesEnum {
+  classic,
+  blind,
+  specialPlayers,
+  classicDouble,
+  blindDouble,
+}

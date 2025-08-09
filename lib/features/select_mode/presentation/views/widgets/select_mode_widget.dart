@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:the_spy/core/models/game_mode_model.dart';
 import 'package:the_spy/core/utils/app_router.dart';
+import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
-import 'package:the_spy/features/select_mode/data/models/select_mode_model.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_decorated_container.dart';
 import 'package:the_spy/generated/l10n.dart';
 
 class SelectModeWidget extends StatelessWidget {
-  const SelectModeWidget({super.key, required this.selectModeModel});
+  const SelectModeWidget({super.key, required this.gameModeModel});
 
-  final SelectModeModel selectModeModel;
+  final GameModeModel gameModeModel;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class SelectModeWidget extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  selectModeModel.backGroundColor,
+                  gameModeModel.gameModesEnum.getModeInfo(context).backGroundColor,
                   Colors.deepPurple,
                   Colors.deepPurple[300]!,
                   const Color.fromARGB(255, 243, 205, 225),
@@ -43,7 +44,7 @@ class SelectModeWidget extends StatelessWidget {
                       height: 100,
                     ),
                     SelectModeDecoratedContainer(
-                      selectModeModel: selectModeModel,
+                      gameModeModel: gameModeModel,
                     ),
                     const Expanded(
                       child: SizedBox(
@@ -52,8 +53,7 @@ class SelectModeWidget extends StatelessWidget {
                     ),
                     CustomTextButton(
                       onPressed: () {
-                        accessAppCubit(context).currentMode =
-                            selectModeModel.mode;
+                        accessAppCubit(context).gameModeModel = gameModeModel;
                         context.push(
                           AppRouter.kHomeView,
                         );

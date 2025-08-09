@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/models/game_mode_model.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/extentions.dart';
-import 'package:the_spy/features/select_mode/data/models/select_mode_model.dart';
+import 'package:the_spy/core/utils/functions/access_enums_helper.dart';
 
 class SelectModeDecoratedContainer extends StatelessWidget {
   const SelectModeDecoratedContainer({
     super.key,
-    required this.selectModeModel,
+    required this.gameModeModel,
   });
 
-  final SelectModeModel selectModeModel;
+  final GameModeModel gameModeModel;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class SelectModeDecoratedContainer extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            selectModeModel.mode.getModeName(context),
+            accessEnumInfo(context, gameModeModel).title,
             style: Styles.styleBold50(context),
             textAlign: TextAlign.center,
           ),
@@ -31,7 +31,7 @@ class SelectModeDecoratedContainer extends StatelessWidget {
             height: 24,
           ),
           Text(
-            selectModeModel.modeDescription,
+            accessEnumInfo(context, gameModeModel).modeDescription,
             style: Styles.styleBold25(context),
             textAlign: TextAlign.center,
           ),

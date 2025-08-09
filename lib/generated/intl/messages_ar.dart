@@ -41,6 +41,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "citiesList": MessageLookupByLibrary.simpleMessage(
       "القاهرة, الرياض, دبي, الدوحة, بيروت, عمان, دمشق, بغداد, الخرطوم, الجزائر, تونس, طرابلس, الرباط, جدة, الإسكندرية, طنطا, المنصورة, أسيوط, أسوان, الأقصر, مرسى مطروح, العين السخنة, شرم الشيخ, الغردقة, الدمام, الخبر, المدينة المنورة, مكة, المدينة, أبها, جيزان, نيوم, حائل, بريدة, مسقط, المنامة, صلالة, كوالالمبور, بانكوك, سنغافورة, نيويورك, واشنطن, لندن, باريس, برلين, أمستردام, روما, ميلان, مدريد",
     ),
+    "classicModeDescription": MessageLookupByLibrary.simpleMessage(
+      "اللي بيظهر للمستخبي هو \n( أنت المستخبي )\n  يعني بيكون عارف إنه هو المستخبي وبيحاول يندمج",
+    ),
+    "classicModeTitle": MessageLookupByLibrary.simpleMessage("الكلاسيك"),
     "cloths": MessageLookupByLibrary.simpleMessage("ملابس"),
     "clothsList": MessageLookupByLibrary.simpleMessage(
       "قميص, بنطلون, تيشيرت, جاكيت, بلوفر, شورت, بدلة, فستان, تنورة, عباية, كوفية, طاقية, شراب, حزام, حذاء, شبشب, سروال, بيجامة, قميص نوم, نقاب, طرحة, بدي, جاكت جينز, هودي, بالطو, قميص رسمي, تي شيرت بولو, بنطلون جينز, بنطلون قماش, تي شيرت سبورت, شوز جلد, كعب عالي, سنيكرز, بوت, فروه, بدلة رسمية, تيشيرت بكم, تيشيرت نص كم, جاكت جلد, تريننج, تيشيرت مطبوع, تيشيرت, جاكت شتوي, كاب, جوانتي, روب حمام, سروال داخلي",
@@ -86,10 +90,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "noNameValidate": MessageLookupByLibrary.simpleMessage(
       "مينفعش تضيف لاعب فاضي (:",
     ),
-    "normalModeDescription": MessageLookupByLibrary.simpleMessage(
-      "اللي بيظهر للمستخبي هو \n( أنت المستخبي )\n  يعني بيكون عارف إنه هو المستخبي وبيحاول يندمج",
-    ),
-    "normalModeTitle": MessageLookupByLibrary.simpleMessage("العادي"),
     "select": MessageLookupByLibrary.simpleMessage("اختار"),
     "selectMode": MessageLookupByLibrary.simpleMessage("اختار المود"),
     "show": MessageLookupByLibrary.simpleMessage("عرض"),

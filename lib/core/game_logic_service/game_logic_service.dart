@@ -14,7 +14,7 @@ abstract class GameLogicService {
     return categoryNames[_random.nextInt(categoryNames.length)];
   }
 
-  static PlayerModel pickSpy(List<PlayerModel> playersList) {
+  static PlayerModel getRandomPlayer(List<PlayerModel> playersList) {
     final tempList = List<PlayerModel>.from(playersList);
     tempList.shuffle(_random);
     return tempList[_random.nextInt(tempList.length)];
