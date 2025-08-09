@@ -23,7 +23,7 @@ class _GameStartingBodyState extends State<GameStartingBody> {
   @override
   void initState() {
     initGameStarting();
-    log(accessPlayerCubit(context).gameModeModel.spysList[0].name);
+    log(context.playersGameModeModel.spysList[0].name);
     super.initState();
   }
 
@@ -40,8 +40,8 @@ class _GameStartingBodyState extends State<GameStartingBody> {
         } else if (state is WordReveal) {
           return CustomWordRevealWidget(
             wordName: state.isSpy
-                ? accessPlayerCubit(context).gameModeModel.spysShowedWord
-                : accessPlayerCubit(context).gameModeModel.playersShowedWord,
+                ? context.playersGameModeModel.spysShowedWord
+                : context.playersGameModeModel.playersShowedWord,
             onPressed: () => accessPlayerCubit(context).switchBetweenPlayersAndWord(),
           );
         } else {
@@ -53,7 +53,7 @@ class _GameStartingBodyState extends State<GameStartingBody> {
 
   void initGameStarting() {
     accessPlayerCubit(context).startGame();
-    mode = accessPlayerCubit(context).gameModeModel.currentMode;
+    mode = context.playersGameModeModel.currentMode;
     mode.setGameStarting(context);
   }
 }

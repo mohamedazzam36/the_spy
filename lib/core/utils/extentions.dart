@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/functions/game_fuctions.dart';
+import 'package:the_spy/core/models/game_mode_model.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
@@ -73,5 +75,11 @@ extension ModesInfo on GameModesEnum {
 extension PlayersStateX on PlayersState {
   bool gameStartingStates() {
     return this is PlayerReveal || this is WordReveal || this is PlayersFinished;
+  }
+}
+
+extension PlayersCubitX on BuildContext {
+  GameModeModel get playersGameModeModel {
+    return BlocProvider.of<PlayersCubit>(this).gameModeModel;
   }
 }

@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/widgets.dart';
-import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
+import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 abstract class GameLogicService {
@@ -15,9 +15,9 @@ abstract class GameLogicService {
   }
 
   static setOneSpy(BuildContext context) {
-    List<PlayerModel> playersList = accessPlayerCubit(context).gameModeModel.playersList;
+    List<PlayerModel> playersList = context.playersGameModeModel.playersList;
     PlayerModel theSpy = GameLogicService.getListRandomWord(playersList);
 
-    accessPlayerCubit(context).gameModeModel.spysList = [theSpy];
+    context.playersGameModeModel.spysList = [theSpy];
   }
 }

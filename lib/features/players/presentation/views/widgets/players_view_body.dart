@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
+import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/functions/showDialogAlert.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/custom_players_list_view.dart';
@@ -54,7 +54,7 @@ class PlayersViewBody extends StatelessWidget {
   }
 
   void nagvigateToGameStarting(BuildContext context) {
-    bool canNavigate = accessPlayerCubit(context).gameModeModel.playersList.length > 2;
+    bool canNavigate = context.playersGameModeModel.playersList.length > 2;
     if (canNavigate) {
       context.push(AppRouter.kWordRevealview);
     } else {
