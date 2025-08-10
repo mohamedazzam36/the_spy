@@ -8,7 +8,7 @@ import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/mobi
 import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/tablet_layout.dart';
 import 'package:the_spy/features/home/presentation/views/home.dart';
 import 'package:the_spy/features/players/presentation/views/players.dart';
-import 'package:the_spy/features/game_starting/presentation/views/game_starting.dart';
+import 'package:the_spy/features/game_setup/presentation/views/game_setup.dart';
 import 'package:the_spy/features/select_mode/presentation/views/select_mode.dart';
 import 'package:the_spy/features/splash/presentation/views/get_started.dart';
 import 'package:the_spy/features/splash/presentation/views/splash.dart';
@@ -39,7 +39,7 @@ abstract class AppRouter {
         ),
         GoRoute(
           path: kWordRevealview,
-          builder: (context, state) => const GameStartingview(),
+          builder: (context, state) => const GameSetupview(),
         ),
         GoRoute(
           path: kPlayersView,

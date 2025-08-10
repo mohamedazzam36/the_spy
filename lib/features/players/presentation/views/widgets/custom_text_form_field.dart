@@ -1,11 +1,10 @@
-import 'dart:developer';
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/extentions.dart';
-import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
+import 'package:the_spy/core/utils/functions/validate_players.dart';
+import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -36,7 +35,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       child: TextFormField(
         controller: controller,
         onFieldSubmitted: (value) => validatePlayer(context),
-        validator: (value) => accessPlayerCubit(context).validatePlayer(context, name: value),
+        validator: (value) => validatePlayers(
+          name: value,
+          playersList: playersModel.playersList,
+        ),
         style: Styles.styleSemiBold24(context),
         cursorColor: kWhiteColor,
         decoration: InputDecoration(
@@ -69,19 +71,14 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   void validatePlayer(BuildContext context) {
     if (formKey.currentState!.validate()) {
       setState(() {
-        accessPlayerCubit(
-          context,
-        ).addPlayer(PlayerModel(name: controller.text));
-        accessPlayerCubit(context).fetchPlayersData();
+        context.playersCubit.addPlayer(PlayerModel(name: controller.text));
+        context.playersCubit.fetchPlayersData();
         autovalidateMode = AutovalidateMode.disabled;
         controller.clear();
       });
     } else {
       setState(() {
-        log(context.playersGameModeModel.playersList.length.toString());
-
         autovalidateMode = AutovalidateMode.always;
-        log(context.playersGameModeModel.playersList.length.toString());
       });
     }
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/utils/extentions.dart';
-import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
+import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/custom_players_list_view_item.dart';
@@ -16,7 +16,7 @@ class CustomPlayersListView extends StatefulWidget {
 class _CustomPlayersListViewState extends State<CustomPlayersListView> {
   @override
   void initState() {
-    accessPlayerCubit(context).fetchPlayersData();
+    context.playersCubit.fetchPlayersData();
     super.initState();
   }
 
@@ -25,7 +25,7 @@ class _CustomPlayersListViewState extends State<CustomPlayersListView> {
     return BlocBuilder<PlayersCubit, PlayersState>(
       buildWhen: (previous, current) => current is PlayersSuccess,
       builder: (context, state) {
-        List<PlayerModel> playersList = context.playersGameModeModel.playersList;
+        List<PlayerModel> playersList = playersModel.playersList;
         return ListView.builder(
           itemCount: playersList.length,
           itemBuilder: (context, index) {

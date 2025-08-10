@@ -1,17 +1,17 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:the_spy/core/models/game_mode_model.dart';
 import 'package:the_spy/core/utils/app_router.dart';
+import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/core/utils/extentions.dart';
-import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
+import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_decorated_container.dart';
 
 class SelectModeWidget extends StatelessWidget {
-  const SelectModeWidget({super.key, required this.gameModeModel});
+  const SelectModeWidget({super.key, required this.currentMode});
 
-  final GameModeModel gameModeModel;
+  final GameModesEnum currentMode;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class SelectModeWidget extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  gameModeModel.currentMode.getModeInfo(context).backGroundColor,
+                  currentMode.getModeInfo.backGroundColor,
                   Colors.deepPurple,
                   Colors.deepPurple[300]!,
                   const Color.fromARGB(255, 243, 205, 225),
@@ -44,7 +44,7 @@ class SelectModeWidget extends StatelessWidget {
                       height: 100,
                     ),
                     SelectModeDecoratedContainer(
-                      gameModeModel: gameModeModel,
+                      currentMode: currentMode,
                     ),
                     const Expanded(
                       child: SizedBox(
@@ -53,10 +53,7 @@ class SelectModeWidget extends StatelessWidget {
                     ),
                     CustomTextButton(
                       onPressed: () {
-                        accessAppCubit(context).currentMode = gameModeModel.currentMode;
-                        accessPlayerCubit(context).gameModeModel = GameModeModel(
-                          currentMode: gameModeModel.currentMode,
-                        );
+                        appServices.currentMode = currentMode;
                         context.push(
                           AppRouter.kHomeView,
                         );

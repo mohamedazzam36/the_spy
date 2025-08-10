@@ -1,18 +1,18 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/widgets/custom_small_text_button.dart';
-import 'package:the_spy/features/game_starting/presentation/views/widgets/custom_questions_reveal_card.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_questions_reveal_card.dart';
 
 class CustomQuestionsRevealWidget extends StatelessWidget {
   const CustomQuestionsRevealWidget({
     super.key,
-    this.onPressed,
     required this.askingPlayer,
     required this.askedPlayer,
+    required this.onPressed,
   });
 
   final String askingPlayer, askedPlayer;
-  final void Function()? onPressed;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {

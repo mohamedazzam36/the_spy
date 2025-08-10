@@ -1,15 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:the_spy/core/models/game_mode_model.dart';
 import 'package:the_spy/core/repos/game_repo_impl.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/enums.dart';
+import 'package:the_spy/features/game_setup/presentation/manager/cubits/game_setup_cubit/game_setup_cubit.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 
 extension ModesInfo on GameModesEnum {
   ({Color backGroundColor, String image, String modeDescription, int numOfSpys, String title})
-  getModeInfo(BuildContext context) {
+  get getModeInfo {
     switch (this) {
       case GameModesEnum.classic:
         return (
@@ -54,30 +54,36 @@ extension ModesInfo on GameModesEnum {
     }
   }
 
-  void setGameStarting(BuildContext context) {
+  void get setGameStarting {
     switch (this) {
       case GameModesEnum.classic:
-        return Classic().setupGame(context);
+        return Classic().setupGame();
       case GameModesEnum.blind:
-        return Blind().setupGame(context);
+        return Blind().setupGame();
       case GameModesEnum.specialPlayers:
-        return SpeacialPlayers().setupGame(context);
+        return SpeacialPlayers().setupGame();
       case GameModesEnum.classicDouble:
-        ClassicDouble().setupGame(context);
+        ClassicDouble().setupGame();
       case GameModesEnum.blindDouble:
-        BlindDouble().setupGame(context);
+        BlindDouble().setupGame();
     }
   }
 }
 
-extension PlayersStateX on PlayersState {
-  bool gameStartingStates() {
-    return this is PlayerReveal || this is WordReveal || this is PlayersFinished;
+// extension PlayersStateX on PlayersState {
+//   bool gameStartingStates() {
+//     return this is PlayerReveal || this is WordReveal || this is QuestionsStart;
+//   }
+// }
+
+extension GameSetupX on BuildContext {
+  GameSetupCubit get gameStartCubit {
+    return BlocProvider.of<GameSetupCubit>(this);
   }
 }
 
 extension PlayersCubitX on BuildContext {
-  GameModeModel get playersGameModeModel {
-    return BlocProvider.of<PlayersCubit>(this).gameModeModel;
+  PlayersCubit get playersCubit {
+    return BlocProvider.of<PlayersCubit>(this);
   }
 }

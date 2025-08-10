@@ -1,6 +1,6 @@
 import 'dart:math';
-import 'package:flutter/widgets.dart';
 import 'package:the_spy/core/utils/extentions.dart';
+import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 abstract class GameLogicService {
@@ -14,16 +14,32 @@ abstract class GameLogicService {
     return List<T>.from(list)..shuffle(_random);
   }
 
-  static setSpys(BuildContext context) {
-    List<PlayerModel> playersList = List.from(context.playersGameModeModel.playersList);
+  static setSpys() {
+    List<PlayerModel> playersList = List.from(playersModel.playersList);
     PlayerModel theSpy;
-    int spysNum = context.playersGameModeModel.currentMode.getModeInfo(context).numOfSpys;
-    context.playersGameModeModel.spysList.clear();
+    int spysNum = appServices.currentMode.getModeInfo.numOfSpys;
+    playersModel.spysList.clear();
 
     for (int i = 0; i < spysNum; i++) {
       theSpy = getListRandomWord(playersList);
-      context.playersGameModeModel.spysList.add(theSpy);
+      playersModel.spysList.add(theSpy);
       playersList.remove(theSpy);
+    }
+  }
+
+  static setAskingAndAskedPlayers() {
+    int i = 0;
+    List<PlayerModel> askingPlayers = getRandomList(playersModel.playersList);
+    List<PlayerModel> askedPlayers = [askingPlayers[1]];
+
+    while (i < askingPlayers.length) {
+      if (askedPlayers[i].name != askingPlayers[i].name) {
+        askedPlayers.add(askingPlayers[i]);
+        i++;
+      }
+
+      // context.playersGameModeModel.askedPlayersList = askedPlayers;
+      // context.playersGameModeModel.askingPlayersList = askingPlayers;
     }
   }
 }

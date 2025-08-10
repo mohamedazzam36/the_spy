@@ -1,100 +1,98 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/widgets.dart';
 import 'package:the_spy/core/game_logic_service/game_logic_service.dart';
 import 'package:the_spy/core/repos/game_repo.dart';
-import 'package:the_spy/core/utils/extentions.dart';
-import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
+import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 class Classic extends GameRepo {
   @override
-  setPlayersShowedWord(BuildContext context) {
-    List<String> categoryWordsList = accessAppCubit(context).currentCategoryNames!;
+  setPlayersShowedWord() {
+    List<String> categoryWordsList = appServices.currentCategoryNames;
     String showedword = GameLogicService.getListRandomWord<String>(categoryWordsList);
 
-    context.playersGameModeModel.playersShowedWord = showedword;
+    playersModel.playersShowedWord = showedword;
   }
 
   @override
-  setSpysShowedWord(BuildContext context) {
-    context.playersGameModeModel.spysShowedWord = 'hide'.tr();
+  setSpysShowedWord() {
+    playersModel.spysShowedWord = 'hide'.tr();
   }
 }
 
 class ClassicDouble extends GameRepo {
   @override
-  setPlayersShowedWord(BuildContext context) {
-    List<String> categoryWordsList = accessAppCubit(context).currentCategoryNames!;
+  setPlayersShowedWord() {
+    List<String> categoryWordsList = appServices.currentCategoryNames;
     String showedword = GameLogicService.getListRandomWord<String>(categoryWordsList);
 
-    context.playersGameModeModel.playersShowedWord = showedword;
+    playersModel.playersShowedWord = showedword;
   }
 
   @override
-  setSpysShowedWord(BuildContext context) {
-    context.playersGameModeModel.spysShowedWord = 'hide'.tr();
+  setSpysShowedWord() {
+    playersModel.spysShowedWord = 'hide'.tr();
   }
 }
 
 class Blind extends GameRepo {
   @override
-  setPlayersShowedWord(BuildContext context) {
-    List<String> categoryWordsList = List.from(accessAppCubit(context).currentCategoryNames!);
+  setPlayersShowedWord() {
+    List<String> categoryWordsList = List.from(appServices.currentCategoryNames);
     String showedword = GameLogicService.getListRandomWord<String>(categoryWordsList);
 
-    context.playersGameModeModel.playersShowedWord = showedword;
+    playersModel.playersShowedWord = showedword;
   }
 
   @override
-  setSpysShowedWord(BuildContext context) {
-    final playersShowedWord = context.playersGameModeModel.playersShowedWord;
+  setSpysShowedWord() {
+    final playersShowedWord = playersModel.playersShowedWord;
 
-    List<String> categoryWordsList = List.from(accessAppCubit(context).currentCategoryNames!);
+    List<String> categoryWordsList = List.from(appServices.currentCategoryNames);
     List<String> spysShowedList = categoryWordsList..remove(playersShowedWord);
     String spysShowedWord = GameLogicService.getListRandomWord<String>(spysShowedList);
 
-    context.playersGameModeModel.spysShowedWord = spysShowedWord;
+    playersModel.spysShowedWord = spysShowedWord;
   }
 }
 
 class BlindDouble extends GameRepo {
   @override
-  setPlayersShowedWord(BuildContext context) {
-    List<String> categoryWordsList = List.from(accessAppCubit(context).currentCategoryNames!);
+  setPlayersShowedWord() {
+    List<String> categoryWordsList = List.from(appServices.currentCategoryNames);
     String showedword = GameLogicService.getListRandomWord<String>(categoryWordsList);
 
-    context.playersGameModeModel.playersShowedWord = showedword;
+    playersModel.playersShowedWord = showedword;
   }
 
   @override
-  setSpysShowedWord(BuildContext context) {
-    final playersShowedWord = context.playersGameModeModel.playersShowedWord;
+  setSpysShowedWord() {
+    final playersShowedWord = playersModel.playersShowedWord;
 
-    List<String> categoryWordsList = List.from(accessAppCubit(context).currentCategoryNames!);
+    List<String> categoryWordsList = List.from(appServices.currentCategoryNames);
     List<String> spysShowedList = categoryWordsList..remove(playersShowedWord);
     String spysShowedWord = GameLogicService.getListRandomWord<String>(spysShowedList);
 
-    context.playersGameModeModel.spysShowedWord = spysShowedWord;
+    playersModel.spysShowedWord = spysShowedWord;
   }
 }
 
 class SpeacialPlayers extends GameRepo {
   @override
-  setPlayersShowedWord(BuildContext context) {
-    List<PlayerModel> playersList = List.from(context.playersGameModeModel.playersList);
+  setPlayersShowedWord() {
+    List<PlayerModel> playersList = List.from(playersModel.playersList);
 
     PlayerModel playersShowedPlayer = GameLogicService.getListRandomWord<PlayerModel>(
       playersList,
     );
 
-    context.playersGameModeModel.playersShowedWord = playersShowedPlayer.name;
+    playersModel.playersShowedWord = playersShowedPlayer.name;
   }
 
   @override
-  setSpysShowedWord(BuildContext context) {
-    String playersShowedWord = context.playersGameModeModel.playersShowedWord;
+  setSpysShowedWord() {
+    String playersShowedWord = playersModel.playersShowedWord;
 
-    List<PlayerModel> playersList = List.from(context.playersGameModeModel.playersList);
+    List<PlayerModel> playersList = List.from(playersModel.playersList);
     List<String> spysShowedList =
         playersList
             .map(
@@ -106,6 +104,6 @@ class SpeacialPlayers extends GameRepo {
       spysShowedList,
     );
 
-    context.playersGameModeModel.spysShowedWord = spysShowedPlayer;
+    playersModel.spysShowedWord = spysShowedPlayer;
   }
 }

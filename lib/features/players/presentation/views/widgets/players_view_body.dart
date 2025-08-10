@@ -1,12 +1,16 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/functions/showDialogAlert.dart';
+import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
+import 'package:the_spy/features/players/data/repos/players_repo.dart';
+import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/custom_players_list_view.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/custom_text_form_field.dart';
 
@@ -15,47 +19,50 @@ class PlayersViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      physics: const NeverScrollableScrollPhysics(),
-      slivers: [
-        const SliverToBoxAdapter(
-          child: CustomTextFormField(),
-        ),
-        const SliverToBoxAdapter(
-          child: SizedBox(
-            height: 16,
+    return BlocProvider(
+      create: (context) => PlayersCubit(playersRepo: getIt<PlayersRepo>()),
+      child: CustomScrollView(
+        physics: const NeverScrollableScrollPhysics(),
+        slivers: [
+          const SliverToBoxAdapter(
+            child: CustomTextFormField(),
           ),
-        ),
-        SliverFillRemaining(
-          hasScrollBody: true,
-          child: Column(
-            children: [
-              const Expanded(
-                child: CustomPlayersListView(),
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              CustomTextButton(
-                text: 'start'.tr(),
-                onPressed: () {
-                  nagvigateToGameStarting(context);
-                },
-                color: kWhiteColor,
-                textStyle: Styles.styleBold50(
-                  context,
-                ).copyWith(color: kBlackColor),
-              ),
-            ],
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 16,
+            ),
           ),
-        ),
-      ],
+          SliverFillRemaining(
+            hasScrollBody: true,
+            child: Column(
+              children: [
+                const Expanded(
+                  child: CustomPlayersListView(),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                CustomTextButton(
+                  text: 'start'.tr(),
+                  onPressed: () {
+                    nagvigateToGameStarting(context);
+                  },
+                  color: kWhiteColor,
+                  textStyle: Styles.styleBold50(
+                    context,
+                  ).copyWith(color: kBlackColor),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 
   void nagvigateToGameStarting(BuildContext context) {
-    int playesNum = context.playersGameModeModel.playersList.length;
-    int spysNum = context.playersGameModeModel.currentMode.getModeInfo(context).numOfSpys;
+    int playesNum = playersModel.playersList.length;
+    int spysNum = appServices.currentMode.getModeInfo.numOfSpys;
     bool canNavigate = playesNum >= (spysNum * 2 + 1);
 
     if (canNavigate) {
