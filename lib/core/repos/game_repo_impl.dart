@@ -19,11 +19,6 @@ class Classic extends GameRepo {
   setSpysShowedWord(BuildContext context) {
     context.playersGameModeModel.spysShowedWord = 'hide'.tr();
   }
-
-  @override
-  setSpysList(BuildContext context) {
-    GameLogicService.setOneSpy(context);
-  }
 }
 
 class ClassicDouble extends GameRepo {
@@ -38,11 +33,6 @@ class ClassicDouble extends GameRepo {
   @override
   setSpysShowedWord(BuildContext context) {
     context.playersGameModeModel.spysShowedWord = 'hide'.tr();
-  }
-
-  @override
-  setSpysList(BuildContext context) {
-    GameLogicService.setTwoSpys(context);
   }
 }
 
@@ -65,11 +55,6 @@ class Blind extends GameRepo {
 
     context.playersGameModeModel.spysShowedWord = spysShowedWord;
   }
-
-  @override
-  setSpysList(BuildContext context) {
-    GameLogicService.setOneSpy(context);
-  }
 }
 
 class BlindDouble extends GameRepo {
@@ -90,11 +75,6 @@ class BlindDouble extends GameRepo {
     String spysShowedWord = GameLogicService.getListRandomWord<String>(spysShowedList);
 
     context.playersGameModeModel.spysShowedWord = spysShowedWord;
-  }
-
-  @override
-  setSpysList(BuildContext context) {
-    GameLogicService.setTwoSpys(context);
   }
 }
 
@@ -127,10 +107,5 @@ class SpeacialPlayers extends GameRepo {
     );
 
     context.playersGameModeModel.spysShowedWord = spysShowedPlayer;
-  }
-
-  @override
-  setSpysList(BuildContext context) {
-    GameLogicService.setOneSpy(context);
   }
 }

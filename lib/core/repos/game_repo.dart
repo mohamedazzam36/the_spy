@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:the_spy/core/game_logic_service/game_logic_service.dart';
 
 abstract class GameRepo {
   void setupGame(BuildContext context) {
@@ -13,5 +14,7 @@ abstract class GameRepo {
 
   setSpysShowedWord(BuildContext context);
 
-  setSpysList(BuildContext context);
+  setSpysList(BuildContext context) {
+    GameLogicService.setSpys(context);
+  }
 }

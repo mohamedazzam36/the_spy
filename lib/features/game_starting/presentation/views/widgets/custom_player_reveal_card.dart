@@ -35,8 +35,8 @@ class CustomPlayerRevealcard extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            CustomWordRevealText(playerName: 'giveMobileTo'.tr()),
-            CustomWordRevealText(playerName: playerName),
+            customWordRevealText(context, 'giveMobileTo'.tr()),
+            customWordRevealText(context, playerName),
             const SizedBox(
               height: 32,
             ),
@@ -52,18 +52,8 @@ class CustomPlayerRevealcard extends StatelessWidget {
       ),
     );
   }
-}
 
-class CustomWordRevealText extends StatelessWidget {
-  const CustomWordRevealText({
-    super.key,
-    required this.playerName,
-  });
-
-  final String playerName;
-
-  @override
-  Widget build(BuildContext context) {
+  FittedBox customWordRevealText(BuildContext context, String playerName) {
     return FittedBox(
       child: Text(
         playerName,
