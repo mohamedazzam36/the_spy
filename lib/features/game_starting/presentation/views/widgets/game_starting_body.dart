@@ -2,7 +2,6 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/features/game_starting/presentation/views/widgets/custom_player_reveal_widget.dart';
@@ -17,13 +16,13 @@ class GameStartingBody extends StatefulWidget {
 }
 
 class _GameStartingBodyState extends State<GameStartingBody> {
-  String? showedWord;
-  late GameModesEnum mode;
-
   @override
   void initState() {
     initGameStarting();
-    log(context.playersGameModeModel.spysList[0].name);
+    for (var element in context.playersGameModeModel.spysList) {
+      log(element.name);
+    }
+
     super.initState();
   }
 
@@ -39,9 +38,7 @@ class _GameStartingBodyState extends State<GameStartingBody> {
           );
         } else if (state is WordReveal) {
           return CustomWordRevealWidget(
-            wordName: state.isSpy
-                ? context.playersGameModeModel.spysShowedWord
-                : context.playersGameModeModel.playersShowedWord,
+            wordName: state.showedWord,
             onPressed: () => accessPlayerCubit(context).switchBetweenPlayersAndWord(),
           );
         } else {
@@ -53,7 +50,6 @@ class _GameStartingBodyState extends State<GameStartingBody> {
 
   void initGameStarting() {
     accessPlayerCubit(context).startGame();
-    mode = context.playersGameModeModel.currentMode;
-    mode.setGameStarting(context);
+    context.playersGameModeModel.currentMode.setGameStarting(context);
   }
 }

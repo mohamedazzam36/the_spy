@@ -11,6 +11,9 @@ class SelectModeViewBody extends StatelessWidget {
     List<GameModeModel> modes = [
       GameModeModel(currentMode: GameModesEnum.classic),
       GameModeModel(currentMode: GameModesEnum.blind),
+      GameModeModel(currentMode: GameModesEnum.classicDouble),
+      GameModeModel(currentMode: GameModesEnum.blindDouble),
+      GameModeModel(currentMode: GameModesEnum.specialPlayers),
     ];
 
     return PageView.builder(

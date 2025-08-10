@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:the_spy/core/functions/game_fuctions.dart';
 import 'package:the_spy/core/models/game_mode_model.dart';
+import 'package:the_spy/core/repos/game_repo_impl.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
@@ -63,11 +63,9 @@ extension ModesInfo on GameModesEnum {
       case GameModesEnum.specialPlayers:
         return SpeacialPlayers().setupGame(context);
       case GameModesEnum.classicDouble:
-        // TODO: Handle this case.
-        throw UnimplementedError();
+        ClassicDouble().setupGame(context);
       case GameModesEnum.blindDouble:
-        // TODO: Handle this case.
-        throw UnimplementedError();
+        BlindDouble().setupGame(context);
     }
   }
 }

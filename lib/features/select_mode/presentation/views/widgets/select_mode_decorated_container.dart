@@ -22,10 +22,12 @@ class SelectModeDecoratedContainer extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text(
-            accessEnumInfo(context, gameModeModel).title,
-            style: Styles.styleBold50(context),
-            textAlign: TextAlign.center,
+          FittedBox(
+            child: Text(
+              accessEnumInfo(context, gameModeModel).title,
+              style: Styles.styleBold50(context),
+              textAlign: TextAlign.center,
+            ),
           ),
           const SizedBox(
             height: 24,

@@ -15,9 +15,24 @@ abstract class GameLogicService {
   }
 
   static setOneSpy(BuildContext context) {
-    List<PlayerModel> playersList = context.playersGameModeModel.playersList;
-    PlayerModel theSpy = GameLogicService.getListRandomWord(playersList);
+    List<PlayerModel> playersList = List.from(context.playersGameModeModel.playersList);
+    PlayerModel theSpy = getListRandomWord(playersList);
 
-    context.playersGameModeModel.spysList = [theSpy];
+    context.playersGameModeModel.spysList
+      ..clear()
+      ..add(theSpy);
+  }
+
+  static setTwoSpys(BuildContext context) {
+    List<PlayerModel> playersList = List.from(context.playersGameModeModel.playersList);
+    PlayerModel theSpy = getListRandomWord(playersList);
+    context.playersGameModeModel.spysList
+      ..clear()
+      ..add(theSpy);
+
+    playersList.remove(theSpy);
+
+    theSpy = getListRandomWord(playersList);
+    context.playersGameModeModel.spysList.add(theSpy);
   }
 }

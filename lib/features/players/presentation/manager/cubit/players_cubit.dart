@@ -9,18 +9,20 @@ import 'package:the_spy/features/players/data/repos/players_repo.dart';
 part 'players_state.dart';
 
 class PlayersCubit extends Cubit<PlayersState> {
-  PlayersCubit({required this.playersRepo}) : super(PlayersInitial());
+  PlayersCubit({required PlayersRepo playersRepo})
+    : _playersRepo = playersRepo,
+      super(PlayersInitial());
   late GameModeModel gameModeModel;
-  final PlayersRepo playersRepo;
+  final PlayersRepo _playersRepo;
   int currentPlayerIndex = 0;
 
   fetchPlayersData() {
-    gameModeModel.playersList = playersRepo.fetchPlayersData();
+    gameModeModel.playersList = _playersRepo.fetchPlayersData();
     emit(PlayersSuccess());
   }
 
   String? validatePlayer(BuildContext context, {required String? name}) {
-    return playersRepo.validatePlayer(
+    return _playersRepo.validatePlayer(
       context,
       name: name,
       playersList: gameModeModel.playersList,
@@ -28,7 +30,7 @@ class PlayersCubit extends Cubit<PlayersState> {
   }
 
   void addPlayer(PlayerModel player) {
-    playersRepo.addPlayer(player);
+    _playersRepo.addPlayer(player);
     emit(PlayersSuccess());
   }
 
@@ -36,7 +38,9 @@ class PlayersCubit extends Cubit<PlayersState> {
     if (currentPlayerIndex < gameModeModel.playersList.length) {
       PlayerModel currentPlayer = gameModeModel.playersList[currentPlayerIndex];
       if (state is PlayerReveal) {
-        emit(WordReveal(isSpy: currentPlayer.name == gameModeModel.spysList[0].name));
+        bool isSpy;
+        isSpy = gameModeModel.spysList.any((element) => currentPlayer.name == element.name);
+        emit(WordReveal(isSpy ? gameModeModel.spysShowedWord : gameModeModel.playersShowedWord));
         currentPlayerIndex++;
       } else {
         emit(PlayerReveal(player: gameModeModel.playersList[currentPlayerIndex]));

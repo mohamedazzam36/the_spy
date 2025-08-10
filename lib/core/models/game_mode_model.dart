@@ -4,7 +4,7 @@ import 'package:the_spy/features/players/data/models/player_model.dart';
 class GameModeModel {
   final GameModesEnum currentMode;
   late String playersShowedWord, spysShowedWord;
-  late List<PlayerModel> spysList;
+  List<PlayerModel> spysList = [];
   late List<PlayerModel> playersList;
   late List<dynamic> resultList;
 

@@ -54,16 +54,14 @@ class PlayersViewBody extends StatelessWidget {
   }
 
   void nagvigateToGameStarting(BuildContext context) {
-    bool canNavigate = context.playersGameModeModel.playersList.length > 2;
+    int playesNum = context.playersGameModeModel.playersList.length;
+    int spysNum = context.playersGameModeModel.currentMode.getModeInfo(context).numOfSpys;
+    bool canNavigate = playesNum >= (spysNum * 2 + 1);
+
     if (canNavigate) {
       context.push(AppRouter.kWordRevealview);
     } else {
-      showDialogAlert(
-        context,
-        title: 'alertTitle'.tr(),
-        actionText: 'alertAction'.tr(),
-        content: 'alertContent'.tr(),
-      );
+      playersDialogAlert(context, reqPlayers: (spysNum * 2 + 1));
     }
   }
 }

@@ -13,9 +13,9 @@ final class PlayerReveal extends PlayersState {
 }
 
 final class WordReveal extends PlayersState {
-  final bool isSpy;
+  final String showedWord;
 
-  WordReveal({required this.isSpy});
+  WordReveal(this.showedWord);
 }
 
 final class PlayersFinished extends PlayersState {}

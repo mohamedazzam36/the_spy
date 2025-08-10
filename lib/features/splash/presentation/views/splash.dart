@@ -13,8 +13,7 @@ class SplashView extends StatefulWidget {
   State<SplashView> createState() => _SplashViewState();
 }
 
-class _SplashViewState extends State<SplashView>
-    with SingleTickerProviderStateMixin {
+class _SplashViewState extends State<SplashView> with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<double> fadeAnimation;
   late bool isFirstStart;

@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/functions/access_cubits_helper.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
@@ -75,7 +78,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       });
     } else {
       setState(() {
+        log(context.playersGameModeModel.playersList.length.toString());
+
         autovalidateMode = AutovalidateMode.always;
+        log(context.playersGameModeModel.playersList.length.toString());
       });
     }
   }
