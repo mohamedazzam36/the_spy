@@ -19,7 +19,7 @@ class GameSetupBody extends StatefulWidget {
 class _GameSetupBodyState extends State<GameSetupBody> {
   @override
   void initState() {
-    initGameStarting();
+    context.gameStartCubit.startGame();
     for (var element in playersModel.spysList) {
       log(element.name);
     }
@@ -32,28 +32,29 @@ class _GameSetupBodyState extends State<GameSetupBody> {
     return BlocConsumer<GameSetupCubit, GameSetupState>(
       listener: (context, state) {},
       builder: (context, state) {
-        if (state is PlayerReveal) {
-          return CustomPlayerRevealWidget(
-            player: state.player,
-            onPressed: () => context.gameStartCubit.switchBetweenPlayersAndWord(),
-          );
-        } else if (state is WordReveal) {
-          return CustomWordRevealWidget(
-            wordName: state.showedWord,
-            onPressed: () => context.gameStartCubit.switchBetweenPlayersAndWord(),
-          );
-        } else {
-          return CustomQuestionsRevealWidget(
-            askedPlayer: '',
-            askingPlayer: '',
-            onPressed: () {},
-          );
+        switch (state) {
+          case PlayerReveal():
+            return CustomPlayerRevealWidget(
+              player: state.player,
+              onPressed: () => context.gameStartCubit.switchBetweenPlayersAndWord(),
+            );
+          case WordReveal():
+            return CustomWordRevealWidget(
+              wordName: state.showedWord,
+              onPressed: () => context.gameStartCubit.switchBetweenPlayersAndWord(),
+            );
+          case QuestionsRound():
+            return CustomQuestionsRevealWidget(
+              askedPlayer: state.askedPlayer,
+              askingPlayer: state.askingPlayer,
+              onPressed: () => context.gameStartCubit.getNextQuestion(),
+            );
+          default:
+            return const CircularProgressIndicator();
         }
       },
     );
   }
 
-  void initGameStarting() {
-    context.gameStartCubit.startGame();
-  }
+  void initGameStarting() {}
 }

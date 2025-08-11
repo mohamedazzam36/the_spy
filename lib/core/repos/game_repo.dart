@@ -11,8 +11,6 @@ abstract class GameRepo {
     setSpysShowedWord();
 
     setSpysList();
-
-    setAskRound();
   }
 
   setPlayersRandomList() {
@@ -27,9 +25,5 @@ abstract class GameRepo {
 
   setSpysList() {
     GameLogicService.setSpys();
-  }
-
-  setAskRound() {
-    GameLogicService.setAskingAndAskedPlayers();
   }
 }

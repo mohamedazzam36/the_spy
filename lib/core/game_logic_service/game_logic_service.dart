@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/features/game_setup/data/models/question_pair_model.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 abstract class GameLogicService {
@@ -27,19 +28,26 @@ abstract class GameLogicService {
     }
   }
 
-  static setAskingAndAskedPlayers() {
-    int i = 0;
-    List<PlayerModel> askingPlayers = getRandomList(playersModel.playersList);
-    List<PlayerModel> askedPlayers = [askingPlayers[1]];
+  static List<QuestionPair> setAskingAndAskedPlayers() {
+    List<PlayerModel> askingPlayers = GameLogicService.getRandomList(playersModel.playersList);
+    List<PlayerModel> askedPlayers = List.from(askingPlayers);
+    List<QuestionPair> questionPairs = [];
+    bool isListValid = false;
 
-    while (i < askingPlayers.length) {
-      if (askedPlayers[i].name != askingPlayers[i].name) {
-        askedPlayers.add(askingPlayers[i]);
-        i++;
+    while (!isListValid) {
+      askedPlayers = GameLogicService.getRandomList(askedPlayers);
+      isListValid = true;
+
+      for (int i = 0; i < askingPlayers.length; i++) {
+        if (askedPlayers[i].name == askingPlayers[i].name) {
+          isListValid = false;
+          break;
+        }
       }
-
-      // context.playersGameModeModel.askedPlayersList = askedPlayers;
-      // context.playersGameModeModel.askingPlayersList = askingPlayers;
     }
+    for (int i = 0; i < askingPlayers.length; i++) {
+      questionPairs.add(QuestionPair(askingPlayer: askingPlayers[i], askedPlayer: askedPlayers[i]));
+    }
+    return questionPairs;
   }
 }

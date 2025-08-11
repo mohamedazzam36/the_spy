@@ -16,4 +16,8 @@ final class WordReveal extends GameSetupState {
   WordReveal(this.showedWord);
 }
 
-final class QuestionsStart extends GameSetupState {}
+final class QuestionsRound extends GameSetupState {
+  final String askingPlayer, askedPlayer;
+
+  QuestionsRound({required this.askingPlayer, required this.askedPlayer});
+}

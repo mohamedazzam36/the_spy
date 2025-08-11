@@ -6,7 +6,7 @@ import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/extentions.dart';
-import 'package:the_spy/core/utils/functions/showDialogAlert.dart';
+import 'package:the_spy/core/utils/functions/show_dialog_alert.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/players/data/repos/players_repo.dart';
