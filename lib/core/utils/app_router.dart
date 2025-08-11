@@ -29,10 +29,7 @@ abstract class AppRouter {
     );
     return GoRouter(
       routes: [
-        GoRoute(
-          path: kSplashView,
-          builder: (context, state) => const SplashView(),
-        ),
+        GoRoute(path: kSplashView, builder: (context, state) => const SplashView()),
         GoRoute(
           path: kHomeView,
           builder: (context, state) => const HomeView(),

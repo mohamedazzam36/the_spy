@@ -21,3 +21,5 @@ final class QuestionsRound extends GameSetupState {
 
   QuestionsRound({required this.askingPlayer, required this.askedPlayer});
 }
+
+final class QuestionsFinish extends GameSetupState {}

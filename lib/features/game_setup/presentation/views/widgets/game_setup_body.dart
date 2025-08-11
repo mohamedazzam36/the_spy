@@ -6,6 +6,7 @@ import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/game_setup/presentation/manager/cubits/game_setup_cubit/game_setup_cubit.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_player_reveal_widget.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_question_finish_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_questions_reveal_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_word_reveal_widget.dart';
 
@@ -48,6 +49,13 @@ class _GameSetupBodyState extends State<GameSetupBody> {
               askedPlayer: state.askedPlayer,
               askingPlayer: state.askingPlayer,
               onPressed: () => context.gameStartCubit.getNextQuestion(),
+            );
+          case QuestionsFinish():
+            return CustomQuestionFinishWidget(
+              reQuestionPressed: () {
+                context.gameStartCubit.setAskingAndAskedPlayers();
+              },
+              votePressed: () {},
             );
           default:
             return const CircularProgressIndicator();

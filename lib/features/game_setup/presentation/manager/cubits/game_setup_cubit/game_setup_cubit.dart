@@ -17,7 +17,6 @@ class GameSetupCubit extends Cubit<GameSetupState> {
 
   void startGame() {
     currentPlayerIndex = 0;
-    currentQuestionIndex = 0;
 
     appServices.currentMode.setGameStarting;
     emit(PlayerReveal(player: playersModel.playersList[currentPlayerIndex]));
@@ -42,6 +41,8 @@ class GameSetupCubit extends Cubit<GameSetupState> {
   }
 
   void setAskingAndAskedPlayers() {
+    currentQuestionIndex = 0;
+
     questionPairs = GameLogicService.setAskingAndAskedPlayers();
 
     emit(
@@ -55,6 +56,7 @@ class GameSetupCubit extends Cubit<GameSetupState> {
 
   void getNextQuestion() {
     if (currentQuestionIndex >= questionPairs.length) {
+      emit(QuestionsFinish());
       return;
     }
 
