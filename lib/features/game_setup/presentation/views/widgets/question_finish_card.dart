@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 
-class CustomQuestionFinishCard extends StatelessWidget {
-  const CustomQuestionFinishCard({
+class QuestionFinishCard extends StatelessWidget {
+  const QuestionFinishCard({
     super.key,
   });
 

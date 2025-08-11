@@ -46,7 +46,7 @@ class GameSetupCubit extends Cubit<GameSetupState> {
     questionPairs = GameLogicService.setAskingAndAskedPlayers();
 
     emit(
-      QuestionsRound(
+      QuestionsReveal(
         askedPlayer: questionPairs[currentQuestionIndex].askedPlayer.name,
         askingPlayer: questionPairs[currentQuestionIndex].askingPlayer.name,
       ),
@@ -61,7 +61,7 @@ class GameSetupCubit extends Cubit<GameSetupState> {
     }
 
     emit(
-      QuestionsRound(
+      QuestionsReveal(
         askedPlayer: questionPairs[currentQuestionIndex].askedPlayer.name,
         askingPlayer: questionPairs[currentQuestionIndex].askingPlayer.name,
       ),

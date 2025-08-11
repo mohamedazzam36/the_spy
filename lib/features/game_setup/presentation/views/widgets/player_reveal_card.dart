@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 
-class CustomPlayerRevealcard extends StatelessWidget {
-  const CustomPlayerRevealcard({
+class PlayerRevealcard extends StatelessWidget {
+  const PlayerRevealcard({
     super.key,
     required this.playerName,
   });

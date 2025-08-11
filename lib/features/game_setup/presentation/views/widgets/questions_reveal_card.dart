@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 
-class CustomQuestionsRevealcard extends StatelessWidget {
-  const CustomQuestionsRevealcard({
+class QuestionsRevealcard extends StatelessWidget {
+  const QuestionsRevealcard({
     super.key,
     required this.askingPlayer,
     required this.askedPlayer,

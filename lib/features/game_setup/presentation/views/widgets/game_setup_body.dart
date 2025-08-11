@@ -5,10 +5,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/game_setup/presentation/manager/cubits/game_setup_cubit/game_setup_cubit.dart';
-import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_player_reveal_widget.dart';
-import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_question_finish_widget.dart';
-import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_questions_reveal_widget.dart';
-import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_word_reveal_widget.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/player_reveal_widget.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/question_finish_widget.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/questions_reveal_widget.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/word_reveal_widget.dart';
 
 class GameSetupBody extends StatefulWidget {
   const GameSetupBody({super.key});
@@ -35,23 +35,23 @@ class _GameSetupBodyState extends State<GameSetupBody> {
       builder: (context, state) {
         switch (state) {
           case PlayerReveal():
-            return CustomPlayerRevealWidget(
+            return PlayerRevealWidget(
               player: state.player,
               onPressed: () => context.gameStartCubit.switchBetweenPlayersAndWord(),
             );
           case WordReveal():
-            return CustomWordRevealWidget(
+            return WordRevealWidget(
               wordName: state.showedWord,
               onPressed: () => context.gameStartCubit.switchBetweenPlayersAndWord(),
             );
-          case QuestionsRound():
-            return CustomQuestionsRevealWidget(
+          case QuestionsReveal():
+            return QuestionsRevealWidget(
               askedPlayer: state.askedPlayer,
               askingPlayer: state.askingPlayer,
               onPressed: () => context.gameStartCubit.getNextQuestion(),
             );
           case QuestionsFinish():
-            return CustomQuestionFinishWidget(
+            return QuestionFinishWidget(
               reQuestionPressed: () {
                 context.gameStartCubit.setAskingAndAskedPlayers();
               },

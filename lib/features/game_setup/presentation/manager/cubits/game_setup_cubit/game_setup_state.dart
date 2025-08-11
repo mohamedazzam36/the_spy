@@ -16,10 +16,10 @@ final class WordReveal extends GameSetupState {
   WordReveal(this.showedWord);
 }
 
-final class QuestionsRound extends GameSetupState {
+final class QuestionsReveal extends GameSetupState {
   final String askingPlayer, askedPlayer;
 
-  QuestionsRound({required this.askingPlayer, required this.askedPlayer});
+  QuestionsReveal({required this.askingPlayer, required this.askedPlayer});
 }
 
 final class QuestionsFinish extends GameSetupState {}

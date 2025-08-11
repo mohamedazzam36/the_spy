@@ -1,18 +1,18 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/widgets/custom_small_text_button.dart';
-import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_questions_reveal_card.dart';
+import 'package:the_spy/features/players/data/models/player_model.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/player_reveal_card.dart';
 
-class CustomQuestionsRevealWidget extends StatelessWidget {
-  const CustomQuestionsRevealWidget({
+class PlayerRevealWidget extends StatelessWidget {
+  const PlayerRevealWidget({
     super.key,
-    required this.askingPlayer,
-    required this.askedPlayer,
-    required this.onPressed,
+    this.onPressed,
+    required this.player,
   });
 
-  final String askingPlayer, askedPlayer;
-  final void Function() onPressed;
+  final PlayerModel player;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -32,16 +32,15 @@ class CustomQuestionsRevealWidget extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CustomQuestionsRevealcard(
-                    askedPlayer: askedPlayer,
-                    askingPlayer: askingPlayer,
+                  PlayerRevealcard(
+                    playerName: player.name,
                   ),
                   const SizedBox(
                     height: 50,
                   ),
                   CustomSmallTextButton(
                     onPressed: onPressed,
-                    text: 'next'.tr(),
+                    text: 'show'.tr(),
                   ),
                 ],
               ),

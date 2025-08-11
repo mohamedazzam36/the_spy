@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/widgets/custom_small_text_button.dart';
-import 'package:the_spy/features/game_setup/presentation/views/widgets/custom_question_finish_card.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/question_finish_card.dart';
 
-class CustomQuestionFinishWidget extends StatelessWidget {
-  const CustomQuestionFinishWidget({
+class QuestionFinishWidget extends StatelessWidget {
+  const QuestionFinishWidget({
     super.key,
     required this.votePressed,
     required this.reQuestionPressed,
@@ -30,7 +30,7 @@ class CustomQuestionFinishWidget extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const CustomQuestionFinishCard(),
+                  const QuestionFinishCard(),
                   const SizedBox(
                     height: 50,
                   ),

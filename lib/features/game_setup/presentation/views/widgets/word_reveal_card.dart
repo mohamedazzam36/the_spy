@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 
-class CustomWordRevealcard extends StatelessWidget {
-  const CustomWordRevealcard({
+class WordRevealcard extends StatelessWidget {
+  const WordRevealcard({
     super.key,
     required this.wordName,
   });
