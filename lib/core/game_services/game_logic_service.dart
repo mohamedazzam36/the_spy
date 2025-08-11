@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/game_setup/data/models/question_pair_model.dart';
 import 'package:the_spy/features/game_setup/data/models/vote_pair_model.dart';
@@ -14,19 +13,6 @@ abstract class GameLogicService {
 
   static List<T> getRandomList<T>(List<T> list) {
     return List<T>.from(list)..shuffle(_random);
-  }
-
-  static setSpys() {
-    List<PlayerModel> playersList = List.from(playersModel.playersList);
-    PlayerModel theSpy;
-    int spysNum = appServices.currentMode.getModeInfo.numOfSpys;
-    playersModel.spysList.clear();
-
-    for (int i = 0; i < spysNum; i++) {
-      theSpy = getListRandomWord(playersList);
-      playersModel.spysList.add(theSpy);
-      playersList.remove(theSpy);
-    }
   }
 
   static List<QuestionPair> setAskPairs() {

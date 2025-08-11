@@ -63,9 +63,9 @@ extension ModesInfo on GameModesEnum {
       case GameModesEnum.specialPlayers:
         return SpeacialPlayers().setupGame();
       case GameModesEnum.classicDouble:
-        ClassicDouble().setupGame();
+        Classic().setupGame();
       case GameModesEnum.blindDouble:
-        BlindDouble().setupGame();
+        Blind().setupGame();
     }
   }
 }

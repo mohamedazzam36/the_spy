@@ -1,29 +1,17 @@
-import 'package:the_spy/core/game_logic_service/game_logic_service.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
-import 'package:the_spy/features/players/data/models/player_model.dart';
+import 'package:the_spy/core/game_services/modes_service.dart';
 
 abstract class GameRepo {
   void setupGame() {
-    setPlayersRandomList();
+    ModesService.setPlayersRandomList();
 
     setPlayersShowedWord();
 
     setSpysShowedWord();
 
-    setSpysList();
-  }
-
-  setPlayersRandomList() {
-    playersModel.playersList = GameLogicService.getRandomList<PlayerModel>(
-      playersModel.playersList,
-    );
+    ModesService.setSpys();
   }
 
   setPlayersShowedWord();
 
   setSpysShowedWord();
-
-  setSpysList() {
-    GameLogicService.setSpys();
-  }
 }
