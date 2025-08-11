@@ -23,3 +23,12 @@ final class QuestionsReveal extends GameSetupState {
 }
 
 final class QuestionsFinish extends GameSetupState {}
+
+final class VotingReveal extends GameSetupState {
+  final PlayerModel votingPlayer;
+  final List<PlayerModel> votingList;
+
+  VotingReveal({required this.votingPlayer, required this.votingList});
+}
+
+final class Votingfinish extends GameSetupState {}

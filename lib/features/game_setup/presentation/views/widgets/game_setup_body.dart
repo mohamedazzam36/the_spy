@@ -8,6 +8,7 @@ import 'package:the_spy/features/game_setup/presentation/manager/cubits/game_set
 import 'package:the_spy/features/game_setup/presentation/views/widgets/player_reveal_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/question_finish_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/questions_reveal_widget.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/vote_reveal_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/word_reveal_widget.dart';
 
 class GameSetupBody extends StatefulWidget {
@@ -55,14 +56,16 @@ class _GameSetupBodyState extends State<GameSetupBody> {
               reQuestionPressed: () {
                 context.gameStartCubit.setAskingAndAskedPlayers();
               },
-              votePressed: () {},
+              votePressed: () {
+                context.gameStartCubit.setVotingPairs();
+              },
             );
+          case VotingReveal():
+            return VoteRevealWidget(players: state.votingList, votingPlayer: state.votingPlayer);
           default:
             return const CircularProgressIndicator();
         }
       },
     );
   }
-
-  void initGameStarting() {}
 }

@@ -1,9 +1,12 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:the_spy/core/game_logic_service/game_logic_service.dart';
 import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/game_setup/data/models/question_pair_model.dart';
+import 'package:the_spy/features/game_setup/data/models/vote_pair_model.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 part 'game_setup_state.dart';
@@ -12,8 +15,10 @@ class GameSetupCubit extends Cubit<GameSetupState> {
   GameSetupCubit() : super(GameStartInitial());
 
   late List<QuestionPair> questionPairs;
+  late List<VotingPair> votingPairs;
   int currentPlayerIndex = 0;
   int currentQuestionIndex = 0;
+  int currentVotingIndex = 0;
 
   void startGame() {
     currentPlayerIndex = 0;
@@ -43,7 +48,7 @@ class GameSetupCubit extends Cubit<GameSetupState> {
   void setAskingAndAskedPlayers() {
     currentQuestionIndex = 0;
 
-    questionPairs = GameLogicService.setAskingAndAskedPlayers();
+    questionPairs = GameLogicService.setAskPairs();
 
     emit(
       QuestionsReveal(
@@ -67,5 +72,38 @@ class GameSetupCubit extends Cubit<GameSetupState> {
       ),
     );
     currentQuestionIndex++;
+  }
+
+  void setVotingPairs() {
+    currentVotingIndex = 0;
+    votingPairs = GameLogicService.setVotingpairs();
+    emit(
+      VotingReveal(
+        votingPlayer: votingPairs[currentVotingIndex].votingPlayer,
+        votingList: votingPairs[currentVotingIndex].votingList,
+      ),
+    );
+    currentVotingIndex++;
+  }
+
+  void getNextVote(List<PlayerModel> votedPlayers) {
+    if (currentVotingIndex >= votingPairs.length) {
+      GameLogicService.setPlayersScore(votedPlayers, votingPairs, currentVotingIndex);
+
+      for (var element in playersModel.playersList) {
+        log('${element.name} : ${element.score}');
+      }
+      emit(Votingfinish());
+      return;
+    }
+    GameLogicService.setPlayersScore(votedPlayers, votingPairs, currentVotingIndex);
+
+    emit(
+      VotingReveal(
+        votingPlayer: votingPairs[currentVotingIndex].votingPlayer,
+        votingList: votingPairs[currentVotingIndex].votingList,
+      ),
+    );
+    currentVotingIndex++;
   }
 }

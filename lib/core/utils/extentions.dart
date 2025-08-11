@@ -70,12 +70,6 @@ extension ModesInfo on GameModesEnum {
   }
 }
 
-// extension PlayersStateX on PlayersState {
-//   bool gameStartingStates() {
-//     return this is PlayerReveal || this is WordReveal || this is QuestionsStart;
-//   }
-// }
-
 extension GameSetupX on BuildContext {
   GameSetupCubit get gameStartCubit {
     return BlocProvider.of<GameSetupCubit>(this);
