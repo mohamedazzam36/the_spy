@@ -22,7 +22,7 @@ class PlayersViewBody extends StatelessWidget {
     return BlocProvider(
       create: (context) => PlayersCubit(playersRepo: getIt<PlayersRepo>()),
       child: CustomScrollView(
-        physics: const NeverScrollableScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         slivers: [
           const SliverToBoxAdapter(
             child: CustomTextFormField(),
@@ -33,12 +33,10 @@ class PlayersViewBody extends StatelessWidget {
             ),
           ),
           SliverFillRemaining(
-            hasScrollBody: true,
+            hasScrollBody: false,
             child: Column(
               children: [
-                const Expanded(
-                  child: CustomPlayersListView(),
-                ),
+                const Expanded(child: SizedBox(height: 200, child: CustomPlayersListView())),
                 const SizedBox(
                   height: 8,
                 ),
