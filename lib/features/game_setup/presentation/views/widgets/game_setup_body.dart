@@ -6,8 +6,10 @@ import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/game_setup/presentation/manager/cubits/game_setup_cubit/game_setup_cubit.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/player_reveal_widget.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/players_swaping_animation_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/question_finish_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/questions_reveal_widget.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/spys_words_selection_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/vote_reveal_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/word_reveal_widget.dart';
 
@@ -53,17 +55,17 @@ class _GameSetupBodyState extends State<GameSetupBody> {
             );
           case QuestionsFinish():
             return QuestionFinishWidget(
-              reQuestionPressed: () {
-                context.gameStartCubit.setAskingAndAskedPlayers();
-              },
-              votePressed: () {
-                context.gameStartCubit.setVotingPairs();
-              },
+              reQuestionPressed: () => context.gameStartCubit.setAskingAndAskedPlayers(),
+              votePressed: () => context.gameStartCubit.setVotingPairs(),
             );
           case VotingReveal():
             return VoteRevealWidget(players: state.votingList, votingPlayer: state.votingPlayer);
+          case Votingfinish():
+            return PlayersSwapingAnimationWidget(
+              onPressed: () => context.gameStartCubit.getSpysShownWords(),
+            );
           default:
-            return const CircularProgressIndicator();
+            return const SpysWordsSelectionWidget();
         }
       },
     );

@@ -51,4 +51,15 @@ abstract class ModesService {
       playersList.remove(theSpy);
     }
   }
+
+  static setPlayersCategoryWords() {
+    List<String> playersCategoryWords = GameLogicService.getRandomList(
+      appServices.currentCategoryNames,
+    );
+    playersCategoryWords.remove(playersModel.playersShowedWord);
+    playersCategoryWords.removeRange(0, playersCategoryWords.length - 7);
+    playersCategoryWords.add(playersModel.playersShowedWord);
+
+    playersModel.playersCategoryWords = GameLogicService.getRandomList(playersCategoryWords);
+  }
 }

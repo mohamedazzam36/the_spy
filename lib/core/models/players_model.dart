@@ -4,4 +4,5 @@ class PlayersModel {
   late String playersShowedWord, spysShowedWord;
   List<PlayerModel> spysList = [];
   late List<PlayerModel> playersList;
+  late List<String> playersCategoryWords;
 }

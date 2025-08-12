@@ -106,4 +106,8 @@ class GameSetupCubit extends Cubit<GameSetupState> {
     );
     currentVotingIndex++;
   }
+
+  void getSpysShownWords() {
+    emit(SpysSelectionWords());
+  }
 }

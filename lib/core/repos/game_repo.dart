@@ -9,6 +9,8 @@ abstract class GameRepo {
     setSpysShowedWord();
 
     ModesService.setSpys();
+
+    ModesService.setPlayersCategoryWords();
   }
 
   setPlayersShowedWord();

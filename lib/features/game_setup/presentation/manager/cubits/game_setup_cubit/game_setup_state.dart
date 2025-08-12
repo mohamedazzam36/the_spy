@@ -32,3 +32,5 @@ final class VotingReveal extends GameSetupState {
 }
 
 final class Votingfinish extends GameSetupState {}
+
+final class SpysSelectionWords extends GameSetupState {}

@@ -81,3 +81,13 @@ extension PlayersCubitX on BuildContext {
     return BlocProvider.of<PlayersCubit>(this);
   }
 }
+
+extension Size on BuildContext {
+  double get hight {
+    return MediaQuery.sizeOf(this).height;
+  }
+
+  double get width {
+    return MediaQuery.sizeOf(this).width;
+  }
+}
