@@ -4,4 +4,5 @@ enum GameModesEnum {
   specialPlayers,
   classicDouble,
   blindDouble,
+  duo,
 }

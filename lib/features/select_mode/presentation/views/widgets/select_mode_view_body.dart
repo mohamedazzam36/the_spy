@@ -11,6 +11,7 @@ class SelectModeViewBody extends StatelessWidget {
     GameModesEnum.classicDouble,
     GameModesEnum.blindDouble,
     GameModesEnum.specialPlayers,
+    GameModesEnum.duo,
   ];
 
   @override

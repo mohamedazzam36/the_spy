@@ -51,6 +51,14 @@ extension ModesInfo on GameModesEnum {
           image: 'blindDouble',
           backGroundColor: kBlackColor,
         );
+      case GameModesEnum.duo:
+        return (
+          title: 'Duo',
+          numOfSpys: 2,
+          modeDescription: 'Duo',
+          image: 'classicDouble',
+          backGroundColor: kBlackColor,
+        );
     }
   }
 
@@ -66,6 +74,8 @@ extension ModesInfo on GameModesEnum {
         Classic().setupGame();
       case GameModesEnum.blindDouble:
         Blind().setupGame();
+      case GameModesEnum.duo:
+        Duo().setupGame();
     }
   }
 }

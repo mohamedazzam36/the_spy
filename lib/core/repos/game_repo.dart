@@ -4,11 +4,11 @@ abstract class GameRepo {
   void setupGame() {
     ModesService.setPlayersRandomList();
 
+    ModesService.setSpys();
+
     setPlayersShowedWord();
 
     setSpysShowedWord();
-
-    ModesService.setSpys();
 
     ModesService.setPlayersCategoryWords();
   }

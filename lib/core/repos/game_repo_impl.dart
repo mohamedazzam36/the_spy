@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:the_spy/core/game_services/game_logic_service.dart';
 import 'package:the_spy/core/game_services/modes_service.dart';
 import 'package:the_spy/core/repos/game_repo.dart';
@@ -93,5 +94,21 @@ class SpeacialPlayers extends GameRepo {
       playersCategoryWords.add(playersModel.playersShowedWord);
     }
     playersModel.playersCategoryWords = GameLogicService.getRandomList(playersCategoryWords);
+  }
+}
+
+class Duo extends GameRepo {
+  @override
+  setPlayersShowedWord() {
+    ModesService.setClassicPlayersShowedWord();
+  }
+
+  @override
+  setSpysShowedWord() {
+    String spysShowedWord = 'hideAll'.tr();
+    for (var element in playersModel.spysList) {
+      spysShowedWord += '\n ${element.name}';
+    }
+    playersModel.spysShowedWord = spysShowedWord;
   }
 }
