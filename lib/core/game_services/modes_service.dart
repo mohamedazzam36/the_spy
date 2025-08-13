@@ -53,11 +53,20 @@ abstract class ModesService {
   }
 
   static setPlayersCategoryWords() {
-    List<String> playersCategoryWords = GameLogicService.getRandomList(
+    List<String> tempPlayersCategoryWords = GameLogicService.getRandomList(
       appServices.currentCategoryNames,
     );
-    playersCategoryWords.remove(playersModel.playersShowedWord);
-    playersCategoryWords.removeRange(0, playersCategoryWords.length - 7);
+    List<String> playersCategoryWords = [];
+    String randomCategoryWord;
+    int i = 0;
+    tempPlayersCategoryWords.remove(playersModel.playersShowedWord);
+    while (i < 7) {
+      randomCategoryWord = GameLogicService.getListRandomWord(tempPlayersCategoryWords);
+      if (!playersCategoryWords.contains(randomCategoryWord)) {
+        playersCategoryWords.add(randomCategoryWord);
+        i++;
+      }
+    }
     playersCategoryWords.add(playersModel.playersShowedWord);
 
     playersModel.playersCategoryWords = GameLogicService.getRandomList(playersCategoryWords);

@@ -49,7 +49,7 @@ class _VoteGridViewState extends State<VoteGridView> {
     setState(() {});
 
     if (selectedIndices.length == playersModel.spysList.length) {
-      context.gameStartCubit.getNextVote(votedPlayers);
+      context.gameStartCubit.getNextPlayerVote(List.from(votedPlayers));
       votedPlayers.clear();
       selectedIndices.clear();
     }

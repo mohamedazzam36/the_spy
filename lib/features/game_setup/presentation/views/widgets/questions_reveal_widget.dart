@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/widgets/custom_small_text_button.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/questions_reveal_card.dart';
 
@@ -8,11 +9,9 @@ class QuestionsRevealWidget extends StatelessWidget {
     super.key,
     required this.askingPlayer,
     required this.askedPlayer,
-    required this.onPressed,
   });
 
   final String askingPlayer, askedPlayer;
-  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,7 @@ class QuestionsRevealWidget extends StatelessWidget {
                     height: 50,
                   ),
                   CustomSmallTextButton(
-                    onPressed: onPressed,
+                    onPressed: () => context.gameStartCubit.getNextQuestion(),
                     text: 'next'.tr(),
                   ),
                 ],

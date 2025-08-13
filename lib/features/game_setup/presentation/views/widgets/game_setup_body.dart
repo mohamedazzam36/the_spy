@@ -40,32 +40,28 @@ class _GameSetupBodyState extends State<GameSetupBody> {
           case PlayerReveal():
             return PlayerRevealWidget(
               player: state.player,
-              onPressed: () => context.gameStartCubit.switchBetweenPlayersAndWord(),
             );
           case WordReveal():
             return WordRevealWidget(
               wordName: state.showedWord,
-              onPressed: () => context.gameStartCubit.switchBetweenPlayersAndWord(),
             );
           case QuestionsReveal():
             return QuestionsRevealWidget(
               askedPlayer: state.askedPlayer,
               askingPlayer: state.askingPlayer,
-              onPressed: () => context.gameStartCubit.getNextQuestion(),
             );
           case QuestionsFinish():
-            return QuestionFinishWidget(
-              reQuestionPressed: () => context.gameStartCubit.setAskingAndAskedPlayers(),
-              votePressed: () => context.gameStartCubit.setVotingPairs(),
-            );
+            return const QuestionFinishWidget();
           case VotingReveal():
             return VoteRevealWidget(players: state.votingList, votingPlayer: state.votingPlayer);
           case Votingfinish():
-            return PlayersSwapingAnimationWidget(
-              onPressed: () => context.gameStartCubit.getSpysShownWords(),
+            return const PlayersSwapingAnimationWidget();
+          case SpysSelectionWords():
+            return SpysWordsSelectionWidget(
+              spyNAme: state.spyName,
             );
           default:
-            return const SpysWordsSelectionWidget();
+            return const CircularProgressIndicator();
         }
       },
     );

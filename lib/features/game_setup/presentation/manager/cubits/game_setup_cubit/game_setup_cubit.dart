@@ -1,12 +1,11 @@
-import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:the_spy/core/game_services/game_logic_service.dart';
 import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/game_setup/data/models/question_pair_model.dart';
-import 'package:the_spy/features/game_setup/data/models/vote_pair_model.dart';
+import 'package:the_spy/features/game_setup/data/models/players_voting_info.dart';
+import 'package:the_spy/features/game_setup/data/models/spys_voting_info.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 part 'game_setup_state.dart';
@@ -15,99 +14,111 @@ class GameSetupCubit extends Cubit<GameSetupState> {
   GameSetupCubit() : super(GameStartInitial());
 
   late List<QuestionPair> questionPairs;
-  late List<VotingPair> votingPairs;
-  int currentPlayerIndex = 0;
-  int currentQuestionIndex = 0;
-  int currentVotingIndex = 0;
+  late List<PlayersVotingInfo> playersVotingInfo;
+  late List<SpysVotingInfo> spysVotingInfo;
+  int _currentPlayerIndex = 0;
+  int _currentQuestionIndex = 0;
+  int _currentVotingIndex = 0;
+  int _currentSpyIndex = 0;
 
   void startGame() {
-    currentPlayerIndex = 0;
+    _currentPlayerIndex = 0;
 
     appServices.currentMode.setGameStarting;
-    emit(PlayerReveal(player: playersModel.playersList[currentPlayerIndex]));
+    emit(PlayerReveal(player: playersModel.playersList[_currentPlayerIndex]));
   }
 
   void switchBetweenPlayersAndWord() {
-    if (currentPlayerIndex >= playersModel.playersList.length) {
+    if (_currentPlayerIndex >= playersModel.playersList.length) {
       setAskingAndAskedPlayers();
       return;
     }
 
-    final currentPlayer = playersModel.playersList[currentPlayerIndex];
+    final currentPlayer = playersModel.playersList[_currentPlayerIndex];
 
     if (state is PlayerReveal) {
       final isSpy = playersModel.spysList.any((spy) => spy.name == currentPlayer.name);
 
       emit(WordReveal(isSpy ? playersModel.spysShowedWord : playersModel.playersShowedWord));
-      currentPlayerIndex++;
+      _currentPlayerIndex++;
     } else {
       emit(PlayerReveal(player: currentPlayer));
     }
   }
 
   void setAskingAndAskedPlayers() {
-    currentQuestionIndex = 0;
+    _currentQuestionIndex = 0;
 
     questionPairs = GameLogicService.setAskPairs();
 
     emit(
       QuestionsReveal(
-        askedPlayer: questionPairs[currentQuestionIndex].askedPlayer.name,
-        askingPlayer: questionPairs[currentQuestionIndex].askingPlayer.name,
+        askedPlayer: questionPairs[_currentQuestionIndex].askedPlayer.name,
+        askingPlayer: questionPairs[_currentQuestionIndex].askingPlayer.name,
       ),
     );
-    currentQuestionIndex++;
+    _currentQuestionIndex++;
   }
 
   void getNextQuestion() {
-    if (currentQuestionIndex >= questionPairs.length) {
+    if (_currentQuestionIndex >= questionPairs.length) {
       emit(QuestionsFinish());
       return;
     }
 
     emit(
       QuestionsReveal(
-        askedPlayer: questionPairs[currentQuestionIndex].askedPlayer.name,
-        askingPlayer: questionPairs[currentQuestionIndex].askingPlayer.name,
+        askedPlayer: questionPairs[_currentQuestionIndex].askedPlayer.name,
+        askingPlayer: questionPairs[_currentQuestionIndex].askingPlayer.name,
       ),
     );
-    currentQuestionIndex++;
+    _currentQuestionIndex++;
   }
 
   void setVotingPairs() {
-    currentVotingIndex = 0;
-    votingPairs = GameLogicService.setVotingpairs();
+    _currentVotingIndex = 0;
+    playersVotingInfo = GameLogicService.setPlayersVotingInfo();
     emit(
       VotingReveal(
-        votingPlayer: votingPairs[currentVotingIndex].votingPlayer,
-        votingList: votingPairs[currentVotingIndex].votingList,
+        votingPlayer: playersVotingInfo[_currentVotingIndex].votingPlayer,
+        votingList: playersVotingInfo[_currentVotingIndex].shownVotingList,
       ),
     );
-    currentVotingIndex++;
   }
 
-  void getNextVote(List<PlayerModel> votedPlayers) {
-    if (currentVotingIndex >= votingPairs.length) {
-      GameLogicService.setPlayersScore(votedPlayers, votingPairs, currentVotingIndex);
+  void getNextPlayerVote(List<PlayerModel> votedPlayers) {
+    if (_currentVotingIndex >= playersVotingInfo.length - 1) {
+      playersVotingInfo[_currentVotingIndex].votedPlayersList = votedPlayers;
 
-      for (var element in playersModel.playersList) {
-        log('${element.name} : ${element.score}');
-      }
       emit(Votingfinish());
       return;
     }
-    GameLogicService.setPlayersScore(votedPlayers, votingPairs, currentVotingIndex);
+
+    playersVotingInfo[_currentVotingIndex].votedPlayersList = votedPlayers;
+    _currentVotingIndex++;
 
     emit(
       VotingReveal(
-        votingPlayer: votingPairs[currentVotingIndex].votingPlayer,
-        votingList: votingPairs[currentVotingIndex].votingList,
+        votingPlayer: playersVotingInfo[_currentVotingIndex].votingPlayer,
+        votingList: playersVotingInfo[_currentVotingIndex].shownVotingList,
       ),
     );
-    currentVotingIndex++;
   }
 
-  void getSpysShownWords() {
-    emit(SpysSelectionWords());
+  void setSpyVotingInfo() {
+    _currentSpyIndex = 0;
+    spysVotingInfo = GameLogicService.setSpysVotingInfo();
+    emit(SpysSelectionWords(spyName: spysVotingInfo[_currentSpyIndex].theSpy.name));
+  }
+
+  void getNextSpyVote(String votedWord) {
+    if (_currentSpyIndex >= playersModel.spysList.length - 1) {
+      spysVotingInfo[_currentSpyIndex].votedWord = votedWord;
+      return;
+    }
+
+    spysVotingInfo[_currentSpyIndex].votedWord = votedWord;
+    _currentSpyIndex++;
+    emit(SpysSelectionWords(spyName: spysVotingInfo[_currentSpyIndex].theSpy.name));
   }
 }

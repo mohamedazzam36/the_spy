@@ -1,7 +1,8 @@
 import 'dart:math';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/game_setup/data/models/question_pair_model.dart';
-import 'package:the_spy/features/game_setup/data/models/vote_pair_model.dart';
+import 'package:the_spy/features/game_setup/data/models/players_voting_info.dart';
+import 'package:the_spy/features/game_setup/data/models/spys_voting_info.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 abstract class GameLogicService {
@@ -38,32 +39,48 @@ abstract class GameLogicService {
     return questionPairs;
   }
 
-  static List<VotingPair> setVotingpairs() {
+  static List<PlayersVotingInfo> setPlayersVotingInfo() {
     List<PlayerModel> votingList = playersModel.playersList;
-    List<VotingPair> votingPairs = [];
+    List<PlayersVotingInfo> votingPairs;
 
-    for (int i = 0; i < votingList.length; i++) {
-      votingPairs.add(
-        VotingPair(
-          votingPlayer: votingList[i],
-          votingList: List.from(votingList)..remove(votingList[i]),
-        ),
-      );
-    }
+    votingPairs = votingList
+        .map(
+          (e) => PlayersVotingInfo(
+            votingPlayer: e,
+            shownVotingList: List.from(votingList)..remove(e),
+          ),
+        )
+        .toList();
 
     return votingPairs;
   }
 
   static void setPlayersScore(
-    List<PlayerModel> votedPlayers,
-    List<VotingPair> votingPairs,
-    int currentVotingIndex,
+    List<PlayersVotingInfo> playersVotingInfo,
   ) {
-    for (int i = 0; i < votedPlayers.length; i++) {
+    for (int i = 0; i < playersVotingInfo.length; i++) {
       for (int j = 0; j < playersModel.spysList.length; j++) {
-        if (votedPlayers[i].name == playersModel.spysList[j].name) {
-          votingPairs[currentVotingIndex - 1].votingPlayer.score++;
+        for (int k = 0; k < playersVotingInfo[i].votedPlayersList.length; k++) {
+          if (playersVotingInfo[i].votedPlayersList[k].name == playersModel.spysList[j].name) {
+            playersVotingInfo[i].votingPlayer.score++;
+          }
         }
+      }
+    }
+  }
+
+  static List<SpysVotingInfo> setSpysVotingInfo() {
+    return playersModel.spysList
+        .map(
+          (e) => SpysVotingInfo(theSpy: e),
+        )
+        .toList();
+  }
+
+  static void setSpysScore(List<SpysVotingInfo> spysVotingInfo) {
+    for (int i = 0; i < spysVotingInfo.length; i++) {
+      if (spysVotingInfo[i].votedWord == playersModel.playersShowedWord) {
+        spysVotingInfo[i].theSpy.score++;
       }
     }
   }

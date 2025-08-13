@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/widgets/custom_small_text_button.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/question_finish_card.dart';
 
 class QuestionFinishWidget extends StatelessWidget {
   const QuestionFinishWidget({
     super.key,
-    required this.votePressed,
-    required this.reQuestionPressed,
   });
-
-  final void Function() votePressed;
-  final void Function() reQuestionPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +35,15 @@ class QuestionFinishWidget extends StatelessWidget {
                       children: [
                         CustomSmallTextButton(
                           text: 'اعاده الاسئله',
-                          onPressed: reQuestionPressed,
+                          onPressed: () => context.gameStartCubit.setAskingAndAskedPlayers(),
                         ),
                         const SizedBox(
                           width: 24,
                         ),
-                        CustomSmallTextButton(onPressed: votePressed, text: 'تصويت'),
+                        CustomSmallTextButton(
+                          onPressed: () => context.gameStartCubit.setVotingPairs(),
+                          text: 'تصويت',
+                        ),
                       ],
                     ),
                   ),

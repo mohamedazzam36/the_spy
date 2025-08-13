@@ -1,12 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/players_swaping_animation.dart';
 
 class PlayersSwapingAnimationWidget extends StatelessWidget {
-  const PlayersSwapingAnimationWidget({super.key, required this.onPressed});
-
-  final void Function() onPressed;
+  const PlayersSwapingAnimationWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class PlayersSwapingAnimationWidget extends StatelessWidget {
                 height: 60,
               ),
               PlayersSwapingAnimation(
-                onPressed: onPressed,
+                onPressed: () => context.gameStartCubit.setSpyVotingInfo(),
               ),
             ],
           ),
