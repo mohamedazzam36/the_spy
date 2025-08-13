@@ -6,14 +6,22 @@ import 'package:the_spy/features/game_setup/data/models/spys_voting_info.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 abstract class GameLogicService {
-  static final Random _random = Random();
+  static final Random _random = Random.secure();
 
   static T getListRandomWord<T>(List<T> wordsList) {
-    return wordsList[_random.nextInt(wordsList.length)];
+    final shuffledList = List<T>.from(wordsList);
+    for (int i = 0; i < 2; i++) {
+      shuffledList.shuffle(_random);
+    }
+    return shuffledList[_random.nextInt(shuffledList.length)];
   }
 
   static List<T> getRandomList<T>(List<T> list) {
-    return List<T>.from(list)..shuffle(_random);
+    final shuffledList = List<T>.from(list);
+    for (int i = 0; i < 3; i++) {
+      shuffledList.shuffle(_random);
+    }
+    return shuffledList;
   }
 
   static List<QuestionPair> setAskPairs() {
