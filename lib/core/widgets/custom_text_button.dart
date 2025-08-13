@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/widgets/custom_responsive_text.dart';
 
 class CustomTextButton extends StatelessWidget {
   const CustomTextButton({
@@ -30,12 +31,9 @@ class CustomTextButton extends StatelessWidget {
           MediaQuery.sizeOf(context).height * .1,
         ),
       ),
-      child: FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Text(
-          text,
-          style: textStyle ?? Styles.styleBold50(context),
-        ),
+      child: CustomResponsiveText(
+        text: text,
+        style: textStyle ?? Styles.styleBold50(context),
       ),
     );
   }

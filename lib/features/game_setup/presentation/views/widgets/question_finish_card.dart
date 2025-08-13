@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
@@ -19,7 +20,7 @@ class QuestionFinishCard extends StatelessWidget {
         ),
         child: FittedBox(
           child: Text(
-            'دلوقتي تقدروا تصوتوا او تسالوا تاني',
+            'nowYouCanAskOrVote'.tr(),
             style: Styles.styleSemiBold60(
               context,
             ).copyWith(color: kBlackColor),

@@ -38,3 +38,9 @@ final class SpysSelectionWords extends GameSetupState {
 
   SpysSelectionWords({required this.spyName});
 }
+
+final class ResultsShown extends GameSetupState {
+  final List<SpysVotingInfo> spysVotingInfo;
+
+  ResultsShown({required this.spysVotingInfo});
+}

@@ -36,7 +36,7 @@ void main() async {
       supportedLocales: const [Locale('en'), Locale('ar')],
       path: kTranslation,
       fallbackLocale: const Locale('ar'),
-      startLocale: const Locale('ar'),
+      startLocale: const Locale('en'),
       child: const TheSpy(),
     ),
   );

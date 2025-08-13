@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/widgets/custom_small_text_button.dart';
@@ -34,7 +35,7 @@ class QuestionFinishWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         CustomSmallTextButton(
-                          text: 'اعاده الاسئله',
+                          text: 'reAsk'.tr(),
                           onPressed: () => context.gameStartCubit.setAskingAndAskedPlayers(),
                         ),
                         const SizedBox(
@@ -42,7 +43,7 @@ class QuestionFinishWidget extends StatelessWidget {
                         ),
                         CustomSmallTextButton(
                           onPressed: () => context.gameStartCubit.setVotingPairs(),
-                          text: 'تصويت',
+                          text: 'vote'.tr(),
                         ),
                       ],
                     ),

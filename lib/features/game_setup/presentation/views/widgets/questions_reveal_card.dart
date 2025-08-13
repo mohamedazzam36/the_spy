@@ -66,7 +66,7 @@ class QuestionsRevealcard extends StatelessWidget {
             ),
             FittedBox(
               child: Text(
-                'بشكل غير مباشر عن الكلمة',
+                'askNotDirectly'.tr(),
                 style: Styles.styleSemiBold35(
                   context,
                 ).copyWith(color: kBlackColor),

@@ -9,6 +9,7 @@ import 'package:the_spy/features/game_setup/presentation/views/widgets/player_re
 import 'package:the_spy/features/game_setup/presentation/views/widgets/players_swaping_animation_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/question_finish_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/questions_reveal_widget.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/result_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/spys_words_selection_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/vote_reveal_widget.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/word_reveal_widget.dart';
@@ -60,6 +61,8 @@ class _GameSetupBodyState extends State<GameSetupBody> {
             return SpysWordsSelectionWidget(
               spyNAme: state.spyName,
             );
+          case ResultsShown():
+            return ResultWidget(spysVotingInfo: state.spysVotingInfo);
           default:
             return const CircularProgressIndicator();
         }

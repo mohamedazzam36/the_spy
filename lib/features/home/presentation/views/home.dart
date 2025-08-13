@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kPrimaryColor,
         title: CustomAppBar(
-          title: 'appBarTitle'.tr(),
+          title: 'theSpy'.tr(),
           imagePath: Assets.imagesDetectiveSearchIcon,
         ),
       ),

@@ -64,7 +64,7 @@ class PlayersViewBody extends StatelessWidget {
     bool canNavigate = playesNum >= (spysNum * 2 + 1);
 
     if (canNavigate) {
-      context.push(AppRouter.kWordRevealview);
+      context.push(AppRouter.kGameSetupview);
     } else {
       playersDialogAlert(context, reqPlayers: (spysNum * 2 + 1));
     }

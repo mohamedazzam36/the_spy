@@ -20,7 +20,7 @@ abstract class AppRouter {
   static const String kSelectModeView = '/SelectModeView';
   static const String kHomeView = '/HomeView';
   static const String kPlayersView = '/PlayersView';
-  static const String kWordRevealview = '/WordRevealview';
+  static const String kGameSetupview = '/GameSetupview';
 
   static GoRouter router() {
     final bool isFirstStart = getIt.get<Box<dynamic>>().get(
@@ -38,7 +38,7 @@ abstract class AppRouter {
           builder: (context, state) => const HomeView(),
         ),
         GoRoute(
-          path: kWordRevealview,
+          path: kGameSetupview,
           builder: (context, state) => const GameSetupview(),
         ),
         GoRoute(
