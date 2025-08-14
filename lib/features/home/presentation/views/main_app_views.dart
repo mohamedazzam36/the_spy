@@ -26,7 +26,7 @@ class MainAppViews extends StatelessWidget {
             ),
             backgroundColor: kPrimaryColor,
             bottomNavigationBar: const CustomCurvedNavigationBar(),
-            body: context.homeCubit.views[context.homeCubit.currentNavBarIndex],
+            body: context.homeCubit.views[context.homeCubit.currentNavBarIndex](),
           );
         },
       ),

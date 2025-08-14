@@ -1,5 +1,4 @@
 import 'package:go_router/go_router.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:the_spy/constants.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/adaptive_layout/presentation/views/adaptive_layout.dart';
@@ -23,7 +22,7 @@ abstract class AppRouter {
   static const String kGameSetupview = '/GameSetupview';
 
   static GoRouter router() {
-    final bool isFirstStart = getIt.get<Box<dynamic>>().get(
+    final bool isFirstStart = applicationBox.get(
       kIsFirstStart,
       defaultValue: true,
     );

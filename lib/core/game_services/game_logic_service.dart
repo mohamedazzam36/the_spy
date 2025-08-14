@@ -24,6 +24,10 @@ abstract class GameLogicService {
     return shuffledList;
   }
 
+  static List<PlayerModel> getSortedPlayersList(List<PlayerModel> list) {
+    return list..sort((a, b) => b.score.compareTo(a.score));
+  }
+
   static List<QuestionPair> setAskPairs() {
     List<PlayerModel> askingPlayers = GameLogicService.getRandomList(playersModel.playersList);
     List<PlayerModel> askedPlayers = List.from(askingPlayers);
@@ -61,6 +65,12 @@ abstract class GameLogicService {
         .toList();
 
     return votingPairs;
+  }
+
+  static void resetPlayersScore() {
+    for (var player in playersModel.playersList) {
+      player.score = 0;
+    }
   }
 
   static void setPlayersScore(

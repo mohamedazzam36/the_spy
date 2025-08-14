@@ -9,6 +9,7 @@ import 'package:the_spy/features/players/data/repos/players_repo_impl.dart';
 
 final getIt = GetIt.instance;
 
+Box<dynamic> get applicationBox => getIt<Box<dynamic>>();
 AppServices get appServices => getIt<AppServices>();
 PlayersModel get playersModel => getIt<PlayersModel>();
 Box<int> get leaderboardBox => getIt<Box<int>>();

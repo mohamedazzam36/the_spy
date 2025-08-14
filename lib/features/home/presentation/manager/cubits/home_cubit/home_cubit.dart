@@ -13,10 +13,10 @@ class HomeCubit extends Cubit<HomeState> {
 
   int currentNavBarIndex = 1;
 
-  final List<Widget> views = const [
-    LeaderboardViewBody(),
-    HomeViewBody(),
-    SettingsViewBody(),
+  final List<Widget Function()> views = [
+    () => const LeaderboardViewBody(),
+    () => const HomeViewBody(),
+    () => const SettingsViewBody(),
   ];
 
   final List<String> appBarTitles = [

@@ -115,6 +115,7 @@ class GameSetupCubit extends Cubit<GameSetupState> {
   void getNextSpyVote(String votedWord) {
     if (_currentSpyIndex >= playersModel.spysList.length - 1) {
       spysVotingInfo[_currentSpyIndex].votedWord = votedWord;
+      GameLogicService.resetPlayersScore();
       GameLogicService.setPlayersScore(playersVotingInfo);
       GameLogicService.setSpysScore(spysVotingInfo);
       emit(ResultsShown(spysVotingInfo: spysVotingInfo));
