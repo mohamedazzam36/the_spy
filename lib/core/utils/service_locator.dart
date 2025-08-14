@@ -11,10 +11,12 @@ final getIt = GetIt.instance;
 
 AppServices get appServices => getIt<AppServices>();
 PlayersModel get playersModel => getIt<PlayersModel>();
+Box<int> get leaderboardBox => getIt<Box<int>>();
 
 Future<void> setupLocator() async {
   final playersBox = await Hive.openBox<PlayerModel>(kPlayerBox);
   final applicationBox = await Hive.openBox<dynamic>(kApplicationBox);
+  final leaderboardBox = await Hive.openBox<int>(kLeaderboardBox);
   final PlayersRepo playersRepo = PlayersRepoImpl();
   final AppServices appServices = AppServices();
   final PlayersModel playersModel = PlayersModel();
@@ -22,6 +24,7 @@ Future<void> setupLocator() async {
   getIt.registerSingleton<PlayersRepo>(playersRepo);
   getIt.registerSingleton<Box<PlayerModel>>(playersBox);
   getIt.registerSingleton<Box<dynamic>>(applicationBox);
+  getIt.registerSingleton<Box<int>>(leaderboardBox);
   getIt.registerSingleton<AppServices>(appServices);
   getIt.registerSingleton<PlayersModel>(playersModel);
 }

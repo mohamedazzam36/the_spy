@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:the_spy/core/app_services/leaderboard_service.dart';
 import 'package:the_spy/core/game_services/game_logic_service.dart';
 import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
@@ -117,6 +118,7 @@ class GameSetupCubit extends Cubit<GameSetupState> {
       GameLogicService.setPlayersScore(playersVotingInfo);
       GameLogicService.setSpysScore(spysVotingInfo);
       emit(ResultsShown(spysVotingInfo: spysVotingInfo));
+      LeaderboardService.updateLeaderBoard();
       return;
     }
 
