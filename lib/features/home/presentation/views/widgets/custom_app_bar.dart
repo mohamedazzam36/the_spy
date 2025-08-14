@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/widgets/custom_responsive_text.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
@@ -17,9 +18,11 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          title,
-          style: Styles.styleSemiBold35(context),
+        Flexible(
+          child: CustomResponsiveText(
+            text: title,
+            style: Styles.styleSemiBold35(context),
+          ),
         ),
         SvgPicture.asset(
           imagePath,

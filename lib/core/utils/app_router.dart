@@ -6,7 +6,7 @@ import 'package:the_spy/features/adaptive_layout/presentation/views/adaptive_lay
 import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/desktop_layout.dart';
 import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/mobile_layout.dart';
 import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/tablet_layout.dart';
-import 'package:the_spy/features/home/presentation/views/home.dart';
+import 'package:the_spy/features/home/presentation/views/main_app_views.dart';
 import 'package:the_spy/features/players/presentation/views/players.dart';
 import 'package:the_spy/features/game_setup/presentation/views/game_setup.dart';
 import 'package:the_spy/features/select_mode/presentation/views/select_mode.dart';
@@ -35,7 +35,7 @@ abstract class AppRouter {
         ),
         GoRoute(
           path: kHomeView,
-          builder: (context, state) => const HomeView(),
+          builder: (context, state) => const MainAppViews(),
         ),
         GoRoute(
           path: kGameSetupview,

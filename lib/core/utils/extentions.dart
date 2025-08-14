@@ -5,6 +5,7 @@ import 'package:the_spy/core/repos/game_repo_impl.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/enums.dart';
 import 'package:the_spy/features/game_setup/presentation/manager/cubits/game_setup_cubit/game_setup_cubit.dart';
+import 'package:the_spy/features/home/presentation/manager/cubits/home_cubit/home_cubit.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 
 extension ModesInfo on GameModesEnum {
@@ -77,6 +78,12 @@ extension ModesInfo on GameModesEnum {
       case GameModesEnum.duo:
         Duo().setupGame();
     }
+  }
+}
+
+extension HomeCubitX on BuildContext {
+  HomeCubit get homeCubit {
+    return BlocProvider.of<HomeCubit>(this);
   }
 }
 
