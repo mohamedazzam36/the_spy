@@ -1,7 +1,7 @@
 enum GameModesEnum {
   classic,
   blind,
-  specialPlayers,
+  amongUs,
   classicDouble,
   blindDouble,
   duo,

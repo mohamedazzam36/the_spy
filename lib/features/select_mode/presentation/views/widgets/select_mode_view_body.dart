@@ -1,27 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:the_spy/core/utils/enums.dart';
-import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_widget.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:the_spy/core/utils/assets.dart';
+import 'package:the_spy/core/widgets/custom_background_container.dart';
+import 'package:the_spy/features/select_mode/presentation/views/widgets/modes_background_container.dart';
 
 class SelectModeViewBody extends StatelessWidget {
   const SelectModeViewBody({super.key});
 
-  final List<GameModesEnum> modes = const [
-    GameModesEnum.classic,
-    GameModesEnum.blind,
-    GameModesEnum.classicDouble,
-    GameModesEnum.blindDouble,
-    GameModesEnum.specialPlayers,
-    GameModesEnum.duo,
-  ];
-
   @override
   Widget build(BuildContext context) {
-    return PageView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: modes.length,
-      itemBuilder: (context, index) {
-        return SelectModeWidget(currentMode: modes[index]);
-      },
+    return CustomBackgroundContainer(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 200,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 32),
+                    child: SvgPicture.asset(
+                      Assets.imagesWelcomeSvg,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const ModesBackgroundContainer(),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

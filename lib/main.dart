@@ -25,9 +25,9 @@ void main() async {
 
   await setupLocator();
 
-  await Future.delayed(
-    const Duration(milliseconds: 350),
-  );
+  // await Future.delayed(
+  //   const Duration(milliseconds: 350),
+  // );
 
   WidgetsBinding.instance.allowFirstFrame();
 

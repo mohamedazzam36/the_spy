@@ -6,9 +6,25 @@ class Assets {
   /// assets/images/animals.png
   static const String imagesAnimals = "assets/images/animals.png";
 
+  /// Assets for imagesBlindDoubleIcon
+  /// assets/images/blind_double_icon.svg
+  static const String imagesBlindDoubleIcon = "assets/images/blind_double_icon.svg";
+
+  /// Assets for imagesBlindIcon
+  /// assets/images/blind_icon.svg
+  static const String imagesBlindIcon = "assets/images/blind_icon.svg";
+
   /// Assets for imagesCities
   /// assets/images/cities.png
   static const String imagesCities = "assets/images/cities.png";
+
+  /// Assets for imagesClassicDoubleIcon
+  /// assets/images/classic_double_icon.svg
+  static const String imagesClassicDoubleIcon = "assets/images/classic_double_icon.svg";
+
+  /// Assets for imagesClassicIcon
+  /// assets/images/classic_icon.svg
+  static const String imagesClassicIcon = "assets/images/classic_icon.svg";
 
   /// Assets for imagesCloths
   /// assets/images/cloths.png
@@ -33,6 +49,10 @@ class Assets {
   /// Assets for imagesDevices
   /// assets/images/devices.png
   static const String imagesDevices = "assets/images/devices.png";
+
+  /// Assets for imagesDuoIcon
+  /// assets/images/duo_icon.svg
+  static const String imagesDuoIcon = "assets/images/duo_icon.svg";
 
   /// Assets for imagesEverything
   /// assets/images/everything.png
@@ -62,6 +82,10 @@ class Assets {
   /// assets/images/sports.png
   static const String imagesSports = "assets/images/sports.png";
 
+  /// Assets for imagesStarsGif
+  /// assets/images/stars_gif.gif
+  static const String imagesStarsGif = "assets/images/stars_gif.gif";
+
   /// Assets for imagesTools
   /// assets/images/tools.png
   static const String imagesTools = "assets/images/tools.png";
@@ -69,5 +93,9 @@ class Assets {
   /// Assets for imagesVideoGames
   /// assets/images/video_games.png
   static const String imagesVideoGames = "assets/images/video_games.png";
+
+  /// Assets for imagesWelcomeSvg
+  /// assets/images/welcome_svg.svg
+  static const String imagesWelcomeSvg = "assets/images/welcome_svg.svg";
 }
 
