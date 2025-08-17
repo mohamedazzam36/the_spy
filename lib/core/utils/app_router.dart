@@ -1,10 +1,4 @@
 import 'package:go_router/go_router.dart';
-import 'package:the_spy/constants.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
-import 'package:the_spy/features/adaptive_layout/presentation/views/adaptive_layout.dart';
-import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/desktop_layout.dart';
-import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/mobile_layout.dart';
-import 'package:the_spy/features/adaptive_layout/presentation/views/widgets/tablet_layout.dart';
 import 'package:the_spy/features/home/presentation/views/main_app_views.dart';
 import 'package:the_spy/features/players/presentation/views/players.dart';
 import 'package:the_spy/features/game_setup/presentation/views/game_setup.dart';
@@ -22,10 +16,6 @@ abstract class AppRouter {
   static const String kGameSetupview = '/GameSetupview';
 
   static GoRouter router() {
-    final bool isFirstStart = applicationBox.get(
-      kIsFirstStart,
-      defaultValue: true,
-    );
     return GoRouter(
       routes: [
         GoRoute(
@@ -51,20 +41,6 @@ abstract class AppRouter {
         GoRoute(
           path: kGetStartedView,
           builder: (context, state) => const GetStartedView(),
-        ),
-        GoRoute(
-          path: kAdaptiveLayoutView,
-          builder: (context, state) => AdaptiveLayoutView(
-            mobileLayout: (context) => MobileLayout(
-              isFirstStart: isFirstStart,
-            ),
-            tabletLayout: (context) => TabletLayout(
-              isFirstStart: isFirstStart,
-            ),
-            desktopLayout: (context) => DesktopLayout(
-              isFirstStart: isFirstStart,
-            ),
-          ),
         ),
       ],
     );

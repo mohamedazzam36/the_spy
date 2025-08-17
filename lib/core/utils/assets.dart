@@ -22,6 +22,10 @@ class Assets {
   /// assets/images/cartoons.png
   static const String imagesCartoons = "assets/images/cartoons.png";
 
+  /// Assets for imagesCategoryStarsGif
+  /// assets/images/category_stars_gif.gif
+  static const String imagesCategoryStarsGif = "assets/images/category_stars_gif.gif";
+
   /// Assets for imagesCities
   /// assets/images/cities.png
   static const String imagesCities = "assets/images/cities.png";
@@ -37,6 +41,10 @@ class Assets {
   /// Assets for imagesClothes
   /// assets/images/clothes.png
   static const String imagesClothes = "assets/images/clothes.png";
+
+  /// Assets for imagesColoredStarsGif
+  /// assets/images/colored_stars_gif.gif
+  static const String imagesColoredStarsGif = "assets/images/colored_stars_gif.gif";
 
   /// Assets for imagesCzTeam
   /// assets/images/cz_team.png

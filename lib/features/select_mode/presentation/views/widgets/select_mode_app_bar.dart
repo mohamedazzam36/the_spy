@@ -9,7 +9,7 @@ class SelectModeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      expandedHeight: 200,
+      expandedHeight: 300,
       backgroundColor: Colors.transparent,
       flexibleSpace: FlexibleSpaceBar(
         background: Padding(

@@ -61,7 +61,7 @@ class _SplashViewState extends State<SplashView> with SingleTickerProviderStateM
     await Future.delayed(const Duration(milliseconds: 500));
     if (mounted) {
       await animationController.reverse();
-      context.go(AppRouter.kAdaptiveLayoutView);
+      isFirstStart ? context.go(AppRouter.kGetStartedView) : context.go(AppRouter.kSelectModeView);
     }
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/extensions/categories_info_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/enums.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/colored_stars_home_list_view_item.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/home_list_view_item.dart';
 
 class HomeListView extends StatelessWidget {
@@ -36,11 +37,18 @@ class HomeListView extends StatelessWidget {
         border: const Border.symmetric(horizontal: BorderSide(color: kWhiteColor, width: 1)),
       ),
       child: ListView.builder(
+        clipBehavior: Clip.none,
+        padding: const EdgeInsets.only(right: 8),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return HomeListViewItem(
-            itemInfo: categories[index % categories.length].getCategoryItemInfo,
-          );
+          return categories[index % categories.length] == CategoriesEnum.amongUs ||
+                  categories[index % categories.length] == CategoriesEnum.random
+              ? ColoredStarsHomeListViewItem(
+                  itemInfo: categories[index % categories.length].getCategoryItemInfo,
+                )
+              : HomeListViewItem(
+                  itemInfo: categories[index % categories.length].getCategoryItemInfo,
+                );
         },
       ),
     );
