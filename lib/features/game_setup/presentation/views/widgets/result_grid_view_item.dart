@@ -19,7 +19,7 @@ class ResultGridViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(color: kLightPurpleColor, borderRadius: BorderRadius.circular(8)),
+      decoration: BoxDecoration(color: kLightPrimaryColor, borderRadius: BorderRadius.circular(8)),
       child: Column(
         children: [
           CustomResponsiveText(

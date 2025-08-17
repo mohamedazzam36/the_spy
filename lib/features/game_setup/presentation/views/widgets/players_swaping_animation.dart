@@ -40,7 +40,7 @@ class _PlayersSwapingAnimationState extends State<PlayersSwapingAnimation> {
         Container(
           height: 250,
           decoration: BoxDecoration(
-            color: controller.isSpyShowed ? kLightPurpleColor : kBlackColor,
+            color: controller.isSpyShowed ? kLightPrimaryColor : kBlackColor,
             shape: BoxShape.circle,
           ),
           child: AspectRatio(

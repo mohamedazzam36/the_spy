@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/game_services/game_logic_service.dart';
-import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
@@ -42,7 +42,7 @@ abstract class ModesService {
   static setSpys() {
     List<PlayerModel> playersList = List.from(playersModel.playersList);
     PlayerModel theSpy;
-    int spysNum = appServices.currentMode.getModeInfo.numOfSpys;
+    int spysNum = appServices.currentMode.numOfSpys;
     playersModel.spysList.clear();
 
     for (int i = 0; i < spysNum; i++) {

@@ -1,7 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
-import 'package:the_spy/core/utils/extentions.dart';
 
 class CustomCurvedNavigationBar extends StatelessWidget {
   const CustomCurvedNavigationBar({
@@ -15,7 +15,7 @@ class CustomCurvedNavigationBar extends StatelessWidget {
       index: context.homeCubit.currentNavBarIndex,
       backgroundColor: Colors.transparent,
       animationDuration: const Duration(milliseconds: 300),
-      color: kLightPurpleColor,
+      color: kLightPrimaryColor,
       items: const [
         Icon(
           Icons.leaderboard,

@@ -11,7 +11,7 @@ class SpysGridViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      style: TextButton.styleFrom(backgroundColor: kLightPurpleColor),
+      style: TextButton.styleFrom(backgroundColor: kLightPrimaryColor),
       child: FittedBox(
         fit: BoxFit.scaleDown,
         alignment: Alignment.center,

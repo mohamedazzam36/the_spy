@@ -14,7 +14,7 @@ class LeaderboardListViewItem extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 8),
       padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(color: kLightPurpleColor, borderRadius: BorderRadius.circular(8)),
+      decoration: BoxDecoration(color: kLightPrimaryColor, borderRadius: BorderRadius.circular(8)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

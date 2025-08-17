@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 class CustomPlayerListViewItem extends StatelessWidget {

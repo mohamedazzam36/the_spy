@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:the_spy/core/app_services/leaderboard_service.dart';
+import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/game_services/game_logic_service.dart';
-import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/game_setup/data/models/question_pair_model.dart';
 import 'package:the_spy/features/game_setup/data/models/players_voting_info.dart';

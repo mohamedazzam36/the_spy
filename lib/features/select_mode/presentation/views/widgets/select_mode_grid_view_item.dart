@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:the_spy/core/utils/app_colors.dart';
+import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/enums.dart';
-import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/core/widgets/custom_responsive_text.dart';
 
@@ -20,14 +18,7 @@ class SelectModeGridViewItem extends StatefulWidget {
 
 class _SelectModeGridViewItemState extends State<SelectModeGridViewItem> {
   bool isPressed = false;
-  late ({
-    List<Color> backGroundColors,
-    String iconPath,
-    String modeDescription,
-    int numOfSpys,
-    String title,
-  })
-  modeInfo;
+  late ({List<Color> backGroundColors, String iconPath, String title}) modeInfo;
 
   @override
   void initState() {
@@ -48,14 +39,14 @@ class _SelectModeGridViewItemState extends State<SelectModeGridViewItem> {
       },
       onTapCancel: () => setState(() => isPressed = false),
       child: AnimatedContainer(
-        transform: Matrix4.identity()..scale(isPressed ? 1.01 : 1.0),
+        transform: Matrix4.identity()..scale(isPressed ? 0.95 : 1.0),
+        transformAlignment: Alignment.center,
         duration: const Duration(milliseconds: 100),
         curve: Curves.easeOut,
         padding: const EdgeInsets.symmetric(vertical: 12),
         margin: const EdgeInsets.only(bottom: 20),
         decoration: BoxDecoration(
           border: isPressed ? Border.all(color: modeInfo.backGroundColors[0], width: 2) : null,
-          color: kBlackColor,
           borderRadius: BorderRadius.circular(16),
           gradient: LinearGradient(
             colors: modeInfo.backGroundColors,
@@ -69,7 +60,7 @@ class _SelectModeGridViewItemState extends State<SelectModeGridViewItem> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(
+              Image.asset(
                 modeInfo.iconPath,
               ),
               const SizedBox(

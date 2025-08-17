@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
-import 'package:the_spy/core/utils/assets.dart';
-import 'package:the_spy/core/utils/extentions.dart';
+import 'package:the_spy/core/widgets/custom_background_container.dart';
 import 'package:the_spy/core/widgets/custom_curved_navigation_bar.dart';
 import 'package:the_spy/features/home/presentation/manager/cubits/home_cubit/home_cubit.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/custom_app_bar.dart';
 
 class MainAppViews extends StatelessWidget {
   const MainAppViews({super.key});
@@ -17,16 +16,18 @@ class MainAppViews extends StatelessWidget {
       child: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
           return Scaffold(
-            appBar: AppBar(
-              backgroundColor: kPrimaryColor,
-              title: CustomAppBar(
-                title: context.homeCubit.appBarTitles[context.homeCubit.currentNavBarIndex],
-                imagePath: Assets.imagesDetectiveSearchIcon,
-              ),
-            ),
+            // appBar: AppBar(
+            //   backgroundColor: kPrimaryColor,
+            //   title: CustomAppBar(
+            //     title: context.homeCubit.appBarTitles[context.homeCubit.currentNavBarIndex],
+            //     imagePath: Assets.imagesDetectiveSearchIcon,
+            //   ),
+            // ),
             backgroundColor: kPrimaryColor,
             bottomNavigationBar: const CustomCurvedNavigationBar(),
-            body: context.homeCubit.views[context.homeCubit.currentNavBarIndex](),
+            body: CustomBackgroundContainer(
+              child: context.homeCubit.views[context.homeCubit.currentNavBarIndex],
+            ),
           );
         },
       ),

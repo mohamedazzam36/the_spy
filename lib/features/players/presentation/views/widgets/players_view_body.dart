@@ -2,10 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/extentions.dart';
 import 'package:the_spy/core/utils/functions/show_dialog_alert.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
@@ -60,7 +60,7 @@ class PlayersViewBody extends StatelessWidget {
 
   void nagvigateToGameStarting(BuildContext context) {
     int playesNum = playersModel.playersList.length;
-    int spysNum = appServices.currentMode.getModeInfo.numOfSpys;
+    int spysNum = appServices.currentMode.numOfSpys;
     bool canNavigate = playesNum >= (spysNum * 2 + 1);
 
     if (canNavigate) {
