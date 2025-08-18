@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:the_spy/core/utils/assets.dart';
 
 class SelectModeAppBar extends StatelessWidget {
@@ -14,8 +15,8 @@ class SelectModeAppBar extends StatelessWidget {
       flexibleSpace: FlexibleSpaceBar(
         background: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
-          child: Image.asset(
-            Assets.imagesWelcome,
+          child: SvgPicture.asset(
+            Assets.imagesWelcomeSvg,
           ),
         ),
       ),

@@ -113,5 +113,9 @@ class Assets {
   /// Assets for imagesWelcome
   /// assets/images/welcome.png
   static const String imagesWelcome = "assets/images/welcome.png";
+
+  /// Assets for imagesWelcomeSvg
+  /// assets/images/welcome_svg.svg
+  static const String imagesWelcomeSvg = "assets/images/welcome_svg.svg";
 }
 

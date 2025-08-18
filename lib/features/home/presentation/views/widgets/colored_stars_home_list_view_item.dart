@@ -49,7 +49,7 @@ class _ColoredStarsHomeListViewItemState extends State<ColoredStarsHomeListViewI
                 borderRadius: BorderRadius.circular(16),
                 border: isPressed
                     ? Border.all(color: widget.itemInfo.gradient.colors[1], width: 2)
-                    : null,
+                    : Border.all(color: widget.itemInfo.gradient.colors[3], width: 2),
               ),
               child: Stack(
                 alignment: Alignment.center,

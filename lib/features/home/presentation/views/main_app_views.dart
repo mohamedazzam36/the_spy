@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
+import 'package:the_spy/core/utils/assets.dart';
 import 'package:the_spy/core/widgets/custom_background_container.dart';
 import 'package:the_spy/core/widgets/custom_curved_navigation_bar.dart';
 import 'package:the_spy/features/home/presentation/manager/cubits/home_cubit/home_cubit.dart';
@@ -25,9 +26,20 @@ class MainAppViews extends StatelessWidget {
             // ),
             backgroundColor: kPrimaryColor,
             bottomNavigationBar: const CustomCurvedNavigationBar(),
-            body: CustomBackgroundContainer(
-              child: context.homeCubit.views[context.homeCubit.currentNavBarIndex],
-            ),
+            body: switch (state) {
+              HomeInitial() => CustomBackgroundContainer(
+                child: context.homeCubit.views[context.homeCubit.currentNavBarIndex],
+              ),
+              // Align(
+              //   alignment: Alignment.center,
+              //   child: Image.asset(
+              //     Assets.imagesWelcome,
+              //   ),
+              // ),
+              HomeSuccess() => CustomBackgroundContainer(
+                child: context.homeCubit.views[context.homeCubit.currentNavBarIndex],
+              ),
+            },
           );
         },
       ),
