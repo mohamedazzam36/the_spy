@@ -12,7 +12,7 @@ class CustomCurvedNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return CurvedNavigationBar(
       onTap: (index) => context.homeCubit.homeNavigation(index),
-      index: context.homeCubit.currentNavBarIndex,
+      index: 1,
       backgroundColor: Colors.transparent,
       animationDuration: const Duration(milliseconds: 300),
       color: kLightPrimaryColor,
