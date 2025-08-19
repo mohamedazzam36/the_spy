@@ -16,7 +16,7 @@ class SelectModeAppBar extends StatelessWidget {
         background: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
           child: SvgPicture.asset(
-            Assets.imagesWelcomeSvg,
+            Assets.imagesModesWelcomeSvg,
           ),
         ),
       ),

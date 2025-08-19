@@ -82,6 +82,10 @@ class Assets {
   /// assets/images/games.png
   static const String imagesGames = "assets/images/games.png";
 
+  /// Assets for imagesHomeWelcomeSvg
+  /// assets/images/home_welcome_svg.svg
+  static const String imagesHomeWelcomeSvg = "assets/images/home_welcome_svg.svg";
+
   /// Assets for imagesJobs
   /// assets/images/jobs.png
   static const String imagesJobs = "assets/images/jobs.png";
@@ -89,6 +93,10 @@ class Assets {
   /// Assets for imagesLogo
   /// assets/images/logo.png
   static const String imagesLogo = "assets/images/logo.png";
+
+  /// Assets for imagesModesWelcomeSvg
+  /// assets/images/modes_welcome_svg.svg
+  static const String imagesModesWelcomeSvg = "assets/images/modes_welcome_svg.svg";
 
   /// Assets for imagesNoBgLogo
   /// assets/images/no_bg_logo.png
@@ -109,13 +117,5 @@ class Assets {
   /// Assets for imagesTools
   /// assets/images/tools.png
   static const String imagesTools = "assets/images/tools.png";
-
-  /// Assets for imagesWelcome
-  /// assets/images/welcome.png
-  static const String imagesWelcome = "assets/images/welcome.png";
-
-  /// Assets for imagesWelcomeSvg
-  /// assets/images/welcome_svg.svg
-  static const String imagesWelcomeSvg = "assets/images/welcome_svg.svg";
 }
 

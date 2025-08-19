@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/utils/app_colors.dart';
 
 class CustomBackgroundContainer extends StatelessWidget {
   const CustomBackgroundContainer({
@@ -23,16 +24,7 @@ class CustomBackgroundContainer extends StatelessWidget {
       margin: margin,
       decoration: BoxDecoration(
         boxShadow: boxShadow,
-        gradient: const LinearGradient(
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
-          colors: [
-            Color(0xff384e58),
-            Color(0xff345a64),
-            Color(0xff2f686f),
-            Color(0xff2d626d),
-          ],
-        ),
+        gradient: kPrimaryGradient,
         borderRadius: borderRadius,
       ),
       child: child,

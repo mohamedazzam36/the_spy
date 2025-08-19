@@ -60,6 +60,8 @@ class _HomeListViewState extends State<HomeListView> {
                   widget.categories[index] == CategoriesEnum.random
               ? ColoredStarsHomeListViewItem(
                   onTap: () {
+                    context.homeCubit.currentGradient =
+                        widget.categories[index].getCategoryItemInfo.gradient;
                     context.homeCubit.changeCategoryIndex(index);
                   },
                   isActive: context.homeCubit.currentCategoryIndex == index,
@@ -67,6 +69,8 @@ class _HomeListViewState extends State<HomeListView> {
                 )
               : HomeListViewItem(
                   onTap: () {
+                    context.homeCubit.currentGradient =
+                        widget.categories[index].getCategoryItemInfo.gradient;
                     context.homeCubit.changeCategoryIndex(index);
                   },
                   isActive: context.homeCubit.currentCategoryIndex == index,
