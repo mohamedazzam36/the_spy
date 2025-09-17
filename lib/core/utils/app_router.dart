@@ -20,7 +20,7 @@ abstract class AppRouter {
       routes: [
         GoRoute(
           path: kSplashView,
-          builder: (context, state) => const MainAppViews(),
+          builder: (context, state) => const SplashView(),
         ),
         GoRoute(
           path: kHomeView,

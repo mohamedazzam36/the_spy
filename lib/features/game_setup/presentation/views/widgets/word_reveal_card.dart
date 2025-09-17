@@ -21,8 +21,8 @@ class WordRevealcard extends StatelessWidget {
           color: kWhiteColor,
           borderRadius: BorderRadius.circular(16),
         ),
-        child: CustomResponsiveText(
-          text: wordName,
+        child: CustomText(
+          wordName,
           style: Styles.styleSemiBold60(
             context,
           ).copyWith(color: kBlackColor),

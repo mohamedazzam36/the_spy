@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
@@ -22,8 +21,8 @@ class ModesHeaderContainer extends StatelessWidget {
           ],
           borderRadius: BorderRadius.circular(24),
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 8),
-          child: CustomResponsiveText(
-            text: 'selectMode'.tr(),
+          child: CustomText(
+            'selectMode',
             style: Styles.styleBold25(
               context,
             ).copyWith(color: kWhiteColor, fontWeight: FontWeight.w900),

@@ -31,8 +31,8 @@ class CustomTextButton extends StatelessWidget {
           MediaQuery.sizeOf(context).height * .1,
         ),
       ),
-      child: CustomResponsiveText(
-        text: text,
+      child: CustomText(
+        text,
         style: textStyle ?? Styles.styleBold50(context),
       ),
     );

@@ -1,17 +1,27 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-class CustomResponsiveText extends StatelessWidget {
-  const CustomResponsiveText({super.key, required this.text, required this.style, this.fit});
+class CustomText extends StatelessWidget {
+  const CustomText(
+    this.text, {
+    super.key,
+    required this.style,
+    this.fit,
+    this.alignment = Alignment.center,
+  });
 
   final String text;
   final TextStyle style;
   final BoxFit? fit;
+  final AlignmentGeometry alignment;
+
   @override
   Widget build(BuildContext context) {
     return FittedBox(
+      alignment: alignment,
       fit: fit ?? BoxFit.scaleDown,
       child: Text(
-        text,
+        text.tr(),
         style: style,
       ),
     );

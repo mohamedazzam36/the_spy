@@ -16,11 +16,12 @@ class MainAppViews extends StatelessWidget {
       create: (context) => HomeCubit(),
       child: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
-          return Scaffold(
-            bottomNavigationBar: const CustomCurvedNavigationBar(),
-            body: Container(
-              decoration: BoxDecoration(gradient: context.homeCubit.currentGradient),
-              child: IndexedStack(
+          return Container(
+            decoration: BoxDecoration(gradient: context.homeCubit.currentGradient),
+            child: Scaffold(
+              backgroundColor: Colors.transparent,
+              bottomNavigationBar: const CustomCurvedNavigationBar(),
+              body: IndexedStack(
                 index: context.homeCubit.currentNavBarIndex,
                 children: const [
                   LeaderboardViewBody(),

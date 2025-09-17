@@ -16,12 +16,12 @@ class ResultLeaderboardItem extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CustomResponsiveText(
-            text: player.name,
+          CustomText(
+            player.name,
             style: Styles.styleSemiBold35(context),
           ),
-          CustomResponsiveText(
-            text: player.score.toString(),
+          CustomText(
+            player.score.toString(),
             style: Styles.styleSemiBold24(context),
           ),
         ],

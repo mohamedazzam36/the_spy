@@ -66,9 +66,9 @@ class _SelectModeGridViewItemState extends State<SelectModeGridViewItem> {
               const SizedBox(
                 height: 16,
               ),
-              CustomResponsiveText(
+              CustomText(
                 fit: BoxFit.scaleDown,
-                text: modeInfo.title,
+                modeInfo.title,
                 style: Styles.extraLight16(
                   context,
                 ).copyWith(fontSize: 24, fontWeight: FontWeight.w900),

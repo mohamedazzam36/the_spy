@@ -5,6 +5,7 @@ import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/extensions/categories_info_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/enums.dart';
+import 'package:the_spy/core/utils/service_locator.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/colored_stars_home_list_view_item.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/home_list_view_item.dart';
 
@@ -60,6 +61,8 @@ class _HomeListViewState extends State<HomeListView> {
                   widget.categories[index] == CategoriesEnum.random
               ? ColoredStarsHomeListViewItem(
                   onTap: () {
+                    appServices.currentCategoryNames =
+                        widget.categories[index].getCategoryInfo.namesList;
                     context.homeCubit.currentGradient =
                         widget.categories[index].getCategoryItemInfo.gradient;
                     context.homeCubit.changeCategoryIndex(index);
@@ -69,6 +72,8 @@ class _HomeListViewState extends State<HomeListView> {
                 )
               : HomeListViewItem(
                   onTap: () {
+                    appServices.currentCategoryNames =
+                        widget.categories[index].getCategoryInfo.namesList;
                     context.homeCubit.currentGradient =
                         widget.categories[index].getCategoryItemInfo.gradient;
                     context.homeCubit.changeCategoryIndex(index);

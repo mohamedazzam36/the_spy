@@ -24,8 +24,8 @@ class VoteGridViewItem extends StatelessWidget {
             color: isSelected! ? Colors.blue : Colors.grey,
             borderRadius: BorderRadius.circular(16),
           ),
-          child: CustomResponsiveText(
-            text: playerName.name,
+          child: CustomText(
+            playerName.name,
             style: Styles.styleSemiBold60(context),
           ),
         ),

@@ -19,8 +19,8 @@ class CustomAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Flexible(
-          child: CustomResponsiveText(
-            text: title,
+          child: CustomText(
+            title,
             style: Styles.styleSemiBold35(context),
           ),
         ),

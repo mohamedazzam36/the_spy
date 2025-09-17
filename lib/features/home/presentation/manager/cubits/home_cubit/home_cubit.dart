@@ -25,4 +25,8 @@ class HomeCubit extends Cubit<HomeState> {
       emit(CategoryChange());
     }
   }
+
+  void finishTheGame() {
+    emit(GameFinish());
+  }
 }

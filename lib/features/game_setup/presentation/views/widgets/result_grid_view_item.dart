@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
@@ -22,22 +21,22 @@ class ResultGridViewItem extends StatelessWidget {
       decoration: BoxDecoration(color: kLightPrimaryColor, borderRadius: BorderRadius.circular(8)),
       child: Column(
         children: [
-          CustomResponsiveText(
-            text: spyName,
+          CustomText(
+            spyName,
             style: Styles.styleBold50(context),
           ),
           const SizedBox(
             height: 8,
           ),
-          CustomResponsiveText(
-            text: 'select'.tr(),
+          CustomText(
+            'select',
             style: Styles.styleSemiBold35(context),
           ),
           const SizedBox(
             height: 8,
           ),
-          CustomResponsiveText(
-            text: votedWord,
+          CustomText(
+            votedWord,
             style: Styles.styleSemiBold35(
               context,
             ).copyWith(color: isSpyTrue ? Colors.green : Colors.red),

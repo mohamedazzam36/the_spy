@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/service_locator.dart';
@@ -13,15 +12,15 @@ class ResultsRightWordSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomResponsiveText(
-          text: 'rightWord'.tr(),
+        CustomText(
+          'rightWord',
           style: Styles.styleSemiBold35(context),
         ),
         const SizedBox(
           height: 8,
         ),
-        CustomResponsiveText(
-          text: playersModel.playersShowedWord,
+        CustomText(
+          playersModel.playersShowedWord,
           style: Styles.styleSemiBold35(context),
         ),
       ],

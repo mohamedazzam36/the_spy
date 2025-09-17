@@ -211,7 +211,7 @@ extension CategoriesInfo on CategoriesEnum {
     }
   }
 
-  get getCategoryInfo {
+  ({List<String> namesList}) get getCategoryInfo {
     switch (this) {
       case CategoriesEnum.animals:
         return (

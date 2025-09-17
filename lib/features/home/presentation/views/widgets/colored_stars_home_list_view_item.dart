@@ -58,9 +58,9 @@ class ColoredStarsHomeListViewItem extends StatelessWidget {
                         Image.asset(
                           itemInfo.image,
                         ),
-                        CustomResponsiveText(
+                        CustomText(
                           fit: BoxFit.scaleDown,
-                          text: itemInfo.titleName,
+                          itemInfo.titleName,
                           style: Styles.extraLight16(
                             context,
                           ).copyWith(fontSize: 50, fontWeight: FontWeight.w900, color: kWhiteColor),
