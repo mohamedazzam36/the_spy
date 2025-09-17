@@ -177,22 +177,6 @@ extension CategoriesInfo on CategoriesEnum {
           titleName: 'cartoon'.tr(),
           image: Assets.imagesCartoons,
         );
-      case CategoriesEnum.amongUs:
-        return (
-          gradient: const LinearGradient(
-            begin: Alignment.bottomRight,
-            end: Alignment.topLeft,
-            colors: [
-              Color(0xffac7031),
-              Color(0xffe7aa51),
-              Color(0xff8d5a1b),
-              Color(0xffffe499),
-              Color(0xffe7aa51),
-            ],
-          ),
-          titleName: 'amongUs'.tr(),
-          image: Assets.imagesAmongUs,
-        );
       case CategoriesEnum.random:
         return (
           gradient: const LinearGradient(
@@ -264,10 +248,6 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.cartoons:
         return (
           namesList: 'cartoonList'.tr().split(', '),
-        );
-      case CategoriesEnum.amongUs:
-        return (
-          namesList: 'randomList'.tr().split(', '),
         );
       case CategoriesEnum.random:
         return (

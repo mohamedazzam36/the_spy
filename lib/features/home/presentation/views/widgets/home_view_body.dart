@@ -18,14 +18,13 @@ class HomeViewBody extends StatelessWidget {
     CategoriesEnum.cities,
     CategoriesEnum.devices,
     CategoriesEnum.food,
-    CategoriesEnum.amongUs,
+    CategoriesEnum.random,
     CategoriesEnum.animals,
     CategoriesEnum.cloths,
     CategoriesEnum.drinks,
     CategoriesEnum.jobs,
     CategoriesEnum.sports,
     CategoriesEnum.football,
-    CategoriesEnum.random,
   ];
 
   @override

@@ -53,16 +53,6 @@ extension ModesInfo on GameModesEnum {
             const Color(0xffffffe8),
           ],
         );
-      case GameModesEnum.amongUs:
-        return (
-          title: 'amongUs'.tr(),
-          iconPath: Assets.imagesClassicDoubleIcon,
-          backGroundColors: [
-            const Color(0xffF6D021),
-            const Color(0xffF8DF6E),
-            const Color(0xffFBEFCC),
-          ],
-        );
     }
   }
 
@@ -71,8 +61,6 @@ extension ModesInfo on GameModesEnum {
       case GameModesEnum.classic:
         return 1;
       case GameModesEnum.blind:
-        return 1;
-      case GameModesEnum.amongUs:
         return 1;
       case GameModesEnum.classicDouble:
         return 2;
@@ -88,8 +76,6 @@ extension ModesInfo on GameModesEnum {
       case GameModesEnum.classic:
         return 'classicModeDescription'.tr();
       case GameModesEnum.blind:
-        return 'blindModeDescription'.tr();
-      case GameModesEnum.amongUs:
         return 'blindModeDescription'.tr();
       case GameModesEnum.classicDouble:
         return 'blindModeDescription'.tr();
@@ -112,8 +98,6 @@ extension ModesInfo on GameModesEnum {
         Blind().setupGame();
       case GameModesEnum.duo:
         Duo().setupGame();
-      case GameModesEnum.amongUs:
-        return SpeacialPlayers().setupGame();
     }
   }
 }

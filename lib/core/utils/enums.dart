@@ -1,7 +1,6 @@
 enum GameModesEnum {
   classic,
   blind,
-  amongUs,
   classicDouble,
   blindDouble,
   duo,
@@ -21,6 +20,5 @@ enum CategoriesEnum {
   sports,
   football,
   cartoons,
-  amongUs,
   random,
 }

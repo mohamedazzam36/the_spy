@@ -57,8 +57,7 @@ class _HomeListViewState extends State<HomeListView> {
         padding: const EdgeInsets.only(right: 8),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return widget.categories[index] == CategoriesEnum.amongUs ||
-                  widget.categories[index] == CategoriesEnum.random
+          return widget.categories[index] == CategoriesEnum.random
               ? ColoredStarsHomeListViewItem(
                   onTap: () {
                     appServices.currentCategoryNames =
