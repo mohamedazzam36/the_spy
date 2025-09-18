@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/vote_grid_view_item.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 

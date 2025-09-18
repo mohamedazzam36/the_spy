@@ -19,7 +19,7 @@ class QuestionsRevealcard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: kWhiteColor,
+          color: AppColors.whiteColor,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -33,7 +33,7 @@ class QuestionsRevealcard extends StatelessWidget {
                       askingPlayer,
                       style: Styles.styleSemiBold35(
                         context,
-                      ).copyWith(color: kBlackColor),
+                      ).copyWith(color: AppColors.blackColor),
                     ),
                   ),
                   Padding(
@@ -46,7 +46,9 @@ class QuestionsRevealcard extends StatelessWidget {
                       alignment: Alignment.topCenter,
                       child: Text(
                         'ask'.tr(),
-                        style: Styles.styleSemiBold24(context).copyWith(color: kBlackColor),
+                        style: Styles.styleSemiBold24(
+                          context,
+                        ).copyWith(color: AppColors.blackColor),
                       ),
                     ),
                   ),
@@ -55,7 +57,7 @@ class QuestionsRevealcard extends StatelessWidget {
                       askedPlayer,
                       style: Styles.styleSemiBold35(
                         context,
-                      ).copyWith(color: kBlackColor),
+                      ).copyWith(color: AppColors.blackColor),
                     ),
                   ),
                 ],
@@ -69,7 +71,7 @@ class QuestionsRevealcard extends StatelessWidget {
                 'askNotDirectly'.tr(),
                 style: Styles.styleSemiBold35(
                   context,
-                ).copyWith(color: kBlackColor),
+                ).copyWith(color: AppColors.blackColor),
               ),
             ),
           ],

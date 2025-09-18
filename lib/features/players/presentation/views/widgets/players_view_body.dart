@@ -6,8 +6,8 @@ import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/functions/show_dialog_alert.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/functions/show_dialog_alert.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/players/data/repos/players_repo.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
@@ -45,10 +45,10 @@ class PlayersViewBody extends StatelessWidget {
                   onPressed: () {
                     nagvigateToGameStarting(context);
                   },
-                  color: kWhiteColor,
+                  color: AppColors.whiteColor,
                   textStyle: Styles.styleBold50(
                     context,
-                  ).copyWith(color: kBlackColor),
+                  ).copyWith(color: AppColors.blackColor),
                 ),
               ],
             ),

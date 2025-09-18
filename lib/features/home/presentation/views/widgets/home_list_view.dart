@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/extensions/categories_info_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
-import 'package:the_spy/core/utils/enums.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/enums/enums.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/colored_stars_home_list_view_item.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/home_list_view_item.dart';
 
@@ -46,8 +46,10 @@ class _HomeListViewState extends State<HomeListView> {
       padding: const EdgeInsets.symmetric(vertical: 16),
       margin: const EdgeInsets.symmetric(vertical: 24),
       decoration: BoxDecoration(
-        color: kBlackColor.withAlpha(100),
-        border: const Border.symmetric(horizontal: BorderSide(color: kWhiteColor, width: 1)),
+        color: AppColors.blackColor.withAlpha(100),
+        border: const Border.symmetric(
+          horizontal: BorderSide(color: AppColors.whiteColor, width: 1),
+        ),
       ),
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),

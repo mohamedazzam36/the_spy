@@ -3,8 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:the_spy/constants.dart';
 import 'package:the_spy/core/utils/app_router.dart';
-import 'package:the_spy/core/utils/assets.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/utils/app_images.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});

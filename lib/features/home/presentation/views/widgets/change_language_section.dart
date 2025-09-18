@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/widgets/custom_responsive_text.dart';
+import 'package:the_spy/core/widgets/custom_text.dart';
 import 'package:the_spy/core/widgets/custom_small_text_button.dart';
 
 class ChangeLanguageSection extends StatelessWidget {

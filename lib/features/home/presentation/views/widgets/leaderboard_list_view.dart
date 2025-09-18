@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/app_services/leaderboard_service.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/home/presentation/manager/cubits/home_cubit/home_cubit.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/leaderboard_list_view_item.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';

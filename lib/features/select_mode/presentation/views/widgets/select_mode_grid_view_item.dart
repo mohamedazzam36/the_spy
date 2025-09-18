@@ -3,9 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/enums.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
-import 'package:the_spy/core/widgets/custom_responsive_text.dart';
+import 'package:the_spy/core/enums/enums.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
+import 'package:the_spy/core/widgets/custom_text.dart';
 
 class SelectModeGridViewItem extends StatefulWidget {
   const SelectModeGridViewItem({super.key, required this.currentMode});

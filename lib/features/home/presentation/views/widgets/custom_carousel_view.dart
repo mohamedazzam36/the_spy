@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/utils/app_router.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 import 'package:the_spy/features/home/data/models/category_item_model.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/carousel_view_item.dart';

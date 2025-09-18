@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
-import 'package:the_spy/core/widgets/custom_responsive_text.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
+import 'package:the_spy/core/widgets/custom_text.dart';
 
 class ResultsRightWordSection extends StatelessWidget {
   const ResultsRightWordSection({

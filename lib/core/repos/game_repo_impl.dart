@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:the_spy/core/game_services/modes_service.dart';
 import 'package:the_spy/core/repos/game_repo.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 
 class Classic extends GameRepo {
   @override

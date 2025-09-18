@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/widgets/custom_responsive_text.dart';
+import 'package:the_spy/core/widgets/custom_text.dart';
 
 class SelectedCategoryWidget extends StatelessWidget {
   const SelectedCategoryWidget({super.key});

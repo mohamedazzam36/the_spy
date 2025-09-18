@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/functions/validate_players.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/functions/validate_players.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -40,7 +40,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           playersList: playersModel.playersList,
         ),
         style: Styles.styleSemiBold24(context),
-        cursorColor: kWhiteColor,
+        cursorColor: AppColors.whiteColor,
         decoration: InputDecoration(
           errorStyle: Styles.extraLight16(context),
           suffixIcon: IconButton(
@@ -48,13 +48,13 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             icon: const Icon(
               size: 36,
               Icons.add_box_rounded,
-              color: kWhiteColor,
+              color: AppColors.whiteColor,
             ),
           ),
           hintText: 'addPlayer'.tr(),
           hintStyle: Styles.styleSemiBold24(
             context,
-          ).copyWith(color: kWhiteColor.withAlpha(150)),
+          ).copyWith(color: AppColors.whiteColor.withAlpha(150)),
           contentPadding: const EdgeInsets.symmetric(
             horizontal: 24,
             vertical: 16,
@@ -96,7 +96,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: const BorderSide(
-        color: kWhiteColor,
+        color: AppColors.whiteColor,
       ),
     );
   }

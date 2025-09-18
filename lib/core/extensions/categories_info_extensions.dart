@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/widgets.dart';
-import 'package:the_spy/core/utils/assets.dart';
-import 'package:the_spy/core/utils/enums.dart';
+import 'package:the_spy/core/utils/app_images.dart';
+import 'package:the_spy/core/enums/enums.dart';
 
 extension CategoriesInfo on CategoriesEnum {
   ({LinearGradient gradient, String image, String titleName}) get getCategoryItemInfo {
@@ -235,7 +235,7 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.films:
         return (
-          namesList: 'flimsList'.tr().split(', '),
+          namesList: 'filmsList'.tr().split(', '),
         );
       case CategoriesEnum.sports:
         return (

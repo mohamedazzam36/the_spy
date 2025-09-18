@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:the_spy/core/utils/assets.dart';
+import 'package:the_spy/core/utils/app_images.dart';
 
 class SelectModeAppBar extends StatelessWidget {
   const SelectModeAppBar({

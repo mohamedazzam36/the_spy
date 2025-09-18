@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/core/widgets/custom_small_text_button.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/players_swaping_animation_controller.dart';
 
@@ -40,7 +40,7 @@ class _PlayersSwapingAnimationState extends State<PlayersSwapingAnimation> {
         Container(
           height: 250,
           decoration: BoxDecoration(
-            color: controller.isSpyShowed ? kLightPrimaryColor : kBlackColor,
+            color: controller.isSpyShowed ? AppColors.lightPrimaryColor : AppColors.blackColor,
             shape: BoxShape.circle,
           ),
           child: AspectRatio(

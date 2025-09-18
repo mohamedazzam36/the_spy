@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/game_services/game_logic_service.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 abstract class ModesService {

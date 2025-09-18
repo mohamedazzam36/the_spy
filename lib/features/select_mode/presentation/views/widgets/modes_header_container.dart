@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/assets.dart';
+import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/widgets/custom_background_container.dart';
-import 'package:the_spy/core/widgets/custom_responsive_text.dart';
+import 'package:the_spy/core/widgets/custom_text.dart';
 
 class ModesHeaderContainer extends StatelessWidget {
   const ModesHeaderContainer({
@@ -17,7 +17,7 @@ class ModesHeaderContainer extends StatelessWidget {
       children: [
         CustomBackgroundContainer(
           boxShadow: const [
-            BoxShadow(color: kyellowColor, blurRadius: 4, offset: Offset(0, 2)),
+            BoxShadow(color: AppColors.yellowColor, blurRadius: 4, offset: Offset(0, 2)),
           ],
           borderRadius: BorderRadius.circular(24),
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 8),
@@ -25,7 +25,7 @@ class ModesHeaderContainer extends StatelessWidget {
             'selectMode',
             style: Styles.styleBold25(
               context,
-            ).copyWith(color: kWhiteColor, fontWeight: FontWeight.w900),
+            ).copyWith(color: AppColors.whiteColor, fontWeight: FontWeight.w900),
           ),
         ),
         Positioned.fill(

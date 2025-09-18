@@ -5,7 +5,7 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:the_spy/constants.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/core/widgets/custom_text_button.dart';
 import 'package:the_spy/features/splash/presentation/views/widgets/get_started_decorated_container.dart';
 
@@ -23,7 +23,7 @@ class GetStartedViewBody extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  kPrimaryColor,
+                  AppColors.primaryColor,
                   Colors.deepPurple,
                   Colors.deepPurple[300]!,
                   const Color.fromARGB(255, 243, 205, 225),

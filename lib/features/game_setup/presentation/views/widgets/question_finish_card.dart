@@ -15,7 +15,7 @@ class QuestionFinishCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: kWhiteColor,
+          color: AppColors.whiteColor,
           borderRadius: BorderRadius.circular(16),
         ),
         child: FittedBox(
@@ -23,7 +23,7 @@ class QuestionFinishCard extends StatelessWidget {
             'nowYouCanAskOrVote'.tr(),
             style: Styles.styleSemiBold60(
               context,
-            ).copyWith(color: kBlackColor),
+            ).copyWith(color: AppColors.blackColor),
           ),
         ),
       ),

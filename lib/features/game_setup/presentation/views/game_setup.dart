@@ -12,9 +12,9 @@ class GameSetupview extends StatelessWidget {
     return BlocProvider(
       create: (context) => GameSetupCubit(),
       child: Scaffold(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: AppColors.primaryColor,
         appBar: AppBar(
-          backgroundColor: kPrimaryColor,
+          backgroundColor: AppColors.primaryColor,
         ),
         body: const GameSetupBody(),
       ),

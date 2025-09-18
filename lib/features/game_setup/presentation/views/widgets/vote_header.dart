@@ -12,7 +12,7 @@ class VoteHeader extends StatelessWidget {
       child: Text(
         votingPlayer.name,
         textAlign: TextAlign.center,
-        style: Styles.styleBold50(context).copyWith(color: kBlackColor),
+        style: Styles.styleBold50(context).copyWith(color: AppColors.blackColor),
       ),
     );
   }

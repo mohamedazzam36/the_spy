@@ -37,7 +37,7 @@ void playersDialogAlert(
           TextButton(
             child: Text(
               'back'.tr(),
-              style: Styles.extraLight16(context).copyWith(color: kBlackColor),
+              style: Styles.extraLight16(context).copyWith(color: AppColors.blackColor),
             ),
             onPressed: () {
               context.pop();

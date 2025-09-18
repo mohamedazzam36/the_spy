@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/game_setup/data/models/question_pair_model.dart';
 import 'package:the_spy/features/game_setup/data/models/players_voting_info.dart';
 import 'package:the_spy/features/game_setup/data/models/spys_voting_info.dart';

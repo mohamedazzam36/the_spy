@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
-import 'package:the_spy/core/utils/enums.dart';
+import 'package:the_spy/core/enums/enums.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/modes_header_container.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_grid_view.dart';
 
@@ -22,7 +22,7 @@ class ModesBackgroundContainer extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(right: 20, left: 20, bottom: 20),
       decoration: BoxDecoration(
-        color: kWhiteColor,
+        color: AppColors.whiteColor,
         borderRadius: BorderRadius.circular(24),
       ),
       child: Column(

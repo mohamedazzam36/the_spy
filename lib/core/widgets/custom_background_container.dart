@@ -24,7 +24,7 @@ class CustomBackgroundContainer extends StatelessWidget {
       margin: margin,
       decoration: BoxDecoration(
         boxShadow: boxShadow,
-        gradient: kPrimaryGradient,
+        gradient: AppColors.primaryGradient,
         borderRadius: borderRadius,
       ),
       child: child,

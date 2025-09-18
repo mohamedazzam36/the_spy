@@ -1,5 +1,5 @@
 import 'package:the_spy/core/game_services/game_logic_service.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 abstract class LeaderboardService {

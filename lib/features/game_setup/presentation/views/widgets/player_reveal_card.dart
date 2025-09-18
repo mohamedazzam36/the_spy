@@ -18,7 +18,7 @@ class PlayerRevealcard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: kWhiteColor,
+          color: AppColors.whiteColor,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -29,7 +29,7 @@ class PlayerRevealcard extends StatelessWidget {
                 playerName,
                 style: Styles.styleSemiBold60(
                   context,
-                ).copyWith(color: kBlackColor),
+                ).copyWith(color: AppColors.blackColor),
               ),
             ),
             const SizedBox(
@@ -44,7 +44,7 @@ class PlayerRevealcard extends StatelessWidget {
               'wordRevealText'.tr(),
               style: Styles.styleSemiBold24(
                 context,
-              ).copyWith(color: kBlackColor),
+              ).copyWith(color: AppColors.blackColor),
               textAlign: TextAlign.center,
             ),
           ],
@@ -59,7 +59,7 @@ class PlayerRevealcard extends StatelessWidget {
         playerName,
         style: Styles.styleSemiBold35(
           context,
-        ).copyWith(color: kBlackColor),
+        ).copyWith(color: AppColors.blackColor),
       ),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/widgets/custom_responsive_text.dart';
+import 'package:the_spy/core/widgets/custom_text.dart';
 
 class HomeListViewItem extends StatelessWidget {
   const HomeListViewItem({
@@ -44,9 +44,14 @@ class HomeListViewItem extends StatelessWidget {
                 CustomText(
                   fit: BoxFit.scaleDown,
                   itemInfo.titleName,
-                  style: Styles.extraLight16(
-                    context,
-                  ).copyWith(fontSize: 50, fontWeight: FontWeight.w900, color: kWhiteColor),
+                  style:
+                      Styles.extraLight16(
+                        context,
+                      ).copyWith(
+                        fontSize: 50,
+                        fontWeight: FontWeight.w900,
+                        color: AppColors.whiteColor,
+                      ),
                 ),
               ],
             ),

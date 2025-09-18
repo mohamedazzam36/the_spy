@@ -8,7 +8,7 @@ part 'home_state.dart';
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
-  Gradient currentGradient = kPrimaryGradient;
+  Gradient currentGradient = AppColors.primaryGradient;
   int currentNavBarIndex = 1;
   int? currentCategoryIndex;
 

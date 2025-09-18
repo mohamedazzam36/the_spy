@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
-import 'package:the_spy/core/utils/assets.dart';
+import 'package:the_spy/core/utils/app_images.dart';
 
 class NoSelectedCategoryWidget extends StatelessWidget {
   const NoSelectedCategoryWidget({super.key});

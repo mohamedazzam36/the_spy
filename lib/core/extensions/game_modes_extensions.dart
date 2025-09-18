@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:the_spy/core/repos/game_repo_impl.dart';
-import 'package:the_spy/core/utils/assets.dart';
-import 'package:the_spy/core/utils/enums.dart';
+import 'package:the_spy/core/utils/app_images.dart';
+import 'package:the_spy/core/enums/enums.dart';
 
 extension ModesInfo on GameModesEnum {
   ({List<Color> backGroundColors, String iconPath, String title}) get getModeInfo {

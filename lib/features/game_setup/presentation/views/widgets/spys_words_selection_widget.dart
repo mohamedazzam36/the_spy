@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/spys_grid_view_item.dart';
 
 class SpysWordsSelectionWidget extends StatelessWidget {

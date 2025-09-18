@@ -15,13 +15,13 @@ class CustomSmallTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      style: TextButton.styleFrom(backgroundColor: kWhiteColor),
+      style: TextButton.styleFrom(backgroundColor: AppColors.whiteColor),
       onPressed: onPressed,
       child: Text(
         text,
         style: Styles.styleSemiBold35(
           context,
-        ).copyWith(color: kBlackColor),
+        ).copyWith(color: AppColors.blackColor),
       ),
     );
   }

@@ -14,7 +14,7 @@ class CustomPlayerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: kWhiteColor,
+      color: AppColors.whiteColor,
       margin: const EdgeInsets.all(0),
       elevation: 10,
       child: Padding(
@@ -26,7 +26,7 @@ class CustomPlayerListViewItem extends StatelessWidget {
                 player.name,
                 style: Styles.styleSemiBold24(
                   context,
-                ).copyWith(color: kBlackColor),
+                ).copyWith(color: AppColors.blackColor),
               ),
             ),
 

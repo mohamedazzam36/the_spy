@@ -6,7 +6,7 @@ abstract class Styles {
   static TextStyle styleSemiBold35(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 35),
-      color: kWhiteColor,
+      color: AppColors.whiteColor,
       fontWeight: FontWeight.w600,
     );
   }
@@ -18,18 +18,18 @@ abstract class Styles {
     );
   }
 
-  static TextStyle styleSemiBold60(BuildContext context) {
+  static TextStyle styleSemiBold24(BuildContext context) {
     return TextStyle(
-      fontSize: getResponsiveText(context, fontSize: 60),
-      color: kWhiteColor,
+      fontSize: getResponsiveText(context, fontSize: 24),
+      color: AppColors.whiteColor,
       fontWeight: FontWeight.w600,
     );
   }
 
-  static TextStyle styleSemiBold24(BuildContext context) {
+  static TextStyle styleSemiBold60(BuildContext context) {
     return TextStyle(
-      fontSize: getResponsiveText(context, fontSize: 24),
-      color: kWhiteColor,
+      fontSize: getResponsiveText(context, fontSize: 60),
+      color: AppColors.whiteColor,
       fontWeight: FontWeight.w600,
     );
   }
@@ -37,7 +37,7 @@ abstract class Styles {
   static TextStyle styleBold50(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 50),
-      color: kWhiteColor,
+      color: AppColors.whiteColor,
       fontWeight: FontWeight.bold,
     );
   }
@@ -45,7 +45,7 @@ abstract class Styles {
   static TextStyle styleBold25(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 25),
-      color: kWhiteColor,
+      color: AppColors.whiteColor,
       fontWeight: FontWeight.bold,
     );
   }

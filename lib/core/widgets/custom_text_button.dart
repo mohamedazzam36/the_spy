@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/widgets/custom_responsive_text.dart';
+import 'package:the_spy/core/widgets/custom_text.dart';
 
 class CustomTextButton extends StatelessWidget {
   const CustomTextButton({
@@ -22,7 +22,7 @@ class CustomTextButton extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       style: TextButton.styleFrom(
-        backgroundColor: color ?? kPrimaryColor,
+        backgroundColor: color ?? AppColors.primaryColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/widgets/custom_responsive_text.dart';
+import 'package:the_spy/core/widgets/custom_text.dart';
 
 class WordRevealcard extends StatelessWidget {
   const WordRevealcard({
@@ -18,14 +18,14 @@ class WordRevealcard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: kWhiteColor,
+          color: AppColors.whiteColor,
           borderRadius: BorderRadius.circular(16),
         ),
         child: CustomText(
           wordName,
           style: Styles.styleSemiBold60(
             context,
-          ).copyWith(color: kBlackColor),
+          ).copyWith(color: AppColors.blackColor),
         ),
       ),
     );

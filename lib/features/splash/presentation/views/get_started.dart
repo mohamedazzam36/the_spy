@@ -11,7 +11,7 @@ class GetStartedView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: AppColors.primaryColor,
         centerTitle: true,
         title: Text(
           'gameIdea'.tr(),

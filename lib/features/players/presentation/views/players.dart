@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/players/presentation/views/widgets/players_view_body.dart';
 
 class PlayersView extends StatelessWidget {
@@ -11,9 +11,9 @@ class PlayersView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kPrimaryColor,
+      backgroundColor: AppColors.primaryColor,
       appBar: AppBar(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: AppColors.primaryColor,
         centerTitle: true,
         title: Text(
           appServices.currentMode.getModeInfo.title,

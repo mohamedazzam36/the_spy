@@ -6,7 +6,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:the_spy/constants.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
-import 'package:the_spy/core/utils/service_locator.dart';
+import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/core/utils/simple_bloc_observer.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
@@ -51,7 +51,7 @@ class TheSpy extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.changaTextTheme(),
         appBarTheme: const AppBarTheme(
-          iconTheme: IconThemeData(color: kWhiteColor),
+          iconTheme: IconThemeData(color: AppColors.whiteColor),
         ),
       ),
       debugShowCheckedModeBanner: false,

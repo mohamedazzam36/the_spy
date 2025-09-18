@@ -23,17 +23,17 @@ class CustomCurvedNavigationBar extends StatelessWidget {
           items: const [
             Icon(
               Icons.leaderboard,
-              color: kWhiteColor,
+              color: AppColors.whiteColor,
               size: 32,
             ),
             Icon(
               Icons.home,
-              color: kWhiteColor,
+              color: AppColors.whiteColor,
               size: 32,
             ),
             Icon(
               Icons.settings,
-              color: kWhiteColor,
+              color: AppColors.whiteColor,
               size: 32,
             ),
           ],
