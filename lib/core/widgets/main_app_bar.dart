@@ -9,11 +9,13 @@ class MainAppBar extends StatelessWidget {
     required this.appBarTitle,
     this.title,
     this.actions,
+    this.titleColor,
   });
 
   final String appBarTitle;
   final Widget? title;
   final List<Widget>? actions;
+  final Color? titleColor;
 
   @override
   Widget build(BuildContext context) {
@@ -22,23 +24,31 @@ class MainAppBar extends StatelessWidget {
       floating: true,
       collapsedHeight: 75,
       centerTitle: true,
-      leading: IconButton(
-        onPressed: () => Navigator.pop(context),
-        icon: const Icon(
-          Icons.arrow_back_ios_new,
-          color: AppColors.whiteColor,
+      leading: GestureDetector(
+        onTap: () => Navigator.pop(context),
+        child: Align(
+          child: Container(
+            width: 32,
+            padding: const EdgeInsetsDirectional.only(end: 2, top: 4, bottom: 4),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.transparent,
+              border: Border.all(color: AppColors.whiteColor),
+            ),
+            child: const Icon(
+              Icons.arrow_back_ios_new,
+              color: AppColors.whiteColor,
+            ),
+          ),
         ),
       ),
       title:
           title ??
           CustomText(
             appBarTitle,
-            style:
-                Styles.styleBold25(
-                  context,
-                ).copyWith(
-                  fontSize: 25,
-                ),
+            style: Styles.styleBold25(
+              context,
+            ).copyWith(fontSize: 28, color: titleColor),
           ),
       actions: actions,
     );

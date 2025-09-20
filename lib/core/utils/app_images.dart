@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesAddPlayerIcon
+  /// assets/images/add_player_icon.svg
+  static const String imagesAddPlayerIcon = "assets/images/add_player_icon.svg";
+
   /// Assets for imagesAmongUs
   /// assets/images/among_us.png
   static const String imagesAmongUs = "assets/images/among_us.png";
@@ -10,6 +14,10 @@ class Assets {
   /// assets/images/animals.png
   static const String imagesAnimals = "assets/images/animals.png";
 
+  /// Assets for imagesBlackPlayerIcon
+  /// assets/images/black_player_icon.svg
+  static const String imagesBlackPlayerIcon = "assets/images/black_player_icon.svg";
+
   /// Assets for imagesBlindDoubleIcon
   /// assets/images/blind_double_icon.png
   static const String imagesBlindDoubleIcon = "assets/images/blind_double_icon.png";
@@ -17,6 +25,10 @@ class Assets {
   /// Assets for imagesBlindIcon
   /// assets/images/blind_icon.png
   static const String imagesBlindIcon = "assets/images/blind_icon.png";
+
+  /// Assets for imagesBluePlayerIcon
+  /// assets/images/blue_player_icon.svg
+  static const String imagesBluePlayerIcon = "assets/images/blue_player_icon.svg";
 
   /// Assets for imagesCartoons
   /// assets/images/cartoons.png
@@ -38,6 +50,10 @@ class Assets {
   /// assets/images/classic_icon.png
   static const String imagesClassicIcon = "assets/images/classic_icon.png";
 
+  /// Assets for imagesClayPlayerIcon
+  /// assets/images/clay_player_icon.svg
+  static const String imagesClayPlayerIcon = "assets/images/clay_player_icon.svg";
+
   /// Assets for imagesClothes
   /// assets/images/clothes.png
   static const String imagesClothes = "assets/images/clothes.png";
@@ -49,6 +65,10 @@ class Assets {
   /// Assets for imagesCzTeam
   /// assets/images/cz_team.png
   static const String imagesCzTeam = "assets/images/cz_team.png";
+
+  /// Assets for imagesDeleteIcon
+  /// assets/images/delete_icon.svg
+  static const String imagesDeleteIcon = "assets/images/delete_icon.svg";
 
   /// Assets for imagesDetectiveSearchIcon
   /// assets/images/detective_search_icon.svg
@@ -82,6 +102,10 @@ class Assets {
   /// assets/images/games.png
   static const String imagesGames = "assets/images/games.png";
 
+  /// Assets for imagesGreenPlayerIcon
+  /// assets/images/green_player_icon.svg
+  static const String imagesGreenPlayerIcon = "assets/images/green_player_icon.svg";
+
   /// Assets for imagesHomeWelcomeSvg
   /// assets/images/home_welcome_svg.svg
   static const String imagesHomeWelcomeSvg = "assets/images/home_welcome_svg.svg";
@@ -102,9 +126,25 @@ class Assets {
   /// assets/images/no_bg_logo.png
   static const String imagesNoBgLogo = "assets/images/no_bg_logo.png";
 
+  /// Assets for imagesOrangePlayerIcon
+  /// assets/images/orange_player_icon.svg
+  static const String imagesOrangePlayerIcon = "assets/images/orange_player_icon.svg";
+
+  /// Assets for imagesPinkPlayerIcon
+  /// assets/images/pink_player_icon.svg
+  static const String imagesPinkPlayerIcon = "assets/images/pink_player_icon.svg";
+
+  /// Assets for imagesPurplePlayerIcon
+  /// assets/images/purple_player_icon.svg
+  static const String imagesPurplePlayerIcon = "assets/images/purple_player_icon.svg";
+
   /// Assets for imagesRandom
   /// assets/images/random.png
   static const String imagesRandom = "assets/images/random.png";
+
+  /// Assets for imagesRedPlayerIcon
+  /// assets/images/red_player_icon.svg
+  static const String imagesRedPlayerIcon = "assets/images/red_player_icon.svg";
 
   /// Assets for imagesSports
   /// assets/images/sports.png

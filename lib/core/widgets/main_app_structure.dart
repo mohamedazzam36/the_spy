@@ -6,14 +6,17 @@ class MainAppStructure extends StatelessWidget {
     super.key,
     required this.appBarTitle,
     this.title,
-    this.actions,
-    required this.sliver,
+    this.appBarActions,
+    this.slivers = const [],
+    this.children,
+    this.titleColor,
   });
 
   final String appBarTitle;
   final Widget? title;
-  final Widget sliver;
-  final List<Widget>? actions;
+  final List<Widget>? appBarActions, children;
+  final List<Widget> slivers;
+  final Color? titleColor;
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +24,23 @@ class MainAppStructure extends StatelessWidget {
       physics: const ClampingScrollPhysics(),
       slivers: [
         SliverPadding(
-          padding: const EdgeInsetsDirectional.only(start: 46, end: 46, top: 16),
+          padding: const EdgeInsetsDirectional.only(start: 0, end: 0, top: 16),
           sliver: MainAppBar(
             appBarTitle: appBarTitle,
-            actions: actions,
+            actions: appBarActions,
             title: title,
+            titleColor: titleColor,
           ),
         ),
-        SliverPadding(padding: const EdgeInsets.symmetric(horizontal: 16), sliver: sliver),
+        children != null
+            ? SliverPadding(
+                padding: const EdgeInsetsDirectional.only(start: 54, end: 54, bottom: 24),
+                sliver: SliverList(
+                  delegate: SliverChildListDelegate(children!),
+                ),
+              )
+            : const SliverToBoxAdapter(),
+        ...slivers,
       ],
     );
   }

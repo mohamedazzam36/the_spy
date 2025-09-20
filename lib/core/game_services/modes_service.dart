@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:the_spy/core/extensions/categories_info_extensions.dart';
 import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/game_services/game_logic_service.dart';
 import 'package:the_spy/core/service_locator/service_locator.dart';
@@ -12,7 +13,7 @@ abstract class ModesService {
   }
 
   static setClassicPlayersShowedWord() {
-    List<String> categoryWordsList = appServices.currentCategoryNames;
+    List<String> categoryWordsList = appServices.currentCategory.getCategoryInfo.namesList;
     String showedword = GameLogicService.getListRandomWord<String>(categoryWordsList);
 
     playersModel.playersShowedWord = showedword;
@@ -23,7 +24,9 @@ abstract class ModesService {
   }
 
   static setBlindPlayersShowedWord() {
-    List<String> categoryWordsList = List.from(appServices.currentCategoryNames);
+    List<String> categoryWordsList = List.from(
+      appServices.currentCategory.getCategoryInfo.namesList,
+    );
     String showedword = GameLogicService.getListRandomWord<String>(categoryWordsList);
 
     playersModel.playersShowedWord = showedword;
@@ -32,7 +35,9 @@ abstract class ModesService {
   static setBlindSpysShowedWord() {
     final playersShowedWord = playersModel.playersShowedWord;
 
-    List<String> categoryWordsList = List.from(appServices.currentCategoryNames);
+    List<String> categoryWordsList = List.from(
+      appServices.currentCategory.getCategoryInfo.namesList,
+    );
     List<String> spysShowedList = categoryWordsList..remove(playersShowedWord);
     String spysShowedWord = GameLogicService.getListRandomWord<String>(spysShowedList);
 
@@ -54,7 +59,7 @@ abstract class ModesService {
 
   static setPlayersCategoryWords() {
     List<String> tempPlayersCategoryWords = GameLogicService.getRandomList(
-      appServices.currentCategoryNames,
+      appServices.currentCategory.getCategoryInfo.namesList,
     );
     List<String> playersCategoryWords = [];
     String randomCategoryWord;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
@@ -8,32 +9,36 @@ class CustomTextButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.color,
     this.textStyle,
   });
 
   final String text;
   final void Function() onPressed;
-  final Color? color;
   final TextStyle? textStyle;
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      style: TextButton.styleFrom(
-        backgroundColor: color ?? AppColors.primaryColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
+    return SizedBox(
+      width: context.width * 0.5,
+      child: AspectRatio(
+        aspectRatio: 3.5,
+        child: TextButton(
+          onPressed: onPressed,
+          style: TextButton.styleFrom(
+            backgroundColor: Colors.transparent,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(24),
+              side: const BorderSide(
+                color: AppColors.coffeeColor,
+                width: 2,
+              ),
+            ),
+          ),
+          child: CustomText(
+            text,
+            style: textStyle ?? Styles.styleBold50(context).copyWith(color: AppColors.coffeeColor),
+          ),
         ),
-        minimumSize: Size(
-          double.infinity,
-          MediaQuery.sizeOf(context).height * .1,
-        ),
-      ),
-      child: CustomText(
-        text,
-        style: textStyle ?? Styles.styleBold50(context),
       ),
     );
   }

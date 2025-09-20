@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:the_spy/features/home/presentation/views/main_app_views.dart';
-import 'package:the_spy/features/players/presentation/views/players.dart';
+import 'package:the_spy/features/players/presentation/views/players_view.dart';
 import 'package:the_spy/features/game_setup/presentation/views/game_setup.dart';
 import 'package:the_spy/features/select_mode/presentation/views/select_mode.dart';
 import 'package:the_spy/features/splash/presentation/views/get_started.dart';
@@ -20,7 +20,7 @@ abstract class AppRouter {
       routes: [
         GoRoute(
           path: kSplashView,
-          builder: (context, state) => const SplashView(),
+          builder: (context, state) => const SelectModeView(),
         ),
         GoRoute(
           path: kHomeView,

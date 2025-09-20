@@ -1,7 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
+import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/functions/validate_players.dart';
 import 'package:the_spy/core/service_locator/service_locator.dart';
@@ -40,15 +42,17 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           playersList: playersModel.playersList,
         ),
         style: Styles.styleSemiBold24(context),
-        cursorColor: AppColors.whiteColor,
+        cursorColor: AppColors.coffeeColor,
         decoration: InputDecoration(
           errorStyle: Styles.extraLight16(context),
-          suffixIcon: IconButton(
-            onPressed: () => validatePlayer(context),
-            icon: const Icon(
-              size: 36,
-              Icons.add_box_rounded,
-              color: AppColors.whiteColor,
+          suffixIcon: Padding(
+            padding: const EdgeInsetsDirectional.only(end: 16),
+            child: IconButton(
+              onPressed: () => validatePlayer(context),
+              icon: SvgPicture.asset(
+                Assets.imagesAddPlayerIcon,
+                width: 40,
+              ),
             ),
           ),
           hintText: 'addPlayer'.tr(),
@@ -86,18 +90,14 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   OutlineInputBorder buildErrorBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
-      borderSide: const BorderSide(
-        color: Colors.red,
-      ),
+      borderSide: const BorderSide(color: Colors.red, width: 2),
     );
   }
 
   OutlineInputBorder buildBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
-      borderSide: const BorderSide(
-        color: AppColors.whiteColor,
-      ),
+      borderSide: const BorderSide(color: AppColors.coffeeColor, width: 2),
     );
   }
 }

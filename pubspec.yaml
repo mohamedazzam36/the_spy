@@ -97,5 +97,5 @@ flutter_native_splash:
 flutter_assets:
   assets_path: assets/images
   output_path: lib/core/utils
-  filename: assets.dart
+  filename: app_images.dart
   field_prefix: null
