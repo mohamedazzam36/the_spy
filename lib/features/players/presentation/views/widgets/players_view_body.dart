@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/extensions/categories_info_extensions.dart';
 import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
@@ -45,9 +46,10 @@ class PlayersViewBody extends StatelessWidget {
                     const Expanded(child: SizedBox(height: 170, child: CustomPlayersListView())),
                     CustomTextButton(
                       text: 'start'.tr(),
-                      onPressed: () {
-                        nagvigateToGameStarting(context);
-                      },
+                      onPressed: () => nagvigateToGameStarting(context),
+                      textColor: AppColors.coffeeColor,
+                      borderColor: AppColors.coffeeColor,
+                      width: context.width * 0.5,
                     ),
                   ],
                 ),

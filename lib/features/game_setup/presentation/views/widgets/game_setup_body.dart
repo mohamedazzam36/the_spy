@@ -40,7 +40,8 @@ class _GameSetupBodyState extends State<GameSetupBody> {
         switch (state) {
           case PlayerReveal():
             return PlayerRevealWidget(
-              player: state.player,
+              currentplayer: state.currentPlayer,
+              prevplayer: state.prevPlayer,
             );
           case WordReveal():
             return WordRevealWidget(

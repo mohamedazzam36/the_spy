@@ -34,7 +34,7 @@ class MainAppStructure extends StatelessWidget {
         ),
         children != null
             ? SliverPadding(
-                padding: const EdgeInsetsDirectional.only(start: 54, end: 54, bottom: 24),
+                padding: const EdgeInsetsDirectional.only(start: 16, end: 16, bottom: 24),
                 sliver: SliverList(
                   delegate: SliverChildListDelegate(children!),
                 ),

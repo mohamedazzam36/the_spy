@@ -1,65 +1,76 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:the_spy/core/utils/app_colors.dart';
+import 'package:lottie/lottie.dart';
+import 'package:the_spy/core/extensions/app_helper_extensions.dart';
+import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/widgets/custom_text.dart';
+import 'package:the_spy/core/widgets/custom_text_button.dart';
+import 'package:the_spy/features/game_setup/presentation/views/widgets/game_setup_background_container.dart';
 
 class PlayerRevealcard extends StatelessWidget {
   const PlayerRevealcard({
     super.key,
     required this.playerName,
+    required this.prevPlayerName,
   });
 
   final String playerName;
+  final String? prevPlayerName;
 
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 4,
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: AppColors.whiteColor,
-          borderRadius: BorderRadius.circular(16),
-        ),
+      child: GameSetupBackgroundContainer(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FittedBox(
-              child: Text(
-                playerName,
-                style: Styles.styleSemiBold60(
-                  context,
-                ).copyWith(color: AppColors.blackColor),
+            Align(
+              heightFactor: 0.7,
+              child: LottieBuilder.asset(
+                Assets.imagesGiveMobileToJson,
               ),
             ),
-            const SizedBox(
-              height: 24,
+            FittedBox(
+              child: Row(
+                spacing: 4,
+                children: [
+                  CustomText(
+                    prevPlayerName ?? '',
+                    style: Styles.styleSemiBold24(context).copyWith(color: Colors.red),
+                  ),
+                  CustomText(
+                    'giveMobileTo',
+                    style: Styles.styleSemiBold24(context),
+                  ),
+                  CustomText(
+                    playerName,
+                    style: Styles.styleSemiBold24(context).copyWith(color: Colors.red),
+                  ),
+                ],
+              ),
             ),
-            customWordRevealText(context, 'giveMobileTo'.tr()),
-            customWordRevealText(context, playerName),
             const SizedBox(
               height: 32,
             ),
             Text(
               'wordRevealText'.tr(),
-              style: Styles.styleSemiBold24(
-                context,
-              ).copyWith(color: AppColors.blackColor),
+              style: Styles.styleMedium16(context),
               textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 32,
+            ),
+            CustomTextButton(
+              text: 'show'.tr(),
+              onPressed: () => context.gameStartCubit.switchBetweenPlayersAndWord(),
+              width: context.width * 0.4,
+            ),
+            const SizedBox(
+              height: 16,
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  FittedBox customWordRevealText(BuildContext context, String playerName) {
-    return FittedBox(
-      child: Text(
-        playerName,
-        style: Styles.styleSemiBold35(
-          context,
-        ).copyWith(color: AppColors.blackColor),
       ),
     );
   }

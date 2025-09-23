@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:the_spy/constants.dart';
+import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/service_locator/service_locator.dart';
@@ -56,6 +57,7 @@ class GetStartedViewBody extends StatelessWidget {
                         context.go(AppRouter.kSelectModeView);
                       },
                       text: 'start'.tr(),
+                      width: context.width * 0.5,
                     ),
                     const SizedBox(
                       height: 48,

@@ -1,52 +1,48 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:the_spy/core/extensions/app_helper_extensions.dart';
-import 'package:the_spy/core/widgets/custom_small_text_button.dart';
+import 'package:the_spy/core/widgets/main_app_structure.dart';
+import 'package:the_spy/core/widgets/main_background_container.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/game_setup/presentation/views/widgets/player_reveal_card.dart';
 
 class PlayerRevealWidget extends StatelessWidget {
   const PlayerRevealWidget({
     super.key,
-    required this.player,
+    required this.currentplayer,
+    required this.prevplayer,
   });
 
-  final PlayerModel player;
+  final PlayerModel currentplayer;
+  final PlayerModel? prevplayer;
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.sizeOf(context).width;
-
-    return CustomScrollView(
-      physics: const ClampingScrollPhysics(),
-      slivers: [
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: Center(
+    return MainBackgroundContainer(
+      child: MainAppStructure(
+        appBarTitle: 'wordsRound'.tr(),
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
             child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: width * .1,
-                vertical: 50,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const Spacer(
+                    flex: 1,
+                  ),
                   PlayerRevealcard(
-                    playerName: player.name,
+                    playerName: currentplayer.name,
+                    prevPlayerName: prevplayer?.name,
                   ),
-                  const SizedBox(
-                    height: 50,
-                  ),
-                  CustomSmallTextButton(
-                    onPressed: () => context.gameStartCubit.switchBetweenPlayersAndWord(),
-                    text: 'show'.tr(),
+                  const Spacer(
+                    flex: 3,
                   ),
                 ],
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

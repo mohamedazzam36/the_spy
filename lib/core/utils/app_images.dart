@@ -102,6 +102,10 @@ class Assets {
   /// assets/images/games.png
   static const String imagesGames = "assets/images/games.png";
 
+  /// Assets for imagesGiveMobileToJson
+  /// assets/images/give_mobile_to_json.json
+  static const String imagesGiveMobileToJson = "assets/images/give_mobile_to_json.json";
+
   /// Assets for imagesGreenPlayerIcon
   /// assets/images/green_player_icon.svg
   static const String imagesGreenPlayerIcon = "assets/images/green_player_icon.svg";

@@ -6,8 +6,9 @@ sealed class GameSetupState {}
 final class GameStartInitial extends GameSetupState {}
 
 final class PlayerReveal extends GameSetupState {
-  final PlayerModel player;
-  PlayerReveal({required this.player});
+  final PlayerModel currentPlayer;
+  final PlayerModel? prevPlayer;
+  PlayerReveal({required this.currentPlayer, required this.prevPlayer});
 }
 
 final class WordReveal extends GameSetupState {

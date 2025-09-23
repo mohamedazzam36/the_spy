@@ -26,7 +26,10 @@ class GameSetupCubit extends Cubit<GameSetupState> {
     _currentPlayerIndex = 0;
 
     appServices.currentMode.setGameStarting;
-    emit(PlayerReveal(player: playersModel.playersList[_currentPlayerIndex]));
+
+    emit(
+      PlayerReveal(currentPlayer: playersModel.playersList[_currentPlayerIndex], prevPlayer: null),
+    );
   }
 
   void switchBetweenPlayersAndWord() {
@@ -36,6 +39,9 @@ class GameSetupCubit extends Cubit<GameSetupState> {
     }
 
     final currentPlayer = playersModel.playersList[_currentPlayerIndex];
+    final prevPlayer = _currentPlayerIndex == 0
+        ? null
+        : playersModel.playersList[_currentPlayerIndex - 1];
 
     if (state is PlayerReveal) {
       final isSpy = playersModel.spysList.any((spy) => spy.name == currentPlayer.name);
@@ -43,7 +49,7 @@ class GameSetupCubit extends Cubit<GameSetupState> {
       emit(WordReveal(isSpy ? playersModel.spysShowedWord : playersModel.playersShowedWord));
       _currentPlayerIndex++;
     } else {
-      emit(PlayerReveal(player: currentPlayer));
+      emit(PlayerReveal(currentPlayer: currentPlayer, prevPlayer: prevPlayer));
     }
   }
 
