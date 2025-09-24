@@ -1,10 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/enums/categories_enum.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/extensions/categories_info_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
-import 'package:the_spy/core/enums/enums.dart';
 import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/colored_stars_home_list_view_item.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/home_list_view_item.dart';

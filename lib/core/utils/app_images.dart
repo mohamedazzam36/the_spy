@@ -118,13 +118,29 @@ class Assets {
   /// assets/images/jobs.png
   static const String imagesJobs = "assets/images/jobs.png";
 
+  /// Assets for imagesLeaderboardHeaderGif
+  /// assets/images/leaderboard_header_gif.gif
+  static const String imagesLeaderboardHeaderGif = "assets/images/leaderboard_header_gif.gif";
+
+  /// Assets for imagesLeaderboardHeaderImage
+  /// assets/images/leaderboard_header_image.png
+  static const String imagesLeaderboardHeaderImage = "assets/images/leaderboard_header_image.png";
+
   /// Assets for imagesLogo
   /// assets/images/logo.png
   static const String imagesLogo = "assets/images/logo.png";
 
+  /// Assets for imagesMainLeaderboardIcon
+  /// assets/images/main_leaderboard_icon.svg
+  static const String imagesMainLeaderboardIcon = "assets/images/main_leaderboard_icon.svg";
+
   /// Assets for imagesModesWelcomeSvg
   /// assets/images/modes_welcome_svg.svg
   static const String imagesModesWelcomeSvg = "assets/images/modes_welcome_svg.svg";
+
+  /// Assets for imagesNicknamesIcon
+  /// assets/images/nicknames_icon.png
+  static const String imagesNicknamesIcon = "assets/images/nicknames_icon.png";
 
   /// Assets for imagesNoBgLogo
   /// assets/images/no_bg_logo.png
@@ -157,6 +173,34 @@ class Assets {
   /// Assets for imagesStarsGif
   /// assets/images/stars_gif.gif
   static const String imagesStarsGif = "assets/images/stars_gif.gif";
+
+  /// Assets for imagesTheCharmerIcon
+  /// assets/images/the_charmer_icon.png
+  static const String imagesTheCharmerIcon = "assets/images/the_charmer_icon.png";
+
+  /// Assets for imagesTheHustlerIcon
+  /// assets/images/the_hustler_icon.png
+  static const String imagesTheHustlerIcon = "assets/images/the_hustler_icon.png";
+
+  /// Assets for imagesThePhantomIcon
+  /// assets/images/the_phantom_icon.png
+  static const String imagesThePhantomIcon = "assets/images/the_phantom_icon.png";
+
+  /// Assets for imagesTheRookieIcon
+  /// assets/images/the_rookie_icon.png
+  static const String imagesTheRookieIcon = "assets/images/the_rookie_icon.png";
+
+  /// Assets for imagesTheSneakyIcon
+  /// assets/images/the_sneaky_icon.png
+  static const String imagesTheSneakyIcon = "assets/images/the_sneaky_icon.png";
+
+  /// Assets for imagesTheSpyIcon
+  /// assets/images/the_spy_icon.png
+  static const String imagesTheSpyIcon = "assets/images/the_spy_icon.png";
+
+  /// Assets for imagesTheWeaselIcon
+  /// assets/images/the_weasel_icon.png
+  static const String imagesTheWeaselIcon = "assets/images/the_weasel_icon.png";
 
   /// Assets for imagesTools
   /// assets/images/tools.png

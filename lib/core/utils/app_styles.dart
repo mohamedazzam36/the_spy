@@ -50,6 +50,22 @@ abstract class Styles {
     );
   }
 
+  static TextStyle styleBold14(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 14),
+      color: AppColors.whiteColor,
+      fontWeight: FontWeight.bold,
+    );
+  }
+
+  static TextStyle styleBold40(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 40),
+      color: AppColors.whiteColor,
+      fontWeight: FontWeight.bold,
+    );
+  }
+
   static TextStyle styleMedium16(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 16),

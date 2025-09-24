@@ -4,7 +4,6 @@ import 'package:the_spy/features/players/presentation/views/players_view.dart';
 import 'package:the_spy/features/game_setup/presentation/views/game_setup.dart';
 import 'package:the_spy/features/select_mode/presentation/views/select_mode.dart';
 import 'package:the_spy/features/splash/presentation/views/get_started.dart';
-import 'package:the_spy/features/splash/presentation/views/splash.dart';
 
 abstract class AppRouter {
   static const String kSplashView = '/';
@@ -20,7 +19,7 @@ abstract class AppRouter {
       routes: [
         GoRoute(
           path: kSplashView,
-          builder: (context, state) => const PlayersView(),
+          builder: (context, state) => const MainAppViews(),
         ),
         GoRoute(
           path: kHomeView,

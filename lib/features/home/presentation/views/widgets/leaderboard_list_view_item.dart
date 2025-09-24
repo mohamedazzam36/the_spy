@@ -1,33 +1,76 @@
 import 'package:flutter/material.dart';
-import 'package:the_spy/core/extensions/app_helper_extensions.dart';
+import 'package:the_spy/core/extensions/nick_names_extensions.dart';
+import 'package:the_spy/core/extensions/players_extension.dart';
+import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
+import 'package:the_spy/features/players/data/models/player_model.dart';
 
 class LeaderboardListViewItem extends StatelessWidget {
-  const LeaderboardListViewItem({super.key, required this.playerName, required this.playerScore});
+  const LeaderboardListViewItem({super.key, required this.player, required this.index});
 
-  final String playerName;
-  final int playerScore;
+  final PlayerModel player;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 8),
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: context.homeCubit.currentGradient.colors[1],
-        borderRadius: BorderRadius.circular(8),
-      ),
+    return Padding(
+      padding: const EdgeInsetsDirectional.only(start: 14, end: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CustomText(
-            playerName,
-            style: Styles.styleSemiBold35(context),
+          SizedBox(
+            width: 50,
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 6),
+                decoration: BoxDecoration(
+                  color: AppColors.blackColor,
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: CustomText(
+                  index.toString(),
+                  style: Styles.extraLight16(
+                    context,
+                  ).copyWith(color: AppColors.coffeeColor, backgroundColor: AppColors.blackColor),
+                ),
+              ),
+            ),
           ),
-          CustomText(
-            playerScore.toString(),
-            style: Styles.styleSemiBold24(context),
+          SizedBox(
+            width: 50,
+            child: CustomText(
+              player.name,
+              style: Styles.styleBold14(context).copyWith(color: AppColors.blackColor),
+            ),
+          ),
+          SizedBox(
+            width: 50,
+            child: Padding(
+              padding: const EdgeInsetsDirectional.only(start: 16),
+              child: CustomText(
+                player.rank.nickName,
+                style: Styles.styleBold14(context).copyWith(color: AppColors.blackColor),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 50,
+            child: Center(
+              child: Image.asset(
+                player.rank.logoPath,
+                width: 25,
+                alignment: AlignmentDirectional.centerStart,
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 50,
+            child: CustomText(
+              player.score.toString(),
+              style: Styles.styleBold14(context).copyWith(color: AppColors.blackColor),
+            ),
           ),
         ],
       ),

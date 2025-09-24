@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/widgets.dart';
+import 'package:the_spy/core/enums/categories_enum.dart';
 import 'package:the_spy/core/utils/app_images.dart';
-import 'package:the_spy/core/enums/enums.dart';
 
 extension CategoriesInfo on CategoriesEnum {
   ({LinearGradient gradient, String image, String titleName}) get getCategoryItemInfo {
@@ -74,11 +74,11 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.videoGames:
         return (
           gradient: const LinearGradient(
-            begin: Alignment.bottomRight,
-            end: Alignment.topLeft,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
             colors: [
               Color(0xff004aad),
-              Color(0xff5de0e6),
+              Color.fromARGB(255, 41, 114, 118),
             ],
           ),
           titleName: 'videoGames'.tr(),
@@ -101,11 +101,12 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.tools:
         return (
           gradient: const LinearGradient(
-            begin: Alignment.bottomRight,
-            end: Alignment.topLeft,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
             colors: [
-              Color(0xff0c9ca1),
-              Color(0xff8c52ff),
+              Color(0xff3B5323),
+
+              Color(0xff556B2F),
             ],
           ),
           titleName: 'tools'.tr(),
@@ -127,12 +128,12 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.films:
         return (
           gradient: const LinearGradient(
-            begin: Alignment.bottomRight,
-            end: Alignment.topLeft,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
             colors: [
               Color(0xff994355),
               Color(0xff9a5362),
-              Color(0xfff7b99c),
+              Color.fromARGB(255, 164, 108, 82),
             ],
           ),
           titleName: 'films'.tr(),

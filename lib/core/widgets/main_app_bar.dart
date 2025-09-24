@@ -10,38 +10,43 @@ class MainAppBar extends StatelessWidget {
     this.title,
     this.actions,
     this.titleColor,
+    required this.floatingAppBar,
+    required this.backButton,
   });
 
   final String appBarTitle;
   final Widget? title;
   final List<Widget>? actions;
   final Color? titleColor;
+  final bool floatingAppBar, backButton;
 
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
       backgroundColor: Colors.transparent,
-      floating: true,
+      floating: floatingAppBar,
       collapsedHeight: 75,
       centerTitle: true,
-      leading: GestureDetector(
-        onTap: () => Navigator.pop(context),
-        child: Align(
-          child: Container(
-            width: 32,
-            padding: const EdgeInsetsDirectional.only(end: 2, top: 4, bottom: 4),
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.transparent,
-              border: Border.all(color: AppColors.whiteColor),
-            ),
-            child: const Icon(
-              Icons.arrow_back_ios_new,
-              color: AppColors.whiteColor,
-            ),
-          ),
-        ),
-      ),
+      leading: backButton
+          ? GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Align(
+                child: Container(
+                  width: 32,
+                  padding: const EdgeInsetsDirectional.only(end: 2, top: 4, bottom: 4),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.transparent,
+                    border: Border.all(color: AppColors.whiteColor),
+                  ),
+                  child: const Icon(
+                    Icons.arrow_back_ios_new,
+                    color: AppColors.whiteColor,
+                  ),
+                ),
+              ),
+            )
+          : const SizedBox(),
       title:
           title ??
           CustomText(

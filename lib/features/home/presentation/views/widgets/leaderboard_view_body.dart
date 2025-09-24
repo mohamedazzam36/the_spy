@@ -1,11 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/leaderboard_list_view.dart';
+import 'package:the_spy/core/widgets/main_app_structure.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard_header.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard_image_section.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard_footer_section.dart';
 
 class LeaderboardViewBody extends StatelessWidget {
   const LeaderboardViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const LeaderboardListView();
+    return const MainAppStructure(
+      hasAppBar: false,
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Padding(
+            padding: EdgeInsets.only(top: 40),
+            child: Column(
+              children: [
+                LeaderboardHeader(),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 32),
+                  child: LeaderboardImageSection(),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 350,
+                    child: LeaderboardFooterSection(),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }

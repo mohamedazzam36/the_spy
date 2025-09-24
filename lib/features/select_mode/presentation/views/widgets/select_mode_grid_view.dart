@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
-import 'package:the_spy/core/enums/enums.dart';
+import 'package:the_spy/core/enums/game_modes_enum.dart';
 import 'package:the_spy/features/select_mode/presentation/views/widgets/select_mode_grid_view_item.dart';
 
 class SelectModeGridView extends StatelessWidget {

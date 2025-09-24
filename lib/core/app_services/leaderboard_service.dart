@@ -13,11 +13,11 @@ abstract class LeaderboardService {
     return GameLogicService.getSortedPlayersList(playersList);
   }
 
-  static void updateLeaderBoard() {
+  static Future<void> updateLeaderBoard() async {
     for (int i = 0; i < playersModel.playersList.length; i++) {
       PlayerModel player = playersModel.playersList[i];
       int newScore = player.score + leaderboardBox.get(player.name, defaultValue: 0)!;
-      leaderboardBox.put(player.name, newScore);
+      await leaderboardBox.put(player.name, newScore);
     }
   }
 

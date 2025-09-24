@@ -1,11 +1,3 @@
-enum GameModesEnum {
-  classic,
-  blind,
-  classicDouble,
-  blindDouble,
-  duo,
-}
-
 enum CategoriesEnum {
   animals,
   food,
