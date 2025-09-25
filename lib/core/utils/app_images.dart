@@ -54,6 +54,10 @@ class Assets {
   /// assets/images/clay_player_icon.svg
   static const String imagesClayPlayerIcon = "assets/images/clay_player_icon.svg";
 
+  /// Assets for imagesCloseIcon
+  /// assets/images/close_icon.png
+  static const String imagesCloseIcon = "assets/images/close_icon.png";
+
   /// Assets for imagesClothes
   /// assets/images/clothes.png
   static const String imagesClothes = "assets/images/clothes.png";

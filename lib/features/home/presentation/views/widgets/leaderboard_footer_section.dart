@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_images.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/custom_nicknames_dialog.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/leaderboard_list_view_section.dart';
 
 class LeaderboardFooterSection extends StatelessWidget {
@@ -23,9 +24,19 @@ class LeaderboardFooterSection extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Image.asset(
-                Assets.imagesNicknamesIcon,
-                width: 35,
+              GestureDetector(
+                onTap: () => showGeneralDialog(
+                  context: context,
+                  barrierDismissible: true,
+                  barrierLabel: '',
+                  pageBuilder: (context, animation, secondaryAnimation) => const Center(
+                    child: CustomNicknamesDialog(),
+                  ),
+                ),
+                child: Image.asset(
+                  Assets.imagesNicknamesIcon,
+                  width: 35,
+                ),
               ),
               const Expanded(
                 child: LeaderboardListViewSection(),
