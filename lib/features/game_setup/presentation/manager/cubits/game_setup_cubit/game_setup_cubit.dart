@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/app_services/leaderboard_service.dart';
 import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/game_services/game_logic_service.dart';
@@ -25,7 +26,7 @@ class GameSetupCubit extends Cubit<GameSetupState> {
   void startGame() {
     _currentPlayerIndex = 0;
 
-    appServices.currentMode.setGameStarting;
+    AppServices.currentMode.setGameStarting;
 
     emit(
       PlayerReveal(currentPlayer: playersModel.playersList[_currentPlayerIndex], prevPlayer: null),
@@ -104,6 +105,7 @@ class GameSetupCubit extends Cubit<GameSetupState> {
     playersVotingInfo[_currentVotingIndex].votedPlayersList = votedPlayers;
     _currentVotingIndex++;
 
+    ResetTime();
     emit(
       VotingReveal(
         votingPlayer: playersVotingInfo[_currentVotingIndex].votingPlayer,
@@ -128,9 +130,13 @@ class GameSetupCubit extends Cubit<GameSetupState> {
       LeaderboardService.updateLeaderBoard();
       return;
     }
-
+    resetTime();
     spysVotingInfo[_currentSpyIndex].votedWord = votedWord;
     _currentSpyIndex++;
     emit(SpysSelectionWords(spyName: spysVotingInfo[_currentSpyIndex].theSpy.name));
+  }
+
+  void resetTime() {
+    emit(ResetTime());
   }
 }

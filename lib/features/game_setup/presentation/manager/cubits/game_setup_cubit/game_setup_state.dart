@@ -45,3 +45,5 @@ final class ResultsShown extends GameSetupState {
 
   ResultsShown({required this.spysVotingInfo});
 }
+
+final class ResetTime extends GameSetupState {}

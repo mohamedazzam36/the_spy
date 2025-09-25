@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/extensions/game_modes_extensions.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/enums/game_modes_enum.dart';
-import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
 
 class SelectModeGridViewItem extends StatefulWidget {
@@ -32,7 +32,7 @@ class _SelectModeGridViewItemState extends State<SelectModeGridViewItem> {
       onTapDown: (_) => setState(() => isPressed = true),
       onTapUp: (_) {
         setState(() => isPressed = false);
-        appServices.currentMode = widget.currentMode;
+        AppServices.currentMode = widget.currentMode;
         context.push(
           AppRouter.kHomeView,
         );

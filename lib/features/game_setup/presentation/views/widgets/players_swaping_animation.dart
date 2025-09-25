@@ -19,9 +19,21 @@ class _PlayersSwapingAnimationState extends State<PlayersSwapingAnimation> {
   @override
   void initState() {
     controller = PlayersSwapingAnimationController(
-      onFinish: () => setState(() {}),
-      onPlayersShown: () => setState(() {}),
-      onSpysShown: () => setState(() {}),
+      onFinish: () {
+        if (mounted) {
+          setState(() {});
+        }
+      },
+      onPlayersShown: () {
+        if (mounted) {
+          setState(() {});
+        }
+      },
+      onSpysShown: () {
+        if (mounted) {
+          setState(() {});
+        }
+      },
     );
     controller.startAnimation();
     super.initState();

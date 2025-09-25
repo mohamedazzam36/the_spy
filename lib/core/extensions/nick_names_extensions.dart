@@ -52,7 +52,7 @@ extension NickNamesInfo on NickNamesEnum {
       case NickNamesEnum.theWeasel:
         return '350 : 499';
       case NickNamesEnum.thePhantom:
-        return '150: 349';
+        return '150 : 349';
       case NickNamesEnum.theHustler:
         return '50 : 149';
       case NickNamesEnum.theRookie:

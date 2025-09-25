@@ -47,11 +47,15 @@ class LeaderboardListViewItem extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsetsDirectional.only(start: 16),
-            child: CustomText(
-              player.rank.nickName,
-              style: Styles.styleBold14(
-                context,
-              ).copyWith(color: AppColors.blackColor, fontSize: 12),
+            child: SizedBox(
+              width: 40,
+              child: CustomText(
+                player.rank.nickName,
+                fit: BoxFit.fitWidth,
+                style: Styles.styleBold14(
+                  context,
+                ).copyWith(color: AppColors.blackColor, fontSize: 12),
+              ),
             ),
           ),
           SizedBox(

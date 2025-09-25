@@ -41,7 +41,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           name: value,
           playersList: playersModel.playersList,
         ),
-        style: Styles.styleSemiBold24(context),
+        style: Styles.styleSemiBold24(context).copyWith(color: AppColors.coffeeColor),
         cursorColor: AppColors.coffeeColor,
         decoration: InputDecoration(
           errorStyle: Styles.extraLight16(context),

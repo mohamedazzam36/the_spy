@@ -18,7 +18,7 @@ class LogosListView extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.start,
-      spacing: 20,
+      spacing: 16,
       children: [
         SizedBox(
           height: 20,
@@ -32,11 +32,11 @@ class LogosListView extends StatelessWidget {
           ),
         ),
         Column(
-          spacing: 17,
+          spacing: 10,
           children: List.generate(
             nickNames.length,
             (index) => SizedBox(
-              width: 20,
+              width: 27,
               child: Image.asset(
                 nickNames[index].logoPath,
                 fit: BoxFit.fill,
