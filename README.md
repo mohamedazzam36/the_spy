@@ -1,12 +1,12 @@
-#🕵️‍♂️ TheSpy (المستخبي) 🎭🎮
+# 🕵️‍♂️ TheSpy (المستخبي) 🎭🎮
 
 A cross-platform Flutter party game designed to deliver fun, challenge, and social interaction for groups of friends and families.
 
-#📱 What is TheSpy?
+# 📱 What is TheSpy?
 
 TheSpy (المستخبي) is a multiplayer mobile party game inspired by social deduction concepts. Players take turns asking and answering questions to discover who the spy is. The app offers multiple modes, themes, and adaptive UI/UX to make the game enjoyable for all age groups.
 
-#✨ Key Features
+# ✨ Key Features
 
 🎲 Multiple Game Modes – Different styles of gameplay to keep things fresh and engaging.
 
@@ -26,7 +26,7 @@ TheSpy (المستخبي) is a multiplayer mobile party game inspired by social 
 
 👤 Solo Development – Entirely developed and architected by me, collaborating only with a designer.
 
-#🛠️ Technologies
+# 🛠️ Technologies
 
 Flutter (Dart) → Cross-platform mobile development.
 
@@ -38,7 +38,7 @@ MVVM Architecture → Structured and maintainable project design.
 
 Clean Code Principles → Readable, scalable, and flexible codebase.
 
-#🎯 About the Game Logic
+# 🎯 About the Game Logic
 
 Automated handling of turns, questions, and voting phases.
 
@@ -48,7 +48,7 @@ Support for flexible number of players.
 
 Multiple modes and rule sets for varied gameplay.
 
-#🌍 User Roles
+# 🌍 User Roles
 
 👥 Players
 
@@ -60,7 +60,7 @@ Vote to reveal the spy.
 
 Track results via leaderboard.
 
-#⚙️ Tech Stack
+# ⚙️ Tech Stack
 
 Mobile Application: Flutter (cross-platform for iOS & Android)
 
@@ -72,6 +72,6 @@ Architecture: MVVM + Clean Code principles
 
 UI/UX: Responsive & Adaptive Design
 
-#🚀 Status
+# 🚀 Status
 
-#📌 TheSpy (المستخبي) is currently under development and is approaching completion.
+ 📌 TheSpy (المستخبي) is currently under development and is approaching completion.
