@@ -105,7 +105,7 @@ class GameSetupCubit extends Cubit<GameSetupState> {
     playersVotingInfo[_currentVotingIndex].votedPlayersList = votedPlayers;
     _currentVotingIndex++;
 
-    ResetTime();
+    resetTime();
     emit(
       VotingReveal(
         votingPlayer: playersVotingInfo[_currentVotingIndex].votingPlayer,
@@ -138,5 +138,9 @@ class GameSetupCubit extends Cubit<GameSetupState> {
 
   void resetTime() {
     emit(ResetTime());
+  }
+
+  void endTime() {
+    emit(TimeIsUp());
   }
 }

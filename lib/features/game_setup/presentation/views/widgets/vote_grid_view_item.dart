@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
@@ -18,15 +19,16 @@ class VoteGridViewItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Card(
+        color: Colors.transparent,
         elevation: 4,
         child: Container(
           decoration: BoxDecoration(
-            color: isSelected! ? Colors.blue : Colors.grey,
+            color: isSelected! ? Colors.blue : AppColors.coffeeColor,
             borderRadius: BorderRadius.circular(16),
           ),
           child: CustomText(
             playerName.name,
-            style: Styles.styleSemiBold60(context),
+            style: Styles.styleSemiBold60(context).copyWith(color: AppColors.blackColor),
           ),
         ),
       ),

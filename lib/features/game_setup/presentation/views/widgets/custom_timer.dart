@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
+import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/features/game_setup/presentation/manager/cubits/game_setup_cubit/game_setup_cubit.dart';
 
 class CustomTimer extends StatefulWidget {
@@ -56,7 +57,7 @@ class _CustomTimerState extends State<CustomTimer> {
 
     return BlocListener<GameSetupCubit, GameSetupState>(
       listener: (context, state) {
-        if (state is ResetTime) {
+        if (state is ResetTime || state is TimeIsUp) {
           setState(() {
             currentTime = widget.startingTime;
           });
@@ -71,17 +72,14 @@ class _CustomTimerState extends State<CustomTimer> {
               height: 120,
               child: CircularProgressIndicator(
                 value: progress,
-                backgroundColor: AppColors.blackColor,
+                backgroundColor: AppColors.coffeeColor,
                 strokeWidth: 10,
-                valueColor: const AlwaysStoppedAnimation(AppColors.coffeeColor),
+                valueColor: const AlwaysStoppedAnimation(Colors.red),
               ),
             ),
             Text(
-              (currentTime % 60).toString().padLeft(2, '0'),
-              style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+              currentTime.toString(),
+              style: Styles.styleBold25(context).copyWith(color: AppColors.coffeeColor),
             ),
           ],
         ),

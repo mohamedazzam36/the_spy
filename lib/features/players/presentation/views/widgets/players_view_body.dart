@@ -68,7 +68,7 @@ class PlayersViewBody extends StatelessWidget {
     bool canNavigate = playesNum >= (spysNum * 2 + 1);
 
     if (canNavigate) {
-      context.push(AppRouter.kGameSetupview);
+      context.push(AppRouter.kGameSetupview, extra: context.homeCubit);
     } else {
       playersDialogAlert(context, reqPlayers: (spysNum * 2 + 1));
     }

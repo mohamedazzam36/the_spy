@@ -11,13 +11,13 @@ class SpysGridViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      style: TextButton.styleFrom(backgroundColor: AppColors.lightPrimaryColor),
+      style: TextButton.styleFrom(backgroundColor: AppColors.coffeeColor),
       child: FittedBox(
         fit: BoxFit.scaleDown,
         alignment: Alignment.center,
         child: Text(
           wordName,
-          style: Styles.styleSemiBold35(context),
+          style: Styles.styleSemiBold35(context).copyWith(color: AppColors.blackColor),
         ),
       ),
     );

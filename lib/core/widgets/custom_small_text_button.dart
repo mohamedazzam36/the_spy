@@ -15,7 +15,7 @@ class CustomSmallTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      style: TextButton.styleFrom(backgroundColor: AppColors.whiteColor),
+      style: TextButton.styleFrom(backgroundColor: AppColors.coffeeColor),
       onPressed: onPressed,
       child: Text(
         text,

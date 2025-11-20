@@ -13,7 +13,7 @@ class ResultLeaderboardItem extends StatelessWidget {
       margin: const EdgeInsets.only(top: 8),
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: AppColors.lightPrimaryColor,
+        color: AppColors.coffeeColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
@@ -21,7 +21,7 @@ class ResultLeaderboardItem extends StatelessWidget {
         children: [
           CustomText(
             player.name,
-            style: Styles.styleSemiBold35(context),
+            style: Styles.styleSemiBold35(context).copyWith(color: AppColors.blackColor),
           ),
           CustomText(
             player.score.toString(),

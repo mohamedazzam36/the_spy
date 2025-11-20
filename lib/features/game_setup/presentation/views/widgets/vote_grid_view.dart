@@ -23,7 +23,7 @@ class _VoteGridViewState extends State<VoteGridView> {
   Widget build(BuildContext context) {
     return BlocListener<GameSetupCubit, GameSetupState>(
       listener: (context, state) {
-        if (state is ResetTime) {
+        if (state is TimeIsUp) {
           context.gameStartCubit.getNextPlayerVote([]);
           votedPlayers.clear();
           selectedIndices.clear();
@@ -61,7 +61,6 @@ class _VoteGridViewState extends State<VoteGridView> {
 
     if (selectedIndices.length == playersModel.spysList.length) {
       context.gameStartCubit.getNextPlayerVote(List.from(votedPlayers));
-      context.gameStartCubit.resetTime();
       votedPlayers.clear();
       selectedIndices.clear();
     }

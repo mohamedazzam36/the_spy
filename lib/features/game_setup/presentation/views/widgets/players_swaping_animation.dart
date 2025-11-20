@@ -52,7 +52,7 @@ class _PlayersSwapingAnimationState extends State<PlayersSwapingAnimation> {
         Container(
           height: 250,
           decoration: BoxDecoration(
-            color: controller.isSpyShowed ? AppColors.lightPrimaryColor : AppColors.blackColor,
+            color: controller.isSpyShowed ? Colors.red : AppColors.coffeeColor,
             shape: BoxShape.circle,
           ),
           child: AspectRatio(
@@ -67,7 +67,7 @@ class _PlayersSwapingAnimationState extends State<PlayersSwapingAnimation> {
                       : playersModel.playersList[controller.currentPlayerIndex].name,
                   style: Styles.styleSemiBold60(
                     context,
-                  ),
+                  ).copyWith(color: AppColors.blackColor),
                 ),
               ),
             ),

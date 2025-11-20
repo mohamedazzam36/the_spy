@@ -47,3 +47,5 @@ final class ResultsShown extends GameSetupState {
 }
 
 final class ResetTime extends GameSetupState {}
+
+final class TimeIsUp extends GameSetupState {}

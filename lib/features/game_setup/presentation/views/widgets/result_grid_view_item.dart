@@ -19,21 +19,21 @@ class ResultGridViewItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.lightPrimaryColor,
+        color: AppColors.coffeeColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Column(
         children: [
           CustomText(
             spyName,
-            style: Styles.styleBold50(context),
+            style: Styles.styleBold50(context).copyWith(color: AppColors.blackColor),
           ),
           const SizedBox(
             height: 8,
           ),
           CustomText(
             'select',
-            style: Styles.styleSemiBold35(context),
+            style: Styles.styleSemiBold35(context).copyWith(color: AppColors.blackColor),
           ),
           const SizedBox(
             height: 8,
