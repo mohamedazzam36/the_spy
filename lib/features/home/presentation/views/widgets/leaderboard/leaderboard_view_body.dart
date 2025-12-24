@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/widgets/main_app_structure.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/leaderboard_header.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/leaderboard_image_section.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/leaderboard_footer_section.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard/leaderboard_header.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard/leaderboard_image_section.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard/leaderboard_footer_section.dart';
 
 class LeaderboardViewBody extends StatelessWidget {
   const LeaderboardViewBody({super.key});

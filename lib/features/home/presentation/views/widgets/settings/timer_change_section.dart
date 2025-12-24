@@ -3,7 +3,7 @@ import 'package:the_spy/core/app_services/time_service.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/timer_change_drop_box.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/settings/timer_change_drop_box.dart';
 
 class TimerChangeSection extends StatelessWidget {
   const TimerChangeSection({super.key});
@@ -17,7 +17,7 @@ class TimerChangeSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(
-          height: 150,
+          height: 12,
         ),
         CustomText(
           'timerChange',

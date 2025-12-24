@@ -9,6 +9,7 @@ enum CategoriesEnum {
   tools,
   cities,
   films,
+  anime,
   sports,
   football,
   cartoons,

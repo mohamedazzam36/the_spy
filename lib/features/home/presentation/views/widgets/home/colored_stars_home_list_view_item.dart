@@ -12,7 +12,7 @@ class ColoredStarsHomeListViewItem extends StatelessWidget {
     required this.onTap,
   });
 
-  final ({LinearGradient gradient, String image, String titleName}) itemInfo;
+  final ({LinearGradient gradient, String image, Color navBarColor, String titleName}) itemInfo;
   final bool isActive;
   final void Function() onTap;
 

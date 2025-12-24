@@ -14,6 +14,10 @@ class Assets {
   /// assets/images/animals.png
   static const String imagesAnimals = "assets/images/animals.png";
 
+  /// Assets for imagesAnime
+  /// assets/images/anime.png
+  static const String imagesAnime = "assets/images/anime.png";
+
   /// Assets for imagesBlackPlayerIcon
   /// assets/images/black_player_icon.svg
   static const String imagesBlackPlayerIcon = "assets/images/black_player_icon.svg";
@@ -41,6 +45,10 @@ class Assets {
   /// Assets for imagesCities
   /// assets/images/cities.png
   static const String imagesCities = "assets/images/cities.png";
+
+  /// Assets for imagesCitiesGif
+  /// assets/images/cities_gif.json
+  static const String imagesCitiesGif = "assets/images/cities_gif.json";
 
   /// Assets for imagesClassicDoubleIcon
   /// assets/images/classic_double_icon.png
@@ -134,6 +142,10 @@ class Assets {
   /// assets/images/logo.png
   static const String imagesLogo = "assets/images/logo.png";
 
+  /// Assets for imagesMainBackground
+  /// assets/images/main_background.png
+  static const String imagesMainBackground = "assets/images/main_background.png";
+
   /// Assets for imagesMainLeaderboardIcon
   /// assets/images/main_leaderboard_icon.svg
   static const String imagesMainLeaderboardIcon = "assets/images/main_leaderboard_icon.svg";
@@ -169,6 +181,10 @@ class Assets {
   /// Assets for imagesRedPlayerIcon
   /// assets/images/red_player_icon.svg
   static const String imagesRedPlayerIcon = "assets/images/red_player_icon.svg";
+
+  /// Assets for imagesSettingsGif
+  /// assets/images/settings_gif.json
+  static const String imagesSettingsGif = "assets/images/settings_gif.json";
 
   /// Assets for imagesSports
   /// assets/images/sports.png

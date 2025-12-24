@@ -9,6 +9,7 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
   Gradient currentGradient = AppColors.primaryGradient;
+  Color navBarColor = AppColors.primaryColor;
   int currentNavBarIndex = 1;
   int? currentCategoryIndex;
 

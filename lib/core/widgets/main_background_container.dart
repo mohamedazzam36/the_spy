@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
+import 'package:the_spy/core/utils/app_images.dart';
 
 class MainBackgroundContainer extends StatelessWidget {
   const MainBackgroundContainer({
@@ -17,6 +18,11 @@ class MainBackgroundContainer extends StatelessWidget {
       padding: padding,
       decoration: BoxDecoration(
         gradient: context.homeCubit.currentGradient,
+        image: const DecorationImage(
+          image: AssetImage(Assets.imagesMainBackground),
+          opacity: 0.4,
+          fit: BoxFit.cover,
+        ),
       ),
       child: child,
     );

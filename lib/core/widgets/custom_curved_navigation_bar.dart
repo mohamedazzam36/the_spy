@@ -19,7 +19,7 @@ class CustomCurvedNavigationBar extends StatelessWidget {
           index: 1,
           backgroundColor: Colors.transparent,
           animationDuration: const Duration(milliseconds: 300),
-          color: context.homeCubit.currentGradient.colors[0],
+          color: context.homeCubit.navBarColor,
           items: const [
             Icon(
               Icons.leaderboard,

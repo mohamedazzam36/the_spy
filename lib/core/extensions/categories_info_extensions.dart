@@ -4,16 +4,20 @@ import 'package:the_spy/core/enums/categories_enum.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 
 extension CategoriesInfo on CategoriesEnum {
-  ({LinearGradient gradient, String image, String titleName}) get getCategoryItemInfo {
+  ({LinearGradient gradient, Color navBarColor, String image, String titleName})
+  get getCategoryItemInfo {
     switch (this) {
       case CategoriesEnum.animals:
         return (
+          navBarColor: const Color(0xff1a3111),
           gradient: const LinearGradient(
-            begin: Alignment.bottomRight,
-            end: Alignment.topLeft,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
-              Color(0xff11210b),
-              Color(0xffe8d37c),
+              Color(0xff234018),
+              Color(0xff496d3c),
+              Color(0xff496d3c),
+              Color(0xff295214),
             ],
           ),
           titleName: 'animals'.tr(),
@@ -21,12 +25,15 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.food:
         return (
+          navBarColor: const Color(0xff681236),
           gradient: const LinearGradient(
-            begin: Alignment.bottomRight,
-            end: Alignment.topLeft,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
-              Color(0xff77659a),
-              Color(0xffff66c4),
+              Color(0xff681236),
+              Color(0xff6b003d),
+              Color(0xff913a5e),
+              Color(0xffdd4383),
             ],
           ),
           titleName: 'food'.tr(),
@@ -34,12 +41,16 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.drinks:
         return (
+          navBarColor: const Color(0xff27252f),
           gradient: const LinearGradient(
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
-              Color(0xff151f28),
-              Color(0xff8983a1),
+              Color(0xff353241),
+              Color(0xff332f44),
+              Color(0xff3e3a53),
+              Color(0xff564f70),
+              Color(0xff473f6a),
             ],
           ),
           titleName: 'drinks'.tr(),
@@ -47,12 +58,14 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.devices:
         return (
+          navBarColor: const Color(0xff003741),
           gradient: const LinearGradient(
-            begin: Alignment.bottomRight,
-            end: Alignment.topLeft,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
-              Color(0xff101113),
-              Color(0xff0097b2),
+              Color(0xff00484d),
+              Color(0xff0d6172),
+              Color(0xff15778c),
             ],
           ),
           titleName: 'devices'.tr(),
@@ -60,12 +73,16 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.cloths:
         return (
+          navBarColor: const Color(0xff390206),
           gradient: const LinearGradient(
-            begin: Alignment.bottomRight,
-            end: Alignment.topLeft,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
+              Color(0xff710715),
+              Color(0xff790816),
+              Color(0xffab0f22),
+              Color(0xffbc1c1c),
               Color(0xff352f33),
-              Color(0xffff3131),
             ],
           ),
           titleName: 'cloths'.tr(),
@@ -73,12 +90,16 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.videoGames:
         return (
+          navBarColor: const Color(0xff013e6a),
           gradient: const LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
-              Color(0xff004aad),
-              Color.fromARGB(255, 41, 114, 118),
+              Color(0xff013e6a),
+              Color(0xff03538d),
+              Color(0xff2e7eb5),
+              Color(0xff067da4),
+              // Color(0xff01186a),
             ],
           ),
           titleName: 'videoGames'.tr(),
@@ -86,9 +107,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.jobs:
         return (
+          navBarColor: const Color(0xff002032),
           gradient: const LinearGradient(
-            begin: Alignment.bottomCenter,
-            end: Alignment.topCenter,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
             colors: [
               Color(0xff00273d),
               Color(0xff468a9c),
@@ -100,13 +122,16 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.tools:
         return (
+          navBarColor: const Color(0xff013430),
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xff3B5323),
-
-              Color(0xff556B2F),
+              Color(0xff013430),
+              Color(0xff045b54),
+              Color(0xff1f615d),
+              Color(0xff239892),
+              Color(0xff2a8f8b),
             ],
           ),
           titleName: 'tools'.tr(),
@@ -114,6 +139,7 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.cities:
         return (
+          navBarColor: const Color(0xff201c1d),
           gradient: const LinearGradient(
             begin: Alignment.centerRight,
             end: Alignment.centerLeft,
@@ -127,13 +153,14 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.films:
         return (
+          navBarColor: const Color(0xff49212a),
           gradient: const LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
               Color(0xff994355),
               Color(0xff9a5362),
-              Color.fromARGB(255, 164, 108, 82),
+              Color(0xffa38678),
             ],
           ),
           titleName: 'films'.tr(),
@@ -141,12 +168,14 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.sports:
         return (
+          navBarColor: const Color(0xff50230e),
           gradient: const LinearGradient(
-            begin: Alignment.bottomLeft,
-            end: Alignment.topRight,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
             colors: [
-              Color(0xff7f30cb),
-              Color(0xff01dcba),
+              Color(0xff893b17),
+              Color(0xff963e15),
+              Color(0xffbd6943),
             ],
           ),
           titleName: 'sports'.tr(),
@@ -154,12 +183,16 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.football:
         return (
+          navBarColor: const Color(0xff002068),
           gradient: const LinearGradient(
-            begin: Alignment.centerRight,
-            end: Alignment.centerLeft,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
-              Color(0xff8f1f40),
-              Color(0xffaf4c0f),
+              Color(0xff002068),
+              Color(0xff093b7c),
+              Color(0xff10468f),
+              Color(0xff2d54ba),
+              Color(0xff4871dc),
             ],
           ),
           titleName: 'football'.tr(),
@@ -167,6 +200,7 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.cartoons:
         return (
+          navBarColor: const Color(0xff450050),
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -180,18 +214,34 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.random:
         return (
+          navBarColor: const Color(0xff121521),
           gradient: const LinearGradient(
             begin: Alignment.bottomLeft,
             end: Alignment.topRight,
             colors: [
               Color(0xff121521),
               Color(0xff38476b),
-              Color(0xffb6192e),
-              Color(0xffffc1ac),
+              Color(0xffbf1d33),
+              Color(0xff846358),
             ],
           ),
           titleName: 'random'.tr(),
           image: Assets.imagesRandom,
+        );
+      case CategoriesEnum.anime:
+        return (
+          navBarColor: const Color(0xff272f42),
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xff313c53),
+              Color(0xff355480),
+              Color(0xff4f7ab6),
+            ],
+          ),
+          titleName: 'anime'.tr(),
+          image: Assets.imagesAnime,
         );
     }
   }
@@ -253,6 +303,10 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.random:
         return (
           namesList: 'randomList'.tr().split(', '),
+        );
+      case CategoriesEnum.anime:
+        return (
+          namesList: 'animeList'.tr().split(', '),
         );
     }
   }

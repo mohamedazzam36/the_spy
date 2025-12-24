@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/enums/nick_names_enum.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/average_points_list_view.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/logos_list_view.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/nicknames_dialog_header.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/nicknames_list_view.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard/average_points_list_view.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard/logos_list_view.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard/nicknames_dialog_header.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard/nicknames_list_view.dart';
 
 class CustomNicknamesDialog extends StatelessWidget {
   const CustomNicknamesDialog({
