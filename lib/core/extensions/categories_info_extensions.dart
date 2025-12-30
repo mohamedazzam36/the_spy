@@ -2,13 +2,17 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/widgets.dart';
 import 'package:the_spy/core/enums/categories_enum.dart';
 import 'package:the_spy/core/utils/app_images.dart';
+import 'package:the_spy/core/utils/typedefs.dart';
 
 extension CategoriesInfo on CategoriesEnum {
-  ({LinearGradient gradient, Color navBarColor, String image, String titleName})
-  get getCategoryItemInfo {
+  CategoryInfo get getCategoryItemInfo {
     switch (this) {
       case CategoriesEnum.animals:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffd8ffd0),
+            thumbColor: const Color(0xff7cce6b),
+          ),
           navBarColor: const Color(0xff1a3111),
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
@@ -25,6 +29,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.food:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffe753fe),
+            thumbColor: const Color(0xff450050),
+          ),
           navBarColor: const Color(0xff681236),
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
@@ -41,6 +49,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.drinks:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffc58e7f),
+            thumbColor: const Color(0xff875d50),
+          ),
           navBarColor: const Color(0xff27252f),
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
@@ -58,6 +70,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.devices:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffd8ffd0),
+            thumbColor: const Color(0xff7cce6b),
+          ),
           navBarColor: const Color(0xff003741),
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
@@ -73,6 +89,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.cloths:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffff3131),
+            thumbColor: const Color(0xffa81023),
+          ),
           navBarColor: const Color(0xff390206),
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
@@ -90,6 +110,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.videoGames:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffb2fbff),
+            thumbColor: const Color(0xff6a8aff),
+          ),
           navBarColor: const Color(0xff013e6a),
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
@@ -107,6 +131,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.jobs:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffb2fbff),
+            thumbColor: const Color(0xff6a8aff),
+          ),
           navBarColor: const Color(0xff002032),
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
@@ -122,6 +150,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.tools:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffd8ffd0),
+            thumbColor: const Color(0xff7cce6b),
+          ),
           navBarColor: const Color(0xff013430),
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
@@ -139,6 +171,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.cities:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffc58e7f),
+            thumbColor: const Color(0xff875d50),
+          ),
           navBarColor: const Color(0xff201c1d),
           gradient: const LinearGradient(
             begin: Alignment.centerRight,
@@ -153,6 +189,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.films:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffc58e7f),
+            thumbColor: const Color(0xff875d50),
+          ),
           navBarColor: const Color(0xff49212a),
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
@@ -168,6 +208,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.sports:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffc58e7f),
+            thumbColor: const Color(0xff875d50),
+          ),
           navBarColor: const Color(0xff50230e),
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
@@ -183,6 +227,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.football:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffb2fbff),
+            thumbColor: const Color(0xff6a8aff),
+          ),
           navBarColor: const Color(0xff002068),
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
@@ -200,6 +248,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.cartoons:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffe753fe),
+            thumbColor: const Color(0xff450050),
+          ),
           navBarColor: const Color(0xff450050),
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
@@ -214,6 +266,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.random:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffff3131),
+            thumbColor: const Color(0xffa81023),
+          ),
           navBarColor: const Color(0xff121521),
           gradient: const LinearGradient(
             begin: Alignment.bottomLeft,
@@ -230,6 +286,10 @@ extension CategoriesInfo on CategoriesEnum {
         );
       case CategoriesEnum.anime:
         return (
+          soundColors: (
+            sliderColor: const Color(0xffb2fbff),
+            thumbColor: const Color(0xff6a8aff),
+          ),
           navBarColor: const Color(0xff272f42),
           gradient: const LinearGradient(
             begin: Alignment.topLeft,

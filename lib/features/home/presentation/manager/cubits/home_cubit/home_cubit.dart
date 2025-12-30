@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
+import 'package:the_spy/core/utils/typedefs.dart';
 
 part 'home_state.dart';
 
@@ -9,7 +10,8 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
   Gradient currentGradient = AppColors.primaryGradient;
-  Color navBarColor = AppColors.primaryColor;
+  SoundSectionColors currentSoundColors = AppColors.primarySoundColors;
+  Color currentNavBarColor = AppColors.primaryColor;
   int currentNavBarIndex = 1;
   int? currentCategoryIndex;
 

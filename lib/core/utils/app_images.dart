@@ -106,6 +106,10 @@ class Assets {
   /// assets/images/food.png
   static const String imagesFood = "assets/images/food.png";
 
+  /// Assets for imagesFoodAnimation
+  /// assets/images/food_animation.json
+  static const String imagesFoodAnimation = "assets/images/food_animation.json";
+
   /// Assets for imagesFootball
   /// assets/images/football.png
   static const String imagesFootball = "assets/images/football.png";
@@ -129,6 +133,10 @@ class Assets {
   /// Assets for imagesJobs
   /// assets/images/jobs.png
   static const String imagesJobs = "assets/images/jobs.png";
+
+  /// Assets for imagesJobsAnimation
+  /// assets/images/jobs_animation.json
+  static const String imagesJobsAnimation = "assets/images/jobs_animation.json";
 
   /// Assets for imagesLeaderboardHeaderGif
   /// assets/images/leaderboard_header_gif.gif
@@ -225,5 +233,9 @@ class Assets {
   /// Assets for imagesTools
   /// assets/images/tools.png
   static const String imagesTools = "assets/images/tools.png";
+
+  /// Assets for imagesVolumeSettingsIcon
+  /// assets/images/volume_settings_icon.png
+  static const String imagesVolumeSettingsIcon = "assets/images/volume_settings_icon.png";
 }
 

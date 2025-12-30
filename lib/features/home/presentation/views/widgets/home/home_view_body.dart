@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lottie/lottie.dart';
 import 'package:the_spy/core/enums/categories_enum.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
+import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/features/home/presentation/manager/cubits/home_cubit/home_cubit.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/home/home_list_view.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/home/no_selected_category_widget.dart';
@@ -41,9 +43,14 @@ class HomeViewBody extends StatelessWidget {
               hasScrollBody: false,
               child: Column(
                 children: [
-                  currentCategoryIndex == null
-                      ? const Expanded(child: NoSelectedCategoryWidget())
-                      : const Expanded(child: SelectedCategoryWidget()),
+                  // currentCategoryIndex == null
+                  //     ? const Expanded(child: NoSelectedCategoryWidget())
+                  //     : const Expanded(child: SelectedCategoryWidget()),
+                  Expanded(
+                    child: Align(
+                      child: Lottie.asset(Assets.imagesJobsAnimation, width: 250),
+                    ),
+                  ),
                   HomeListView(
                     categories: categories,
                   ),

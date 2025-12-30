@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_spy/core/utils/typedefs.dart';
 
 abstract class AppColors {
   static const Color primaryColor = Color(0xff004d48);
@@ -17,5 +18,9 @@ abstract class AppColors {
       Color(0xff1a6964),
       Color(0xff175c57),
     ],
+  );
+  static const SoundSectionColors primarySoundColors = (
+    sliderColor: Color(0xffd8ffd0),
+    thumbColor: Color(0xff7cce6b),
   );
 }

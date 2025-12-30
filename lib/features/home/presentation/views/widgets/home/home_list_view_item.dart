@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
+import 'package:the_spy/core/utils/typedefs.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
 
 class HomeListViewItem extends StatelessWidget {
@@ -11,7 +12,7 @@ class HomeListViewItem extends StatelessWidget {
     required this.onTap,
   });
 
-  final ({LinearGradient gradient, String image, Color navBarColor, String titleName}) itemInfo;
+  final CategoryInfo itemInfo;
   final bool isActive;
   final void Function() onTap;
 
