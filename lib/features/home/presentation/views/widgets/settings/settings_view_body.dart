@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
@@ -14,6 +15,8 @@ class SettingsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return MainAppStructure(
       appBarTitle: 'settings',
+      titleColor: AppColors.coffeeColor,
+      backButton: false,
       hasAppBar: true,
       children: [
         Align(
@@ -40,6 +43,9 @@ class SettingsViewBody extends StatelessWidget {
           height: 16,
         ),
         const ChangeVolumeSection(),
+        const SizedBox(
+          height: 16,
+        ),
         // const TimerChangeSection(),
         // const SizedBox(
         //   height: 24,

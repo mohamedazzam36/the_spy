@@ -7,7 +7,8 @@ import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
 import 'package:the_spy/features/home/presentation/manager/cubits/home_cubit/home_cubit.dart';
-import 'package:the_spy/features/home/presentation/views/widgets/settings/custom_slider.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/settings/custom_settings_container.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/settings/custom_sound_slider.dart';
 
 class ChangeVolumeSection extends StatelessWidget {
   const ChangeVolumeSection({super.key});
@@ -16,20 +17,14 @@ class ChangeVolumeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
-        return Container(
-          padding: const EdgeInsets.all(12),
-          decoration: BoxDecoration(
-            color: Colors.black.withAlpha(100),
-            border: Border.all(color: AppColors.coffeeColor),
-            borderRadius: BorderRadius.circular(16),
-          ),
+        return CustomSettingsContainer(
           child: Row(
             spacing: 16,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
                 Assets.imagesVolumeSettingsIcon,
-                width: 45,
+                width: 46,
               ),
               Expanded(
                 child: Column(

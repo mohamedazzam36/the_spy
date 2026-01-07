@@ -6,6 +6,10 @@ class Assets {
   /// assets/images/add_player_icon.svg
   static const String imagesAddPlayerIcon = "assets/images/add_player_icon.svg";
 
+  /// Assets for imagesAmircaIcon
+  /// assets/images/amirca_icon.png
+  static const String imagesAmircaIcon = "assets/images/amirca_icon.png";
+
   /// Assets for imagesAmongUs
   /// assets/images/among_us.png
   static const String imagesAmongUs = "assets/images/among_us.png";
@@ -41,6 +45,10 @@ class Assets {
   /// Assets for imagesCategoryStarsGif
   /// assets/images/category_stars_gif.gif
   static const String imagesCategoryStarsGif = "assets/images/category_stars_gif.gif";
+
+  /// Assets for imagesChangeLanguageIcon
+  /// assets/images/change_language_icon.png
+  static const String imagesChangeLanguageIcon = "assets/images/change_language_icon.png";
 
   /// Assets for imagesCities
   /// assets/images/cities.png
@@ -97,6 +105,10 @@ class Assets {
   /// Assets for imagesDuoIcon
   /// assets/images/duo_icon.png
   static const String imagesDuoIcon = "assets/images/duo_icon.png";
+
+  /// Assets for imagesEgyptIcon
+  /// assets/images/egypt_icon.png
+  static const String imagesEgyptIcon = "assets/images/egypt_icon.png";
 
   /// Assets for imagesFilms
   /// assets/images/films.png

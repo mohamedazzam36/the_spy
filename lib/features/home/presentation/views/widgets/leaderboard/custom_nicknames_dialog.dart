@@ -45,7 +45,7 @@ class CustomNicknamesDialog extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             border: Border.all(color: AppColors.coffeeColor, width: 3),
           ),
-          constraints: const BoxConstraints(minWidth: 300, maxWidth: 500, maxHeight: 420),
+          constraints: const BoxConstraints(maxWidth: 500, maxHeight: 420),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
