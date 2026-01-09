@@ -8,6 +8,7 @@ import 'package:the_spy/core/widgets/main_app_structure.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/settings/change_language_section.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/settings/change_volume_section.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/settings/change_timer_section.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/settings/three_stars_widget.dart';
 
 class SettingsViewBody extends StatelessWidget {
   const SettingsViewBody({super.key});
@@ -52,6 +53,10 @@ class SettingsViewBody extends StatelessWidget {
           height: 16,
         ),
         const ChangeLanguageSection(),
+        const SizedBox(
+          height: 32,
+        ),
+        const ThreeStarsWidget(),
         const SizedBox(
           height: 24,
         ),

@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesAboutGameIcon
+  /// assets/images/about_game_icon.png
+  static const String imagesAboutGameIcon = "assets/images/about_game_icon.png";
+
   /// Assets for imagesAddPlayerIcon
   /// assets/images/add_player_icon.svg
   static const String imagesAddPlayerIcon = "assets/images/add_player_icon.svg";
@@ -21,6 +25,14 @@ class Assets {
   /// Assets for imagesAnime
   /// assets/images/anime.png
   static const String imagesAnime = "assets/images/anime.png";
+
+  /// Assets for imagesAppDesignerIcon
+  /// assets/images/app_designer_icon.png
+  static const String imagesAppDesignerIcon = "assets/images/app_designer_icon.png";
+
+  /// Assets for imagesAppDeveloperIcon
+  /// assets/images/app_developer_icon.png
+  static const String imagesAppDeveloperIcon = "assets/images/app_developer_icon.png";
 
   /// Assets for imagesBlackPlayerIcon
   /// assets/images/black_player_icon.svg
@@ -93,6 +105,10 @@ class Assets {
   /// Assets for imagesDetectiveSearchIcon
   /// assets/images/detective_search_icon.svg
   static const String imagesDetectiveSearchIcon = "assets/images/detective_search_icon.svg";
+
+  /// Assets for imagesDevelopingTeamIcon
+  /// assets/images/developing_team_icon.png
+  static const String imagesDevelopingTeamIcon = "assets/images/developing_team_icon.png";
 
   /// Assets for imagesDevices
   /// assets/images/devices.png
@@ -209,6 +225,10 @@ class Assets {
   /// Assets for imagesSports
   /// assets/images/sports.png
   static const String imagesSports = "assets/images/sports.png";
+
+  /// Assets for imagesStarIcon
+  /// assets/images/star_icon.png
+  static const String imagesStarIcon = "assets/images/star_icon.png";
 
   /// Assets for imagesStarsGif
   /// assets/images/stars_gif.gif
