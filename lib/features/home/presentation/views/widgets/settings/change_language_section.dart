@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
@@ -33,7 +32,7 @@ class ChangeLanguageSection extends StatelessWidget {
                   'languageSettings',
                   style: Styles.styleBold14(
                     context,
-                  ).copyWith(color: AppColors.coffeeColor),
+                  ),
                 ),
                 const SizedBox(
                   height: 4,
@@ -42,7 +41,7 @@ class ChangeLanguageSection extends StatelessWidget {
                   'languageSettingsDiscription',
                   style: Styles.styleBold14(
                     context,
-                  ).copyWith(color: AppColors.coffeeColor, fontSize: 10),
+                  ),
                 ),
               ],
             ),

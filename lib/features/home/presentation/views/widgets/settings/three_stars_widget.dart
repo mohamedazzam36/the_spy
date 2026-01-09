@@ -18,11 +18,11 @@ class ThreeStarsWidget extends StatelessWidget {
             children: [
               Image.asset(
                 Assets.imagesStarIcon,
-                width: 24,
+                width: 18,
               ),
               Image.asset(
                 Assets.imagesStarIcon,
-                width: 24,
+                width: 18,
               ),
             ],
           ),
@@ -31,7 +31,7 @@ class ThreeStarsWidget extends StatelessWidget {
           bottom: 15,
           child: Image.asset(
             Assets.imagesStarIcon,
-            width: 24,
+            width: 18,
           ),
         ),
       ],

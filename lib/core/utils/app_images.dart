@@ -18,6 +18,10 @@ class Assets {
   /// assets/images/among_us.png
   static const String imagesAmongUs = "assets/images/among_us.png";
 
+  /// Assets for imagesAndSvg
+  /// assets/images/and_svg.svg
+  static const String imagesAndSvg = "assets/images/and_svg.svg";
+
   /// Assets for imagesAnimals
   /// assets/images/animals.png
   static const String imagesAnimals = "assets/images/animals.png";

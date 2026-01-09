@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
-import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
@@ -34,16 +33,16 @@ class ChangeVolumeSection extends StatelessWidget {
                       'soundEffects',
                       style: Styles.styleBold14(
                         context,
-                      ).copyWith(color: AppColors.coffeeColor),
+                      ),
                     ),
                     const SizedBox(
                       height: 4,
                     ),
                     CustomText(
                       'soundEffectsDiscription',
-                      style: Styles.styleBold14(
+                      style: Styles.styleBold10(
                         context,
-                      ).copyWith(color: AppColors.coffeeColor, fontSize: 10),
+                      ),
                     ),
                     const SizedBox(
                       height: 12,

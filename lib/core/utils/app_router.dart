@@ -16,38 +16,36 @@ abstract class AppRouter {
   static const String kPlayersView = '/PlayersView';
   static const String kGameSetupview = '/GameSetupview';
 
-  static GoRouter router() {
-    return GoRouter(
-      routes: [
-        GoRoute(
-          path: kSplashView,
-          builder: (context, state) => const MainAppViews(),
+  static final GoRouter router = GoRouter(
+    routes: [
+      GoRoute(
+        path: kSplashView,
+        builder: (context, state) => const MainAppViews(),
+      ),
+      GoRoute(
+        path: kHomeView,
+        builder: (context, state) => const MainAppViews(),
+      ),
+      GoRoute(
+        path: kGameSetupview,
+        builder: (context, state) => GameSetupview(
+          homeCubit: state.extra as HomeCubit,
         ),
-        GoRoute(
-          path: kHomeView,
-          builder: (context, state) => const MainAppViews(),
+      ),
+      GoRoute(
+        path: kPlayersView,
+        builder: (context, state) => PlayersView(
+          homeCubit: state.extra as HomeCubit,
         ),
-        GoRoute(
-          path: kGameSetupview,
-          builder: (context, state) => GameSetupview(
-            homeCubit: state.extra as HomeCubit,
-          ),
-        ),
-        GoRoute(
-          path: kPlayersView,
-          builder: (context, state) => PlayersView(
-            homeCubit: state.extra as HomeCubit,
-          ),
-        ),
-        GoRoute(
-          path: kSelectModeView,
-          builder: (context, state) => const SelectModeView(),
-        ),
-        GoRoute(
-          path: kGetStartedView,
-          builder: (context, state) => const GetStartedView(),
-        ),
-      ],
-    );
-  }
+      ),
+      GoRoute(
+        path: kSelectModeView,
+        builder: (context, state) => const SelectModeView(),
+      ),
+      GoRoute(
+        path: kGetStartedView,
+        builder: (context, state) => const GetStartedView(),
+      ),
+    ],
+  );
 }

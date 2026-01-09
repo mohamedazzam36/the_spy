@@ -5,6 +5,7 @@ import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
 import 'package:the_spy/core/widgets/main_app_structure.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/settings/about_app_section.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/settings/change_language_section.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/settings/change_volume_section.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/settings/change_timer_section.dart';
@@ -18,6 +19,7 @@ class SettingsViewBody extends StatelessWidget {
     return MainAppStructure(
       appBarTitle: 'settings',
       titleColor: AppColors.coffeeColor,
+      floatingAppBar: false,
       backButton: false,
       hasAppBar: true,
       children: [
@@ -60,6 +62,7 @@ class SettingsViewBody extends StatelessWidget {
         const SizedBox(
           height: 24,
         ),
+        const AboutAppSection(),
       ],
     );
   }
