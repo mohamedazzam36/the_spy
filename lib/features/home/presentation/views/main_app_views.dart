@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
-import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/widgets/custom_curved_navigation_bar.dart';
 import 'package:the_spy/core/widgets/main_background_container.dart';
 import 'package:the_spy/features/home/presentation/manager/cubits/home_cubit/home_cubit.dart';

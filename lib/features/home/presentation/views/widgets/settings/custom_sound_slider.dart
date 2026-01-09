@@ -39,8 +39,8 @@ class _CustomSoundSliderState extends State<CustomSoundSlider> {
                       30,
                     ),
                     trackHeight: 2,
-                    thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8),
-                    overlayShape: const RoundSliderOverlayShape(overlayRadius: 16),
+                    thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6),
+                    overlayShape: const RoundSliderOverlayShape(overlayRadius: 10),
                   ),
               child: Slider(
                 padding: const EdgeInsets.symmetric(vertical: 8),

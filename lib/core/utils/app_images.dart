@@ -242,6 +242,10 @@ class Assets {
   /// assets/images/the_weasel_icon.png
   static const String imagesTheWeaselIcon = "assets/images/the_weasel_icon.png";
 
+  /// Assets for imagesTimeChangeIcon
+  /// assets/images/time_change_icon.png
+  static const String imagesTimeChangeIcon = "assets/images/time_change_icon.png";
+
   /// Assets for imagesTools
   /// assets/images/tools.png
   static const String imagesTools = "assets/images/tools.png";

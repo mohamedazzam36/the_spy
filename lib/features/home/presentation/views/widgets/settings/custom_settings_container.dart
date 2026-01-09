@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 
 class CustomSettingsContainer extends StatelessWidget {
