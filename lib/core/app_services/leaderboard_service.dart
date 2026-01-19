@@ -1,3 +1,4 @@
+import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/game_services/game_logic_service.dart';
 import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
@@ -14,8 +15,8 @@ abstract class LeaderboardService {
   }
 
   static Future<void> updateLeaderBoard() async {
-    for (int i = 0; i < playersModel.playersList.length; i++) {
-      PlayerModel player = playersModel.playersList[i];
+    for (int i = 0; i < AppServices.playersList.length; i++) {
+      PlayerModel player = AppServices.playersList[i];
       int newScore = player.score + leaderboardBox.get(player.name, defaultValue: 0)!;
       await leaderboardBox.put(player.name, newScore);
     }

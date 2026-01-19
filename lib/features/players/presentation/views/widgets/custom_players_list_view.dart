@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
-import 'package:the_spy/core/service_locator/service_locator.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
@@ -37,7 +37,7 @@ class _CustomPlayersListViewState extends State<CustomPlayersListView> {
     return BlocBuilder<PlayersCubit, PlayersState>(
       buildWhen: (previous, current) => current is PlayersSuccess,
       builder: (context, state) {
-        List<PlayerModel> playersList = playersModel.playersList;
+        List<PlayerModel> playersList = AppServices.playersList;
         return ListView.builder(
           itemCount: playersList.length,
           padding: const EdgeInsets.all(0),

@@ -53,6 +53,7 @@ class SettingsAndLeaderboardDialog extends StatelessWidget {
                 children: [
                   SizedBox(
                     height: 32,
+                    width: 100,
                     child: TextButton(
                       onPressed: onNoPressed,
                       style: TextButton.styleFrom(
@@ -64,6 +65,7 @@ class SettingsAndLeaderboardDialog extends StatelessWidget {
                   ),
                   SizedBox(
                     height: 32,
+                    width: 100,
                     child: TextButton(
                       onPressed: onYesPressed,
                       style: TextButton.styleFrom(

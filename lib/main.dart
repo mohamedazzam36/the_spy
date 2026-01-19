@@ -56,7 +56,7 @@ class TheSpy extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       // showPerformanceOverlay: true,
-      routerConfig: AppRouter.router,
+      routerConfig: AppRouter.router(),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,

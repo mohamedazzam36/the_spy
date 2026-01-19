@@ -1,15 +1,16 @@
 import 'dart:math';
-import 'package:the_spy/core/service_locator/service_locator.dart';
+import 'package:the_spy/core/app_services/app_services.dart';
+import 'package:the_spy/core/models/modes_settings.dart';
+import 'package:the_spy/features/game_setup/data/models/normal_modes_models/players_voting_info.dart';
 import 'package:the_spy/features/game_setup/data/models/question_pair_model.dart';
-import 'package:the_spy/features/game_setup/data/models/players_voting_info.dart';
-import 'package:the_spy/features/game_setup/data/models/spys_voting_info.dart';
+import 'package:the_spy/features/game_setup/data/models/normal_modes_models/spys_voting_info.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 abstract class GameLogicService {
   static final Random _random = Random.secure();
 
-  static T getListRandomWord<T>(List<T> wordsList) {
-    final shuffledList = List<T>.from(wordsList);
+  static T getListRandomItem<T>(List<T> itemsList) {
+    final shuffledList = List<T>.from(itemsList);
     for (int i = 0; i < 2; i++) {
       shuffledList.shuffle(_random);
     }
@@ -29,7 +30,9 @@ abstract class GameLogicService {
   }
 
   static List<QuestionPair> setAskPairs() {
-    List<PlayerModel> askingPlayers = GameLogicService.getRandomList(playersModel.playersList);
+    List<PlayerModel> askingPlayers = GameLogicService.getRandomList(
+      AppServices.playersList,
+    );
     List<PlayerModel> askedPlayers = List.from(askingPlayers);
     List<QuestionPair> questionPairs = [];
     bool isListValid = false;
@@ -52,7 +55,7 @@ abstract class GameLogicService {
   }
 
   static List<PlayersVotingInfo> setPlayersVotingInfo() {
-    List<PlayerModel> votingList = playersModel.playersList;
+    List<PlayerModel> votingList = AppServices.playersList;
     List<PlayersVotingInfo> votingPairs;
 
     votingPairs = votingList
@@ -68,7 +71,7 @@ abstract class GameLogicService {
   }
 
   static void resetPlayersScore() {
-    for (var player in playersModel.playersList) {
+    for (var player in AppServices.playersList) {
       player.score = 0;
     }
   }
@@ -77,9 +80,10 @@ abstract class GameLogicService {
     List<PlayersVotingInfo> playersVotingInfo,
   ) {
     for (int i = 0; i < playersVotingInfo.length; i++) {
-      for (int j = 0; j < playersModel.spysList.length; j++) {
+      for (int j = 0; j < NormalModeSettings.spysList.length; j++) {
         for (int k = 0; k < playersVotingInfo[i].votedPlayersList.length; k++) {
-          if (playersVotingInfo[i].votedPlayersList[k].name == playersModel.spysList[j].name) {
+          if (playersVotingInfo[i].votedPlayersList[k].name ==
+              NormalModeSettings.spysList[j].name) {
             playersVotingInfo[i].votingPlayer.score++;
           }
         }
@@ -88,7 +92,7 @@ abstract class GameLogicService {
   }
 
   static List<SpysVotingInfo> setSpysVotingInfo() {
-    return playersModel.spysList
+    return NormalModeSettings.spysList
         .map(
           (e) => SpysVotingInfo(theSpy: e),
         )
@@ -97,7 +101,7 @@ abstract class GameLogicService {
 
   static void setSpysScore(List<SpysVotingInfo> spysVotingInfo) {
     for (int i = 0; i < spysVotingInfo.length; i++) {
-      if (spysVotingInfo[i].votedWord == playersModel.playersShowedWord) {
+      if (spysVotingInfo[i].votedWord == NormalModeSettings.playersShowedWord) {
         spysVotingInfo[i].theSpy.score++;
       }
     }

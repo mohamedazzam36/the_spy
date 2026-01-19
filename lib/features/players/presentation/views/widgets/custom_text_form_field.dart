@@ -1,12 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/functions/validate_players.dart';
-import 'package:the_spy/core/service_locator/service_locator.dart';
+import 'package:the_spy/core/functions/form_field_helper.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -37,9 +37,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       child: TextFormField(
         controller: controller,
         onFieldSubmitted: (value) => validatePlayer(context),
-        validator: (value) => validatePlayers(
+        validator: (value) => FormFieldHelper.validatePlayerName(
           name: value,
-          playersList: playersModel.playersList,
+          playersList: AppServices.playersList,
         ),
         style: Styles.styleSemiBold24(context).copyWith(color: AppColors.coffeeColor),
         cursorColor: AppColors.coffeeColor,
@@ -63,10 +63,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             horizontal: 24,
             vertical: 16,
           ),
-          enabledBorder: buildBorder(),
-          focusedBorder: buildBorder(),
-          errorBorder: buildErrorBorder(),
-          focusedErrorBorder: buildErrorBorder(),
+          enabledBorder: FormFieldHelper.buildBorder(),
+          focusedBorder: FormFieldHelper.buildBorder(),
+          errorBorder: FormFieldHelper.buildErrorBorder(),
+          focusedErrorBorder: FormFieldHelper.buildErrorBorder(),
         ),
       ),
     );
@@ -75,7 +75,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   void validatePlayer(BuildContext context) {
     if (formKey.currentState!.validate()) {
       setState(() {
-        context.playersCubit.addPlayer(PlayerModel(name: controller.text));
+        context.playersCubit.addPlayer(PlayerModel(name: controller.text.trim()));
         context.playersCubit.fetchPlayersData();
         autovalidateMode = AutovalidateMode.disabled;
         controller.clear();
@@ -85,19 +85,5 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         autovalidateMode = AutovalidateMode.always;
       });
     }
-  }
-
-  OutlineInputBorder buildErrorBorder() {
-    return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8),
-      borderSide: const BorderSide(color: Colors.red, width: 2),
-    );
-  }
-
-  OutlineInputBorder buildBorder() {
-    return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8),
-      borderSide: const BorderSide(color: AppColors.coffeeColor, width: 2),
-    );
   }
 }

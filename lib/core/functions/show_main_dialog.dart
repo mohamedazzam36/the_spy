@@ -13,3 +13,14 @@ void showMainDialog(BuildContext context, Widget child, {required VoidCallback o
     ),
   );
 }
+
+void showInGamePopUpDialog(BuildContext context, Widget child) {
+  showGeneralDialog(
+    context: context,
+    barrierDismissible: true,
+    barrierLabel: '',
+    pageBuilder: (context, animation, secondaryAnimation) => Center(
+      child: child,
+    ),
+  );
+}

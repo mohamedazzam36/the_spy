@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/extensions/categories_info_extensions.dart';
-import 'package:the_spy/core/extensions/game_modes_extensions.dart';
+import 'package:the_spy/core/extensions/sub_game_modes_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/functions/show_dialog_alert.dart';
@@ -63,14 +63,10 @@ class PlayersViewBody extends StatelessWidget {
   }
 
   void nagvigateToGameStarting(BuildContext context) {
-    int playesNum = playersModel.playersList.length;
-    int spysNum = AppServices.currentMode.numOfSpys;
-    bool canNavigate = playesNum >= (spysNum * 2 + 1);
-
-    if (canNavigate) {
+    if (AppServices.currentSubMode.canStartGame()) {
       context.push(AppRouter.kGameSetupview, extra: context.homeCubit);
     } else {
-      playersDialogAlert(context, reqPlayers: (spysNum * 2 + 1));
+      playersDialogAlert(context, reqPlayers: AppServices.currentSubMode.minimumModePlayers);
     }
   }
 }

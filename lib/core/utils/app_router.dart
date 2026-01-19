@@ -16,11 +16,11 @@ abstract class AppRouter {
   static const String kPlayersView = '/PlayersView';
   static const String kGameSetupview = '/GameSetupview';
 
-  static final GoRouter router = GoRouter(
+  static GoRouter router() => GoRouter(
     routes: [
       GoRoute(
         path: kSplashView,
-        builder: (context, state) => const MainAppViews(),
+        builder: (context, state) => const SplashView(),
       ),
       GoRoute(
         path: kHomeView,

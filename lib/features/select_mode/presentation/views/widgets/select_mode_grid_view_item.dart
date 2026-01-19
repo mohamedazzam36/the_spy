@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:the_spy/core/app_services/app_services.dart';
-import 'package:the_spy/core/extensions/game_modes_extensions.dart';
-import 'package:the_spy/core/utils/app_router.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
-import 'package:the_spy/core/enums/game_modes_enum.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
 
 class SelectModeGridViewItem extends StatefulWidget {
-  const SelectModeGridViewItem({super.key, required this.currentMode});
+  const SelectModeGridViewItem({super.key, required this.onTapUp, required this.modeInfo});
 
-  final GameModesEnum currentMode;
+  final ({List<Color> backGroundColors, String iconPath, String title}) modeInfo;
+
+  final Function() onTapUp;
 
   @override
   State<SelectModeGridViewItem> createState() => _SelectModeGridViewItemState();
@@ -18,13 +15,6 @@ class SelectModeGridViewItem extends StatefulWidget {
 
 class _SelectModeGridViewItemState extends State<SelectModeGridViewItem> {
   bool isPressed = false;
-  late ({List<Color> backGroundColors, String iconPath, String title}) modeInfo;
-
-  @override
-  void initState() {
-    modeInfo = widget.currentMode.getModeInfo;
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +22,7 @@ class _SelectModeGridViewItemState extends State<SelectModeGridViewItem> {
       onTapDown: (_) => setState(() => isPressed = true),
       onTapUp: (_) {
         setState(() => isPressed = false);
-        AppServices.currentMode = widget.currentMode;
-        context.push(
-          AppRouter.kHomeView,
-        );
+        widget.onTapUp();
       },
       onTapCancel: () => setState(() => isPressed = false),
       child: AnimatedContainer(
@@ -46,10 +33,12 @@ class _SelectModeGridViewItemState extends State<SelectModeGridViewItem> {
         padding: const EdgeInsets.symmetric(vertical: 12),
         margin: const EdgeInsets.only(bottom: 20),
         decoration: BoxDecoration(
-          border: isPressed ? Border.all(color: modeInfo.backGroundColors[0], width: 2) : null,
+          border: isPressed
+              ? Border.all(color: widget.modeInfo.backGroundColors[0], width: 2)
+              : null,
           borderRadius: BorderRadius.circular(16),
           gradient: LinearGradient(
-            colors: modeInfo.backGroundColors,
+            colors: widget.modeInfo.backGroundColors,
             begin: Alignment.bottomRight,
             end: Alignment.centerLeft,
           ),
@@ -61,14 +50,14 @@ class _SelectModeGridViewItemState extends State<SelectModeGridViewItem> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                modeInfo.iconPath,
+                widget.modeInfo.iconPath,
               ),
               const SizedBox(
                 height: 16,
               ),
               CustomText(
                 fit: BoxFit.scaleDown,
-                modeInfo.title,
+                widget.modeInfo.title,
                 style: Styles.extraLight16(
                   context,
                 ).copyWith(fontSize: 24, fontWeight: FontWeight.w900),
