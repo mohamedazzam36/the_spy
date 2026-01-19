@@ -74,7 +74,7 @@ class DevelopingTeamCard extends StatelessWidget {
                     children: [
                       const Icon(
                         Icons.arrow_circle_right,
-                        size: 10,
+                        size: 18,
                         color: AppColors.coffeeColor,
                       ),
                       FittedBox(
