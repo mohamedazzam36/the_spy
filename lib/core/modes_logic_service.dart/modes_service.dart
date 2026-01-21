@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/extensions/categories_info_extensions.dart';
@@ -74,5 +76,15 @@ abstract class ModesService {
     playersCategoryWords.add(NormalModeSettings.playersShowedWord);
 
     NormalModeSettings.playersCategoryWords = GameLogicService.getRandomList(playersCategoryWords);
+  }
+
+  static void setRandomSpys() {
+    final Random random = Random.secure();
+
+    final int playersNum = AppServices.playersList.length;
+    final int spysMinNum = 1;
+    final int spysMaxNum = ((playersNum - 1) / 2).toInt();
+
+    NormalModeSettings.numOfSpys = random.nextInt(spysMaxNum) + spysMinNum;
   }
 }

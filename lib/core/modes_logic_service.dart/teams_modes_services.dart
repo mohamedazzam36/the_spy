@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/extensions/categories_info_extensions.dart';
 import 'package:the_spy/core/game_services/game_logic_service.dart';
@@ -74,6 +76,20 @@ abstract class TeamsModesServices {
         shownWord: randomOpponentTeam.showedWord,
       );
       TeamsModeSettings.teamsList[i].votingWords = List.of(teamVotingWords);
+    }
+  }
+
+  static void setRandomTeams() {
+    final Random random = Random.secure();
+
+    final int playersNum = AppServices.playersList.length;
+    final int teamsMaxNum = (playersNum / 2).toInt();
+    final int randomNum = random.nextInt(teamsMaxNum);
+
+    if (randomNum == 0) {
+      TeamsModeSettings.numOfTeams = randomNum + 2;
+    } else {
+      TeamsModeSettings.numOfTeams = randomNum + 1;
     }
   }
 }

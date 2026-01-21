@@ -5,6 +5,8 @@ import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/game_setup_logic/game_setup_impl.dart';
 import 'package:the_spy/core/game_setup_logic/teams_game_setup.dart';
 import 'package:the_spy/core/models/modes_settings.dart';
+import 'package:the_spy/core/modes_logic_service.dart/modes_service.dart';
+import 'package:the_spy/core/modes_logic_service.dart/teams_modes_services.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/enums/game_modes_enum.dart';
 
@@ -88,8 +90,8 @@ extension SubModesInfo on SubGameModes {
           title: 'custom'.tr(),
           iconPath: Assets.imagesDuoIcon,
           backGroundColors: [
-            const Color.fromARGB(255, 108, 175, 6),
-            const Color.fromARGB(255, 240, 15, 49),
+            const Color.fromARGB(255, 202, 240, 244),
+            const Color.fromARGB(255, 224, 8, 227),
           ],
         );
       case SubGameModes.customTeams:
@@ -97,8 +99,35 @@ extension SubModesInfo on SubGameModes {
           title: 'custom'.tr(),
           iconPath: Assets.imagesDuoIcon,
           backGroundColors: [
-            const Color.fromARGB(255, 0, 244, 122),
-            const Color.fromARGB(255, 240, 240, 15),
+            const Color.fromARGB(255, 202, 240, 244),
+            const Color.fromARGB(255, 224, 8, 227),
+          ],
+        );
+      case SubGameModes.randomClassic:
+        return (
+          title: 'random'.tr(),
+          iconPath: Assets.imagesDuoIcon,
+          backGroundColors: [
+            const Color.fromARGB(255, 1, 255, 225),
+            const Color.fromARGB(255, 0, 56, 241),
+          ],
+        );
+      case SubGameModes.randomBlind:
+        return (
+          title: 'random'.tr(),
+          iconPath: Assets.imagesDuoIcon,
+          backGroundColors: [
+            const Color.fromARGB(255, 1, 255, 225),
+            const Color.fromARGB(255, 0, 56, 241),
+          ],
+        );
+      case SubGameModes.randomTeams:
+        return (
+          title: 'random'.tr(),
+          iconPath: Assets.imagesDuoIcon,
+          backGroundColors: [
+            const Color.fromARGB(255, 1, 255, 225),
+            const Color.fromARGB(255, 0, 56, 241),
           ],
         );
     }
@@ -146,6 +175,17 @@ extension SubModesInfo on SubGameModes {
         AppServices.currentSubMode = this;
         TeamsModeSettings.numOfTeams = teamsNum!;
         break;
+      case SubGameModes.randomClassic:
+        AppServices.currentSubMode = this;
+        break;
+
+      case SubGameModes.randomBlind:
+        AppServices.currentSubMode = this;
+        break;
+
+      case SubGameModes.randomTeams:
+        AppServices.currentSubMode = this;
+        break;
     }
   }
 
@@ -164,6 +204,22 @@ extension SubModesInfo on SubGameModes {
       case SubGameModes.twoTeams:
       case SubGameModes.customTeams:
         return canTeamsGameStart();
+      case SubGameModes.randomClassic:
+      case SubGameModes.randomBlind:
+        if (AppServices.playersList.length < 3) {
+          return false;
+        } else {
+          ModesService.setRandomSpys();
+          return true;
+        }
+
+      case SubGameModes.randomTeams:
+        if (AppServices.playersList.length < 4) {
+          return false;
+        } else {
+          TeamsModesServices.setRandomTeams();
+          return true;
+        }
     }
   }
 
@@ -182,6 +238,11 @@ extension SubModesInfo on SubGameModes {
       case SubGameModes.twoTeams:
       case SubGameModes.customTeams:
         return TeamsModeSettings.numOfTeams * 2;
+      case SubGameModes.randomClassic:
+      case SubGameModes.randomBlind:
+        return 3;
+      case SubGameModes.randomTeams:
+        return 4;
     }
   }
 
@@ -220,6 +281,12 @@ extension SubModesInfo on SubGameModes {
         return 'blindModeDescription'.tr();
       case SubGameModes.customTeams:
         return 'blindModeDescription'.tr();
+      case SubGameModes.randomClassic:
+        return 'blindModeDescription'.tr();
+      case SubGameModes.randomBlind:
+        return 'blindModeDescription'.tr();
+      case SubGameModes.randomTeams:
+        return 'blindModeDescription'.tr();
     }
   }
 
@@ -228,11 +295,13 @@ extension SubModesInfo on SubGameModes {
       case SubGameModes.classicOneSpy:
       case SubGameModes.classicTwoSpys:
       case SubGameModes.customClassicSpys:
+      case SubGameModes.randomClassic:
         return Classic().setupGame();
 
       case SubGameModes.blindOneSpy:
       case SubGameModes.blindTwoSpys:
       case SubGameModes.customBlindSpys:
+      case SubGameModes.randomBlind:
         return Blind().setupGame();
 
       case SubGameModes.classicTwoFriendsSpys:
@@ -241,6 +310,7 @@ extension SubModesInfo on SubGameModes {
       case SubGameModes.threeTeams:
       case SubGameModes.twoTeams:
       case SubGameModes.customTeams:
+      case SubGameModes.randomTeams:
         return TeamsGameSetup().setup();
     }
   }
