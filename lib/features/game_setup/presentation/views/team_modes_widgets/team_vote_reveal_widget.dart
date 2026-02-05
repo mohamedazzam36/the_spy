@@ -48,12 +48,16 @@ class TeamVoteRevealWidget extends StatelessWidget {
                 children: [
                   Text(
                     'is'.tr(),
-                    style: Styles.styleBold50(context).copyWith(color: AppColors.coffeeColor),
+                    style: Styles.styleBold50(
+                      context,
+                    ).copyWith(color: AppColors.coffeeColor, fontSize: 36),
                   ),
                   Text(
                     shownPlayer.name,
                     textAlign: TextAlign.center,
-                    style: Styles.styleBold50(context).copyWith(color: Colors.deepOrangeAccent),
+                    style: Styles.styleBold50(
+                      context,
+                    ).copyWith(color: AppColors.coffeeColor, fontSize: 36),
                   ),
                 ],
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 
@@ -17,6 +18,11 @@ class LeaderboardImageSection extends StatelessWidget {
           const CircleAvatar(
             backgroundColor: AppColors.coffeeColor,
             radius: 120,
+          ),
+          Positioned.fill(
+            child: Lottie.asset(
+              Assets.imagesLeaderboardAnimation,
+            ),
           ),
           Positioned(
             top: 10,

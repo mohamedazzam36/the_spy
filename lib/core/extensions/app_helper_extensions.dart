@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:the_spy/core/utils/fade_animation_router.dart';
+import 'package:the_spy/core/utils/no_animation_router.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 import 'package:the_spy/features/game_setup/presentation/manager/cubits/game_setup_cubit/normal_modes/normal_game_setup_cubit.dart';
 import 'package:the_spy/features/game_setup/presentation/manager/cubits/team_modes/teams_game_setup_cubit.dart';
 import 'package:the_spy/features/home/presentation/manager/cubits/home_cubit/home_cubit.dart';
+import 'package:the_spy/features/home/presentation/manager/cubits/leaderboard_cubit/leaderboard_cubit.dart';
 import 'package:the_spy/features/home/presentation/manager/cubits/settings_cubit/settings_cubit.dart';
 import 'package:the_spy/features/players/presentation/manager/cubit/players_cubit.dart';
 
@@ -35,6 +38,12 @@ extension SettingsCubitX on BuildContext {
   }
 }
 
+extension LeaderboardCubitX on BuildContext {
+  LeaderboardCubit get leaderboardCubit {
+    return BlocProvider.of<LeaderboardCubit>(this);
+  }
+}
+
 extension Size on BuildContext {
   double get height {
     return MediaQuery.sizeOf(this).height;
@@ -47,19 +56,12 @@ extension Size on BuildContext {
   void navigate(Widget screen) {
     Navigator.push(
       this,
-      MaterialPageRoute(
-        builder: (context) => screen,
-      ),
+      FadeAnimationRouter(page: screen),
     );
   }
 
   void navigateReplace(Widget screen) {
-    Navigator.pushReplacement(
-      this,
-      MaterialPageRoute(
-        builder: (context) => screen,
-      ),
-    );
+    Navigator.pushReplacement(this, NoAnimationRouter(page: screen));
   }
 
   void popTimes(int count) {
@@ -70,9 +72,7 @@ extension Size on BuildContext {
   void pushAbove(String baseRouteName, Widget newScreen) {
     Navigator.pushAndRemoveUntil(
       this,
-      MaterialPageRoute(
-        builder: (context) => newScreen,
-      ),
+      NoAnimationRouter(page: newScreen),
       (route) => route.settings.name == baseRouteName,
     );
   }
@@ -81,6 +81,10 @@ extension Size on BuildContext {
 extension IsMobile on BuildContext {
   bool get isMobile {
     return MediaQuery.sizeOf(this).width <= SizeConfig.mobileWidth;
+  }
+
+  bool get isPortrait {
+    return MediaQuery.orientationOf(this) == Orientation.portrait;
   }
 }
 

@@ -1,13 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
-import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/functions/form_field_helper.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
+import 'package:the_spy/features/players/presentation/views/widgets/custom_player_add_button.dart';
 
 class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField({
@@ -21,11 +20,13 @@ class CustomTextFormField extends StatefulWidget {
 class _CustomTextFormFieldState extends State<CustomTextFormField> {
   GlobalKey<FormState> formKey = GlobalKey();
   TextEditingController controller = TextEditingController();
+  final focusNode = FocusNode();
   AutovalidateMode? autovalidateMode;
 
   @override
   void dispose() {
     controller.dispose();
+    focusNode.dispose();
     super.dispose();
   }
 
@@ -35,8 +36,12 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       autovalidateMode: autovalidateMode,
       key: formKey,
       child: TextFormField(
+        focusNode: focusNode,
         controller: controller,
-        onFieldSubmitted: (value) => validatePlayer(context),
+        onFieldSubmitted: (value) {
+          focusNode.requestFocus();
+          validatePlayer(context);
+        },
         validator: (value) => FormFieldHelper.validatePlayerName(
           name: value,
           playersList: AppServices.playersList,
@@ -47,13 +52,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           errorStyle: Styles.extraLight16(context),
           suffixIcon: Padding(
             padding: const EdgeInsetsDirectional.only(end: 16),
-            child: IconButton(
-              onPressed: () => validatePlayer(context),
-              icon: SvgPicture.asset(
-                Assets.imagesAddPlayerIcon,
-                width: 40,
-              ),
-            ),
+            child: CustomPlayerAddButton(onPressed: () => validatePlayer(context)),
           ),
           hintText: 'addPlayer'.tr(),
           hintStyle: Styles.styleSemiBold24(

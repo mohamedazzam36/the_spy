@@ -9,4 +9,15 @@ class PlayerModel extends HiveObject {
   int score;
 
   PlayerModel({required this.name, this.score = 0});
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) || (other is PlayerModel && other.name == name);
+
+  PlayerModel copyWith({String? name, int? score}) {
+    return PlayerModel(
+      name: name ?? this.name,
+      score: score ?? this.score,
+    );
+  }
 }

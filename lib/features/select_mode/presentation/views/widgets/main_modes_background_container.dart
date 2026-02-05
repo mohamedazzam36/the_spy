@@ -16,16 +16,21 @@ class MainModesBackgroundContainer extends StatelessWidget {
         color: AppColors.whiteColor,
         borderRadius: BorderRadius.circular(24),
       ),
-      child: const Column(
+      child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
-          ModesHeaderContainer(),
-          SizedBox(
+          const ModesHeaderContainer(),
+          const SizedBox(
             height: 24,
           ),
-          MainModesGridView(),
+          MediaQuery.removePadding(
+            context: context,
+            removeBottom: true,
+            removeTop: true,
+            child: const MainModesGridView(),
+          ),
         ],
       ),
     );

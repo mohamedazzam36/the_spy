@@ -1,3 +1,4 @@
+import 'package:hive/hive.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:the_spy/core/service_locator/service_locator.dart';
 
@@ -6,7 +7,7 @@ abstract class SoundService {
   static final double _defaultVolume = 0.7;
   static const _volumeKey = 'volumeKey';
 
-  static double get volume => applicationBox.get(_volumeKey, defaultValue: _defaultVolume);
+  static double get volume => getIt<Box<dynamic>>().get(_volumeKey, defaultValue: _defaultVolume);
 
   static Future<void> play(String soundPath) async {
     await _player.setVolume(volume);
@@ -15,7 +16,7 @@ abstract class SoundService {
   }
 
   static Future<double> setVolume(double newVolume) async {
-    await applicationBox.put(_volumeKey, newVolume);
+    await getIt<Box<dynamic>>().put(_volumeKey, newVolume);
     await _player.setVolume(newVolume);
     return volume;
   }

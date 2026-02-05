@@ -13,14 +13,16 @@ abstract class AppColors {
     begin: Alignment.topRight,
     end: Alignment.bottomRight,
     colors: [
-      Color(0xff004d48),
-      Color(0xff004e49),
-      Color(0xff1a6964),
-      Color(0xff175c57),
+      Color(0xff002068),
+      Color(0xff093b7c),
+      Color(0xff10468f),
+      Color(0xff2d54ba),
     ],
   );
   static const SoundSectionColors primarySoundColors = (
     sliderColor: Color(0xffd8ffd0),
     thumbColor: Color(0xff7cce6b),
   );
+
+  static const primaryNavBarColor = Color(0xff002068);
 }

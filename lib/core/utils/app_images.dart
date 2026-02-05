@@ -170,6 +170,10 @@ class Assets {
   /// assets/images/jobs_animation.json
   static const String imagesJobsAnimation = "assets/images/jobs_animation.json";
 
+  /// Assets for imagesLeaderboardAnimation
+  /// assets/images/leaderboard_animation.json
+  static const String imagesLeaderboardAnimation = "assets/images/leaderboard_animation.json";
+
   /// Assets for imagesLeaderboardHeaderGif
   /// assets/images/leaderboard_header_gif.gif
   static const String imagesLeaderboardHeaderGif = "assets/images/leaderboard_header_gif.gif";

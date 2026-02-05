@@ -16,54 +16,57 @@ class SettingsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MainAppStructure(
-      appBarTitle: 'settings',
-      titleColor: AppColors.coffeeColor,
-      floatingAppBar: false,
-      backButton: false,
-      hasAppBar: true,
-      children: [
-        Align(
-          heightFactor: 0.7,
-          child: Lottie.asset(Assets.imagesSettingsGif, height: 240, fit: BoxFit.cover),
-        ),
-        const SizedBox(
-          height: 12,
-        ),
-        CustomText(
-          'settingsHeaderTitle',
-          style: Styles.styleBold14(context).copyWith(
-            color: Colors.amber,
-            shadows: [
-              Shadow(
-                blurRadius: 20.0,
-                color: Colors.yellow.withAlpha(150),
-                offset: const Offset(0, 0),
-              ),
-            ],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+      child: MainAppStructure(
+        appBarTitle: 'settings',
+        titleColor: AppColors.coffeeColor,
+        floatingAppBar: false,
+        backButton: false,
+        hasAppBar: true,
+        children: [
+          Align(
+            heightFactor: 0.7,
+            child: Lottie.asset(Assets.imagesSettingsGif, height: 240, fit: BoxFit.cover),
           ),
-        ),
-        const SizedBox(
-          height: 16,
-        ),
-        const ChangeVolumeSection(),
-        const SizedBox(
-          height: 16,
-        ),
-        const ChangeTimerSection(),
-        const SizedBox(
-          height: 16,
-        ),
-        const ChangeLanguageSection(),
-        const SizedBox(
-          height: 32,
-        ),
-        const ThreeStarsWidget(),
-        const SizedBox(
-          height: 24,
-        ),
-        const AboutAppSection(),
-      ],
+          const SizedBox(
+            height: 12,
+          ),
+          CustomText(
+            'settingsHeaderTitle',
+            style: Styles.styleBold14(context).copyWith(
+              color: Colors.amber,
+              shadows: [
+                Shadow(
+                  blurRadius: 20.0,
+                  color: Colors.yellow.withAlpha(150),
+                  offset: const Offset(0, 0),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          const ChangeVolumeSection(),
+          const SizedBox(
+            height: 16,
+          ),
+          const ChangeTimerSection(),
+          const SizedBox(
+            height: 16,
+          ),
+          const ChangeLanguageSection(),
+          const SizedBox(
+            height: 32,
+          ),
+          const ThreeStarsWidget(),
+          const SizedBox(
+            height: 24,
+          ),
+          const AboutAppSection(),
+        ],
+      ),
     );
   }
 }

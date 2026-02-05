@@ -26,37 +26,41 @@ class PlayersViewBody extends StatelessWidget {
     return BlocProvider(
       create: (context) => PlayersCubit(playersRepo: getIt<PlayersRepo>()),
       child: MainBackgroundContainer(
-        padding: const EdgeInsets.only(bottom: 32),
-        child: MainAppStructure(
-          appBarTitle: AppServices.currentCategory.getCategoryItemInfo.titleName,
-          titleColor: AppColors.coffeeColor,
-          slivers: [
-            const SliverPadding(
-              padding: EdgeInsets.symmetric(horizontal: 18),
-              sliver: SliverToBoxAdapter(
-                child: CustomTextFormField(),
-              ),
-            ),
-            SliverPadding(
-              padding: const EdgeInsetsDirectional.only(start: 18, end: 18, top: 8),
-              sliver: SliverFillRemaining(
-                hasScrollBody: false,
-                child: Column(
-                  spacing: 8,
-                  children: [
-                    const Expanded(child: SizedBox(height: 170, child: CustomPlayersListView())),
-                    CustomTextButton(
-                      text: 'start'.tr(),
-                      onPressed: () => nagvigateToGameStarting(context),
-                      textColor: AppColors.coffeeColor,
-                      borderColor: AppColors.coffeeColor,
-                      width: context.width * 0.5,
-                    ),
-                  ],
+        padding: const EdgeInsets.only(bottom: 0),
+        child: SafeArea(
+          top: false,
+          bottom: false,
+          child: MainAppStructure(
+            appBarTitle: AppServices.currentCategory.getCategoryItemInfo.titleName,
+            titleColor: AppColors.coffeeColor,
+            slivers: [
+              const SliverPadding(
+                padding: EdgeInsets.symmetric(horizontal: 18),
+                sliver: SliverToBoxAdapter(
+                  child: CustomTextFormField(),
                 ),
               ),
-            ),
-          ],
+              SliverPadding(
+                padding: const EdgeInsetsDirectional.only(start: 18, end: 18, top: 8),
+                sliver: SliverFillRemaining(
+                  hasScrollBody: false,
+                  child: Column(
+                    spacing: 8,
+                    children: [
+                      const Expanded(child: SizedBox(height: 130, child: CustomPlayersListView())),
+                      CustomTextButton(
+                        text: 'start'.tr(),
+                        onPressed: () => nagvigateToGameStarting(context),
+                        textColor: AppColors.coffeeColor,
+                        borderColor: AppColors.coffeeColor,
+                        width: context.width * 0.5,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -68,5 +72,6 @@ class PlayersViewBody extends StatelessWidget {
     } else {
       playersDialogAlert(context, reqPlayers: AppServices.currentSubMode.minimumModePlayers);
     }
+    FocusManager.instance.primaryFocus?.unfocus();
   }
 }

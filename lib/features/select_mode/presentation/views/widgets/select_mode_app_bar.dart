@@ -9,15 +9,19 @@ class SelectModeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverAppBar(
-      automaticallyImplyLeading: false,
-      expandedHeight: 300,
-      backgroundColor: Colors.transparent,
-      flexibleSpace: FlexibleSpaceBar(
-        background: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
-          child: SvgPicture.asset(
-            Assets.imagesModesWelcomeSvg,
+    return MediaQuery.removePadding(
+      context: context,
+      removeTop: true,
+      child: SliverAppBar(
+        automaticallyImplyLeading: false,
+        expandedHeight: 300,
+        backgroundColor: Colors.transparent,
+        flexibleSpace: FlexibleSpaceBar(
+          background: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
+            child: SvgPicture.asset(
+              Assets.imagesModesWelcomeSvg,
+            ),
           ),
         ),
       ),

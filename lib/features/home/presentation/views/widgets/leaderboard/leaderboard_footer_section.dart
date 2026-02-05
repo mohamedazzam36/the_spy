@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/leaderboard/custom_nicknames_dialog.dart';
+import 'package:the_spy/features/home/presentation/views/widgets/leaderboard/leaderboard_edit_button.dart';
 import 'package:the_spy/features/home/presentation/views/widgets/leaderboard/leaderboard_list_view_section.dart';
 
 class LeaderboardFooterSection extends StatelessWidget {
@@ -15,7 +16,6 @@ class LeaderboardFooterSection extends StatelessWidget {
       alignment: Alignment.topCenter,
       children: [
         Container(
-          margin: const EdgeInsets.only(right: 16, left: 16, bottom: 20),
           padding: const EdgeInsets.only(top: 8, bottom: 16, left: 8, right: 8),
           decoration: BoxDecoration(
             color: AppColors.coffeeColor,
@@ -24,23 +24,31 @@ class LeaderboardFooterSection extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              GestureDetector(
-                onTap: () => showGeneralDialog(
-                  context: context,
-                  barrierDismissible: true,
-                  barrierLabel: '',
-                  pageBuilder: (context, animation, secondaryAnimation) => const Center(
-                    child: CustomNicknamesDialog(),
-                  ),
-                ),
-                child: Image.asset(
-                  Assets.imagesNicknamesIcon,
-                  width: 35,
-                ),
+              Builder(
+                builder: (context) {
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const LeaderboardEditButton(),
+                      GestureDetector(
+                        onTap: () => showGeneralDialog(
+                          context: context,
+                          barrierDismissible: true,
+                          barrierLabel: '',
+                          pageBuilder: (context, animation, secondaryAnimation) => const Center(
+                            child: CustomNicknamesDialog(),
+                          ),
+                        ),
+                        child: Image.asset(
+                          Assets.imagesNicknamesIcon,
+                          width: 35,
+                        ),
+                      ),
+                    ],
+                  );
+                },
               ),
-              const Expanded(
-                child: LeaderboardListViewSection(),
-              ),
+              const Expanded(child: LeaderboardListViewSection()),
             ],
           ),
         ),

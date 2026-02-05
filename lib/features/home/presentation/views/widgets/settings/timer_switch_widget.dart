@@ -15,7 +15,7 @@ class TimerSwitchWidget extends StatelessWidget {
       builder: (context, state) {
         return Switch(
           padding: const EdgeInsets.all(0),
-          activeColor: Colors.white,
+          activeThumbColor: Colors.white,
           activeTrackColor: context.homeCubit.currentSoundColors.thumbColor,
           inactiveThumbColor: Colors.white,
           inactiveTrackColor: const Color(0xff4f4c4c),

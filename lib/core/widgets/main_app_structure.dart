@@ -13,14 +13,18 @@ class MainAppStructure extends StatelessWidget {
     this.floatingAppBar = true,
     this.backButton = true,
     this.hasAppBar = true,
+    this.appBarFlexibleSpace,
+    this.appBarExpandedHeight,
+    this.appBarCollapsedHeight,
   });
 
   final String appBarTitle;
-  final Widget? title;
+  final Widget? title, appBarFlexibleSpace;
   final List<Widget>? appBarActions, children;
   final List<Widget> slivers;
   final Color? titleColor;
   final bool floatingAppBar, backButton, hasAppBar;
+  final double? appBarExpandedHeight, appBarCollapsedHeight;
 
   @override
   Widget build(BuildContext context) {
@@ -30,27 +34,26 @@ class MainAppStructure extends StatelessWidget {
         hasAppBar
             ? SliverPadding(
                 padding: const EdgeInsetsDirectional.only(start: 0, end: 0, top: 16),
-                sliver: MainAppBar(
-                  appBarTitle: appBarTitle,
-                  actions: appBarActions,
-                  title: title,
-                  titleColor: titleColor,
-                  floatingAppBar: floatingAppBar,
-                  backButton: backButton,
+                sliver: MediaQuery.removePadding(
+                  context: context,
+                  removeTop: true,
+                  child: MainAppBar(
+                    appBarTitle: appBarTitle,
+                    actions: appBarActions,
+                    title: title,
+                    titleColor: titleColor,
+                    floatingAppBar: floatingAppBar,
+                    backButton: backButton,
+                    appBarCollapsedHeight: appBarCollapsedHeight,
+                    appBarExpandedHeight: appBarExpandedHeight,
+                    appBarFlexibleSpace: appBarFlexibleSpace,
+                  ),
                 ),
               )
             : const SliverToBoxAdapter(),
         children != null
-            ? SliverPadding(
-                padding: EdgeInsetsDirectional.only(
-                  start: 16,
-                  end: 16,
-                  bottom: 24,
-                  top: hasAppBar ? 0 : 50,
-                ),
-                sliver: SliverList(
-                  delegate: SliverChildListDelegate(children!),
-                ),
+            ? SliverList(
+                delegate: SliverChildListDelegate(children!),
               )
             : const SliverToBoxAdapter(),
         ...slivers,

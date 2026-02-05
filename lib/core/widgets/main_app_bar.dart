@@ -12,21 +12,27 @@ class MainAppBar extends StatelessWidget {
     this.titleColor,
     required this.floatingAppBar,
     required this.backButton,
+    this.appBarFlexibleSpace,
+    this.appBarExpandedHeight,
+    this.appBarCollapsedHeight,
   });
 
   final String appBarTitle;
-  final Widget? title;
+  final Widget? title, appBarFlexibleSpace;
   final List<Widget>? actions;
   final Color? titleColor;
   final bool floatingAppBar, backButton;
+  final double? appBarExpandedHeight, appBarCollapsedHeight;
 
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
       backgroundColor: Colors.transparent,
       floating: floatingAppBar,
-      collapsedHeight: 75,
+      collapsedHeight: appBarCollapsedHeight ?? 75,
       centerTitle: true,
+      expandedHeight: appBarExpandedHeight,
+      flexibleSpace: appBarFlexibleSpace,
       leading: backButton
           ? GestureDetector(
               onTap: () => Navigator.pop(context),

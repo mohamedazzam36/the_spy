@@ -20,15 +20,20 @@ class MainAppViews extends StatelessWidget {
           return MainBackgroundContainer(
             padding: const EdgeInsets.all(0),
             child: Scaffold(
+              resizeToAvoidBottomInset: false,
               backgroundColor: Colors.transparent,
               bottomNavigationBar: const CustomCurvedNavigationBar(),
-              body: IndexedStack(
-                index: context.homeCubit.currentNavBarIndex,
-                children: const [
-                  LeaderboardViewBody(),
-                  HomeViewBody(),
-                  SettingsViewBody(),
-                ],
+              body: SafeArea(
+                bottom: false,
+                top: false,
+                child: IndexedStack(
+                  index: context.homeCubit.currentNavBarIndex,
+                  children: const [
+                    LeaderboardViewBody(),
+                    HomeViewBody(),
+                    SettingsViewBody(),
+                  ],
+                ),
               ),
             ),
           );

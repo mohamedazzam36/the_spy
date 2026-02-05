@@ -11,7 +11,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   Gradient currentGradient = AppColors.primaryGradient;
   SoundSectionColors currentSoundColors = AppColors.primarySoundColors;
-  Color currentNavBarColor = AppColors.primaryColor;
+  Color currentNavBarColor = AppColors.primaryNavBarColor;
   int currentNavBarIndex = 1;
   int? currentCategoryIndex;
 

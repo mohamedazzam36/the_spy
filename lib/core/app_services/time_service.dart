@@ -1,3 +1,4 @@
+import 'package:hive/hive.dart';
 import 'package:the_spy/core/service_locator/service_locator.dart';
 
 abstract class TimeService {
@@ -10,23 +11,23 @@ abstract class TimeService {
   static final List<int> playersTimes = const [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
   static final List<int> spysTimes = const [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
 
-  static bool get hasTimer => applicationBox.get(_hasTimerKey, defaultValue: true);
+  static bool get hasTimer => getIt<Box<dynamic>>().get(_hasTimerKey, defaultValue: true);
 
   static Future<void> setTimerState(bool isTimerActive) async {
-    await applicationBox.put(_hasTimerKey, isTimerActive);
+    await getIt<Box<dynamic>>().put(_hasTimerKey, isTimerActive);
   }
 
   static Future<void> setPlayersVotingTime(int seconds) async {
-    await applicationBox.put(_kPlayersVotingTime, seconds);
+    await getIt<Box<dynamic>>().put(_kPlayersVotingTime, seconds);
   }
 
   static Future<void> setSpysVotingTime(int seconds) async {
-    await applicationBox.put(_kSpysVotingTime, seconds);
+    await getIt<Box<dynamic>>().put(_kSpysVotingTime, seconds);
   }
 
   static int get playersVotingTime =>
-      applicationBox.get(_kPlayersVotingTime, defaultValue: _playersVotingDefaultTime);
+      getIt<Box<dynamic>>().get(_kPlayersVotingTime, defaultValue: _playersVotingDefaultTime);
 
   static int get spysVotingTime =>
-      applicationBox.get(_kSpysVotingTime, defaultValue: _spysVotingDefaultTime);
+      getIt<Box<dynamic>>().get(_kSpysVotingTime, defaultValue: _spysVotingDefaultTime);
 }
