@@ -29,13 +29,8 @@ class SubModesBackgroundContainer extends StatelessWidget {
           const SizedBox(
             height: 24,
           ),
-          MediaQuery.removePadding(
-            removeTop: true,
-            removeBottom: true,
-            context: context,
-            child: SubModesGridView(
-              gameModes: gameModes,
-            ),
+          SubModesGridView(
+            gameModes: gameModes,
           ),
         ],
       ),

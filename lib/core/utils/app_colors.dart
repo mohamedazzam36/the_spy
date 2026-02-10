@@ -20,8 +20,8 @@ abstract class AppColors {
     ],
   );
   static const SoundSectionColors primarySoundColors = (
-    sliderColor: Color(0xffd8ffd0),
-    thumbColor: Color(0xff7cce6b),
+    sliderColor: Color(0xff3870ff),
+    thumbColor: Color(0xff2952ba),
   );
 
   static const primaryNavBarColor = Color(0xff002068);

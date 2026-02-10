@@ -10,8 +10,6 @@ class MainModesViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomBackgroundContainer(
       child: SafeArea(
-        top: false,
-        bottom: false,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
           child: CustomScrollView(

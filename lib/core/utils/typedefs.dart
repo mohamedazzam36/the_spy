@@ -9,3 +9,11 @@ typedef CategoryInfo = ({
 });
 
 typedef SoundSectionColors = ({Color thumbColor, Color sliderColor});
+
+typedef CategoryUiInfo = ({
+  String enImage,
+  String arImage,
+  String description,
+  String animationPath,
+  List<String> highlightWords,
+});

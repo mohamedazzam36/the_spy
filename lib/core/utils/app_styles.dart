@@ -8,6 +8,7 @@ abstract class Styles {
       fontSize: getResponsiveText(context, fontSize: 35),
       color: AppColors.whiteColor,
       fontWeight: FontWeight.w600,
+      fontFamily: 'Cairo',
     );
   }
 
@@ -15,6 +16,7 @@ abstract class Styles {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 16),
       fontWeight: FontWeight.w200,
+      fontFamily: 'Cairo',
     );
   }
 
@@ -23,6 +25,7 @@ abstract class Styles {
       fontSize: getResponsiveText(context, fontSize: 24),
       color: AppColors.blackColor,
       fontWeight: FontWeight.w600,
+      fontFamily: 'Cairo',
     );
   }
 
@@ -31,6 +34,7 @@ abstract class Styles {
       fontSize: getResponsiveText(context, fontSize: 60),
       color: AppColors.whiteColor,
       fontWeight: FontWeight.w600,
+      fontFamily: 'Cairo',
     );
   }
 
@@ -39,6 +43,7 @@ abstract class Styles {
       fontSize: getResponsiveText(context, fontSize: 50),
       color: AppColors.whiteColor,
       fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
     );
   }
 
@@ -47,6 +52,16 @@ abstract class Styles {
       fontSize: getResponsiveText(context, fontSize: 25),
       color: AppColors.whiteColor,
       fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
+    );
+  }
+
+  static TextStyle styleBold32(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 32),
+      color: AppColors.coffeeColor,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
     );
   }
 
@@ -55,6 +70,7 @@ abstract class Styles {
       fontSize: getResponsiveText(context, fontSize: 14),
       color: AppColors.coffeeColor,
       fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
     );
   }
 
@@ -63,6 +79,7 @@ abstract class Styles {
       fontSize: getResponsiveText(context, fontSize: 13),
       color: AppColors.coffeeColor,
       fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
     );
   }
 
@@ -71,6 +88,7 @@ abstract class Styles {
       fontSize: getResponsiveText(context, fontSize: 10),
       color: AppColors.coffeeColor,
       fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
     );
   }
 
@@ -79,6 +97,7 @@ abstract class Styles {
       fontSize: getResponsiveText(context, fontSize: 40),
       color: AppColors.whiteColor,
       fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
     );
   }
 
@@ -87,6 +106,7 @@ abstract class Styles {
       fontSize: getResponsiveText(context, fontSize: 16),
       color: AppColors.blackColor,
       fontWeight: FontWeight.w500,
+      fontFamily: 'Cairo',
     );
   }
 }

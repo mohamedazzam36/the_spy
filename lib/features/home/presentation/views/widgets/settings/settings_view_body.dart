@@ -23,6 +23,7 @@ class SettingsViewBody extends StatelessWidget {
         titleColor: AppColors.coffeeColor,
         floatingAppBar: false,
         backButton: false,
+        hasBottomDivider: false,
         hasAppBar: true,
         children: [
           Align(

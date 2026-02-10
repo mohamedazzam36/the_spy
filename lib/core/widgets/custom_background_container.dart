@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
+import 'package:the_spy/core/utils/app_images.dart';
 
 class CustomBackgroundContainer extends StatelessWidget {
   const CustomBackgroundContainer({
@@ -26,7 +27,13 @@ class CustomBackgroundContainer extends StatelessWidget {
         boxShadow: boxShadow,
         gradient: AppColors.primaryGradient,
         borderRadius: borderRadius,
+        image: const DecorationImage(
+          image: AssetImage(Assets.imagesMainBackground),
+          opacity: 0.2,
+          fit: BoxFit.cover,
+        ),
       ),
+
       child: child,
     );
   }

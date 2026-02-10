@@ -10,8 +10,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.animals:
         return (
           soundColors: (
-            sliderColor: const Color(0xffd8ffd0),
-            thumbColor: const Color(0xff7cce6b),
+            sliderColor: const Color(0xff519360),
+            thumbColor: const Color(0xff497453),
           ),
           navBarColor: const Color(0xff012c29),
           gradient: const LinearGradient(
@@ -29,8 +29,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.food:
         return (
           soundColors: (
-            sliderColor: const Color(0xffe753fe),
-            thumbColor: const Color(0xff450050),
+            sliderColor: const Color(0xffff934e),
+            thumbColor: const Color(0xffce6b37),
           ),
           navBarColor: const Color(0xff5a2601),
           gradient: const LinearGradient(
@@ -49,8 +49,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.drinks:
         return (
           soundColors: (
-            sliderColor: const Color(0xffc58e7f),
-            thumbColor: const Color(0xff875d50),
+            sliderColor: const Color(0xff814f93),
+            thumbColor: const Color(0xff703f7a),
           ),
           navBarColor: const Color(0xff27252f),
           gradient: const LinearGradient(
@@ -70,8 +70,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.devices:
         return (
           soundColors: (
-            sliderColor: const Color(0xffd8ffd0),
-            thumbColor: const Color(0xff7cce6b),
+            sliderColor: const Color(0xff6ea9e6),
+            thumbColor: const Color(0xff3e73aa),
           ),
           navBarColor: const Color(0xff082a49),
           gradient: const LinearGradient(
@@ -90,8 +90,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.cloths:
         return (
           soundColors: (
-            sliderColor: const Color(0xffff3131),
-            thumbColor: const Color(0xffa81023),
+            sliderColor: const Color(0xff0787d8),
+            thumbColor: const Color(0xff0268a8),
           ),
           navBarColor: const Color(0xff0c4769),
           gradient: const LinearGradient(
@@ -106,11 +106,11 @@ extension CategoriesInfo on CategoriesEnum {
           titleName: 'cloths'.tr(),
           image: Assets.imagesClothes,
         );
-      case CategoriesEnum.videoGames:
+      case CategoriesEnum.games:
         return (
           soundColors: (
-            sliderColor: const Color(0xffb2fbff),
-            thumbColor: const Color(0xff6a8aff),
+            sliderColor: const Color(0xff08a39f),
+            thumbColor: const Color(0xff1f7c7b),
           ),
           navBarColor: const Color(0xff012c29),
           gradient: const LinearGradient(
@@ -127,8 +127,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.jobs:
         return (
           soundColors: (
-            sliderColor: const Color(0xffb2fbff),
-            thumbColor: const Color(0xff6a8aff),
+            sliderColor: const Color(0xff1ba6fd),
+            thumbColor: const Color(0xff036eb1),
           ),
           navBarColor: const Color(0xff011e5f),
           gradient: const LinearGradient(
@@ -146,8 +146,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.tools:
         return (
           soundColors: (
-            sliderColor: const Color(0xffd8ffd0),
-            thumbColor: const Color(0xff7cce6b),
+            sliderColor: const Color(0xff2f9998),
+            thumbColor: const Color(0xff187b7a),
           ),
           navBarColor: const Color(0xff0c3a36),
           gradient: const LinearGradient(
@@ -166,8 +166,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.cities:
         return (
           soundColors: (
-            sliderColor: const Color(0xffc58e7f),
-            thumbColor: const Color(0xff875d50),
+            sliderColor: const Color(0xffa55d46),
+            thumbColor: const Color(0xff7e4c3c),
           ),
           navBarColor: const Color(0xff2b1c1f),
           gradient: const LinearGradient(
@@ -184,8 +184,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.films:
         return (
           soundColors: (
-            sliderColor: const Color(0xffc58e7f),
-            thumbColor: const Color(0xff875d50),
+            sliderColor: const Color(0xffcf8675),
+            thumbColor: const Color(0xff966559),
           ),
           navBarColor: const Color(0xff6b341b),
           gradient: const LinearGradient(
@@ -205,8 +205,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.sports:
         return (
           soundColors: (
-            sliderColor: const Color(0xffc58e7f),
-            thumbColor: const Color(0xff875d50),
+            sliderColor: const Color(0xff3870ff),
+            thumbColor: const Color(0xff2952ba),
           ),
           navBarColor: const Color(0xff041a4d),
           gradient: const LinearGradient(
@@ -224,8 +224,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.football:
         return (
           soundColors: (
-            sliderColor: const Color(0xffb2fbff),
-            thumbColor: const Color(0xff6a8aff),
+            sliderColor: const Color(0xfffd3a3a),
+            thumbColor: const Color(0xffe50000),
           ),
           navBarColor: const Color(0xff390206),
           gradient: const LinearGradient(
@@ -244,8 +244,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.cartoons:
         return (
           soundColors: (
-            sliderColor: const Color(0xffe753fe),
-            thumbColor: const Color(0xff450050),
+            sliderColor: const Color(0xfffa53e5),
+            thumbColor: const Color(0xffa94b9e),
           ),
           navBarColor: const Color(0xff450050),
           gradient: const LinearGradient(
@@ -263,8 +263,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.random:
         return (
           soundColors: (
-            sliderColor: const Color(0xffff3131),
-            thumbColor: const Color(0xffa81023),
+            sliderColor: const Color(0xfffd3a3a),
+            thumbColor: const Color(0xffe50000),
           ),
           navBarColor: const Color(0xff121521),
           gradient: const LinearGradient(
@@ -283,8 +283,8 @@ extension CategoriesInfo on CategoriesEnum {
       case CategoriesEnum.anime:
         return (
           soundColors: (
-            sliderColor: const Color(0xffb2fbff),
-            thumbColor: const Color(0xff6a8aff),
+            sliderColor: const Color(0xff814f93),
+            thumbColor: const Color(0xff703f7a),
           ),
           navBarColor: const Color(0xff0b1624),
           gradient: const LinearGradient(
@@ -325,7 +325,7 @@ extension CategoriesInfo on CategoriesEnum {
         return (
           namesList: 'clothsList'.tr().split(', '),
         );
-      case CategoriesEnum.videoGames:
+      case CategoriesEnum.games:
         return (
           namesList: 'videoGamesList'.tr().split(', '),
         );
@@ -366,5 +366,115 @@ extension CategoriesInfo on CategoriesEnum {
           namesList: 'animeList'.tr().split(', '),
         );
     }
+  }
+
+  CategoryUiInfo categoryUiInfo() {
+    return switch (this) {
+      CategoriesEnum.animals => (
+        arImage: Assets.imagesAnimalsWordAr,
+        enImage: Assets.imagesAnimalsWordEn,
+        description: 'animalsDescription'.tr(),
+        highlightWords: [],
+        animationPath: Assets.imagesAnimalsAnimation,
+      ),
+      CategoriesEnum.food => (
+        arImage: Assets.imagesFoodWordAr,
+        enImage: Assets.imagesFoodWordEn,
+        description: 'foodDescription'.tr(),
+        highlightWords: ['koshary'.tr(), 'pizza'.tr(), 'burger'.tr()],
+        animationPath: Assets.imagesFoodAnimation,
+      ),
+      CategoriesEnum.drinks => (
+        arImage: Assets.imagesDrinksWordAr,
+        enImage: Assets.imagesDrinksWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesDrinksAnimation,
+      ),
+      CategoriesEnum.devices => (
+        arImage: Assets.imagesDevicesWordAr,
+        enImage: Assets.imagesDevicesWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesDevicesAnimation,
+      ),
+      CategoriesEnum.cloths => (
+        arImage: Assets.imagesClothesWordAr,
+        enImage: Assets.imagesClothesWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesClothesAnimation,
+      ),
+      CategoriesEnum.games => (
+        arImage: Assets.imagesGamesWordAr,
+        enImage: Assets.imagesGamesWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesGamesAnimation,
+      ),
+      CategoriesEnum.jobs => (
+        arImage: Assets.imagesJobsWordAr,
+        enImage: Assets.imagesJobsWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesJobsAnimation,
+      ),
+      CategoriesEnum.tools => (
+        arImage: Assets.imagesToolsWordAr,
+        enImage: Assets.imagesToolsWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesToolsAnimation,
+      ),
+      CategoriesEnum.cities => (
+        arImage: Assets.imagesCitiesWordAr,
+        enImage: Assets.imagesCitiesWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesCitiesAnimation,
+      ),
+      CategoriesEnum.films => (
+        arImage: Assets.imagesFilmsWordAr,
+        enImage: Assets.imagesFilmsWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesFilmsAnimation,
+      ),
+      CategoriesEnum.anime => (
+        arImage: Assets.imagesAnimeWordAr,
+        enImage: Assets.imagesAnimeWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesAnimeAnimation,
+      ),
+      CategoriesEnum.sports => (
+        arImage: Assets.imagesSportsWordAr,
+        enImage: Assets.imagesSportsWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesSportsAnimation,
+      ),
+      CategoriesEnum.football => (
+        arImage: Assets.imagesFootballWordAr,
+        enImage: Assets.imagesFootballWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesFootballAnimation,
+      ),
+      CategoriesEnum.cartoons => (
+        arImage: Assets.imagesCartoonWordAr,
+        enImage: Assets.imagesCartoonWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesCartoonAnimation,
+      ),
+      CategoriesEnum.random => (
+        arImage: Assets.imagesRandomWordAr,
+        enImage: Assets.imagesRandomWordEn,
+        description: '',
+        highlightWords: [],
+        animationPath: Assets.imagesRandomAnimation,
+      ),
+    };
   }
 }

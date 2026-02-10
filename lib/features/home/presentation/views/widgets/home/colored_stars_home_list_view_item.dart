@@ -42,7 +42,6 @@ class ColoredStarsHomeListViewItem extends StatelessWidget {
               transform: Matrix4.identity()..scale(isActive ? 1.04 : 1.0),
               transformAlignment: Alignment.center,
               padding: const EdgeInsets.symmetric(vertical: 8),
-              margin: const EdgeInsets.only(left: 16),
               decoration: BoxDecoration(
                 gradient: itemInfo.gradient,
                 borderRadius: BorderRadius.circular(16),

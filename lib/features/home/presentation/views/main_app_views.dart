@@ -19,14 +19,11 @@ class MainAppViews extends StatelessWidget {
         builder: (context, state) {
           return MainBackgroundContainer(
             padding: const EdgeInsets.all(0),
-            child: Scaffold(
-              resizeToAvoidBottomInset: false,
-              backgroundColor: Colors.transparent,
-              bottomNavigationBar: const CustomCurvedNavigationBar(),
-              body: SafeArea(
-                bottom: false,
-                top: false,
-                child: IndexedStack(
+            child: SafeArea(
+              child: Scaffold(
+                backgroundColor: Colors.transparent,
+                bottomNavigationBar: const CustomCurvedNavigationBar(),
+                body: IndexedStack(
                   index: context.homeCubit.currentNavBarIndex,
                   children: const [
                     LeaderboardViewBody(),

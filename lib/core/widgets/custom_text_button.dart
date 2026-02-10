@@ -34,7 +34,7 @@ class CustomTextButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(24),
               side: BorderSide(
                 color: borderColor,
-                width: 2,
+                width: 1,
               ),
             ),
           ),

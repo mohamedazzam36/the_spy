@@ -4,7 +4,7 @@ enum CategoriesEnum {
   drinks,
   devices,
   cloths,
-  videoGames,
+  games,
   jobs,
   tools,
   cities,

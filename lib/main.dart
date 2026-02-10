@@ -1,7 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:the_spy/constants.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
@@ -25,6 +26,9 @@ void main() async {
 
   await setupLocator();
 
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  // debugRepaintRainbowEnabled = true;
+
   WidgetsBinding.instance.allowFirstFrame();
 
   runApp(
@@ -45,14 +49,13 @@ class TheSpy extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: ThemeData(
-        textTheme: GoogleFonts.changaTextTheme(),
         appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(color: AppColors.whiteColor),
         ),
       ),
       debugShowCheckedModeBanner: false,
       // showPerformanceOverlay: true,
-      routerConfig: AppRouter.router(),
+      routerConfig: AppRouter.router,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,

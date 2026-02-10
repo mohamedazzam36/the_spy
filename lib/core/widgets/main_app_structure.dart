@@ -16,6 +16,7 @@ class MainAppStructure extends StatelessWidget {
     this.appBarFlexibleSpace,
     this.appBarExpandedHeight,
     this.appBarCollapsedHeight,
+    this.hasBottomDivider = true,
   });
 
   final String appBarTitle;
@@ -23,7 +24,7 @@ class MainAppStructure extends StatelessWidget {
   final List<Widget>? appBarActions, children;
   final List<Widget> slivers;
   final Color? titleColor;
-  final bool floatingAppBar, backButton, hasAppBar;
+  final bool floatingAppBar, backButton, hasAppBar, hasBottomDivider;
   final double? appBarExpandedHeight, appBarCollapsedHeight;
 
   @override
@@ -32,23 +33,17 @@ class MainAppStructure extends StatelessWidget {
       physics: const ClampingScrollPhysics(),
       slivers: [
         hasAppBar
-            ? SliverPadding(
-                padding: const EdgeInsetsDirectional.only(start: 0, end: 0, top: 16),
-                sliver: MediaQuery.removePadding(
-                  context: context,
-                  removeTop: true,
-                  child: MainAppBar(
-                    appBarTitle: appBarTitle,
-                    actions: appBarActions,
-                    title: title,
-                    titleColor: titleColor,
-                    floatingAppBar: floatingAppBar,
-                    backButton: backButton,
-                    appBarCollapsedHeight: appBarCollapsedHeight,
-                    appBarExpandedHeight: appBarExpandedHeight,
-                    appBarFlexibleSpace: appBarFlexibleSpace,
-                  ),
-                ),
+            ? MainAppBar(
+                appBarTitle: appBarTitle,
+                actions: appBarActions,
+                title: title,
+                titleColor: titleColor,
+                floatingAppBar: floatingAppBar,
+                backButton: backButton,
+                appBarCollapsedHeight: appBarCollapsedHeight,
+                appBarExpandedHeight: appBarExpandedHeight,
+                appBarFlexibleSpace: appBarFlexibleSpace,
+                hasBottomDivider: hasBottomDivider,
               )
             : const SliverToBoxAdapter(),
         children != null

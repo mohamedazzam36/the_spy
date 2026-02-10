@@ -14,8 +14,6 @@ class SubModesViewBody extends StatelessWidget {
     return Material(
       child: CustomBackgroundContainer(
         child: SafeArea(
-          top: false,
-          bottom: false,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: CustomScrollView(

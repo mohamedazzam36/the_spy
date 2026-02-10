@@ -26,22 +26,20 @@ class PlayersViewBody extends StatelessWidget {
     return BlocProvider(
       create: (context) => PlayersCubit(playersRepo: getIt<PlayersRepo>()),
       child: MainBackgroundContainer(
-        padding: const EdgeInsets.only(bottom: 0),
+        padding: const EdgeInsets.only(bottom: 16),
         child: SafeArea(
-          top: false,
-          bottom: false,
           child: MainAppStructure(
             appBarTitle: AppServices.currentCategory.getCategoryItemInfo.titleName,
             titleColor: AppColors.coffeeColor,
             slivers: [
               const SliverPadding(
-                padding: EdgeInsets.symmetric(horizontal: 18),
+                padding: EdgeInsets.symmetric(horizontal: 18, vertical: 18),
                 sliver: SliverToBoxAdapter(
                   child: CustomTextFormField(),
                 ),
               ),
               SliverPadding(
-                padding: const EdgeInsetsDirectional.only(start: 18, end: 18, top: 8),
+                padding: const EdgeInsetsDirectional.only(start: 18, end: 18),
                 sliver: SliverFillRemaining(
                   hasScrollBody: false,
                   child: Column(

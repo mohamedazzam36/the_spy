@@ -38,18 +38,16 @@ class _CustomPlayersListViewState extends State<CustomPlayersListView> {
       buildWhen: (previous, current) => current is PlayersSuccess,
       builder: (context, state) {
         List<PlayerModel> playersList = AppServices.playersList;
-        return ListView.builder(
+        return ListView.separated(
           itemCount: playersList.length,
           padding: const EdgeInsets.all(0),
+          separatorBuilder: (context, index) => const SizedBox(
+            height: 16,
+          ),
           itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.only(
-                top: 16,
-              ),
-              child: CustomPlayerListViewItem(
-                player: playersList[index],
-                iconPath: widget.iconsPath[index % widget.iconsPath.length],
-              ),
+            return CustomPlayerListViewItem(
+              player: playersList[index],
+              iconPath: widget.iconsPath[index % widget.iconsPath.length],
             );
           },
         );

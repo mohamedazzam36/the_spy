@@ -1,6 +1,4 @@
 import 'dart:ui';
-
-import 'package:easy_localization/easy_localization.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 import 'package:the_spy/core/enums/game_modes_enum.dart';
 
@@ -9,7 +7,7 @@ extension MainModesInfo on MainGameModes {
     switch (this) {
       case MainGameModes.classic:
         return (
-          title: 'classicModeTitle'.tr(),
+          title: 'classicModeTitle',
           iconPath: Assets.imagesClassicIcon,
           backGroundColors: [
             const Color(0xffb2fbff),
@@ -18,7 +16,7 @@ extension MainModesInfo on MainGameModes {
         );
       case MainGameModes.blind:
         return (
-          title: 'blindModeTitle'.tr(),
+          title: 'blindModeTitle',
           iconPath: Assets.imagesBlindIcon,
           backGroundColors: [
             const Color(0xffff6a92),
@@ -27,7 +25,7 @@ extension MainModesInfo on MainGameModes {
         );
       case MainGameModes.teams:
         return (
-          title: 'teams'.tr(),
+          title: 'teams',
           iconPath: Assets.imagesClassicDoubleIcon,
           backGroundColors: [
             const Color(0xff90d46c),

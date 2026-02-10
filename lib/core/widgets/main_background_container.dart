@@ -20,7 +20,7 @@ class MainBackgroundContainer extends StatelessWidget {
         gradient: context.homeCubit.currentGradient,
         image: const DecorationImage(
           image: AssetImage(Assets.imagesMainBackground),
-          opacity: 0.4,
+          opacity: 0.35,
           fit: BoxFit.cover,
         ),
       ),

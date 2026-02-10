@@ -58,7 +58,7 @@ class ChangeVolumeSection extends StatelessWidget {
                               Shadow(
                                 blurRadius: 20.0,
                                 color: context.homeCubit.currentSoundColors.sliderColor.withAlpha(
-                                  120,
+                                  160,
                                 ),
                                 offset: const Offset(0, 0),
                               ),

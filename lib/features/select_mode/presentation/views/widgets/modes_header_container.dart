@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/app_styles.dart';
 import 'package:the_spy/core/utils/app_images.dart';
-import 'package:the_spy/core/widgets/custom_background_container.dart';
 import 'package:the_spy/core/widgets/custom_text.dart';
 
 class ModesHeaderContainer extends StatelessWidget {
@@ -15,12 +14,16 @@ class ModesHeaderContainer extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        CustomBackgroundContainer(
-          boxShadow: const [
-            BoxShadow(color: AppColors.yellowColor, blurRadius: 4, offset: Offset(0, 2)),
-          ],
-          borderRadius: BorderRadius.circular(24),
+        Container(
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 8),
+          decoration: BoxDecoration(
+            boxShadow: const [
+              BoxShadow(color: Colors.blueAccent, blurRadius: 4, offset: Offset(0, 2)),
+            ],
+            gradient: AppColors.primaryGradient,
+            borderRadius: BorderRadius.circular(24),
+          ),
+
           child: CustomText(
             'selectMode',
             style: Styles.styleBold25(
@@ -29,11 +32,13 @@ class ModesHeaderContainer extends StatelessWidget {
           ),
         ),
         Positioned.fill(
-          child: ClipRRect(
-            borderRadius: BorderRadiusGeometry.circular(24),
-            child: Image.asset(
-              Assets.imagesStarsGif,
-              fit: BoxFit.fill,
+          child: RepaintBoundary(
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.circular(24),
+              child: Image.asset(
+                Assets.imagesStarsGif,
+                fit: BoxFit.fill,
+              ),
             ),
           ),
         ),

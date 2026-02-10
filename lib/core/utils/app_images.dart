@@ -6,6 +6,10 @@ class Assets {
   /// assets/images/about_game_icon.png
   static const String imagesAboutGameIcon = "assets/images/about_game_icon.png";
 
+  /// Assets for imagesAboutIcon
+  /// assets/images/about_icon.svg
+  static const String imagesAboutIcon = "assets/images/about_icon.svg";
+
   /// Assets for imagesAddPlayerIcon
   /// assets/images/add_player_icon.svg
   static const String imagesAddPlayerIcon = "assets/images/add_player_icon.svg";
@@ -26,9 +30,33 @@ class Assets {
   /// assets/images/animals.png
   static const String imagesAnimals = "assets/images/animals.png";
 
+  /// Assets for imagesAnimalsAnimation
+  /// assets/images/animals_animation.json
+  static const String imagesAnimalsAnimation = "assets/images/animals_animation.json";
+
+  /// Assets for imagesAnimalsWordAr
+  /// assets/images/animals_word_ar.svg
+  static const String imagesAnimalsWordAr = "assets/images/animals_word_ar.svg";
+
+  /// Assets for imagesAnimalsWordEn
+  /// assets/images/animals_word_en.svg
+  static const String imagesAnimalsWordEn = "assets/images/animals_word_en.svg";
+
   /// Assets for imagesAnime
   /// assets/images/anime.png
   static const String imagesAnime = "assets/images/anime.png";
+
+  /// Assets for imagesAnimeAnimation
+  /// assets/images/anime_animation.json
+  static const String imagesAnimeAnimation = "assets/images/anime_animation.json";
+
+  /// Assets for imagesAnimeWordAr
+  /// assets/images/anime_word_ar.svg
+  static const String imagesAnimeWordAr = "assets/images/anime_word_ar.svg";
+
+  /// Assets for imagesAnimeWordEn
+  /// assets/images/anime_word_en.svg
+  static const String imagesAnimeWordEn = "assets/images/anime_word_en.svg";
 
   /// Assets for imagesAppDesignerIcon
   /// assets/images/app_designer_icon.png
@@ -37,6 +65,10 @@ class Assets {
   /// Assets for imagesAppDeveloperIcon
   /// assets/images/app_developer_icon.png
   static const String imagesAppDeveloperIcon = "assets/images/app_developer_icon.png";
+
+  /// Assets for imagesBackIcon
+  /// assets/images/back_icon.svg
+  static const String imagesBackIcon = "assets/images/back_icon.svg";
 
   /// Assets for imagesBlackPlayerIcon
   /// assets/images/black_player_icon.svg
@@ -54,6 +86,18 @@ class Assets {
   /// assets/images/blue_player_icon.svg
   static const String imagesBluePlayerIcon = "assets/images/blue_player_icon.svg";
 
+  /// Assets for imagesCartoonAnimation
+  /// assets/images/cartoon_animation.json
+  static const String imagesCartoonAnimation = "assets/images/cartoon_animation.json";
+
+  /// Assets for imagesCartoonWordAr
+  /// assets/images/cartoon_word_ar.svg
+  static const String imagesCartoonWordAr = "assets/images/cartoon_word_ar.svg";
+
+  /// Assets for imagesCartoonWordEn
+  /// assets/images/cartoon_word_en.svg
+  static const String imagesCartoonWordEn = "assets/images/cartoon_word_en.svg";
+
   /// Assets for imagesCartoons
   /// assets/images/cartoons.png
   static const String imagesCartoons = "assets/images/cartoons.png";
@@ -70,9 +114,17 @@ class Assets {
   /// assets/images/cities.png
   static const String imagesCities = "assets/images/cities.png";
 
-  /// Assets for imagesCitiesGif
-  /// assets/images/cities_gif.json
-  static const String imagesCitiesGif = "assets/images/cities_gif.json";
+  /// Assets for imagesCitiesAnimation
+  /// assets/images/cities_animation.json
+  static const String imagesCitiesAnimation = "assets/images/cities_animation.json";
+
+  /// Assets for imagesCitiesWordAr
+  /// assets/images/cities_word_ar.svg
+  static const String imagesCitiesWordAr = "assets/images/cities_word_ar.svg";
+
+  /// Assets for imagesCitiesWordEn
+  /// assets/images/cities_word_en.svg
+  static const String imagesCitiesWordEn = "assets/images/cities_word_en.svg";
 
   /// Assets for imagesClassicDoubleIcon
   /// assets/images/classic_double_icon.png
@@ -93,6 +145,18 @@ class Assets {
   /// Assets for imagesClothes
   /// assets/images/clothes.png
   static const String imagesClothes = "assets/images/clothes.png";
+
+  /// Assets for imagesClothesAnimation
+  /// assets/images/clothes_animation.json
+  static const String imagesClothesAnimation = "assets/images/clothes_animation.json";
+
+  /// Assets for imagesClothesWordAr
+  /// assets/images/clothes_word_ar.svg
+  static const String imagesClothesWordAr = "assets/images/clothes_word_ar.svg";
+
+  /// Assets for imagesClothesWordEn
+  /// assets/images/clothes_word_en.svg
+  static const String imagesClothesWordEn = "assets/images/clothes_word_en.svg";
 
   /// Assets for imagesColoredStarsGif
   /// assets/images/colored_stars_gif.gif
@@ -118,9 +182,33 @@ class Assets {
   /// assets/images/devices.png
   static const String imagesDevices = "assets/images/devices.png";
 
+  /// Assets for imagesDevicesAnimation
+  /// assets/images/devices_animation.json
+  static const String imagesDevicesAnimation = "assets/images/devices_animation.json";
+
+  /// Assets for imagesDevicesWordAr
+  /// assets/images/devices_word_ar.svg
+  static const String imagesDevicesWordAr = "assets/images/devices_word_ar.svg";
+
+  /// Assets for imagesDevicesWordEn
+  /// assets/images/devices_word_en.svg
+  static const String imagesDevicesWordEn = "assets/images/devices_word_en.svg";
+
   /// Assets for imagesDrinks
   /// assets/images/drinks.png
   static const String imagesDrinks = "assets/images/drinks.png";
+
+  /// Assets for imagesDrinksAnimation
+  /// assets/images/drinks_animation.json
+  static const String imagesDrinksAnimation = "assets/images/drinks_animation.json";
+
+  /// Assets for imagesDrinksWordAr
+  /// assets/images/drinks_word_ar.svg
+  static const String imagesDrinksWordAr = "assets/images/drinks_word_ar.svg";
+
+  /// Assets for imagesDrinksWordEn
+  /// assets/images/drinks_word_en.svg
+  static const String imagesDrinksWordEn = "assets/images/drinks_word_en.svg";
 
   /// Assets for imagesDuoIcon
   /// assets/images/duo_icon.png
@@ -134,6 +222,18 @@ class Assets {
   /// assets/images/films.png
   static const String imagesFilms = "assets/images/films.png";
 
+  /// Assets for imagesFilmsAnimation
+  /// assets/images/films_animation.json
+  static const String imagesFilmsAnimation = "assets/images/films_animation.json";
+
+  /// Assets for imagesFilmsWordAr
+  /// assets/images/films_word_ar.svg
+  static const String imagesFilmsWordAr = "assets/images/films_word_ar.svg";
+
+  /// Assets for imagesFilmsWordEn
+  /// assets/images/films_word_en.svg
+  static const String imagesFilmsWordEn = "assets/images/films_word_en.svg";
+
   /// Assets for imagesFood
   /// assets/images/food.png
   static const String imagesFood = "assets/images/food.png";
@@ -142,13 +242,45 @@ class Assets {
   /// assets/images/food_animation.json
   static const String imagesFoodAnimation = "assets/images/food_animation.json";
 
+  /// Assets for imagesFoodWordAr
+  /// assets/images/food_word_ar.svg
+  static const String imagesFoodWordAr = "assets/images/food_word_ar.svg";
+
+  /// Assets for imagesFoodWordEn
+  /// assets/images/food_word_en.svg
+  static const String imagesFoodWordEn = "assets/images/food_word_en.svg";
+
   /// Assets for imagesFootball
   /// assets/images/football.png
   static const String imagesFootball = "assets/images/football.png";
 
+  /// Assets for imagesFootballAnimation
+  /// assets/images/football_animation.json
+  static const String imagesFootballAnimation = "assets/images/football_animation.json";
+
+  /// Assets for imagesFootballWordAr
+  /// assets/images/football_word_ar.svg
+  static const String imagesFootballWordAr = "assets/images/football_word_ar.svg";
+
+  /// Assets for imagesFootballWordEn
+  /// assets/images/football_word_en.svg
+  static const String imagesFootballWordEn = "assets/images/football_word_en.svg";
+
   /// Assets for imagesGames
   /// assets/images/games.png
   static const String imagesGames = "assets/images/games.png";
+
+  /// Assets for imagesGamesAnimation
+  /// assets/images/games_animation.json
+  static const String imagesGamesAnimation = "assets/images/games_animation.json";
+
+  /// Assets for imagesGamesWordAr
+  /// assets/images/games_word_ar.svg
+  static const String imagesGamesWordAr = "assets/images/games_word_ar.svg";
+
+  /// Assets for imagesGamesWordEn
+  /// assets/images/games_word_en.svg
+  static const String imagesGamesWordEn = "assets/images/games_word_en.svg";
 
   /// Assets for imagesGiveMobileToJson
   /// assets/images/give_mobile_to_json.json
@@ -169,6 +301,14 @@ class Assets {
   /// Assets for imagesJobsAnimation
   /// assets/images/jobs_animation.json
   static const String imagesJobsAnimation = "assets/images/jobs_animation.json";
+
+  /// Assets for imagesJobsWordAr
+  /// assets/images/jobs_word_ar.svg
+  static const String imagesJobsWordAr = "assets/images/jobs_word_ar.svg";
+
+  /// Assets for imagesJobsWordEn
+  /// assets/images/jobs_word_en.svg
+  static const String imagesJobsWordEn = "assets/images/jobs_word_en.svg";
 
   /// Assets for imagesLeaderboardAnimation
   /// assets/images/leaderboard_animation.json
@@ -222,6 +362,18 @@ class Assets {
   /// assets/images/random.png
   static const String imagesRandom = "assets/images/random.png";
 
+  /// Assets for imagesRandomAnimation
+  /// assets/images/random_animation.json
+  static const String imagesRandomAnimation = "assets/images/random_animation.json";
+
+  /// Assets for imagesRandomWordAr
+  /// assets/images/random_word_ar.svg
+  static const String imagesRandomWordAr = "assets/images/random_word_ar.svg";
+
+  /// Assets for imagesRandomWordEn
+  /// assets/images/random_word_en.svg
+  static const String imagesRandomWordEn = "assets/images/random_word_en.svg";
+
   /// Assets for imagesRedPlayerIcon
   /// assets/images/red_player_icon.svg
   static const String imagesRedPlayerIcon = "assets/images/red_player_icon.svg";
@@ -233,6 +385,18 @@ class Assets {
   /// Assets for imagesSports
   /// assets/images/sports.png
   static const String imagesSports = "assets/images/sports.png";
+
+  /// Assets for imagesSportsAnimation
+  /// assets/images/sports_animation.json
+  static const String imagesSportsAnimation = "assets/images/sports_animation.json";
+
+  /// Assets for imagesSportsWordAr
+  /// assets/images/sports_word_ar.svg
+  static const String imagesSportsWordAr = "assets/images/sports_word_ar.svg";
+
+  /// Assets for imagesSportsWordEn
+  /// assets/images/sports_word_en.svg
+  static const String imagesSportsWordEn = "assets/images/sports_word_en.svg";
 
   /// Assets for imagesStarIcon
   /// assets/images/star_icon.png
@@ -277,6 +441,18 @@ class Assets {
   /// Assets for imagesTools
   /// assets/images/tools.png
   static const String imagesTools = "assets/images/tools.png";
+
+  /// Assets for imagesToolsAnimation
+  /// assets/images/tools_animation.json
+  static const String imagesToolsAnimation = "assets/images/tools_animation.json";
+
+  /// Assets for imagesToolsWordAr
+  /// assets/images/tools_word_ar.svg
+  static const String imagesToolsWordAr = "assets/images/tools_word_ar.svg";
+
+  /// Assets for imagesToolsWordEn
+  /// assets/images/tools_word_en.svg
+  static const String imagesToolsWordEn = "assets/images/tools_word_en.svg";
 
   /// Assets for imagesVolumeSettingsIcon
   /// assets/images/volume_settings_icon.png

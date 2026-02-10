@@ -52,13 +52,14 @@ class _HomeListViewState extends State<HomeListView> {
           horizontal: BorderSide(color: AppColors.whiteColor, width: 1),
         ),
       ),
-      child: ListView.builder(
+      child: ListView.separated(
         physics: const BouncingScrollPhysics(),
         itemCount: widget.categories.length,
         controller: _controller,
         clipBehavior: Clip.none,
-        padding: const EdgeInsets.only(right: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 8),
         scrollDirection: Axis.horizontal,
+        separatorBuilder: (context, index) => const SizedBox(width: 16),
         itemBuilder: (context, index) {
           CategoryInfo categoryInfo = widget.categories[index].getCategoryItemInfo;
           return widget.categories[index] == CategoriesEnum.random

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:the_spy/core/widgets/full_screen_wrapper.dart';
 import 'package:the_spy/features/home/presentation/manager/cubits/home_cubit/home_cubit.dart';
 import 'package:the_spy/features/home/presentation/views/main_app_views.dart';
 import 'package:the_spy/features/players/presentation/views/players_view.dart';
@@ -18,41 +17,37 @@ abstract class AppRouter {
   static const String kPlayersView = '/PlayersView';
   static const String kGameSetupview = '/GameSetupview';
 
-  static GoRouter router() => GoRouter(
+  static GoRouter router = GoRouter(
     routes: [
       GoRoute(
         path: kSplashView,
-        pageBuilder: (context, state) =>
-            fadeTransitionPage(const FullScreenWrapper(child: SplashView()), state),
+        pageBuilder: (context, state) => fadeTransitionPage(const SplashView(), state),
       ),
       GoRoute(
         path: kHomeView,
-        pageBuilder: (context, state) =>
-            fadeTransitionPage(const FullScreenWrapper(child: MainAppViews()), state),
+        pageBuilder: (context, state) => fadeTransitionPage(const MainAppViews(), state),
       ),
       GoRoute(
         path: kGameSetupview,
         pageBuilder: (context, state) => fadeTransitionPage(
-          FullScreenWrapper(child: GameSetupview(homeCubit: state.extra as HomeCubit)),
+          GameSetupview(homeCubit: state.extra as HomeCubit),
           state,
         ),
       ),
       GoRoute(
         path: kPlayersView,
         pageBuilder: (context, state) => fadeTransitionPage(
-          FullScreenWrapper(child: PlayersView(homeCubit: state.extra as HomeCubit)),
+          PlayersView(homeCubit: state.extra as HomeCubit),
           state,
         ),
       ),
       GoRoute(
         path: kSelectModeView,
-        pageBuilder: (context, state) =>
-            fadeTransitionPage(const FullScreenWrapper(child: SelectModeView()), state),
+        pageBuilder: (context, state) => fadeTransitionPage(const SelectModeView(), state),
       ),
       GoRoute(
         path: kGetStartedView,
-        pageBuilder: (context, state) =>
-            fadeTransitionPage(const FullScreenWrapper(child: GetStartedView()), state),
+        pageBuilder: (context, state) => fadeTransitionPage(const GetStartedView(), state),
       ),
     ],
   );
