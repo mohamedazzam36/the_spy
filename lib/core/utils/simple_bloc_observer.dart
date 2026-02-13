@@ -5,17 +5,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class SimpleBlocObserver implements BlocObserver {
   @override
   void onChange(BlocBase bloc, Change change) {
-    log('change : $change');
+    log('change : ${bloc.runtimeType} $change');
   }
 
   @override
   void onClose(BlocBase bloc) {
-    log('close : $Bloc');
+    log('close : ${bloc.runtimeType}');
   }
 
   @override
   void onCreate(BlocBase bloc) {
-    log('create : $Bloc');
+    log('create : ${bloc.runtimeType}');
   }
 
   @override
@@ -32,7 +32,7 @@ class SimpleBlocObserver implements BlocObserver {
   void onTransition(Bloc bloc, Transition transition) {
     // TODO: implement onTransition
   }
-  
+
   @override
   void onDone(Bloc<dynamic, dynamic> bloc, Object? event, [Object? error, StackTrace? stackTrace]) {
     // TODO: implement onDone

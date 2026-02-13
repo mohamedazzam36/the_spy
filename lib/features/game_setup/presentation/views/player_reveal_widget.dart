@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_spy/core/app_services/app_services.dart';
 import 'package:the_spy/core/widgets/main_app_structure.dart';
 import 'package:the_spy/features/game_setup/presentation/views/player_reveal_card.dart';
+import 'package:the_spy/features/game_setup/presentation/views/round_title_widget.dart';
 import 'package:the_spy/features/players/data/models/player_model.dart';
 
 class PlayerRevealWidget extends StatelessWidget {
@@ -24,20 +25,18 @@ class PlayerRevealWidget extends StatelessWidget {
         SliverFillRemaining(
           hasScrollBody: false,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
             child: Column(
               children: [
-                const Spacer(
-                  flex: 1,
-                ),
+                const Spacer(),
+                const RoundTitleWidget(title: 'wordsRound'),
+                const Spacer(),
                 PlayerRevealcard(
                   playerName: currentplayer.name,
                   prevPlayerName: prevplayer?.name,
                   onPressed: onNextPressed,
                 ),
-                const Spacer(
-                  flex: 3,
-                ),
+                const Spacer(flex: 4),
               ],
             ),
           ),

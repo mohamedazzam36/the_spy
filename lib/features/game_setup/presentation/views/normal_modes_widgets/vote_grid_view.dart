@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:the_spy/core/constants/ui_constants.dart';
 import 'package:the_spy/core/extensions/app_helper_extensions.dart';
 import 'package:the_spy/core/models/modes_settings.dart';
 import 'package:the_spy/features/game_setup/presentation/manager/cubits/game_setup_cubit/normal_modes/normal_game_setup_cubit.dart';
@@ -29,17 +30,21 @@ class _VoteGridViewState extends State<VoteGridView> {
           selectedIndices.clear();
         }
       },
-      child: SliverGrid.builder(
+      child: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          crossAxisSpacing: 20,
+          crossAxisSpacing: 40,
           mainAxisSpacing: 20,
+          childAspectRatio: 1.7,
         ),
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: widget.players.length,
         itemBuilder: (context, index) {
           return VoteGridViewItem(
             playerName: widget.players[index],
             isSelected: selectedIndices.contains(index),
+            iconPath: UiConstants.playersIconPaths[index % UiConstants.playersIconPaths.length],
             onTap: () {
               tapped(index, context);
             },

@@ -87,11 +87,11 @@ flutter_native_splash:
   ios: true
   web: false
 
-  color: "##492443"
+  color: "##004d48"
   image: assets/images/no_bg_logo.png
 
   android_12:
-    color: "##492443"
+    color: "##004d48"
     image: assets/images/no_bg_logo.png
     branding: assets/images/cz_team.png
 

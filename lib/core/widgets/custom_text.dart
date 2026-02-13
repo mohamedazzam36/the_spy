@@ -8,12 +8,14 @@ class CustomText extends StatelessWidget {
     required this.style,
     this.fit,
     this.alignment = Alignment.center,
+    this.textAlign,
   });
 
   final String text;
   final TextStyle style;
   final BoxFit? fit;
   final AlignmentGeometry alignment;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class CustomText extends StatelessWidget {
       child: Text(
         text.tr(),
         style: style,
+        textAlign: textAlign,
       ),
     );
   }

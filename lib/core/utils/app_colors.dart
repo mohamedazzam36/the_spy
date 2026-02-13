@@ -7,6 +7,10 @@ abstract class AppColors {
   static const Color blackColor = Colors.black;
   static const Color yellowColor = Color(0xffD59921);
   static const Color coffeeColor = Color(0xffffffe8);
+  static const Color purpleColor = Color(0xff474bd8);
+  static const Color pinkColor = Color(0xffec2b9f);
+  static const Color redColor = Color(0xffe50000);
+  static const Color darkBLueColor = Color(0xff002068);
   static const Color lightPrimaryColor = Color.fromARGB(255, 68, 124, 125);
 
   static const Gradient primaryGradient = LinearGradient(

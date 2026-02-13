@@ -102,6 +102,10 @@ class Assets {
   /// assets/images/cartoons.png
   static const String imagesCartoons = "assets/images/cartoons.png";
 
+  /// Assets for imagesCatLoadingAnimation
+  /// assets/images/cat_loading_animation.json
+  static const String imagesCatLoadingAnimation = "assets/images/cat_loading_animation.json";
+
   /// Assets for imagesCategoryStarsGif
   /// assets/images/category_stars_gif.gif
   static const String imagesCategoryStarsGif = "assets/images/category_stars_gif.gif";
@@ -358,6 +362,14 @@ class Assets {
   /// assets/images/purple_player_icon.svg
   static const String imagesPurplePlayerIcon = "assets/images/purple_player_icon.svg";
 
+  /// Assets for imagesQuestionMarkIcon
+  /// assets/images/question_mark_icon.svg
+  static const String imagesQuestionMarkIcon = "assets/images/question_mark_icon.svg";
+
+  /// Assets for imagesQuestionsRoundAnimation
+  /// assets/images/questions_round_animation.json
+  static const String imagesQuestionsRoundAnimation = "assets/images/questions_round_animation.json";
+
   /// Assets for imagesRandom
   /// assets/images/random.png
   static const String imagesRandom = "assets/images/random.png";
@@ -457,5 +469,9 @@ class Assets {
   /// Assets for imagesVolumeSettingsIcon
   /// assets/images/volume_settings_icon.png
   static const String imagesVolumeSettingsIcon = "assets/images/volume_settings_icon.png";
+
+  /// Assets for imagesVoteIcon
+  /// assets/images/vote_icon.svg
+  static const String imagesVoteIcon = "assets/images/vote_icon.svg";
 }
 

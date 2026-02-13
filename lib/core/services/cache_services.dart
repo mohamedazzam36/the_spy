@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lottie/lottie.dart';
 import 'package:the_spy/core/utils/app_images.dart';
 
 class AppImageCache {
@@ -106,6 +107,31 @@ class AppImageCache {
       Assets.imagesSportsWordEn,
       Assets.imagesToolsWordAr,
       Assets.imagesToolsWordEn,
+      Assets.imagesVoteIcon,
+      Assets.imagesQuestionMarkIcon,
+    ];
+
+    final lottieAssets = [
+      Assets.imagesAnimalsAnimation,
+      Assets.imagesAnimeAnimation,
+      Assets.imagesCartoonAnimation,
+      Assets.imagesCatLoadingAnimation,
+      Assets.imagesCitiesAnimation,
+      Assets.imagesClothesAnimation,
+      Assets.imagesDevicesAnimation,
+      Assets.imagesDrinksAnimation,
+      Assets.imagesFilmsAnimation,
+      Assets.imagesFoodAnimation,
+      Assets.imagesFootballAnimation,
+      Assets.imagesGamesAnimation,
+      Assets.imagesGiveMobileToJson,
+      Assets.imagesJobsAnimation,
+      Assets.imagesLeaderboardAnimation,
+      Assets.imagesQuestionsRoundAnimation,
+      Assets.imagesRandomAnimation,
+      Assets.imagesSportsAnimation,
+      Assets.imagesToolsAnimation,
+      Assets.imagesSettingsGif,
     ];
 
     for (final image in rasterImages) {
@@ -115,6 +141,10 @@ class AppImageCache {
     for (final svg in svgAssets) {
       final loader = SvgAssetLoader(svg);
       vg.loadPicture(loader, context);
+    }
+
+    for (final lottie in lottieAssets) {
+      AssetLottie(lottie).load(context: context);
     }
   }
 }

@@ -17,6 +17,7 @@ class MainAppStructure extends StatelessWidget {
     this.appBarExpandedHeight,
     this.appBarCollapsedHeight,
     this.hasBottomDivider = true,
+    this.isPinned = false,
   });
 
   final String appBarTitle;
@@ -24,7 +25,7 @@ class MainAppStructure extends StatelessWidget {
   final List<Widget>? appBarActions, children;
   final List<Widget> slivers;
   final Color? titleColor;
-  final bool floatingAppBar, backButton, hasAppBar, hasBottomDivider;
+  final bool floatingAppBar, backButton, hasAppBar, hasBottomDivider, isPinned;
   final double? appBarExpandedHeight, appBarCollapsedHeight;
 
   @override
@@ -44,6 +45,7 @@ class MainAppStructure extends StatelessWidget {
                 appBarExpandedHeight: appBarExpandedHeight,
                 appBarFlexibleSpace: appBarFlexibleSpace,
                 hasBottomDivider: hasBottomDivider,
+                isPinned: isPinned,
               )
             : const SliverToBoxAdapter(),
         children != null

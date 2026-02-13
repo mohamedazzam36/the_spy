@@ -21,13 +21,14 @@ class MainAppBar extends StatelessWidget {
     this.appBarExpandedHeight,
     this.appBarCollapsedHeight,
     this.hasBottomDivider = false,
+    required this.isPinned,
   });
 
   final String appBarTitle;
   final Widget? title, appBarFlexibleSpace;
   final List<Widget>? actions;
   final Color? titleColor;
-  final bool floatingAppBar, backButton, hasBottomDivider;
+  final bool floatingAppBar, backButton, hasBottomDivider, isPinned;
   final double? appBarExpandedHeight, appBarCollapsedHeight;
 
   @override
@@ -38,6 +39,8 @@ class MainAppBar extends StatelessWidget {
       floating: floatingAppBar,
       collapsedHeight: appBarCollapsedHeight ?? 75,
       centerTitle: true,
+      pinned: isPinned,
+      scrolledUnderElevation: 0,
       expandedHeight: appBarExpandedHeight,
       leadingWidth: 64,
       actionsPadding: const .directional(end: 12),

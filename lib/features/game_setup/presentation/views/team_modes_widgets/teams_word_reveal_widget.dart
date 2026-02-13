@@ -34,11 +34,17 @@ class TeamsWordRevealWidget extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  WordRevealcard(wordName: '${'team'.tr()}${teamId + 1}'),
+                  WordRevealcard(
+                    wordName: '${'team'.tr()}${teamId + 1}',
+                    onNextPressed: onNextPressed,
+                  ),
                   const SizedBox(
                     height: 24,
                   ),
-                  WordRevealcard(wordName: wordName),
+                  WordRevealcard(
+                    wordName: wordName,
+                    onNextPressed: onNextPressed,
+                  ),
                   const SizedBox(
                     height: 50,
                   ),

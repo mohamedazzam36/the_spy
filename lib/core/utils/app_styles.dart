@@ -3,19 +3,37 @@ import 'package:the_spy/core/utils/app_colors.dart';
 import 'package:the_spy/core/utils/size_config.dart';
 
 abstract class Styles {
-  static TextStyle styleSemiBold35(BuildContext context) {
+  static TextStyle extraLight16(BuildContext context) {
     return TextStyle(
-      fontSize: getResponsiveText(context, fontSize: 35),
-      color: AppColors.whiteColor,
+      fontSize: getResponsiveText(context, fontSize: 16),
+      fontWeight: FontWeight.w200,
+      fontFamily: 'Cairo',
+    );
+  }
+
+  static TextStyle stylesLight16(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 16),
+      fontWeight: FontWeight.w300,
+      color: AppColors.blackColor,
+      fontFamily: 'Cairo',
+    );
+  }
+
+  static TextStyle styleSemiBold16(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 16),
+      color: AppColors.blackColor,
       fontWeight: FontWeight.w600,
       fontFamily: 'Cairo',
     );
   }
 
-  static TextStyle extraLight16(BuildContext context) {
+  static TextStyle styleSemiBold35(BuildContext context) {
     return TextStyle(
-      fontSize: getResponsiveText(context, fontSize: 16),
-      fontWeight: FontWeight.w200,
+      fontSize: getResponsiveText(context, fontSize: 35),
+      color: AppColors.whiteColor,
+      fontWeight: FontWeight.w600,
       fontFamily: 'Cairo',
     );
   }
@@ -74,6 +92,15 @@ abstract class Styles {
     );
   }
 
+  static TextStyle styleBold18(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 18),
+      color: AppColors.blackColor,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
+    );
+  }
+
   static TextStyle styleBold13(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 13),
@@ -92,6 +119,15 @@ abstract class Styles {
     );
   }
 
+  static TextStyle styleBold12(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 12),
+      color: AppColors.blackColor,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
+    );
+  }
+
   static TextStyle styleBold40(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 40),
@@ -104,6 +140,15 @@ abstract class Styles {
   static TextStyle styleMedium16(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveText(context, fontSize: 16),
+      color: AppColors.blackColor,
+      fontWeight: FontWeight.w500,
+      fontFamily: 'Cairo',
+    );
+  }
+
+  static TextStyle styleMedium24(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveText(context, fontSize: 24),
       color: AppColors.blackColor,
       fontWeight: FontWeight.w500,
       fontFamily: 'Cairo',
